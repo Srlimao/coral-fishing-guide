@@ -1,6 +1,5 @@
 import React from 'react';
 import { FishingProvider, useFishing } from './context/FishingContext';
-import { LiveSyncProvider } from './features/save-import/LiveSyncContext';
 import { AppHeader } from './features/header/AppHeader';
 import { TimeWeatherBar } from './features/time-weather/TimeWeatherBar';
 import { GearSelector } from './features/gear/GearSelector';
@@ -66,9 +65,7 @@ const MainContent: React.FC = () => {
 export function App() {
   return (
     <FishingProvider>
-      <LiveSyncProvider>
-        <MainContent />
-      </LiveSyncProvider>
+      <MainContent />
     </FishingProvider>
   );
 }

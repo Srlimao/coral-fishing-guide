@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { useFishing } from '../../context/FishingContext';
-import { useLiveSync } from '../save-import/LiveSyncContext';
-import { BookOpen, Calendar, MapPin, Sparkles, Award, Settings, CheckCircle2, Layers, Radio } from 'lucide-react';
+import { BookOpen, Calendar, MapPin, Sparkles, Award, Settings, CheckCircle2, Layers, FolderDown } from 'lucide-react';
 import superCoralImg from '../../assets/icons/Super_Coral.png';
 import { SaveManagerModal } from '../settings/SaveManagerModal';
 import { SaveImportModal } from '../save-import/SaveImportModal';
 
 export const AppHeader: React.FC = () => {
   const { activeTab, setActiveTab, activeNowCount, userProgress } = useFishing();
-  const { isConnected, fileName } = useLiveSync();
 
   const [showSettings, setShowSettings] = useState(false);
   const [showSaveImport, setShowSaveImport] = useState(false);
@@ -120,18 +118,14 @@ export const AppHeader: React.FC = () => {
               <span>Pins</span>
             </button>
 
-            {/* Live Save Sync Connection Pill */}
+            {/* Import Save Game Button */}
             <button
               onClick={() => setShowSaveImport(true)}
-              title={isConnected ? `Live Sync Active: ${fileName}` : 'Connect In-Game Save File'}
-              className={`cg-pill px-3 py-1.5 text-xs font-bold transition-all ${
-                isConnected
-                  ? 'border-emerald-500/60 bg-emerald-950/40 text-emerald-300 hover:border-emerald-400'
-                  : 'hover:text-white'
-              }`}
+              title="Import Coral Island Save Game (.sav)"
+              className="cg-pill px-3 py-1.5 text-xs font-bold hover:text-white"
             >
-              <Radio className={`w-3.5 h-3.5 ${isConnected ? 'text-emerald-400 animate-pulse' : 'text-[#c4b5a0]'}`} />
-              <span>{isConnected ? (fileName?.split('.')[0] || 'Live Sync') : 'Live Sync'}</span>
+              <FolderDown className="w-3.5 h-3.5 text-[#c4b5a0]" />
+              <span>Import Save</span>
             </button>
 
             <button
