@@ -1,0 +1,7625 @@
+[
+  {
+    "id": "item_72030",
+    "key": "Salmon_Estuary",
+    "name": "Salmon",
+    "rarity": "Uncommon",
+    "size": "Medium",
+    "pattern": "Stay",
+    "difficulty": "Medium",
+    "minCaughtSize": 71,
+    "maxCaughtSize": 76,
+    "expGranted": 12,
+    "price": 75,
+    "sellPrice": 45,
+    "bronzeSellPrice": 52,
+    "silverSellPrice": 59,
+    "goldSellPrice": 68,
+    "osmiumSellPrice": 90,
+    "iconName": "Salmon_Sprite",
+    "description": "A common saltwater fish.",
+    "locations": [
+      "Estuary",
+      "Lake Temple",
+      "River Farm",
+      "River Forest",
+      "River Town"
+    ],
+    "seasons": [
+      "spring",
+      "winter",
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "Salmon_Estuary",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Estuary"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Salmon_LakeTemple",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Lake Temple"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Salmon_Fall",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Farm",
+          "River Forest",
+          "River Town"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_71001",
+    "key": "GiantSnakeHead",
+    "name": "Giant snakehead",
+    "rarity": "Uncommon",
+    "size": "Medium",
+    "pattern": "Circle",
+    "difficulty": "Hard",
+    "minCaughtSize": 50,
+    "maxCaughtSize": 150,
+    "expGranted": 12,
+    "price": 160,
+    "sellPrice": 95,
+    "bronzeSellPrice": 109,
+    "silverSellPrice": 124,
+    "goldSellPrice": 143,
+    "osmiumSellPrice": 190,
+    "iconName": "Giant_Snakehead_Sprite",
+    "description": "It has distinctive white stripes.",
+    "locations": [
+      "River Forest",
+      "River Town"
+    ],
+    "seasons": [
+      "summer",
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "GiantSnakeHead",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Forest",
+          "River Town"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": false,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": false
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": true,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Fresh Water Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_71002",
+    "key": "Catfish",
+    "name": "Catfish",
+    "rarity": "Common",
+    "size": "Medium",
+    "pattern": "Star",
+    "difficulty": "Medium",
+    "minCaughtSize": 57,
+    "maxCaughtSize": 132,
+    "expGranted": 12,
+    "price": 75,
+    "sellPrice": 45,
+    "bronzeSellPrice": 52,
+    "silverSellPrice": 59,
+    "goldSellPrice": 68,
+    "osmiumSellPrice": 90,
+    "iconName": "Catfish_Sprite",
+    "description": "Lives deep in the rivers.",
+    "locations": [
+      "Rice Field",
+      "Pond",
+      "River Forest"
+    ],
+    "seasons": [
+      "spring",
+      "summer"
+    ],
+    "weathers": [
+      "rain",
+      "storm"
+    ],
+    "times": [
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "Catfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Rice Field",
+          "Pond",
+          "River Forest"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": false,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Fresh Water Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_71003",
+    "key": "Flowerhorn",
+    "name": "Flowerhorn",
+    "rarity": "Uncommon",
+    "size": "Small",
+    "pattern": "Circle",
+    "difficulty": "Medium",
+    "minCaughtSize": 30,
+    "maxCaughtSize": 41,
+    "expGranted": 12,
+    "price": 135,
+    "sellPrice": 80,
+    "bronzeSellPrice": 92,
+    "silverSellPrice": 104,
+    "goldSellPrice": 120,
+    "osmiumSellPrice": 160,
+    "iconName": "Flowerhorn_Sprite",
+    "description": "According to legend, it brings prosperity and luck.",
+    "locations": [
+      "Cave Entrance"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Flowerhorn",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Cave Entrance"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_71004",
+    "key": "Tilapia",
+    "name": "Tilapia",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "Easy",
+    "minCaughtSize": 12,
+    "maxCaughtSize": 20,
+    "expGranted": 12,
+    "price": 65,
+    "sellPrice": 40,
+    "bronzeSellPrice": 46,
+    "silverSellPrice": 52,
+    "goldSellPrice": 60,
+    "osmiumSellPrice": 80,
+    "iconName": "Tilapia_Sprite",
+    "description": "A common freshwater fish.",
+    "locations": [
+      "Pond",
+      "Lake Temple",
+      "Cave Mining Earth"
+    ],
+    "seasons": [
+      "spring",
+      "winter",
+      "summer",
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": true,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "Tilapia",
+        "spawnArea": {
+          "canBeCatchOnCave": true,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Pond",
+          "Lake Temple"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Tilapia_Cave",
+        "spawnArea": {
+          "canBeCatchOnCave": true,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Cave Mining Earth"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Fresh Water Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_74001",
+    "key": "KingRedArowana",
+    "name": "Red king arowana",
+    "rarity": "Legendary",
+    "size": "Medium",
+    "pattern": "Star",
+    "difficulty": "Medium",
+    "minCaughtSize": 76,
+    "maxCaughtSize": 89,
+    "expGranted": 12,
+    "price": 1035,
+    "sellPrice": 620,
+    "bronzeSellPrice": 713,
+    "silverSellPrice": 806,
+    "goldSellPrice": 930,
+    "osmiumSellPrice": 1240,
+    "iconName": "Red_king_arowana_Sprite",
+    "description": "A legendary freshwater fish. Considered a symbol of good fortune.",
+    "locations": [
+      "Cave Mining Fire",
+      "Cave Mining Air",
+      "Cave Mining Water",
+      "Cave Mining Fire Lava",
+      "Savannah"
+    ],
+    "seasons": [
+      "fall",
+      "spring",
+      "summer",
+      "winter"
+    ],
+    "weathers": [
+      "rain",
+      "storm",
+      "windy",
+      "sunny",
+      "snow",
+      "blizzard"
+    ],
+    "times": [
+      "afternoon",
+      "evening",
+      "morning",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": true,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "KingRedArowana",
+        "spawnArea": {
+          "canBeCatchOnCave": true,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Cave Mining Fire",
+          "Cave Mining Air",
+          "Cave Mining Water",
+          "Cave Mining Fire Lava"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": true,
+          "evening": true,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": true,
+        "dateRangeList": [
+          {
+            "isValidOnSpecificDate": false,
+            "isValidIndefinitelyOnceStarted": false,
+            "random": false,
+            "lastsTill": {
+              "day": 28,
+              "season": "Fall",
+              "year": 1
+            },
+            "startsFrom": {
+              "day": 22,
+              "season": "Fall",
+              "year": 1
+            }
+          }
+        ]
+      },
+      {
+        "key": "KingRedArowana_Savannah",
+        "spawnArea": {
+          "canBeCatchOnCave": true,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Savannah"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Day Fishing Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_71005",
+    "key": "SilverArowana",
+    "name": "Silver arowana",
+    "rarity": "Uncommon",
+    "size": "Medium",
+    "pattern": "Circle",
+    "difficulty": "Medium",
+    "minCaughtSize": 70,
+    "maxCaughtSize": 120,
+    "expGranted": 12,
+    "price": 135,
+    "sellPrice": 80,
+    "bronzeSellPrice": 92,
+    "silverSellPrice": 104,
+    "goldSellPrice": 120,
+    "osmiumSellPrice": 160,
+    "iconName": "Silver_arowana_Sprite",
+    "description": "A predatory fish. It’s known to jump out of the water in pursuit of prey.",
+    "locations": [
+      "Cave Mining Earth",
+      "Cave Mining Water",
+      "Cave Mining Air"
+    ],
+    "seasons": [
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "SilverArowana",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Cave Mining Earth",
+          "Cave Mining Water",
+          "Cave Mining Air"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": false,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Fresh Water Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_71006",
+    "key": "Koi",
+    "name": "Koi",
+    "rarity": "Rare",
+    "size": "Medium",
+    "pattern": "Stay",
+    "difficulty": "Medium",
+    "minCaughtSize": 61,
+    "maxCaughtSize": 91,
+    "expGranted": 12,
+    "price": 290,
+    "sellPrice": 175,
+    "bronzeSellPrice": 201,
+    "silverSellPrice": 228,
+    "goldSellPrice": 263,
+    "osmiumSellPrice": 350,
+    "iconName": "Koi_Sprite",
+    "description": "A beautifully spotted fish.",
+    "locations": [
+      "River Town",
+      "Cave Entrance",
+      "Lake Temple"
+    ],
+    "seasons": [
+      "spring",
+      "summer"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "Koi",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Town",
+          "Cave Entrance",
+          "Lake Temple"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": false,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Fresh Water Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_71007",
+    "key": "BlackPhantomGhostFish",
+    "name": "Black phantom ghost fish",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "VeryEasy",
+    "minCaughtSize": 2.5,
+    "maxCaughtSize": 5,
+    "expGranted": 12,
+    "price": 60,
+    "sellPrice": 35,
+    "bronzeSellPrice": 40,
+    "silverSellPrice": 46,
+    "goldSellPrice": 53,
+    "osmiumSellPrice": 70,
+    "iconName": "Black_Phantom_Ghost_Fish_Sprite",
+    "description": "A jet black fish that likes to hover close to the riverbed.",
+    "locations": [
+      "River Farm",
+      "River Forest",
+      "Lake Temple"
+    ],
+    "seasons": [
+      "spring"
+    ],
+    "weathers": [
+      "sunny",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "BlackPhantomGhostFish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Farm",
+          "River Forest",
+          "Lake Temple"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": false,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": false
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Night Fishing Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_71008",
+    "key": "GatorGar",
+    "name": "Gator gar",
+    "rarity": "Rare",
+    "size": "Large",
+    "pattern": "Star",
+    "difficulty": "Hard",
+    "minCaughtSize": 122,
+    "maxCaughtSize": 183,
+    "expGranted": 12,
+    "price": 350,
+    "sellPrice": 210,
+    "bronzeSellPrice": 242,
+    "silverSellPrice": 273,
+    "goldSellPrice": 315,
+    "osmiumSellPrice": 420,
+    "iconName": "Gator_Gar_Sprite",
+    "description": "This fish has a long, narrow mouth.",
+    "locations": [
+      "River Forest",
+      "Lake Temple"
+    ],
+    "seasons": [
+      "spring"
+    ],
+    "weathers": [
+      "rain",
+      "storm"
+    ],
+    "times": [
+      "morning",
+      "afternoon"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "GatorGar",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Forest",
+          "Lake Temple"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": false,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": false,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Rare Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_71010",
+    "key": "RainbowFish",
+    "name": "Rainbow fish",
+    "rarity": "Uncommon",
+    "size": "Small",
+    "pattern": "Circle",
+    "difficulty": "VeryEasy",
+    "minCaughtSize": 7,
+    "maxCaughtSize": 12,
+    "expGranted": 12,
+    "price": 100,
+    "sellPrice": 60,
+    "bronzeSellPrice": 69,
+    "silverSellPrice": 78,
+    "goldSellPrice": 90,
+    "osmiumSellPrice": 120,
+    "iconName": "Rainbow_Fish_Sprite",
+    "description": "Characterized by spots and a red blush on its cheeks.",
+    "locations": [
+      "River Town",
+      "Deep Forest"
+    ],
+    "seasons": [
+      "spring",
+      "winter",
+      "summer",
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "snow",
+      "blizzard",
+      "windy",
+      "rain",
+      "storm"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "RainbowFish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Town"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": false,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": false
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "RainbowFish_DeepForest",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Deep Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Fresh Water Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_71011",
+    "key": "TigerBarb",
+    "name": "Tiger barb",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "VeryEasy",
+    "minCaughtSize": 7,
+    "maxCaughtSize": 10,
+    "expGranted": 12,
+    "price": 60,
+    "sellPrice": 35,
+    "bronzeSellPrice": 40,
+    "silverSellPrice": 46,
+    "goldSellPrice": 53,
+    "osmiumSellPrice": 70,
+    "iconName": "Tiger_Barb_Sprite",
+    "description": "A common freshwater fish known for its black stripes.",
+    "locations": [
+      "Pond",
+      "Lake Temple"
+    ],
+    "seasons": [
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "TigerBarb",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Pond",
+          "Lake Temple"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": false,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": false
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_71012",
+    "key": "Crayfish",
+    "name": "Crayfish",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "VeryEasy",
+    "minCaughtSize": 2.5,
+    "maxCaughtSize": 8,
+    "expGranted": 12,
+    "price": 60,
+    "sellPrice": 35,
+    "bronzeSellPrice": 40,
+    "silverSellPrice": 46,
+    "goldSellPrice": 53,
+    "osmiumSellPrice": 70,
+    "iconName": "Crayfish_Sprite",
+    "description": "It looks like a tiny lobster and lives in freshwater.",
+    "locations": [
+      "Pond",
+      "River Farm",
+      "Deep Forest",
+      "Savannah"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "Crayfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Pond",
+          "River Farm",
+          "Deep Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Crayfish_Savannah",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Savannah"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_71013",
+    "key": "FreshwaterEel",
+    "name": "Freshwater eel",
+    "rarity": "Common",
+    "size": "Medium",
+    "pattern": "Circle",
+    "difficulty": "Medium",
+    "minCaughtSize": 30,
+    "maxCaughtSize": 91,
+    "expGranted": 12,
+    "price": 75,
+    "sellPrice": 45,
+    "bronzeSellPrice": 52,
+    "silverSellPrice": 59,
+    "goldSellPrice": 68,
+    "osmiumSellPrice": 90,
+    "iconName": "Freshwater_eel_Sprite",
+    "description": "It’s slimy and feeds on small fish.",
+    "locations": [
+      "Estuary",
+      "River Farm",
+      "Cave Mining Water"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy",
+      "snow",
+      "blizzard"
+    ],
+    "times": [
+      "afternoon",
+      "evening",
+      "night",
+      "morning"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "FreshwaterEel",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Estuary",
+          "River Farm"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "FreshwaterEel_Cave",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Cave Mining Water"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_71014",
+    "key": "Goldfish",
+    "name": "Goldfish",
+    "rarity": "Uncommon",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "Easy",
+    "minCaughtSize": 2.5,
+    "maxCaughtSize": 36,
+    "expGranted": 12,
+    "price": 115,
+    "sellPrice": 70,
+    "bronzeSellPrice": 81,
+    "silverSellPrice": 91,
+    "goldSellPrice": 105,
+    "osmiumSellPrice": 140,
+    "iconName": "GoldFish_Sprite",
+    "description": "Its diet includes small crustacea.",
+    "locations": [
+      "River Farm",
+      "River Forest",
+      "Lake Temple"
+    ],
+    "seasons": [
+      "summer",
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "Goldfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Farm",
+          "River Forest",
+          "Lake Temple"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": true,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_71015",
+    "key": "SnakeheadFish",
+    "name": "Snakehead",
+    "rarity": "Common",
+    "size": "Medium",
+    "pattern": "Star",
+    "difficulty": "Medium",
+    "minCaughtSize": 30,
+    "maxCaughtSize": 89,
+    "expGranted": 12,
+    "price": 75,
+    "sellPrice": 45,
+    "bronzeSellPrice": 52,
+    "silverSellPrice": 59,
+    "goldSellPrice": 68,
+    "osmiumSellPrice": 90,
+    "iconName": "Snakehead_Sprite",
+    "description": "A fierce predator with a large mouth and shiny teeth.",
+    "locations": [
+      "Lake Temple"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "weathers": [
+      "rain",
+      "storm"
+    ],
+    "times": [
+      "morning",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "SnakeheadFish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Lake Temple"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": false,
+          "evening": false,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": false,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_71016",
+    "key": "Bluegil",
+    "name": "Bluegill",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Circle",
+    "difficulty": "Easy",
+    "minCaughtSize": 17.5,
+    "maxCaughtSize": 41,
+    "expGranted": 12,
+    "price": 65,
+    "sellPrice": 40,
+    "bronzeSellPrice": 46,
+    "silverSellPrice": 52,
+    "goldSellPrice": 60,
+    "osmiumSellPrice": 80,
+    "iconName": "Bluegill_Sprite",
+    "description": "A common Summer fish.",
+    "locations": [
+      "Pond",
+      "River Town",
+      "Lake Temple"
+    ],
+    "seasons": [
+      "summer"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy"
+    ],
+    "times": [
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "Bluegil",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Pond",
+          "River Town",
+          "Lake Temple"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": true,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Day Fishing Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_71017",
+    "key": "Arapaima",
+    "name": "Arapaima",
+    "rarity": "Rare",
+    "size": "Large",
+    "pattern": "Stay",
+    "difficulty": "VeryHard",
+    "minCaughtSize": 213,
+    "maxCaughtSize": 251,
+    "expGranted": 12,
+    "price": 400,
+    "sellPrice": 240,
+    "bronzeSellPrice": 276,
+    "silverSellPrice": 312,
+    "goldSellPrice": 360,
+    "osmiumSellPrice": 480,
+    "iconName": "Arapaima_Sprite",
+    "description": "A very large fish. It spawns in Fall and Winter, when the water is cooler.",
+    "locations": [
+      "River Forest",
+      "Deep Forest",
+      "Savannah"
+    ],
+    "seasons": [
+      "fall",
+      "winter",
+      "spring",
+      "summer"
+    ],
+    "weathers": [
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "sunny",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "Arapaima",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": false,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Arapaima_DeepForest",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Deep Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Arapaima_Savannah",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Savannah"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Rare Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_71018",
+    "key": "ZebraFish",
+    "name": "Zebra fish",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "VeryEasy",
+    "minCaughtSize": 3,
+    "maxCaughtSize": 5,
+    "expGranted": 12,
+    "price": 60,
+    "sellPrice": 35,
+    "bronzeSellPrice": 40,
+    "silverSellPrice": 46,
+    "goldSellPrice": 53,
+    "osmiumSellPrice": 70,
+    "iconName": "Zebra_Fish_Sprite",
+    "description": "A common fish of the Spring.",
+    "locations": [
+      "Rice Field",
+      "River Farm",
+      "River Forest"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "ZebraFish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Rice Field"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "ZebraFish_Spring",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "River Farm",
+          "River Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_71019",
+    "key": "GoldenGar",
+    "name": "Golden gar",
+    "rarity": "Rare",
+    "size": "Medium",
+    "pattern": "Star",
+    "difficulty": "Medium",
+    "minCaughtSize": 30,
+    "maxCaughtSize": 48,
+    "expGranted": 12,
+    "price": 290,
+    "sellPrice": 175,
+    "bronzeSellPrice": 201,
+    "silverSellPrice": 228,
+    "goldSellPrice": 263,
+    "osmiumSellPrice": 350,
+    "iconName": "Golden_Gar_Sprite",
+    "description": "It only comes out in the rain.",
+    "locations": [
+      "River Farm",
+      "Lake Temple",
+      "Savannah"
+    ],
+    "seasons": [
+      "summer",
+      "spring",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "rain",
+      "storm",
+      "sunny",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "GoldenGar",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Farm",
+          "Lake Temple"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": false,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": true,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "GoldenGar_Savannah",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Savannah"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_71020",
+    "key": "Chub",
+    "name": "Chub",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "VeryEasy",
+    "minCaughtSize": 12.5,
+    "maxCaughtSize": 18,
+    "expGranted": 12,
+    "price": 60,
+    "sellPrice": 35,
+    "bronzeSellPrice": 40,
+    "silverSellPrice": 46,
+    "goldSellPrice": 53,
+    "osmiumSellPrice": 70,
+    "iconName": "Chub_Sprite",
+    "description": "A common freshwater fish.",
+    "locations": [
+      "River Forest",
+      "River Town",
+      "Lake Temple"
+    ],
+    "seasons": [
+      "summer",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": true,
+      "lake": true,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "Chub",
+        "spawnArea": {
+          "canBeCatchOnCave": true,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Forest",
+          "River Town",
+          "Lake Temple"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": true,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_71021",
+    "key": "BrownTrout",
+    "name": "Brown trout",
+    "rarity": "Common",
+    "size": "Medium",
+    "pattern": "Circle",
+    "difficulty": "Medium",
+    "minCaughtSize": 35,
+    "maxCaughtSize": 60,
+    "expGranted": 12,
+    "price": 75,
+    "sellPrice": 45,
+    "bronzeSellPrice": 52,
+    "silverSellPrice": 59,
+    "goldSellPrice": 68,
+    "osmiumSellPrice": 90,
+    "iconName": "Brown_trout_Sprite",
+    "description": "A common lake fish.",
+    "locations": [
+      "River Farm"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "BrownTrout",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Farm"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_71009",
+    "key": "Cobia",
+    "name": "Cobia",
+    "rarity": "Uncommon",
+    "size": "Large",
+    "pattern": "Star",
+    "difficulty": "Hard",
+    "minCaughtSize": 91.44,
+    "maxCaughtSize": 182.88,
+    "expGranted": 12,
+    "price": 160,
+    "sellPrice": 95,
+    "bronzeSellPrice": 109,
+    "silverSellPrice": 124,
+    "goldSellPrice": 143,
+    "osmiumSellPrice": 190,
+    "iconName": "Cobia_Sprite",
+    "description": "Very curious in nature. It lives in the sea and isn’t afraid of boats.",
+    "locations": [
+      "Estuary",
+      "Ocean Dock",
+      "Cave Mining Water"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy",
+      "snow",
+      "blizzard"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": true,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Cobia",
+        "spawnArea": {
+          "canBeCatchOnCave": true,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Estuary",
+          "Ocean Dock"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": false,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Cobia_Cave",
+        "spawnArea": {
+          "canBeCatchOnCave": true,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Cave Mining Water"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72001",
+    "key": "Frogfish",
+    "name": "Frogfish",
+    "rarity": "Uncommon",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "Easy",
+    "minCaughtSize": 2.5,
+    "maxCaughtSize": 38,
+    "expGranted": 12,
+    "price": 115,
+    "sellPrice": 70,
+    "bronzeSellPrice": 81,
+    "silverSellPrice": 91,
+    "goldSellPrice": 105,
+    "osmiumSellPrice": 140,
+    "iconName": "Frogfish_Sprite",
+    "description": "Not the prettiest fish, but extremely agile.",
+    "locations": [
+      "Estuary",
+      "Ocean Lookout"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "rain",
+      "storm",
+      "snow",
+      "blizzard"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Frogfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Estuary",
+          "Ocean Lookout"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": false,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_74002",
+    "key": "Monkfish",
+    "name": "Monkfish",
+    "rarity": "Legendary",
+    "size": "Large",
+    "pattern": "Circle",
+    "difficulty": "Hard",
+    "minCaughtSize": 91.44,
+    "maxCaughtSize": 152.4,
+    "expGranted": 12,
+    "price": 1240,
+    "sellPrice": 745,
+    "bronzeSellPrice": 857,
+    "silverSellPrice": 969,
+    "goldSellPrice": 1118,
+    "osmiumSellPrice": 1490,
+    "iconName": "Monkfish_Sprite",
+    "description": "A legendary saltwater fish. Not the prettiest fish.",
+    "locations": [
+      "Ocean Forest",
+      "Deep Forest"
+    ],
+    "seasons": [
+      "spring"
+    ],
+    "weathers": [
+      "sunny",
+      "windy",
+      "rain",
+      "storm"
+    ],
+    "times": [
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Monkfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Forest"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": false,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": false
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": true,
+        "dateRangeList": [
+          {
+            "isValidOnSpecificDate": false,
+            "isValidIndefinitelyOnceStarted": false,
+            "random": false,
+            "lastsTill": {
+              "day": 14,
+              "season": "Spring",
+              "year": 1
+            },
+            "startsFrom": {
+              "day": 1,
+              "season": "Spring",
+              "year": 1
+            }
+          }
+        ]
+      },
+      {
+        "key": "Monkfish_DeepForest",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Deep Forest"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72002",
+    "key": "Yellowtail",
+    "name": "Yellowtail",
+    "rarity": "Common",
+    "size": "Large",
+    "pattern": "Stay",
+    "difficulty": "Hard",
+    "minCaughtSize": 200,
+    "maxCaughtSize": 250,
+    "expGranted": 12,
+    "price": 90,
+    "sellPrice": 55,
+    "bronzeSellPrice": 63,
+    "silverSellPrice": 72,
+    "goldSellPrice": 83,
+    "osmiumSellPrice": 110,
+    "iconName": "Yellowtail_Sprite",
+    "description": "A common saltwater fish.",
+    "locations": [
+      "Ocean Dock",
+      "Cave Mining Fire"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "sunny",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Yellowtail",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Dock"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": false,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Yellowtail_Cave",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Cave Mining Fire"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72003",
+    "key": "Tuna",
+    "name": "Tuna",
+    "rarity": "Rare",
+    "size": "Large",
+    "pattern": "Star",
+    "difficulty": "VeryHard",
+    "minCaughtSize": 200,
+    "maxCaughtSize": 460,
+    "expGranted": 12,
+    "price": 400,
+    "sellPrice": 240,
+    "bronzeSellPrice": 276,
+    "silverSellPrice": 312,
+    "goldSellPrice": 360,
+    "osmiumSellPrice": 480,
+    "iconName": "Tuna_Sprite",
+    "description": "It has the ability to maintain a constant body temperature.",
+    "locations": [
+      "Ocean Dock",
+      "Ocean Lookout",
+      "Cave Mining Fire"
+    ],
+    "seasons": [
+      "fall",
+      "spring",
+      "summer",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy",
+      "snow",
+      "blizzard"
+    ],
+    "times": [
+      "afternoon",
+      "evening",
+      "morning",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Tuna",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Dock",
+          "Ocean Lookout"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": true,
+          "evening": true,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Tuna_Cave",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Cave Mining Fire"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Salt Water Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_72004",
+    "key": "Pufferfish",
+    "name": "Pufferfish",
+    "rarity": "Uncommon",
+    "size": "Small",
+    "pattern": "Circle",
+    "difficulty": "Easy",
+    "minCaughtSize": 1,
+    "maxCaughtSize": 60,
+    "expGranted": 12,
+    "price": 115,
+    "sellPrice": 70,
+    "bronzeSellPrice": 81,
+    "silverSellPrice": 91,
+    "goldSellPrice": 105,
+    "osmiumSellPrice": 140,
+    "iconName": "Pufferfish_Sprite",
+    "description": "Its elastic stomach inflates when it’s threatened.",
+    "locations": [
+      "Ocean Dock",
+      "Ocean Lookout",
+      "Cave Mining Air"
+    ],
+    "seasons": [
+      "winter",
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Pufferfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Dock",
+          "Ocean Lookout"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": false,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Pufferfish_Cave",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Cave Mining Air"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Day Fishing Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_72006",
+    "key": "RubyRedDragonet",
+    "name": "Ruby red dragonet",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "VeryEasy",
+    "minCaughtSize": 3.81,
+    "maxCaughtSize": 6.35,
+    "expGranted": 12,
+    "price": 60,
+    "sellPrice": 35,
+    "bronzeSellPrice": 40,
+    "silverSellPrice": 46,
+    "goldSellPrice": 53,
+    "osmiumSellPrice": 70,
+    "iconName": "Ruby_Red_Dragonet_Sprite",
+    "description": "A small, feisty fish.",
+    "locations": [
+      "Ocean Beach",
+      "Cave Entrance"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "RubyRedDragonet",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Beach",
+          "Cave Entrance"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_74003",
+    "key": "YellowMorayEel",
+    "name": "Yellow moray eel",
+    "rarity": "Legendary",
+    "size": "Large",
+    "pattern": "Stay",
+    "difficulty": "Hard",
+    "minCaughtSize": 80,
+    "maxCaughtSize": 240,
+    "expGranted": 12,
+    "price": 1240,
+    "sellPrice": 745,
+    "bronzeSellPrice": 857,
+    "silverSellPrice": 969,
+    "goldSellPrice": 1118,
+    "osmiumSellPrice": 1490,
+    "iconName": "Yellow_Moray_Eel_Sprite",
+    "description": "A legendary saltwater fish. Unlike many other fish that breathe through gills, the eel opens and closes its mouth to breathe.",
+    "locations": [
+      "Ocean Beach",
+      "Deep Forest"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy",
+      "snow",
+      "blizzard"
+    ],
+    "times": [
+      "night",
+      "morning",
+      "afternoon",
+      "evening"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "YellowMorayEel",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Beach"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": false,
+          "evening": false,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": true,
+        "dateRangeList": [
+          {
+            "isValidOnSpecificDate": false,
+            "isValidIndefinitelyOnceStarted": false,
+            "random": false,
+            "lastsTill": {
+              "day": 28,
+              "season": "Spring",
+              "year": 1
+            },
+            "startsFrom": {
+              "day": 15,
+              "season": "Spring",
+              "year": 1
+            }
+          },
+          {
+            "isValidOnSpecificDate": false,
+            "isValidIndefinitelyOnceStarted": false,
+            "random": false,
+            "lastsTill": {
+              "day": 28,
+              "season": "Summer",
+              "year": 1
+            },
+            "startsFrom": {
+              "day": 15,
+              "season": "Summer",
+              "year": 1
+            }
+          }
+        ]
+      },
+      {
+        "key": "YellowMorayEel_DeepForest",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Deep Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Rare Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_72005",
+    "key": "PinkSnapper",
+    "name": "Pink snapper",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Circle",
+    "difficulty": "Easy",
+    "minCaughtSize": 20,
+    "maxCaughtSize": 28,
+    "expGranted": 12,
+    "price": 65,
+    "sellPrice": 40,
+    "bronzeSellPrice": 46,
+    "silverSellPrice": 52,
+    "goldSellPrice": 60,
+    "osmiumSellPrice": 80,
+    "iconName": "Pink_Snapper_Sprite",
+    "description": "A common saltwater fish known for its pinkish hue.",
+    "locations": [
+      "Ocean Dock",
+      "Cave Mining Air"
+    ],
+    "seasons": [
+      "spring",
+      "winter",
+      "summer",
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "PinkSnapper",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Dock"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "PinkSnapper_Cave",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Cave Mining Air"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Salt Water Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_72007",
+    "key": "Squid",
+    "name": "Squid",
+    "rarity": "Common",
+    "size": "Medium",
+    "pattern": "Stay",
+    "difficulty": "Medium",
+    "minCaughtSize": 55,
+    "maxCaughtSize": 60,
+    "expGranted": 12,
+    "price": 75,
+    "sellPrice": 45,
+    "bronzeSellPrice": 52,
+    "silverSellPrice": 59,
+    "goldSellPrice": 68,
+    "osmiumSellPrice": 90,
+    "iconName": "Squid_Sprite",
+    "description": "Shoots black ink when threatened.",
+    "locations": [
+      "Ocean Lookout"
+    ],
+    "seasons": [
+      "summer",
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy"
+    ],
+    "times": [
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Squid",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Lookout"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": true,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72008",
+    "key": "Octopus",
+    "name": "Octopus",
+    "rarity": "Uncommon",
+    "size": "Medium",
+    "pattern": "Circle",
+    "difficulty": "Medium",
+    "minCaughtSize": 30.48,
+    "maxCaughtSize": 91.44,
+    "expGranted": 12,
+    "price": 140,
+    "sellPrice": 85,
+    "bronzeSellPrice": 98,
+    "silverSellPrice": 111,
+    "goldSellPrice": 128,
+    "osmiumSellPrice": 170,
+    "iconName": "Octopus_Sprite",
+    "description": "Can regrow lost limbs. It’s usually found crawling on the ocean floor.",
+    "locations": [
+      "Ocean Dock",
+      "Ocean Beach"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy"
+    ],
+    "times": [
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Octopus",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Dock",
+          "Ocean Beach"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72009",
+    "key": "GiantMudskipper_Estuary",
+    "name": "Giant mudskipper",
+    "rarity": "Uncommon",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "Easy",
+    "minCaughtSize": 12,
+    "maxCaughtSize": 27,
+    "expGranted": 12,
+    "price": 65,
+    "sellPrice": 40,
+    "bronzeSellPrice": 46,
+    "silverSellPrice": 52,
+    "goldSellPrice": 60,
+    "osmiumSellPrice": 80,
+    "iconName": "Giant_Mudskipper_Sprite",
+    "description": "It spawns often during the rain.",
+    "locations": [
+      "Estuary",
+      "Rice Field",
+      "Cave Mining Fire Lava"
+    ],
+    "seasons": [
+      "fall",
+      "winter",
+      "spring",
+      "summer"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": false,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "GiantMudskipper_Estuary",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Estuary"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "GiantMudskipper_RiceField",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Rice Field"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "GiantMudskipper_Lava",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Cave Mining Fire Lava"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Rare Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_72010",
+    "key": "Grouper",
+    "name": "Grouper",
+    "rarity": "Uncommon",
+    "size": "Large",
+    "pattern": "Star",
+    "difficulty": "Hard",
+    "minCaughtSize": 100,
+    "maxCaughtSize": 250,
+    "expGranted": 12,
+    "price": 160,
+    "sellPrice": 95,
+    "bronzeSellPrice": 109,
+    "silverSellPrice": 124,
+    "goldSellPrice": 143,
+    "osmiumSellPrice": 190,
+    "iconName": "Grouper_Sprite",
+    "description": "A very large fish. It doesn’t have many teeth and prefers to swallow its prey whole.",
+    "locations": [
+      "Estuary",
+      "Ocean Dock",
+      "Cave Entrance"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Grouper",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Estuary",
+          "Ocean Dock",
+          "Cave Entrance"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72011",
+    "key": "SeaCucumber",
+    "name": "Sea cucumber",
+    "rarity": "Rare",
+    "size": "Medium",
+    "pattern": "Stay",
+    "difficulty": "Medium",
+    "minCaughtSize": 2.5,
+    "maxCaughtSize": 180,
+    "expGranted": 12,
+    "price": 290,
+    "sellPrice": 175,
+    "bronzeSellPrice": 201,
+    "silverSellPrice": 228,
+    "goldSellPrice": 263,
+    "osmiumSellPrice": 350,
+    "iconName": "Sea_Cucumber_Sprite",
+    "description": "Rarely encountered because it likes to live on the deep seafloor.",
+    "locations": [
+      "Ocean Forest",
+      "Deep Forest"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "SeaCucumber",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "SeaCucumber_DeepForest",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Deep Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72012",
+    "key": "Parrotfish",
+    "name": "Parrotfish",
+    "rarity": "Common",
+    "size": "Medium",
+    "pattern": "Circle",
+    "difficulty": "Hard",
+    "minCaughtSize": 30.48,
+    "maxCaughtSize": 121.92,
+    "expGranted": 12,
+    "price": 90,
+    "sellPrice": 55,
+    "bronzeSellPrice": 63,
+    "silverSellPrice": 72,
+    "goldSellPrice": 83,
+    "osmiumSellPrice": 110,
+    "iconName": "Parrotfish_Sprite",
+    "description": "It hunts during the day and sleeps at night in a self-built mucus cocoon.",
+    "locations": [
+      "Ocean Beach",
+      "Ocean Lookout"
+    ],
+    "seasons": [
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Parrotfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Beach",
+          "Ocean Lookout"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": false,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72013",
+    "key": "PolkadotBatfish",
+    "name": "Polka-dot batfish",
+    "rarity": "Uncommon",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "Medium",
+    "minCaughtSize": 25.4,
+    "maxCaughtSize": 38.1,
+    "expGranted": 12,
+    "price": 135,
+    "sellPrice": 80,
+    "bronzeSellPrice": 92,
+    "silverSellPrice": 104,
+    "goldSellPrice": 120,
+    "osmiumSellPrice": 160,
+    "iconName": "Polka-dot_batfish_Sprite",
+    "description": "It eats its prey by snatching them with its circular mouth. Found at sea.",
+    "locations": [
+      "Ocean Forest",
+      "Cave Mining Air"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "sunny",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "PolkadotBatfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": false,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "PolkadotBatfish_Cave",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Cave Mining Air"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72014",
+    "key": "FlamebackFish",
+    "name": "Flameback fish",
+    "rarity": "Uncommon",
+    "size": "Small",
+    "pattern": "Star",
+    "difficulty": "VeryEasy",
+    "minCaughtSize": 3.1,
+    "maxCaughtSize": 8,
+    "expGranted": 12,
+    "price": 100,
+    "sellPrice": 60,
+    "bronzeSellPrice": 69,
+    "silverSellPrice": 78,
+    "goldSellPrice": 90,
+    "osmiumSellPrice": 120,
+    "iconName": "Flameback_Fish_Sprite",
+    "description": "A carnivorous fish found in saltwater.",
+    "locations": [
+      "Ocean Dock"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "rain",
+      "storm",
+      "snow",
+      "blizzard"
+    ],
+    "times": [
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "FlamebackFish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Dock"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": false,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_75001",
+    "key": "GiantStingray",
+    "name": "Giant stingray",
+    "rarity": "Legendary",
+    "size": "Large",
+    "pattern": "Circle",
+    "difficulty": "VeryHard",
+    "minCaughtSize": 200,
+    "maxCaughtSize": 275,
+    "expGranted": 12,
+    "price": 1410,
+    "sellPrice": 845,
+    "bronzeSellPrice": 972,
+    "silverSellPrice": 1099,
+    "goldSellPrice": 1268,
+    "osmiumSellPrice": 1690,
+    "iconName": "Giant_Stingray_Sprite",
+    "description": "A legendary freshwater fish. It’s massive, but it has no bones. The whole body is supported by flexible cartilage.",
+    "locations": [
+      "River Forest",
+      "Deep Forest"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "windy",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard"
+    ],
+    "times": [
+      "afternoon",
+      "evening",
+      "morning",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "GiantStingray",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "River Forest"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": true,
+          "evening": true,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": false,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": false
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": true,
+        "dateRangeList": [
+          {
+            "isValidOnSpecificDate": false,
+            "isValidIndefinitelyOnceStarted": false,
+            "random": false,
+            "lastsTill": {
+              "day": 28,
+              "season": "Spring",
+              "year": 1
+            },
+            "startsFrom": {
+              "day": 15,
+              "season": "Spring",
+              "year": 1
+            }
+          },
+          {
+            "isValidOnSpecificDate": false,
+            "isValidIndefinitelyOnceStarted": false,
+            "random": false,
+            "lastsTill": {
+              "day": 28,
+              "season": "Summer",
+              "year": 1
+            },
+            "startsFrom": {
+              "day": 15,
+              "season": "Summer",
+              "year": 1
+            }
+          }
+        ]
+      },
+      {
+        "key": "GiantStingray_DeepForest",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Deep Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72015",
+    "key": "Lobster",
+    "name": "Lobster",
+    "rarity": "Uncommon",
+    "size": "Medium",
+    "pattern": "Star",
+    "difficulty": "Medium",
+    "minCaughtSize": 25,
+    "maxCaughtSize": 50,
+    "expGranted": 12,
+    "price": 190,
+    "sellPrice": 115,
+    "bronzeSellPrice": 132,
+    "silverSellPrice": 150,
+    "goldSellPrice": 173,
+    "osmiumSellPrice": 230,
+    "iconName": "Lobster_Sprite",
+    "description": "Commonly found near the pier.",
+    "locations": [
+      "Ocean Beach",
+      "Cave Mining Fire"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Lobster",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Beach"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Lobster_Cave",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Cave Mining Fire"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72016",
+    "key": "Lionfish",
+    "name": "Lionfish",
+    "rarity": "Uncommon",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "Medium",
+    "minCaughtSize": 30,
+    "maxCaughtSize": 38,
+    "expGranted": 12,
+    "price": 90,
+    "sellPrice": 55,
+    "bronzeSellPrice": 63,
+    "silverSellPrice": 72,
+    "goldSellPrice": 83,
+    "osmiumSellPrice": 110,
+    "iconName": "Lionfish_Sprite",
+    "description": "It likes warm water. Commonly found in the Summer.",
+    "locations": [
+      "Ocean Beach",
+      "Ocean Forest"
+    ],
+    "seasons": [
+      "spring",
+      "summer"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Lionfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Beach",
+          "Ocean Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Salt Water Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_72017",
+    "key": "Damselfish",
+    "name": "Damselfish",
+    "rarity": "Rare",
+    "size": "Small",
+    "pattern": "Circle",
+    "difficulty": "VeryEasy",
+    "minCaughtSize": 5.08,
+    "maxCaughtSize": 7.62,
+    "expGranted": 12,
+    "price": 235,
+    "sellPrice": 140,
+    "bronzeSellPrice": 161,
+    "silverSellPrice": 182,
+    "goldSellPrice": 210,
+    "osmiumSellPrice": 280,
+    "iconName": "Damselfish_Sprite",
+    "description": "Small and aggressive.",
+    "locations": [
+      "Ocean Beach"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Damselfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Beach"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": false,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": false
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72018",
+    "key": "Mandarin",
+    "name": "Mandarin",
+    "rarity": "Rare",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "VeryEasy",
+    "minCaughtSize": 7,
+    "maxCaughtSize": 10,
+    "expGranted": 12,
+    "price": 235,
+    "sellPrice": 140,
+    "bronzeSellPrice": 161,
+    "silverSellPrice": 182,
+    "goldSellPrice": 210,
+    "osmiumSellPrice": 280,
+    "iconName": "Mandarin_Sprite",
+    "description": "A colorful fish that comes out at night.",
+    "locations": [
+      "Ocean Forest"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Mandarin",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Forest"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": false,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": false
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72019",
+    "key": "Archer",
+    "name": "Archer",
+    "rarity": "Uncommon",
+    "size": "Small",
+    "pattern": "Circle",
+    "difficulty": "Easy",
+    "minCaughtSize": 22.8,
+    "maxCaughtSize": 30.5,
+    "expGranted": 12,
+    "price": 115,
+    "sellPrice": 70,
+    "bronzeSellPrice": 81,
+    "silverSellPrice": 91,
+    "goldSellPrice": 105,
+    "osmiumSellPrice": 140,
+    "iconName": "Archer_Sprite",
+    "description": "An uncommon ocean fish.",
+    "locations": [
+      "River Farm",
+      "Cave Entrance",
+      "Savannah"
+    ],
+    "seasons": [
+      "fall",
+      "winter",
+      "spring",
+      "summer"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "Archer",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Farm",
+          "Cave Entrance"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Archer_Savannah",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Savannah"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72020",
+    "key": "Angelfish",
+    "name": "Angelfish",
+    "rarity": "Uncommon",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "Easy",
+    "minCaughtSize": 12.7,
+    "maxCaughtSize": 25.4,
+    "expGranted": 12,
+    "price": 115,
+    "sellPrice": 70,
+    "bronzeSellPrice": 81,
+    "silverSellPrice": 91,
+    "goldSellPrice": 105,
+    "osmiumSellPrice": 140,
+    "iconName": "Angelfish_Sprite",
+    "description": "They aren’t afraid of boats, but can be hard to find.",
+    "locations": [
+      "River Forest",
+      "Deep Forest"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": false,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "Angelfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Forest",
+          "Deep Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72021",
+    "key": "BlueTang",
+    "name": "Blue tang",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Circle",
+    "difficulty": "Easy",
+    "minCaughtSize": 13,
+    "maxCaughtSize": 37,
+    "expGranted": 12,
+    "price": 65,
+    "sellPrice": 40,
+    "bronzeSellPrice": 46,
+    "silverSellPrice": 52,
+    "goldSellPrice": 60,
+    "osmiumSellPrice": 80,
+    "iconName": "Blue_Tang_Sprite",
+    "description": "It’s flat and circular.",
+    "locations": [
+      "Ocean Beach",
+      "Cave Mining Earth"
+    ],
+    "seasons": [
+      "spring",
+      "fall",
+      "winter",
+      "summer"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": true,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "BlueTang",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Beach"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "BlueTang_Cave",
+        "spawnArea": {
+          "canBeCatchOnCave": true,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Cave Mining Earth"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72022",
+    "key": "Clownfish",
+    "name": "Clownfish",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Star",
+    "difficulty": "VeryEasy",
+    "minCaughtSize": 7.6,
+    "maxCaughtSize": 9,
+    "expGranted": 12,
+    "price": 60,
+    "sellPrice": 35,
+    "bronzeSellPrice": 40,
+    "silverSellPrice": 46,
+    "goldSellPrice": 53,
+    "osmiumSellPrice": 70,
+    "iconName": "Clownfish_Sprite",
+    "description": "It’s commonly found on warm Spring nights.",
+    "locations": [
+      "Ocean Dock"
+    ],
+    "seasons": [
+      "spring",
+      "summer"
+    ],
+    "weathers": [
+      "sunny",
+      "windy"
+    ],
+    "times": [
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Clownfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Dock"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": false,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": false
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72023",
+    "key": "Firefish",
+    "name": "Firefish",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "VeryEasy",
+    "minCaughtSize": 5.08,
+    "maxCaughtSize": 7.62,
+    "expGranted": 12,
+    "price": 60,
+    "sellPrice": 35,
+    "bronzeSellPrice": 40,
+    "silverSellPrice": 46,
+    "goldSellPrice": 53,
+    "osmiumSellPrice": 70,
+    "iconName": "Firefish_Sprite",
+    "description": "Fearful in nature.",
+    "locations": [
+      "Ocean Forest"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Firefish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72024",
+    "key": "AsianSheepshead",
+    "name": "Asian sheepshead",
+    "rarity": "Rare",
+    "size": "Medium",
+    "pattern": "Circle",
+    "difficulty": "Medium",
+    "minCaughtSize": 87.5,
+    "maxCaughtSize": 100,
+    "expGranted": 12,
+    "price": 290,
+    "sellPrice": 175,
+    "bronzeSellPrice": 201,
+    "silverSellPrice": 228,
+    "goldSellPrice": 263,
+    "osmiumSellPrice": 350,
+    "iconName": "Asian_Sheepshead_Sprite",
+    "description": "Feeds on shellfish and crustaceans.",
+    "locations": [
+      "Ocean Forest"
+    ],
+    "seasons": [
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "AsianSheepshead",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Salt Water Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_72025",
+    "key": "Boxfish",
+    "name": "Boxfish",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "Easy",
+    "minCaughtSize": 12.7,
+    "maxCaughtSize": 45.72,
+    "expGranted": 12,
+    "price": 65,
+    "sellPrice": 40,
+    "bronzeSellPrice": 46,
+    "silverSellPrice": 52,
+    "goldSellPrice": 60,
+    "osmiumSellPrice": 80,
+    "iconName": "BoxFish_Sprite",
+    "description": "When threatened, it releases poisonous substances from its skin.",
+    "locations": [
+      "Ocean Lookout"
+    ],
+    "seasons": [
+      "spring",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": true,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Boxfish",
+        "spawnArea": {
+          "canBeCatchOnCave": true,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Lookout"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72026",
+    "key": "Mackarel",
+    "name": "Mackerel",
+    "rarity": "Common",
+    "size": "Medium",
+    "pattern": "Star",
+    "difficulty": "Medium",
+    "minCaughtSize": 30.48,
+    "maxCaughtSize": 45.72,
+    "expGranted": 12,
+    "price": 75,
+    "sellPrice": 45,
+    "bronzeSellPrice": 52,
+    "silverSellPrice": 59,
+    "goldSellPrice": 68,
+    "osmiumSellPrice": 90,
+    "iconName": "Mackerel_Sprite",
+    "description": "Swims in large groups.",
+    "locations": [
+      "Ocean Lookout",
+      "Ocean Forest",
+      "Cave Mining Fire Lava"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Mackarel",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Lookout",
+          "Ocean Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Mackarel_Lava",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Cave Mining Fire Lava"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72027",
+    "key": "YellowfinTuna",
+    "name": "Yellowfin tuna",
+    "rarity": "Rare",
+    "size": "Large",
+    "pattern": "Circle",
+    "difficulty": "Hard",
+    "minCaughtSize": 110,
+    "maxCaughtSize": 210,
+    "expGranted": 12,
+    "price": 350,
+    "sellPrice": 210,
+    "bronzeSellPrice": 242,
+    "silverSellPrice": 273,
+    "goldSellPrice": 315,
+    "osmiumSellPrice": 420,
+    "iconName": "Yellowfin_tuna_Sprite",
+    "description": "That is one big tuna!",
+    "locations": [
+      "Ocean Dock",
+      "Ocean Beach"
+    ],
+    "seasons": [
+      "winter"
+    ],
+    "weathers": [
+      "rain",
+      "storm",
+      "snow",
+      "blizzard"
+    ],
+    "times": [
+      "afternoon",
+      "evening"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "YellowfinTuna",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Dock",
+          "Ocean Beach"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": true,
+          "evening": true,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": false,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Salt Water Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_72028",
+    "key": "Crab",
+    "name": "Crab",
+    "rarity": "Uncommon",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "Easy",
+    "minCaughtSize": 11,
+    "maxCaughtSize": 17.7,
+    "expGranted": 12,
+    "price": 115,
+    "sellPrice": 70,
+    "bronzeSellPrice": 81,
+    "silverSellPrice": 91,
+    "goldSellPrice": 105,
+    "osmiumSellPrice": 140,
+    "iconName": "Crab_Sprite",
+    "description": "It walks sideways.",
+    "locations": [
+      "Rice Field",
+      "River Forest",
+      "Ocean Lookout"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "Crab",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Rice Field",
+          "River Forest",
+          "Ocean Lookout"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_72029",
+    "key": "Swordfish",
+    "name": "Swordfish",
+    "rarity": "Rare",
+    "size": "Large",
+    "pattern": "Star",
+    "difficulty": "Hard",
+    "minCaughtSize": 119.38,
+    "maxCaughtSize": 190.5,
+    "expGranted": 12,
+    "price": 350,
+    "sellPrice": 210,
+    "bronzeSellPrice": 242,
+    "silverSellPrice": 273,
+    "goldSellPrice": 315,
+    "osmiumSellPrice": 420,
+    "iconName": "Swordfish_Sprite",
+    "description": "Its long, pointy bill is said to resemble a sword.",
+    "locations": [
+      "Ocean Dock"
+    ],
+    "seasons": [
+      "spring",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Swordfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Dock"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_73001",
+    "key": "Cod",
+    "name": "Cod",
+    "rarity": "Common",
+    "size": "Medium",
+    "pattern": "Stay",
+    "difficulty": "Medium",
+    "minCaughtSize": 68.5,
+    "maxCaughtSize": 106.6,
+    "expGranted": 12,
+    "price": 75,
+    "sellPrice": 45,
+    "bronzeSellPrice": 52,
+    "silverSellPrice": 59,
+    "goldSellPrice": 68,
+    "osmiumSellPrice": 90,
+    "iconName": "Cod_Sprite",
+    "description": "A common fish.",
+    "locations": [
+      "Estuary"
+    ],
+    "seasons": [
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Cod",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Estuary"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": false,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": false
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_73003",
+    "key": "Barracuda",
+    "name": "Barracuda",
+    "rarity": "Uncommon",
+    "size": "Medium",
+    "pattern": "Circle",
+    "difficulty": "Medium",
+    "minCaughtSize": 60,
+    "maxCaughtSize": 99,
+    "expGranted": 12,
+    "price": 100,
+    "sellPrice": 60,
+    "bronzeSellPrice": 69,
+    "silverSellPrice": 78,
+    "goldSellPrice": 90,
+    "osmiumSellPrice": 120,
+    "iconName": "Barracuda_Sprite",
+    "description": "A predatory saltwater fish.",
+    "locations": [
+      "Ocean Beach",
+      "Ocean Dock"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Barracuda",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Beach",
+          "Ocean Dock"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_73004",
+    "key": "GiantSeaBass",
+    "name": "Giant sea bass",
+    "rarity": "Legendary",
+    "size": "Large",
+    "pattern": "Star",
+    "difficulty": "VeryHard",
+    "minCaughtSize": 200,
+    "maxCaughtSize": 213,
+    "expGranted": 12,
+    "price": 1410,
+    "sellPrice": 845,
+    "bronzeSellPrice": 972,
+    "silverSellPrice": 1099,
+    "goldSellPrice": 1268,
+    "osmiumSellPrice": 1690,
+    "iconName": "Giant_Sea_Bass_Sprite",
+    "description": "The locals call it black sea bass. Legendary.",
+    "locations": [
+      "Ocean Forest",
+      "Deep Forest"
+    ],
+    "seasons": [
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "GiantSeaBass",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": false,
+          "evening": false,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": true,
+        "dateRangeList": [
+          {
+            "isValidOnSpecificDate": false,
+            "isValidIndefinitelyOnceStarted": false,
+            "random": false,
+            "lastsTill": {
+              "day": 7,
+              "season": "Fall",
+              "year": 1
+            },
+            "startsFrom": {
+              "day": 1,
+              "season": "Fall",
+              "year": 1
+            }
+          }
+        ]
+      },
+      {
+        "key": "GiantSeaBass_DeepForest",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Deep Forest"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": false,
+          "evening": false,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Rare Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_73005",
+    "key": "Sardine",
+    "name": "Sardine",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "VeryEasy",
+    "minCaughtSize": 15.24,
+    "maxCaughtSize": 30.48,
+    "expGranted": 12,
+    "price": 60,
+    "sellPrice": 35,
+    "bronzeSellPrice": 40,
+    "silverSellPrice": 46,
+    "goldSellPrice": 53,
+    "osmiumSellPrice": 70,
+    "iconName": "Sardines_Sprite",
+    "description": "Very oily and packed with nutrients.",
+    "locations": [
+      "Ocean Beach",
+      "Ocean Lookout",
+      "Cave Mining Fire Lava"
+    ],
+    "seasons": [
+      "summer",
+      "fall",
+      "spring",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy",
+      "snow",
+      "blizzard"
+    ],
+    "times": [
+      "evening",
+      "night",
+      "morning",
+      "afternoon"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Sardine",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Beach",
+          "Ocean Lookout"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": true,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Sardine_Lava",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Cave Mining Fire Lava"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Salt Water Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_73006",
+    "key": "RedSnapper",
+    "name": "Red snapper",
+    "rarity": "Common",
+    "size": "Medium",
+    "pattern": "Circle",
+    "difficulty": "Medium",
+    "minCaughtSize": 40.64,
+    "maxCaughtSize": 101.6,
+    "expGranted": 12,
+    "price": 75,
+    "sellPrice": 45,
+    "bronzeSellPrice": 52,
+    "silverSellPrice": 59,
+    "goldSellPrice": 68,
+    "osmiumSellPrice": 90,
+    "iconName": "Red_Snapper_Sprite",
+    "description": "It lays eggs to reproduce.",
+    "locations": [
+      "River Town",
+      "Lake Temple",
+      "Estuary"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "RedSnapper",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "River Town",
+          "Lake Temple"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "RedSnapper_Estuary",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Estuary"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_75002",
+    "key": "GreenSawfish",
+    "name": "Green sawfish",
+    "rarity": "Legendary",
+    "size": "Large",
+    "pattern": "Star",
+    "difficulty": "VeryHard",
+    "minCaughtSize": 380,
+    "maxCaughtSize": 731,
+    "expGranted": 12,
+    "price": 1410,
+    "sellPrice": 845,
+    "bronzeSellPrice": 972,
+    "silverSellPrice": 1099,
+    "goldSellPrice": 1268,
+    "osmiumSellPrice": 1690,
+    "iconName": "Green_Sawfish_Sprite",
+    "description": "A legendary freshwater fish. It can sense electricity from other animals.",
+    "locations": [
+      "Estuary",
+      "Deep Forest"
+    ],
+    "seasons": [
+      "winter"
+    ],
+    "weathers": [
+      "rain",
+      "storm",
+      "snow",
+      "blizzard"
+    ],
+    "times": [
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "GreenSawfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Estuary"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": false,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": true,
+        "dateRangeList": [
+          {
+            "isValidOnSpecificDate": false,
+            "isValidIndefinitelyOnceStarted": false,
+            "random": false,
+            "lastsTill": {
+              "day": 28,
+              "season": "Winter",
+              "year": 1
+            },
+            "startsFrom": {
+              "day": 1,
+              "season": "Winter",
+              "year": 1
+            }
+          }
+        ]
+      },
+      {
+        "key": "GreenSawfish_DeepForest",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Deep Forest"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": false,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Day Fishing Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_73007",
+    "key": "Sturgeon",
+    "name": "Sturgeon",
+    "rarity": "Rare",
+    "size": "Large",
+    "pattern": "Stay",
+    "difficulty": "VeryHard",
+    "minCaughtSize": 213,
+    "maxCaughtSize": 305,
+    "expGranted": 12,
+    "price": 400,
+    "sellPrice": 240,
+    "bronzeSellPrice": 276,
+    "silverSellPrice": 312,
+    "goldSellPrice": 360,
+    "osmiumSellPrice": 480,
+    "iconName": "Sturgeon_Sprite",
+    "description": "Female sturgeon can lay two to three million eggs per breeding season.",
+    "locations": [
+      "River Farm",
+      "Lake Temple",
+      "Deep Forest"
+    ],
+    "seasons": [
+      "summer",
+      "fall",
+      "winter",
+      "spring"
+    ],
+    "weathers": [
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "sunny",
+      "windy"
+    ],
+    "times": [
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": true,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "Sturgeon",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Farm",
+          "Lake Temple"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": false,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "Sturgeon_DeepForest",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Deep Forest"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Rare Fish Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_73008",
+    "key": "SockeyeSalmon_Estuary",
+    "name": "Sockeye salmon",
+    "rarity": "Rare",
+    "size": "Medium",
+    "pattern": "Star",
+    "difficulty": "Medium",
+    "minCaughtSize": 71.12,
+    "maxCaughtSize": 76.2,
+    "expGranted": 12,
+    "price": 135,
+    "sellPrice": 80,
+    "bronzeSellPrice": 92,
+    "silverSellPrice": 104,
+    "goldSellPrice": 120,
+    "osmiumSellPrice": 160,
+    "iconName": "Sockeye_Salmon_Sprite",
+    "description": "It hatches in a lake, then journeys out to sea to feed on zooplankton.",
+    "locations": [
+      "Estuary",
+      "Lake Temple",
+      "River Farm",
+      "River Forest",
+      "River Town"
+    ],
+    "seasons": [
+      "winter",
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": true,
+      "ocean": true,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "SockeyeSalmon_Estuary",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Estuary"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "SockeyeSalmon_LakeTemple",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": true,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "Lake Temple"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": false,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      },
+      {
+        "key": "SockeyeSalmon_Fall",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Farm",
+          "River Forest",
+          "River Town"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_73002",
+    "key": "Shrimp",
+    "name": "Shrimp",
+    "rarity": "Common",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "VeryEasy",
+    "minCaughtSize": 4,
+    "maxCaughtSize": 8,
+    "expGranted": 12,
+    "price": 60,
+    "sellPrice": 35,
+    "bronzeSellPrice": 40,
+    "silverSellPrice": 46,
+    "goldSellPrice": 53,
+    "osmiumSellPrice": 70,
+    "iconName": "Shrimp_Sprite",
+    "description": "Travels in schools.",
+    "locations": [
+      "Pond"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "snow",
+      "blizzard",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": false,
+      "pond": true,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Shrimp",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": true,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Pond"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": true,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_73009",
+    "key": "Barramundi",
+    "name": "Barramundi",
+    "rarity": "Rare",
+    "size": "Medium",
+    "pattern": "Circle",
+    "difficulty": "Medium",
+    "minCaughtSize": 60,
+    "maxCaughtSize": 150,
+    "expGranted": 12,
+    "price": 290,
+    "sellPrice": 175,
+    "bronzeSellPrice": 201,
+    "silverSellPrice": 228,
+    "goldSellPrice": 263,
+    "osmiumSellPrice": 350,
+    "iconName": "Barramundi_Sprite",
+    "description": "Its habitat includes streams, lakes, and coastal waters.",
+    "locations": [
+      "River Town",
+      "Estuary"
+    ],
+    "seasons": [
+      "spring",
+      "fall"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": true,
+      "pond": false,
+      "river": true
+    },
+    "spawnSettings": [
+      {
+        "key": "Barramundi",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": true,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": true
+        },
+        "spawnLocation": [
+          "River Town",
+          "Estuary"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": true,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": [
+      {
+        "bundleName": "Night Fishing Offering",
+        "altarName": "Catching Altar",
+        "roomName": "Lake Temple",
+        "amount": 1,
+        "quality": "Regular"
+      }
+    ]
+  },
+  {
+    "id": "item_72031",
+    "key": "Jellyfish",
+    "name": "Jellyfish",
+    "rarity": "Rare",
+    "size": "Small",
+    "pattern": "Stay",
+    "difficulty": "Easy",
+    "minCaughtSize": 1,
+    "maxCaughtSize": 40,
+    "expGranted": 12,
+    "price": 160,
+    "sellPrice": 95,
+    "bronzeSellPrice": 109,
+    "silverSellPrice": 124,
+    "goldSellPrice": 143,
+    "osmiumSellPrice": 190,
+    "iconName": "Jellyfish_Sprite",
+    "description": "Cute, but venomous and dangerous.",
+    "locations": [
+      "Ocean Beach",
+      "Ocean Lookout"
+    ],
+    "seasons": [
+      "spring"
+    ],
+    "weathers": [
+      "sunny",
+      "windy"
+    ],
+    "times": [
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": false,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Jellyfish",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Beach",
+          "Ocean Lookout"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": false,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": false
+        },
+        "spawnSeason": {
+          "spring": true,
+          "summer": false,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_75004",
+    "key": "GreatWhiteShark",
+    "name": "Great white shark",
+    "rarity": "Legendary",
+    "size": "Large",
+    "pattern": "Circle",
+    "difficulty": "VeryHard",
+    "minCaughtSize": 340,
+    "maxCaughtSize": 640,
+    "expGranted": 12,
+    "price": 1410,
+    "sellPrice": 845,
+    "bronzeSellPrice": 972,
+    "silverSellPrice": 1099,
+    "goldSellPrice": 1268,
+    "osmiumSellPrice": 1690,
+    "iconName": "Great_White_Shark_Sprite",
+    "description": "A legendary saltwater fish. The apex predator of the ocean.",
+    "locations": [
+      "Ocean Dock"
+    ],
+    "seasons": [
+      "summer"
+    ],
+    "weathers": [
+      "sunny",
+      "windy"
+    ],
+    "times": [
+      "morning",
+      "afternoon"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": false,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "GreatWhiteShark",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Dock"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": true,
+          "evening": false,
+          "night": false
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": false,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": false
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": true,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": true,
+        "dateRangeList": [
+          {
+            "isValidOnSpecificDate": false,
+            "isValidIndefinitelyOnceStarted": false,
+            "random": false,
+            "lastsTill": {
+              "day": 14,
+              "season": "Summer",
+              "year": 1
+            },
+            "startsFrom": {
+              "day": 1,
+              "season": "Summer",
+              "year": 1
+            }
+          }
+        ]
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_75003",
+    "key": "Hammerhead",
+    "name": "Hammerhead",
+    "rarity": "Legendary",
+    "size": "Large",
+    "pattern": "Star",
+    "difficulty": "VeryHard",
+    "minCaughtSize": 300,
+    "maxCaughtSize": 400,
+    "expGranted": 12,
+    "price": 1410,
+    "sellPrice": 845,
+    "bronzeSellPrice": 972,
+    "silverSellPrice": 1099,
+    "goldSellPrice": 1268,
+    "osmiumSellPrice": 1690,
+    "iconName": "Hammerhead_Sprite",
+    "description": "A legendary saltwater fish. It uses its powerful head to hunt for food.",
+    "locations": [
+      "Ocean Lookout"
+    ],
+    "seasons": [
+      "fall",
+      "winter"
+    ],
+    "weathers": [
+      "rain",
+      "storm",
+      "snow",
+      "blizzard"
+    ],
+    "times": [
+      "morning",
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": false,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "Hammerhead",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Lookout"
+        ],
+        "spawnTime": {
+          "morning": true,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": false,
+          "rain": true,
+          "snow": true,
+          "blizzard": true,
+          "windy": false,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": false,
+          "fall": true,
+          "winter": true
+        },
+        "isUsingSpecificDate": true,
+        "dateRangeList": [
+          {
+            "isValidOnSpecificDate": false,
+            "isValidIndefinitelyOnceStarted": false,
+            "random": false,
+            "lastsTill": {
+              "day": 21,
+              "season": "Fall",
+              "year": 1
+            },
+            "startsFrom": {
+              "day": 8,
+              "season": "Fall",
+              "year": 1
+            }
+          },
+          {
+            "isValidOnSpecificDate": false,
+            "isValidIndefinitelyOnceStarted": false,
+            "random": false,
+            "lastsTill": {
+              "day": 21,
+              "season": "Winter",
+              "year": 1
+            },
+            "startsFrom": {
+              "day": 8,
+              "season": "Winter",
+              "year": 1
+            }
+          }
+        ]
+      }
+    ],
+    "offerings": []
+  },
+  {
+    "id": "item_75005",
+    "key": "RajaAmpatShark",
+    "name": "Raja Ampat shark",
+    "rarity": "Legendary",
+    "size": "Large",
+    "pattern": "Stay",
+    "difficulty": "Hard",
+    "minCaughtSize": 72,
+    "maxCaughtSize": 160,
+    "expGranted": 10,
+    "price": 1240,
+    "sellPrice": 745,
+    "bronzeSellPrice": 857,
+    "silverSellPrice": 969,
+    "goldSellPrice": 1118,
+    "osmiumSellPrice": 1490,
+    "iconName": "Raja_Ampat_Shark_Sprite",
+    "description": "A legendary saltwater fish. It can “walk” along the seafloor and over shallow reefs.",
+    "locations": [
+      "Ocean Lookout",
+      "Deep Forest"
+    ],
+    "seasons": [
+      "summer"
+    ],
+    "weathers": [
+      "sunny",
+      "rain",
+      "storm",
+      "windy"
+    ],
+    "times": [
+      "evening",
+      "night"
+    ],
+    "waterTypes": {
+      "cave": false,
+      "lake": false,
+      "ocean": false,
+      "pond": false,
+      "river": false
+    },
+    "spawnSettings": [
+      {
+        "key": "RajaAmpatShark",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Ocean Lookout"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": true,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": true,
+        "dateRangeList": [
+          {
+            "isValidOnSpecificDate": false,
+            "isValidIndefinitelyOnceStarted": false,
+            "random": false,
+            "lastsTill": {
+              "day": 14,
+              "season": "Summer",
+              "year": 1
+            },
+            "startsFrom": {
+              "day": 1,
+              "season": "Summer",
+              "year": 1
+            }
+          }
+        ]
+      },
+      {
+        "key": "RajaAmpatShark_DeepForest",
+        "spawnArea": {
+          "canBeCatchOnCave": false,
+          "canBeCatchOnLake": false,
+          "canBeCatchOnOcean": false,
+          "canBeCatchOnPond": false,
+          "canBeCatchOnRiver": false
+        },
+        "spawnLocation": [
+          "Deep Forest"
+        ],
+        "spawnTime": {
+          "morning": false,
+          "afternoon": false,
+          "evening": true,
+          "night": true
+        },
+        "spawnWeather": {
+          "sunny": true,
+          "rain": true,
+          "snow": false,
+          "blizzard": false,
+          "windy": true,
+          "storm": true
+        },
+        "spawnSeason": {
+          "spring": false,
+          "summer": true,
+          "fall": false,
+          "winter": false
+        },
+        "isUsingSpecificDate": false,
+        "dateRangeList": []
+      }
+    ],
+    "offerings": []
+  }
+]

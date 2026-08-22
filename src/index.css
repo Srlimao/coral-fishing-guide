@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'QTVagaRound';
+  src: url('./assets/fonts/QTVagaRound-Bold.woff2') format('woff2'),
+       url('./assets/fonts/QTVagaRound-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QTVagaRound';
+  src: url('./assets/fonts/QTVagaRound.woff2') format('woff2'),
+       url('./assets/fonts/QTVagaRound.woff') format('woff');
+  font-weight: 400;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --cg-bg-main: #13181b;
+  --cg-card-bg: #f7f2e8;
+  --cg-card-subtle: #ede6db;
+  --cg-card-border: #e2d3be;
+  --cg-card-text: #5a4627;
+  --cg-card-text-muted: #8c785b;
+  --cg-accent: #d89e43;
+  --cg-accent-hover: #c48c34;
+  --cg-coral: #e76f51;
+  --cg-teal: #2a9d8f;
+  --cg-gold: #f59e0b;
+  --cg-header-bg: rgba(19, 24, 27, 0.94);
+  --cg-header-text: #8a7c67;
+  --cg-header-text-active: #d89e43;
+  --cg-card-radius: 24px;
+}
+
+html, body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'QTVagaRound', 'Outfit', system-ui, -apple-system, sans-serif;
+  background-color: var(--cg-bg-main);
+  color: var(--cg-card-text);
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(rgba(10, 15, 18, 0.82), rgba(10, 15, 18, 0.88)) fixed,
+              url('./assets/images/bg.jpg') center top no-repeat fixed;
+  background-size: cover;
+}
+
+/* Coral Guide Header Glass */
+.glass-header {
+  background-color: var(--cg-header-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel {
+  background-color: rgba(19, 24, 27, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  color: #f1f5f9;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* Coral Guide Authentic Pill Buttons */
+.cg-pill {
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 255, 255, 0.22);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #c4b5a0;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.15s ease;
+}
+
+.cg-pill:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+.cg-pill-active {
+  background-color: #ffffff !important;
+  color: #13181b !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Standard Button Pill */
+.btn-pill {
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.15s ease;
+}
+
+.btn-pill-active {
+  background-color: #ffffff;
+  color: #13181b;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-pill-inactive {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #c4b5a0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-pill-inactive:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+
+/* Coral Guide Standard Card */
+.cg-card {
+  background-color: var(--cg-card-bg);
+  border-radius: var(--cg-card-radius);
+  border: 1px solid var(--cg-card-border);
+  color: var(--cg-card-text);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.cg-card:hover {
+  border-color: #d1bfa6;
+}
+
+.cg-card-interactive:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -4px rgba(0, 0, 0, 0.45);
+}
+
+/* Primary Amber Button */
+.btn-amber {
+  background-color: #b45309;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.5rem 1.15rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(180, 83, 9, 0.35);
+  transition: all 0.15s ease;
+}
+
+.btn-amber:hover {
+  background-color: #92400e;
+  transform: translateY(-1px);
+}
+
+/* Rarity Badges */
+.badge-rarity-Common {
+  background-color: #64748b;
+  color: #ffffff;
+}
+
+.badge-rarity-Uncommon {
+  background-color: #059669;
+  color: #ffffff;
+}
+
+.badge-rarity-Rare {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.badge-rarity-Legendary {
+  background: linear-gradient(135deg, #d97706, #f59e0b, #fbbf24);
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes pulse-gentle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.03); }
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 2.5s infinite ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(196, 181, 160, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(196, 181, 160, 0.7);
+}
