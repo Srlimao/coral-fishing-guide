@@ -80,7 +80,7 @@ export function isFishSpawnActive(
 
 export function getFishExclusivityInfo(
   fish: FishItem,
-  currentSeason: Season,
+  _currentSeason: Season,
   userProgress: UserProgress
 ): ExclusivityInfo {
   const flags: string[] = [];
@@ -90,24 +90,7 @@ export function getFishExclusivityInfo(
   const isNeededMuseum = !userProgress.donatedMuseum[fish.id];
   const isNeededTemple = fish.offerings.length > 0 && !userProgress.offeredTemple[fish.id];
 
-  // 1. Leaving Soon Alert
-  const nextSeason =
-    currentSeason === 'spring'
-      ? 'summer'
-      : currentSeason === 'summer'
-      ? 'fall'
-      : currentSeason === 'fall'
-      ? 'winter'
-      : 'spring';
-  const isCurrentSeason = fish.seasons.includes(currentSeason);
-  const isLeavingSoon = isCurrentSeason && !fish.seasons.includes(nextSeason);
-
-  if (isLeavingSoon) {
-    flags.push(`Leaving Soon`);
-    exclusivityWeight += 600;
-  }
-
-  // 2. Season Exclusivity (Single Season)
+  // 1. Season Exclusivity (Single Season)
   if (fish.seasons.length === 1) {
     const seasonLabel = fish.seasons[0].charAt(0).toUpperCase() + fish.seasons[0].slice(1);
     flags.push(`${seasonLabel} Exclusive`);
