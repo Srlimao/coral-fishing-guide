@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { useFishing } from '../../context/FishingContext';
-import { X, Download, Upload, Trash2, Check, AlertTriangle } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
+import { X, Download, Upload, Trash2, Check, AlertTriangle, Globe } from 'lucide-react';
 
 export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const { exportData, importData, resetProgress } = useFishing();
+  const { language, setLanguage, supportedLanguages, t } = useLanguage();
+
   const [importText, setImportText] = useState('');
   const [statusMsg, setStatusMsg] = useState<{ text: string; type: 'success' | 'error' } | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
@@ -40,15 +43,16 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md">
-      <div className="bg-[#1f2937] border border-white/10 rounded-2xl w-full max-w-lg overflow-hidden shadow-2xl text-[#f3f4f6]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md overflow-y-auto">
+      <div className="bg-[#182228] border border-white/10 rounded-2xl w-full max-w-lg overflow-hidden shadow-2xl text-[#f3f4f6] my-8">
         {/* Modal Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
           <h3 className="text-lg font-bold text-white flex items-center gap-2">
-            <span>⚙️ Save Data & Progress</span>
+            <span>⚙️ {t('nav_settings')}</span>
           </h3>
           <button
             onClick={onClose}
+            aria-label="Close"
             className="p-1 rounded-lg text-neutral-400 hover:text-white hover:bg-white/10"
           >
             <X className="w-5 h-5" />
@@ -56,10 +60,10 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
         </div>
 
         {/* Modal Body */}
-        <div className="p-6 space-y-6">
+        <div className="p-6 space-y-5 max-h-[75vh] overflow-y-auto text-xs">
           {statusMsg && (
             <div
-              className={`p-3 rounded-xl text-sm font-medium flex items-center gap-2 ${
+              className={`p-3 rounded-xl text-xs font-medium flex items-center gap-2 ${
                 statusMsg.type === 'success'
                   ? 'bg-emerald-950/70 border border-emerald-500/30 text-emerald-300'
                   : 'bg-rose-950/70 border border-rose-500/30 text-rose-300'
@@ -70,15 +74,37 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
             </div>
           )}
 
+          {/* Language Selection Grid */}
+          <div className="bg-black/20 p-4 rounded-xl border border-white/5 space-y-2.5">
+            <div className="flex items-center gap-1.5 font-bold text-white text-sm">
+              <Globe className="w-4 h-4 text-[#c4b5a0]" />
+              <span>{t('language_modal_title')}</span>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
+              {supportedLanguages.map(l => (
+                <button
+                  key={l.code}
+                  onClick={() => setLanguage(l.code)}
+                  className={`cg-pill py-2 px-2 text-xs flex flex-col items-center justify-center gap-0.5 ${
+                    language === l.code ? 'cg-pill-active' : ''
+                  }`}
+                >
+                  <span className="text-base">{l.flag}</span>
+                  <span className="text-[10px] font-bold truncate max-w-full">{l.nativeName}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Export Section */}
           <div className="bg-black/20 p-4 rounded-xl border border-white/5 space-y-2">
-            <h4 className="font-semibold text-sm text-neutral-200">Export Backup</h4>
-            <p className="text-xs text-neutral-400">
+            <h4 className="font-semibold text-xs text-neutral-200">Export Backup</h4>
+            <p className="text-[11px] text-neutral-400">
               Download your caught fish, temple offerings, and museum checklist as a JSON backup file.
             </p>
             <button
               onClick={handleExport}
-              className="btn-amber text-xs py-2 px-3 mt-1 inline-flex items-center gap-1.5"
+              className="cg-pill cg-pill-active text-xs py-1.5 px-3 mt-1 inline-flex items-center gap-1.5 font-bold"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Download Backup JSON</span>
@@ -87,21 +113,21 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
 
           {/* Import Section */}
           <div className="bg-black/20 p-4 rounded-xl border border-white/5 space-y-2">
-            <h4 className="font-semibold text-sm text-neutral-200">Import Progress</h4>
-            <p className="text-xs text-neutral-400">
+            <h4 className="font-semibold text-xs text-neutral-200">Import Progress</h4>
+            <p className="text-[11px] text-neutral-400">
               Paste previously exported JSON data to restore your progress:
             </p>
             <textarea
-              rows={3}
+              rows={2}
               value={importText}
               onChange={(e) => setImportText(e.target.value)}
               placeholder='{"gameState": {...}, "userProgress": {...}}'
-              className="w-full bg-black/40 border border-white/10 rounded-lg p-2.5 text-xs text-neutral-200 focus:outline-none focus:border-amber-500 font-mono"
+              className="w-full bg-black/40 border border-white/10 rounded-lg p-2 text-xs text-neutral-200 focus:outline-none focus:border-white font-mono"
             />
             <button
               onClick={handleImport}
               disabled={!importText.trim()}
-              className="bg-neutral-700 hover:bg-neutral-600 disabled:opacity-50 text-white text-xs font-semibold py-2 px-3.5 rounded-lg inline-flex items-center gap-1.5 transition-all"
+              className="cg-pill text-xs font-semibold py-1.5 px-3 rounded-lg inline-flex items-center gap-1.5 transition-all"
             >
               <Upload className="w-3.5 h-3.5" />
               <span>Restore Data</span>
@@ -112,7 +138,7 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
           <div className="pt-2 border-t border-white/10 flex items-center justify-between">
             <div>
               <p className="text-xs font-semibold text-rose-300">Reset All Data</p>
-              <p className="text-[11px] text-neutral-400">Clears all caught checkboxes and reset gear settings.</p>
+              <p className="text-[10px] text-neutral-400">Clears all caught checkboxes and reset gear settings.</p>
             </div>
             {confirmReset ? (
               <div className="flex items-center gap-2">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FishingProvider, useFishing } from './context/FishingContext';
+import { LanguageProvider } from './i18n/LanguageContext';
 import { AppHeader } from './features/header/AppHeader';
 import { TimeWeatherBar } from './features/time-weather/TimeWeatherBar';
 import { GearSelector } from './features/gear/GearSelector';
@@ -64,9 +65,11 @@ const MainContent: React.FC = () => {
 
 export function App() {
   return (
-    <FishingProvider>
-      <MainContent />
-    </FishingProvider>
+    <LanguageProvider>
+      <FishingProvider>
+        <MainContent />
+      </FishingProvider>
+    </LanguageProvider>
   );
 }
 

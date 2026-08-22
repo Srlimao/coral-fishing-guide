@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FishItem } from '../../types/fishing';
 import { getFishSpriteUrl } from '../../data/fishData';
 import { useFishing } from '../../context/FishingContext';
+import { useLanguage } from '../../i18n/LanguageContext';
 import { calculateCatchViability, isFishSpawnActive } from '../calculator/FishingCalculations';
 import { MinigameVisualizer } from './MinigameVisualizer';
 import { RODS_DATA } from '../../data/gearData';
@@ -26,11 +27,15 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
     toggleOffered
   } = useFishing();
 
+  const { getFishName, getLocationName, t } = useLanguage();
+
   const [imgError, setImgError] = useState(false);
 
   const isCaught = !!userProgress.caught[fish.id];
   const isDonated = !!userProgress.donatedMuseum[fish.id];
   const isOffered = !!userProgress.offeredTemple[fish.id];
+
+  const localizedName = getFishName(fish);
 
   const viability = calculateCatchViability(
     fish,
@@ -63,7 +68,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
               {!imgError ? (
                 <img
                   src={spriteSrc}
-                  alt={fish.name}
+                  alt={localizedName}
                   className="w-full h-full object-contain drop-shadow-md"
                   onError={() => setImgError(true)}
                 />
@@ -75,13 +80,13 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
             </div>
             <div>
               <div className="flex items-center gap-2.5">
-                <h2 className="text-2xl font-bold">{fish.name}</h2>
+                <h2 className="text-2xl font-bold">{localizedName}</h2>
                 <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full badge-rarity-${fish.rarity}`}>
-                  {fish.rarity}
+                  {t(`rarity_${fish.rarity.toLowerCase()}` as any, fish.rarity)}
                 </span>
                 {isActiveNow && (
                   <span className="bg-emerald-500 text-white text-xs font-bold px-2 py-0.5 rounded-full animate-pulse-gentle">
-                    Active Now!
+                    {t('badge_active_now')}
                   </span>
                 )}
               </div>
@@ -110,7 +115,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
               }`}
             >
               <Check className="w-3.5 h-3.5" />
-              <span>{isCaught ? 'Caught in Journal' : 'Mark as Caught'}</span>
+              <span>{isCaught ? t('btn_caught') : t('btn_uncaught')}</span>
             </button>
 
             <button
@@ -120,7 +125,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
               }`}
             >
               <Landmark className="w-3.5 h-3.5" />
-              <span>{isDonated ? 'Donated to Museum' : 'Donate to Museum'}</span>
+              <span>{isDonated ? t('btn_museum_donated') : t('btn_museum_missing')}</span>
             </button>
 
             {fish.offerings.length > 0 && (
@@ -131,7 +136,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
                 }`}
               >
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>{isOffered ? 'Offered to Altar' : 'Offer at Lake Temple'}</span>
+                <span>{isOffered ? t('btn_altar_offered') : t('btn_altar_needed')}</span>
               </button>
             )}
           </div>
@@ -139,7 +144,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
           {/* Pricing & Sell Values with Quality Stars */}
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-xs">
             <div className="bg-[#ede6db] p-2 rounded-xl border border-[#e2d5be]">
-              <span className="text-[10px] uppercase font-bold text-[#8c785b] block">Regular</span>
+              <span className="text-[10px] uppercase font-bold text-[#8c785b] block">{t('price_regular')}</span>
               <span className="font-extrabold text-sm text-[#44331d] flex items-center justify-center gap-1 mt-0.5">
                 <img src={coinImg} alt="Coin" className="w-3.5 h-3.5 inline" />
                 {fish.sellPrice}g
@@ -147,7 +152,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
             </div>
             <div className="bg-[#ede6db] p-2 rounded-xl border border-[#e2d5be]">
               <span className="text-[10px] uppercase font-bold text-amber-800 flex items-center justify-center gap-1">
-                <img src={starBronze} alt="Bronze Star" className="w-3.5 h-3.5 inline" /> Bronze
+                <img src={starBronze} alt="Bronze Star" className="w-3.5 h-3.5 inline" /> {t('price_bronze')}
               </span>
               <span className="font-extrabold text-sm text-[#44331d] block mt-0.5">
                 {fish.bronzeSellPrice}g
@@ -155,7 +160,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
             </div>
             <div className="bg-[#ede6db] p-2 rounded-xl border border-[#e2d5be]">
               <span className="text-[10px] uppercase font-bold text-slate-700 flex items-center justify-center gap-1">
-                <img src={starSilver} alt="Silver Star" className="w-3.5 h-3.5 inline" /> Silver
+                <img src={starSilver} alt="Silver Star" className="w-3.5 h-3.5 inline" /> {t('price_silver')}
               </span>
               <span className="font-extrabold text-sm text-[#44331d] block mt-0.5">
                 {fish.silverSellPrice}g
@@ -163,7 +168,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
             </div>
             <div className="bg-[#ede6db] p-2 rounded-xl border border-[#e2d5be]">
               <span className="text-[10px] uppercase font-bold text-amber-600 flex items-center justify-center gap-1">
-                <img src={starGold} alt="Gold Star" className="w-3.5 h-3.5 inline" /> Gold
+                <img src={starGold} alt="Gold Star" className="w-3.5 h-3.5 inline" /> {t('price_gold')}
               </span>
               <span className="font-extrabold text-sm text-[#44331d] block mt-0.5">
                 {fish.goldSellPrice}g
@@ -171,7 +176,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
             </div>
             <div className="bg-[#ede6db] p-2 rounded-xl border border-[#e2d5be]">
               <span className="text-[10px] uppercase font-bold text-purple-800 flex items-center justify-center gap-1">
-                <img src={starOsmium} alt="Osmium Star" className="w-3.5 h-3.5 inline" /> Osmium
+                <img src={starOsmium} alt="Osmium Star" className="w-3.5 h-3.5 inline" /> {t('price_osmium')}
               </span>
               <span className="font-extrabold text-sm text-purple-900 block mt-0.5">
                 {fish.osmiumSellPrice}g
@@ -184,7 +189,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
             <div className="flex items-center justify-between font-bold">
               <span className="flex items-center gap-1.5 text-[#3d2f1a]">
                 <Shield className="w-4 h-4 text-amber-600" />
-                <span>Gear Suitability with your {currentRod.name}:</span>
+                <span>{t('gear_suitability')} {t(`rod_${gameState.equippedRod}` as any, currentRod.name)}:</span>
               </span>
               <span style={{ color: viability.badgeColor }} className="text-sm">
                 {viability.statusLabel} ({viability.score}%)
@@ -211,11 +216,11 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
             <div className="bg-[#ede6db] p-3.5 rounded-2xl border border-[#e5d8c3] space-y-2">
               <div className="flex items-center gap-1.5 font-bold text-[#3d2f1a]">
                 <MapPin className="w-4 h-4 text-amber-600" />
-                <span>Spawn Locations</span>
+                <span>{t('spawn_locations_title')}</span>
               </div>
               <ul className="list-disc list-inside space-y-1 text-[#5a4627]">
                 {fish.locations.map(loc => (
-                  <li key={loc} className="font-bold">{loc}</li>
+                  <li key={loc} className="font-bold">{getLocationName(loc)}</li>
                 ))}
               </ul>
             </div>
@@ -223,13 +228,13 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
             <div className="bg-[#ede6db] p-3.5 rounded-2xl border border-[#e5d8c3] space-y-1.5 text-[#5a4627]">
               <div className="flex items-center gap-1.5 font-bold text-[#3d2f1a]">
                 <Clock className="w-4 h-4 text-amber-600" />
-                <span>Times & Weather</span>
+                <span>{t('times_weather_title')}</span>
               </div>
-              <p><strong>Seasons:</strong> {fish.seasons.join(', ')}</p>
-              <p><strong>Time Slots:</strong> {fish.times.join(', ')}</p>
+              <p><strong>{t('season_date_header')}:</strong> {fish.seasons.map(s => t(`season_${s}` as any, s)).join(', ')}</p>
+              <p><strong>{t('time_of_day_header')}:</strong> {fish.times.map(tm => t(`time_${tm}` as any, tm)).join(', ')}</p>
               <p className="flex items-center gap-1">
                 <Cloud className="w-3.5 h-3.5 text-blue-600" />
-                <strong>Weathers:</strong> {fish.weathers.join(', ')}
+                <strong>{t('weather_header')}:</strong> {fish.weathers.map(w => t(`weather_${w}` as any, w)).join(', ')}
               </p>
             </div>
           </div>
@@ -239,7 +244,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
             <div className="bg-[#fef3c7] p-3.5 rounded-2xl border border-amber-300 text-xs text-[#92400e] space-y-1">
               <div className="flex items-center gap-1.5 font-bold">
                 <Sparkles className="w-4 h-4 text-amber-600" />
-                <span>Lake Temple Catching Altar</span>
+                <span>{t('lake_temple_title')}</span>
               </div>
               {fish.offerings.map((o, idx) => (
                 <p key={idx}>

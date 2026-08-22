@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFishing } from '../../context/FishingContext';
+import { useLanguage } from '../../i18n/LanguageContext';
 import { Season, Weather, TimeOfDay } from '../../types/fishing';
 import { Flame, ChevronLeft, ChevronRight } from 'lucide-react';
 import sunnyIcon from '../../assets/icons/weather/Sunny.png';
@@ -10,28 +11,29 @@ import windyIcon from '../../assets/icons/weather/Windy.png';
 
 export const TimeWeatherBar: React.FC = () => {
   const { gameState, setSeason, setDay, setTimeOfDay, setWeather, setGameState } = useFishing();
+  const { t } = useLanguage();
 
   const seasons: Array<{ id: Season; label: string; icon: string }> = [
-    { id: 'spring', label: 'Spring', icon: '🌸' },
-    { id: 'summer', label: 'Summer', icon: '☀️' },
-    { id: 'fall', label: 'Fall', icon: '🍂' },
-    { id: 'winter', label: 'Winter', icon: '❄️' }
+    { id: 'spring', label: t('season_spring'), icon: '🌸' },
+    { id: 'summer', label: t('season_summer'), icon: '☀️' },
+    { id: 'fall', label: t('season_fall'), icon: '🍂' },
+    { id: 'winter', label: t('season_winter'), icon: '❄️' }
   ];
 
   const timeSlots: Array<{ id: TimeOfDay; label: string; hours: string; icon: string }> = [
-    { id: 'morning', label: 'Morning', hours: '06:00 - 12:00', icon: '🌅' },
-    { id: 'afternoon', label: 'Afternoon', hours: '12:00 - 16:00', icon: '☀️' },
-    { id: 'evening', label: 'Evening', hours: '16:00 - 20:00', icon: '🌇' },
-    { id: 'night', label: 'Night', hours: '20:00 - 02:00', icon: '🌙' }
+    { id: 'morning', label: t('time_morning'), hours: '06:00 - 12:00', icon: '🌅' },
+    { id: 'afternoon', label: t('time_afternoon'), hours: '12:00 - 16:00', icon: '☀️' },
+    { id: 'evening', label: t('time_evening'), hours: '16:00 - 20:00', icon: '🌇' },
+    { id: 'night', label: t('time_night'), hours: '20:00 - 02:00', icon: '🌙' }
   ];
 
   const weathers: Array<{ id: Weather; label: string; iconImg: string }> = [
-    { id: 'sunny', label: 'Sunny', iconImg: sunnyIcon },
-    { id: 'rain', label: 'Rain', iconImg: rainIcon },
-    { id: 'storm', label: 'Storm', iconImg: stormIcon },
-    { id: 'snow', label: 'Snow', iconImg: snowIcon },
-    { id: 'blizzard', label: 'Blizzard', iconImg: snowIcon },
-    { id: 'windy', label: 'Windy', iconImg: windyIcon }
+    { id: 'sunny', label: t('weather_sunny'), iconImg: sunnyIcon },
+    { id: 'rain', label: t('weather_rain'), iconImg: rainIcon },
+    { id: 'storm', label: t('weather_storm'), iconImg: stormIcon },
+    { id: 'snow', label: t('weather_snow'), iconImg: snowIcon },
+    { id: 'blizzard', label: t('weather_blizzard'), iconImg: snowIcon },
+    { id: 'windy', label: t('weather_windy'), iconImg: windyIcon }
   ];
 
   return (
@@ -70,7 +72,7 @@ export const TimeWeatherBar: React.FC = () => {
               <ChevronLeft className="w-4 h-4" />
             </button>
             <div className="text-center min-w-[70px]">
-              <span className="text-[10px] uppercase font-bold tracking-wider text-[#c4b5a0] block">Day</span>
+              <span className="text-[10px] uppercase font-bold tracking-wider text-[#c4b5a0] block">{t('day_label')}</span>
               <span className="text-sm font-bold text-white">{gameState.day} / 28</span>
             </div>
             <button
@@ -87,19 +89,19 @@ export const TimeWeatherBar: React.FC = () => {
 
         {/* Time of Day */}
         <div className="flex flex-wrap items-center gap-1.5">
-          {timeSlots.map(t => (
+          {timeSlots.map(tSlot => (
             <button
-              key={t.id}
-              onClick={() => setTimeOfDay(t.id)}
-              aria-label={t.label}
-              title={`${t.label} (${t.hours})`}
+              key={tSlot.id}
+              onClick={() => setTimeOfDay(tSlot.id)}
+              aria-label={tSlot.label}
+              title={`${tSlot.label} (${tSlot.hours})`}
               className={`cg-pill px-2.5 py-1.5 text-xs font-bold ${
-                gameState.timeOfDay === t.id ? 'cg-pill-active' : ''
+                gameState.timeOfDay === tSlot.id ? 'cg-pill-active' : ''
               }`}
             >
-              <span>{t.icon}</span>
-              <span className="hidden md:inline">{t.label}</span>
-              <span className="text-[10px] opacity-75 hidden xl:inline">({t.hours})</span>
+              <span>{tSlot.icon}</span>
+              <span className="hidden md:inline">{tSlot.label}</span>
+              <span className="text-[10px] opacity-75 hidden xl:inline">({tSlot.hours})</span>
             </button>
           ))}
         </div>
@@ -132,7 +134,7 @@ export const TimeWeatherBar: React.FC = () => {
           }`}
         >
           <Flame className="w-4 h-4" />
-          <span>Active RIGHT NOW</span>
+          <span>{t('active_right_now')}</span>
           <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
             gameState.liveFilterOnlyActive ? 'bg-[#13181b] text-white' : 'bg-white/15 text-white'
           }`}>

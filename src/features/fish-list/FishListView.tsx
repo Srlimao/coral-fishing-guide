@@ -9,7 +9,7 @@ export const FishListView: React.FC = () => {
 
   const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const [by, order] = e.target.value.split('-');
-    setFilters(prev => ({ ...prev, sortBy: by as any, sortOrder: order as any }));
+    setFilters((prev: any) => ({ ...prev, sortBy: by as any, sortOrder: order as any }));
   };
 
   return (
@@ -77,7 +77,7 @@ export const FishListView: React.FC = () => {
             </p>
             <button
               onClick={() =>
-                setFilters(prev => ({
+                setFilters((prev: any) => ({
                   ...prev,
                   search: '',
                   season: 'all',

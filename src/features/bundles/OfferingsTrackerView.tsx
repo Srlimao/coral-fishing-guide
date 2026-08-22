@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFishing } from '../../context/FishingContext';
+import { useLanguage } from '../../i18n/LanguageContext';
 import { FISH_LIST, getFishSpriteUrl } from '../../data/fishData';
 import { Sparkles, Check } from 'lucide-react';
 
@@ -76,6 +77,7 @@ export const TEMPLE_BUNDLES: BundleGroup[] = [
 
 export const OfferingsTrackerView: React.FC = () => {
   const { userProgress, toggleOffered, setSelectedFish } = useFishing();
+  const { getFishName, getLocationName, t } = useLanguage();
 
   return (
     <div className="space-y-6">
@@ -85,10 +87,10 @@ export const OfferingsTrackerView: React.FC = () => {
           <div>
             <h2 className="text-xl font-bold text-white flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-amber-400" />
-              <span>Goddess Lake Temple Offerings (Catching Altar)</span>
+              <span>{t('altar_header_title')}</span>
             </h2>
             <p className="text-xs text-neutral-300">
-              Track required fish offerings to restore the Goddess Lake and unlock community rewards.
+              {t('altar_header_desc')}
             </p>
           </div>
         </div>
@@ -116,10 +118,10 @@ export const OfferingsTrackerView: React.FC = () => {
                   </span>
                   <h3 className="text-lg font-bold text-[#3d2f1a] flex items-center gap-2">
                     <span>{bundle.name}</span>
-                    {isAllCompleted && <span className="text-amber-500">✨ Complete!</span>}
+                    {isAllCompleted && <span className="text-amber-500">✨ {t('bundle_complete')}</span>}
                   </h3>
                   <span className="text-xs text-[#8c785b] block mt-0.5">
-                    🎁 Reward: <strong className="text-[#5a4627]">{bundle.reward}</strong>
+                    🎁 {t('reward_label')}: <strong className="text-[#5a4627]">{bundle.reward}</strong>
                   </span>
                 </div>
 
@@ -144,6 +146,7 @@ export const OfferingsTrackerView: React.FC = () => {
                 {bundle.items.map(item => {
                   const isOffered = !!userProgress.offeredTemple[item.fishId];
                   const fishData = FISH_LIST.find(f => f.id === item.fishId);
+                  const locFishName = fishData ? getFishName(fishData) : item.fishName;
 
                   return (
                     <div
@@ -172,16 +175,16 @@ export const OfferingsTrackerView: React.FC = () => {
                         <div className="w-7 h-7 rounded-md bg-white/70 border border-[#e2d5be] p-0.5 flex items-center justify-center flex-shrink-0">
                           <img
                             src={getFishSpriteUrl(fishData?.iconName, fishData?.key, item.fishId)}
-                            alt={item.fishName}
+                            alt={locFishName}
                             className="w-full h-full object-contain"
                             onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
                           />
                         </div>
                         <div>
-                          <strong className="text-xs font-bold block">{item.fishName}</strong>
+                          <strong className="text-xs font-bold block">{locFishName}</strong>
                           {fishData && (
                             <span className="text-[10px] text-[#8c785b] line-clamp-1">
-                              {fishData.seasons.join(', ')} • {fishData.locations[0]}
+                              {fishData.seasons.map(s => t(`season_${s}` as any, s)).join(', ')} • {getLocationName(fishData.locations[0])}
                             </span>
                           )}
                         </div>

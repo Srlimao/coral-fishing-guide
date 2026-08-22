@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FishItem } from '../../types/fishing';
 import { getFishSpriteUrl } from '../../data/fishData';
 import { useFishing } from '../../context/FishingContext';
+import { useLanguage } from '../../i18n/LanguageContext';
 import { isFishSpawnActive, getFishExclusivityInfo } from '../calculator/FishingCalculations';
 import { LocationMapHoverPopover } from './LocationMapHoverPopover';
 import { Check, Sparkles, Clock, MapPin, Landmark, Flag } from 'lucide-react';
@@ -22,12 +23,16 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
     customMapImage
   } = useFishing();
 
+  const { getFishName, getLocationName, t } = useLanguage();
+
   const [isLocationHovered, setIsLocationHovered] = useState(false);
   const [imgError, setImgError] = useState(false);
 
   const isCaught = !!userProgress.caught[fish.id];
   const isDonated = !!userProgress.donatedMuseum[fish.id];
   const isOffered = !!userProgress.offeredTemple[fish.id];
+
+  const localizedName = getFishName(fish);
 
   const isActiveNow = isFishSpawnActive(
     fish,
@@ -69,7 +74,7 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
           {!exclusivity.isExclusive && fish.offerings.length === 0 && !isDonated && (
             <span className="bg-[#13181b] text-[#c4b5a0] text-[10px] font-bold px-2 py-0.5 rounded-full inline-flex items-center gap-1 border border-white/20">
               <Landmark className="w-3 h-3 text-neutral-300" />
-              <span>Museum Missing</span>
+              <span>{t('filter_museum')}</span>
             </span>
           )}
         </div>
@@ -81,7 +86,7 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
               {!imgError ? (
                 <img
                   src={spriteSrc}
-                  alt={fish.name}
+                  alt={localizedName}
                   className="w-full h-full object-contain drop-shadow-sm"
                   onError={() => setImgError(true)}
                 />
@@ -95,10 +100,10 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
             <div className="min-w-0">
               <div className="flex items-center gap-1.5">
                 <h3 className="font-bold text-sm sm:text-base text-[#3d2f1a] leading-tight truncate hover:text-black transition-colors">
-                  {fish.name}
+                  {localizedName}
                 </h3>
                 {isActiveNow && (
-                  <span className="flex h-2 w-2 relative flex-shrink-0" title="Catchable Right Now!">
+                  <span className="flex h-2 w-2 relative flex-shrink-0" title={t('badge_active_now')}>
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                   </span>
@@ -112,7 +117,7 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
                     key={s}
                     className="text-[9px] font-bold px-1.5 py-0.2 rounded-md bg-[#ede5d5] text-[#5a4627] border border-[#dfd2be] uppercase"
                   >
-                    {s}
+                    {t(`season_${s}` as any, s)}
                   </span>
                 ))}
               </div>
@@ -122,7 +127,7 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
           {/* Badges: Rarity & Difficulty */}
           <div className="flex flex-col items-end gap-1 flex-shrink-0">
             <span className={`text-[9px] font-bold px-2 py-0.5 rounded-full badge-rarity-${fish.rarity}`}>
-              {fish.rarity}
+              {t(`rarity_${fish.rarity.toLowerCase()}` as any, fish.rarity)}
             </span>
             <span className="text-[9px] font-semibold text-[#8c785b] bg-[#ede5d5] px-1.5 py-0.5 rounded-full">
               {fish.difficulty}
@@ -139,7 +144,7 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
           >
             <MapPin className="w-3.5 h-3.5 text-[#8c785b] flex-shrink-0" />
             <span className="font-medium text-[11px] truncate text-[#44331d] hover:underline underline-offset-2">
-              {fish.locations.join(', ') || 'Any Waters'}
+              {fish.locations.map(loc => getLocationName(loc)).join(', ') || t('any_waters')}
             </span>
 
             {isLocationHovered && (
@@ -154,7 +159,7 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
           <div className="flex items-center gap-1.5">
             <Clock className="w-3.5 h-3.5 text-[#8c785b] flex-shrink-0" />
             <span className="text-[11px] text-[#5a4627] truncate">
-              {fish.times.map(t => t.charAt(0).toUpperCase() + t.slice(1)).join(', ')} • {fish.sellPrice}g
+              {fish.times.map(tm => t(`time_${tm}` as any, tm)).join(', ')} • {fish.sellPrice}g
             </span>
           </div>
         </div>
@@ -167,30 +172,30 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
       >
         <button
           onClick={() => toggleCaught(fish.id)}
-          aria-label={`Mark ${fish.name} as caught`}
+          aria-label={`Mark ${localizedName} as caught`}
           className={`flex items-center gap-1 px-2.5 py-1 rounded-full font-bold transition-all ${
             isCaught ? 'bg-[#13181b] text-white shadow-xs' : 'bg-[#ede5d5] text-[#8c785b] hover:bg-[#e2d5be]'
           }`}
         >
           <Check className={`w-3 h-3 ${isCaught ? 'opacity-100' : 'opacity-40'}`} />
-          <span>{isCaught ? 'Caught' : 'Catch'}</span>
+          <span>{isCaught ? t('btn_caught') : t('btn_uncaught')}</span>
         </button>
 
         <button
           onClick={() => toggleDonated(fish.id)}
-          aria-label={`Mark ${fish.name} as donated`}
+          aria-label={`Mark ${localizedName} as donated`}
           className={`flex items-center gap-1 px-2.5 py-1 rounded-full font-bold transition-all ${
             isDonated ? 'bg-[#13181b] text-white shadow-xs' : 'bg-[#ede5d5] text-[#8c785b] hover:bg-[#e2d5be]'
           }`}
         >
           <Landmark className={`w-3 h-3 ${isDonated ? 'opacity-100' : 'opacity-40'}`} />
-          <span>{isDonated ? 'Donated' : 'Museum'}</span>
+          <span>{isDonated ? t('btn_museum_donated') : t('btn_museum_missing')}</span>
         </button>
 
         {fish.offerings.length > 0 && (
           <button
             onClick={() => toggleOffered(fish.id)}
-            aria-label={`Mark ${fish.name} as offered`}
+            aria-label={`Mark ${localizedName} as offered`}
             title={`Required for: ${fish.offerings.map(o => o.bundleName).join(', ')}`}
             className={`flex items-center gap-1 px-2.5 py-1 rounded-full font-bold transition-all ${
               isOffered
@@ -199,7 +204,7 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
             }`}
           >
             <Sparkles className="w-3 h-3" />
-            <span>{isOffered ? 'Offered' : 'Altar'}</span>
+            <span>{isOffered ? t('btn_altar_offered') : t('btn_altar_needed')}</span>
           </button>
         )}
       </div>

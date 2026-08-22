@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFishing } from '../../context/FishingContext';
+import { useLanguage } from '../../i18n/LanguageContext';
 import { FishRarity, FishSize, RodTier } from '../../types/fishing';
 import {
   DateWeatherFilterSection,
@@ -20,12 +21,14 @@ export const FishListSidebar: React.FC = () => {
     setFilters
   } = useFishing();
 
+  const { t } = useLanguage();
+
   const handleFilterChange = (key: string, value: any) => {
-    setFilters(prev => ({ ...prev, [key]: value }));
+    setFilters((prev: any) => ({ ...prev, [key]: value }));
   };
 
   const resetAllFilters = () => {
-    setFilters(prev => ({
+    setFilters((prev: any) => ({
       ...prev,
       search: '',
       season: 'all',
@@ -52,7 +55,7 @@ export const FishListSidebar: React.FC = () => {
           type="text"
           value={filters.search}
           onChange={(e) => handleFilterChange('search', e.target.value)}
-          placeholder="Search fish..."
+          placeholder={t('search_placeholder')}
           className="w-full bg-white/5 border-2 border-white/20 rounded-full pl-9 pr-8 py-2 text-xs text-white placeholder:text-[#c4b5a0] focus:outline-none focus:border-white focus:bg-white/10 transition-all"
         />
         {filters.search && (
@@ -76,7 +79,7 @@ export const FishListSidebar: React.FC = () => {
       >
         <div className="flex items-center gap-2">
           <Flame className="w-3.5 h-3.5" />
-          <span>Active RIGHT NOW</span>
+          <span>{t('active_right_now')}</span>
         </div>
         <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
           gameState.liveFilterOnlyActive ? 'bg-[#13181b] text-white' : 'bg-white/15 text-white'
@@ -116,7 +119,7 @@ export const FishListSidebar: React.FC = () => {
       {/* 6. Rarity Filter */}
       <div className="border-t border-white/10 pt-3 space-y-1.5">
         <span className="text-[10px] font-bold uppercase tracking-wider text-[#c4b5a0] block">
-          Rarity
+          {t('filter_rarity')}
         </span>
         <div className="flex flex-wrap gap-1.5">
           {rarities.map(r => (
@@ -127,7 +130,7 @@ export const FishListSidebar: React.FC = () => {
                 filters.rarity === r ? 'cg-pill-active' : ''
               }`}
             >
-              {r === 'all' ? 'All' : r}
+              {r === 'all' ? t('rarity_all') : t(`rarity_${r.toLowerCase()}` as any, r)}
             </button>
           ))}
         </div>
@@ -136,7 +139,7 @@ export const FishListSidebar: React.FC = () => {
       {/* 7. Size Filter */}
       <div className="border-t border-white/10 pt-3 space-y-1.5">
         <span className="text-[10px] font-bold uppercase tracking-wider text-[#c4b5a0] block">
-          Fish Size
+          {t('filter_size')}
         </span>
         <div className="flex flex-wrap gap-1.5">
           {sizes.map(s => (
@@ -147,7 +150,7 @@ export const FishListSidebar: React.FC = () => {
                 filters.size === s ? 'cg-pill-active' : ''
               }`}
             >
-              {s === 'all' ? 'All' : s}
+              {s === 'all' ? t('size_all') : t(`size_${s.toLowerCase()}` as any, s)}
             </button>
           ))}
         </div>
@@ -159,7 +162,7 @@ export const FishListSidebar: React.FC = () => {
         className="cg-pill w-full py-2 px-3 text-xs justify-center hover:text-white mt-2"
       >
         <RotateCcw className="w-3.5 h-3.5" />
-        <span>Reset Filters</span>
+        <span>{t('reset_filters')}</span>
       </button>
 
     </aside>

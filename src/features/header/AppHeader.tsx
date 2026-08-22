@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import { useFishing } from '../../context/FishingContext';
-import { BookOpen, Calendar, MapPin, Sparkles, Award, Settings, CheckCircle2, Layers, FolderDown } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
+import { BookOpen, Calendar, MapPin, Sparkles, Award, Settings, CheckCircle2, Layers, FolderDown, Globe } from 'lucide-react';
 import superCoralImg from '../../assets/icons/Super_Coral.png';
 import { SaveManagerModal } from '../settings/SaveManagerModal';
 import { SaveImportModal } from '../save-import/SaveImportModal';
 
 export const AppHeader: React.FC = () => {
   const { activeTab, setActiveTab, activeNowCount, userProgress } = useFishing();
+  const { language, currentLanguageInfo, setLanguage, supportedLanguages, t } = useLanguage();
 
   const [showSettings, setShowSettings] = useState(false);
   const [showSaveImport, setShowSaveImport] = useState(false);
+  const [showLangDropdown, setShowLangDropdown] = useState(false);
 
   const caughtCount = Object.values(userProgress.caught).filter(Boolean).length;
   const donatedCount = Object.values(userProgress.donatedMuseum).filter(Boolean).length;
-  const offeredCount = Object.values(userProgress.offeredTemple).filter(Boolean).length;
 
   return (
     <>
@@ -50,7 +52,7 @@ export const AppHeader: React.FC = () => {
               }`}
             >
               <BookOpen className="w-3.5 h-3.5" />
-              <span>Fish Journal</span>
+              <span>{t('nav_journal')}</span>
               {activeNowCount > 0 && (
                 <span className={`text-[10px] font-bold px-1.5 py-0.2 rounded-full ${
                   activeTab === 'catalog' ? 'bg-[#13181b] text-white' : 'bg-white/20 text-white'
@@ -67,7 +69,7 @@ export const AppHeader: React.FC = () => {
               }`}
             >
               <Calendar className="w-3.5 h-3.5" />
-              <span>28-Day Schedule</span>
+              <span>{t('nav_calendar')}</span>
             </button>
 
             <button
@@ -77,7 +79,7 @@ export const AppHeader: React.FC = () => {
               }`}
             >
               <MapPin className="w-3.5 h-3.5" />
-              <span>Island Map</span>
+              <span>{t('nav_map')}</span>
             </button>
 
             <button
@@ -87,14 +89,7 @@ export const AppHeader: React.FC = () => {
               }`}
             >
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Temple Altars</span>
-              {offeredCount > 0 && (
-                <span className={`text-[10px] font-bold px-1.5 py-0.2 rounded-full ${
-                  activeTab === 'bundles' ? 'bg-[#13181b] text-white' : 'bg-white/20 text-white'
-                }`}>
-                  {offeredCount}
-                </span>
-              )}
+              <span>{t('nav_altars')}</span>
             </button>
 
             <button
@@ -104,7 +99,7 @@ export const AppHeader: React.FC = () => {
               }`}
             >
               <Award className="w-3.5 h-3.5" />
-              <span>Mastery</span>
+              <span>{t('nav_mastery')}</span>
             </button>
 
             <button
@@ -112,26 +107,63 @@ export const AppHeader: React.FC = () => {
               className={`cg-pill px-2.5 py-1.5 text-xs font-bold ${
                 activeTab === 'backoffice' ? 'cg-pill-active' : ''
               }`}
-              title="Map Pin Editor & Back Office"
+              title={t('nav_pins')}
             >
               <Layers className="w-3.5 h-3.5" />
-              <span>Pins</span>
+              <span>{t('nav_pins')}</span>
             </button>
+
+            {/* Language Selector Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setShowLangDropdown(prev => !prev)}
+                className="cg-pill px-2.5 py-1.5 text-xs font-bold hover:text-white"
+                title="Change Language"
+              >
+                <Globe className="w-3.5 h-3.5 text-[#c4b5a0]" />
+                <span>{currentLanguageInfo.flag} {currentLanguageInfo.code.toUpperCase()}</span>
+              </button>
+
+              {showLangDropdown && (
+                <div
+                  className="absolute right-0 mt-2 w-44 bg-[#182228] border border-white/20 rounded-2xl shadow-2xl p-1.5 z-50 space-y-1"
+                  onClick={() => setShowLangDropdown(false)}
+                >
+                  {supportedLanguages.map(l => (
+                    <button
+                      key={l.code}
+                      onClick={() => setLanguage(l.code)}
+                      className={`w-full flex items-center justify-between px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ${
+                        language === l.code
+                          ? 'bg-white text-[#13181b]'
+                          : 'text-[#c4b5a0] hover:bg-white/10 hover:text-white'
+                      }`}
+                    >
+                      <span className="flex items-center gap-2">
+                        <span>{l.flag}</span>
+                        <span>{l.nativeName}</span>
+                      </span>
+                      {language === l.code && <span>✓</span>}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* Import Save Game Button */}
             <button
               onClick={() => setShowSaveImport(true)}
-              title="Import Coral Island Save Game (.sav)"
+              title={t('nav_import_save')}
               className="cg-pill px-3 py-1.5 text-xs font-bold hover:text-white"
             >
               <FolderDown className="w-3.5 h-3.5 text-[#c4b5a0]" />
-              <span>Import Save</span>
+              <span className="hidden lg:inline">{t('nav_import_save')}</span>
             </button>
 
             <button
               onClick={() => setShowSettings(true)}
-              title="Settings"
-              aria-label="Settings"
+              title={t('nav_settings')}
+              aria-label={t('nav_settings')}
               className="cg-pill p-2"
             >
               <Settings className="w-3.5 h-3.5" />
@@ -139,14 +171,14 @@ export const AppHeader: React.FC = () => {
           </nav>
 
           {/* Quick Progress Indicator */}
-          <div className="hidden lg:flex items-center gap-3 bg-white/5 border border-white/15 px-3 py-1 rounded-full text-xs text-[#c4b5a0]">
+          <div className="hidden xl:flex items-center gap-3 bg-white/5 border border-white/15 px-3 py-1 rounded-full text-xs text-[#c4b5a0]">
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-[#c4b5a0]" />
-              <span>Caught: <strong className="text-white">{caughtCount}/69</strong></span>
+              <span>{t('nav_caught_count')}: <strong className="text-white">{caughtCount}/69</strong></span>
             </div>
             <div className="w-[1px] h-3 bg-white/20" />
             <div>
-              <span>Museum: <strong className="text-white">{donatedCount}/69</strong></span>
+              <span>{t('nav_museum_count')}: <strong className="text-white">{donatedCount}/69</strong></span>
             </div>
           </div>
         </div>
