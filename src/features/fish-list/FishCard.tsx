@@ -153,29 +153,29 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
 
       {/* Footer Checklists */}
       <div
-        className="mt-3 pt-2 border-t border-[#e8ddcb] flex items-center justify-between gap-1.5 text-[11px]"
+        className="mt-3 pt-2 border-t border-[#e8ddcb] flex items-center gap-1.5 text-[11px]"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={() => toggleCaught(fish.id)}
           aria-label={`Mark ${localizedName} as caught`}
-          className={`flex items-center gap-1 px-2.5 py-1 rounded-full font-bold transition-all ${
+          className={`flex-1 min-w-0 flex items-center justify-center gap-1 px-2 py-1 rounded-full font-bold transition-all ${
             isCaught ? 'bg-[#13181b] text-white shadow-xs' : 'bg-[#ede5d5] text-[#8c785b] hover:bg-[#e2d5be]'
           }`}
         >
-          <Check className={`w-3 h-3 ${isCaught ? 'opacity-100' : 'opacity-40'}`} />
-          <span>{isCaught ? t('btn_caught') : t('btn_uncaught')}</span>
+          <Check className={`w-3 h-3 flex-shrink-0 ${isCaught ? 'opacity-100' : 'opacity-40'}`} />
+          <span className="truncate">{isCaught ? t('btn_caught') : t('btn_uncaught')}</span>
         </button>
 
         <button
           onClick={() => toggleDonated(fish.id)}
           aria-label={`Mark ${localizedName} as donated`}
-          className={`flex items-center gap-1 px-2.5 py-1 rounded-full font-bold transition-all ${
+          className={`flex-1 min-w-0 flex items-center justify-center gap-1 px-2 py-1 rounded-full font-bold transition-all ${
             isDonated ? 'bg-[#13181b] text-white shadow-xs' : 'bg-[#ede5d5] text-[#8c785b] hover:bg-[#e2d5be]'
           }`}
         >
-          <Landmark className={`w-3 h-3 ${isDonated ? 'opacity-100' : 'opacity-40'}`} />
-          <span>{isDonated ? t('btn_museum_donated') : t('btn_museum_missing')}</span>
+          <Landmark className={`w-3 h-3 flex-shrink-0 ${isDonated ? 'opacity-100' : 'opacity-40'}`} />
+          <span className="truncate">{isDonated ? t('btn_museum_donated') : t('btn_museum_missing')}</span>
         </button>
 
         {fish.offerings.length > 0 && (
@@ -183,14 +183,14 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
             onClick={() => toggleOffered(fish.id)}
             aria-label={`Mark ${localizedName} as offered`}
             title={`Required for: ${fish.offerings.map(o => o.bundleName).join(', ')}`}
-            className={`flex items-center gap-1 px-2.5 py-1 rounded-full font-bold transition-all ${
+            className={`flex-1 min-w-0 flex items-center justify-center gap-1 px-2 py-1 rounded-full font-bold transition-all ${
               isOffered
                 ? 'bg-[#13181b] text-white shadow-xs'
                 : 'bg-[#ede5d5] text-[#8c785b] hover:bg-[#e2d5be]'
             }`}
           >
-            <Sparkles className={`w-3 h-3 ${isOffered ? 'opacity-100' : 'opacity-40'}`} />
-            <span>{isOffered ? t('btn_altar_offered') : t('btn_altar_needed')}</span>
+            <Sparkles className={`w-3 h-3 flex-shrink-0 ${isOffered ? 'opacity-100' : 'opacity-40'}`} />
+            <span className="truncate">{isOffered ? t('btn_altar_offered') : t('btn_altar_needed')}</span>
           </button>
         )}
       </div>
