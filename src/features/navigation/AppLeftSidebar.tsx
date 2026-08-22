@@ -46,14 +46,21 @@ export const AppLeftSidebar: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [showLangDropdown]);
 
-  const navItems = [
+  interface NavItem {
+    id: 'catalog' | 'calendar' | 'map' | 'bundles' | 'stats' | 'backoffice';
+    label: string;
+    icon: React.ElementType;
+    badge?: number;
+  }
+
+  const navItems: NavItem[] = [
     { id: 'catalog', label: t('nav_journal'), icon: BookOpen, badge: activeNowCount },
     { id: 'calendar', label: t('nav_calendar'), icon: Calendar },
     { id: 'map', label: t('nav_map'), icon: MapPin },
     { id: 'bundles', label: t('nav_altars'), icon: Sparkles },
     { id: 'stats', label: t('nav_mastery'), icon: Award },
     { id: 'backoffice', label: t('nav_pins'), icon: Layers }
-  ] as const;
+  ];
 
   return (
     <>
