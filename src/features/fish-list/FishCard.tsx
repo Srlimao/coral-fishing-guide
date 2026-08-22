@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FishItem } from '../../types/fishing';
+import { getFishSpriteUrl } from '../../data/fishData';
 import { useFishing } from '../../context/FishingContext';
 import { isFishSpawnActive, getFishExclusivityInfo } from '../calculator/FishingCalculations';
 import { LocationMapHoverPopover } from './LocationMapHoverPopover';
@@ -38,7 +39,7 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
   );
 
   const exclusivity = getFishExclusivityInfo(fish, gameState.season, userProgress);
-  const spriteSrc = `/fish-sprites/${fish.iconName || fish.key || fish.id}.webp`;
+  const spriteSrc = getFishSpriteUrl(fish.iconName, fish.key, fish.id);
 
   return (
     <div

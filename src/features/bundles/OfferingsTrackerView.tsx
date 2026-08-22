@@ -1,6 +1,6 @@
 import React from 'react';
 import { useFishing } from '../../context/FishingContext';
-import { FISH_LIST } from '../../data/fishData';
+import { FISH_LIST, getFishSpriteUrl } from '../../data/fishData';
 import { Sparkles, Check } from 'lucide-react';
 
 interface BundleGroup {
@@ -171,7 +171,7 @@ export const OfferingsTrackerView: React.FC = () => {
                         </button>
                         <div className="w-7 h-7 rounded-md bg-white/70 border border-[#e2d5be] p-0.5 flex items-center justify-center flex-shrink-0">
                           <img
-                            src={`/fish-sprites/${fishData?.iconName || fishData?.key || item.fishId}.webp`}
+                            src={getFishSpriteUrl(fishData?.iconName, fishData?.key, item.fishId)}
                             alt={item.fishName}
                             className="w-full h-full object-contain"
                             onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}

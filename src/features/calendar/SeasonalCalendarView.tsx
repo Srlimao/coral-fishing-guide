@@ -1,6 +1,6 @@
 import React from 'react';
 import { useFishing } from '../../context/FishingContext';
-import { FISH_LIST } from '../../data/fishData';
+import { FISH_LIST, getFishSpriteUrl } from '../../data/fishData';
 import { Calendar, AlertCircle, Sparkles, Clock, Check } from 'lucide-react';
 
 export const SeasonalCalendarView: React.FC = () => {
@@ -87,7 +87,7 @@ export const SeasonalCalendarView: React.FC = () => {
                   }`}
                 >
                   <img
-                    src={`/fish-sprites/${f.iconName || f.key || f.id}.webp`}
+                    src={getFishSpriteUrl(f.iconName, f.key, f.id)}
                     alt={f.name}
                     className="w-4 h-4 object-contain inline"
                     onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
@@ -135,7 +135,7 @@ export const SeasonalCalendarView: React.FC = () => {
                       <div className="flex items-center gap-2.5">
                         <div className="w-8 h-8 rounded-lg bg-black/40 border border-white/10 flex items-center justify-center p-0.5 flex-shrink-0">
                           <img
-                            src={`/fish-sprites/${fish.iconName || fish.key || fish.id}.webp`}
+                            src={getFishSpriteUrl(fish.iconName, fish.key, fish.id)}
                             alt={fish.name}
                             className="w-full h-full object-contain"
                             onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}

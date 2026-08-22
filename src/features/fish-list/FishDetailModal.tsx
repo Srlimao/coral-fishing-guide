@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FishItem } from '../../types/fishing';
+import { getFishSpriteUrl } from '../../data/fishData';
 import { useFishing } from '../../context/FishingContext';
 import { calculateCatchViability, isFishSpawnActive } from '../calculator/FishingCalculations';
 import { MinigameVisualizer } from './MinigameVisualizer';
@@ -49,7 +50,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
   );
 
   const currentRod = RODS_DATA[gameState.equippedRod] || RODS_DATA.makeshift;
-  const spriteSrc = `/fish-sprites/${fish.iconName || fish.key || fish.id}.webp`;
+  const spriteSrc = getFishSpriteUrl(fish.iconName, fish.key, fish.id);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
