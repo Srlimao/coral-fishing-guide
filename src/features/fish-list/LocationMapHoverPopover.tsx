@@ -9,6 +9,22 @@ interface LocationMapHoverPopoverProps {
   customMapImage?: string | null;
 }
 
+const LOCATION_ALIASES: Record<string, string[]> = {
+  'Mine': ['mine', 'mining', 'cave', 'cavern', 'fire cave', 'water cave', 'wind cave', 'earth cave', 'lava', 'mina', 'caverna', 'mina de'],
+  'Lake Temple': ['lake temple', 'lake', 'temple lake', 'lago do templo', 'lago da deusa', 'lago'],
+  'River Forest': ['river forest', 'forest river', 'rio da floresta', 'floresta alta'],
+  'River Farm': ['river farm', 'farm river', 'rio da fazenda'],
+  'River Town': ['river town', 'town river', 'rio da cidade'],
+  'Pond': ['pond', 'farm pond', 'forest pond', 'lagoa da fazenda', 'lagoa'],
+  'Rice Field': ['rice field', 'rice terraces', 'arrozal', 'campo de arroz'],
+  'Estuary': ['estuary', 'estuário', 'estuario'],
+  'Ocean Dock': ['ocean dock', 'dock', 'docks', 'pier', 'porto', 'cais', 'doca'],
+  'Ocean Beach': ['ocean beach', 'beach', 'praia', 'costa'],
+  'Lookout': ['lookout', 'mirante', 'farol'],
+  'Savannah': ['savannah', 'savana', 'savannah stream', 'savannah waterfall'],
+  'Deep Forest': ['deep forest', 'floresta profunda', 'enchanted forest']
+};
+
 export const LocationMapHoverPopover: React.FC<LocationMapHoverPopoverProps> = ({
   locations,
   customLocations,
@@ -16,30 +32,41 @@ export const LocationMapHoverPopover: React.FC<LocationMapHoverPopoverProps> = (
 }) => {
   const mapSrc = customMapImage || officialMapImg;
 
-  // Find matching location objects from customLocations
-  const matchedLocations = customLocations.filter(loc =>
-    locations.some(l => {
-      const lLow = l.toLowerCase();
-      const idLow = loc.id.toLowerCase();
-      const nameLow = loc.name.toLowerCase();
-      return lLow.includes(idLow) || idLow.includes(lLow) || lLow.includes(nameLow);
-    })
-  );
+  // Accurately find matching location pins by ID and semantic aliases
+  const matchedLocations = customLocations.filter(loc => {
+    const locIdLow = loc.id.toLowerCase();
+    const locNameLow = loc.name.toLowerCase();
+    const aliases = LOCATION_ALIASES[loc.id] || [locIdLow, locNameLow];
 
-  // If no direct matches, fallback to the first matching location or primary
-  const displayLocations = matchedLocations.length > 0
-    ? matchedLocations.slice(0, 3) // Show up to 3 location minimaps
-    : customLocations.slice(0, 1);
+    return locations.some(rawLoc => {
+      const lLow = rawLoc.toLowerCase().trim();
+      
+      // Direct exact or substring match
+      if (lLow === locIdLow || lLow === locNameLow || lLow.includes(locNameLow)) {
+        return true;
+      }
+
+      // Alias matches
+      return aliases.some(alias => lLow.includes(alias) || alias.includes(lLow));
+    });
+  });
+
+  // If no matching map locations exist, don't show misleading false map coordinates
+  if (matchedLocations.length === 0) {
+    return null;
+  }
+
+  const displayLocations = matchedLocations.slice(0, 2); // Show up to 2 primary spot viewports
 
   return (
     <div className="absolute bottom-full left-0 mb-2 z-50 pointer-events-none animate-fade-in">
-      <div className="bg-[#181d20]/95 backdrop-blur-md p-2.5 rounded-2xl border-2 border-amber-400/50 shadow-2xl space-y-2 min-w-[200px] max-w-[280px]">
+      <div className="bg-[#181d20]/95 backdrop-blur-md p-2.5 rounded-2xl border-2 border-amber-400/50 shadow-2xl space-y-2 min-w-[220px] max-w-[280px]">
         <div className="flex items-center justify-between gap-2 border-b border-white/10 pb-1.5 px-0.5">
           <span className="text-[10px] font-black uppercase tracking-wider text-amber-400 flex items-center gap-1">
             <MapPin className="w-3 h-3 text-amber-400" />
-            <span>Map Locations ({displayLocations.length})</span>
+            <span>Map Spots ({displayLocations.length})</span>
           </span>
-          <span className="text-[9px] text-neutral-400">Mini-Map View</span>
+          <span className="text-[9px] text-neutral-400">Mini-Map Preview</span>
         </div>
 
         <div className="space-y-2">
@@ -52,7 +79,7 @@ export const LocationMapHoverPopover: React.FC<LocationMapHoverPopoverProps> = (
               <div key={loc.id} className="space-y-1">
                 <div className="flex items-center justify-between text-[10px] px-1 font-bold text-white">
                   <span className="truncate">{loc.name}</span>
-                  <span className="text-[9px] font-semibold text-neutral-400">{loc.category}</span>
+                  <span className="text-[9px] font-semibold text-amber-300/80">{loc.category}</span>
                 </div>
 
                 {/* Zoomed-in Minimap Viewport */}
