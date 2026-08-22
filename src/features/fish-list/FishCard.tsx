@@ -56,28 +56,14 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
       {/* Top Section */}
       <div>
         {/* Banner Badges */}
-        <div className="mb-2 -mt-0.5 flex flex-wrap items-center gap-1.5">
-          {exclusivity.isExclusive && (
+        {exclusivity.isExclusive && (
+          <div className="mb-2 -mt-0.5 flex flex-wrap items-center gap-1.5">
             <span className="bg-[#13181b] text-white text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-xs border border-white/20">
               <Flag className="w-3 h-3 text-amber-400 fill-amber-400 flex-shrink-0" />
               <span>{exclusivity.flags.join(' • ')}</span>
             </span>
-          )}
-
-          {fish.offerings.length > 0 && !isOffered && (
-            <span className="bg-[#13181b] text-[#c4b5a0] text-[10px] font-bold px-2 py-0.5 rounded-full inline-flex items-center gap-1 border border-white/20">
-              <Sparkles className="w-3 h-3 text-amber-400 fill-amber-400" />
-              <span>Altar: {fish.offerings[0].bundleName.replace(' Offering', '').replace(' Fish Bundle', '')}</span>
-            </span>
-          )}
-
-          {!exclusivity.isExclusive && fish.offerings.length === 0 && !isDonated && (
-            <span className="bg-[#13181b] text-[#c4b5a0] text-[10px] font-bold px-2 py-0.5 rounded-full inline-flex items-center gap-1 border border-white/20">
-              <Landmark className="w-3 h-3 text-neutral-300" />
-              <span>{t('filter_museum')}</span>
-            </span>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* Fish Header: Sprite + Title + Seasons */}
         <div className="flex items-start justify-between gap-2">

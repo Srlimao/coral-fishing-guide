@@ -103,13 +103,14 @@ export function getFishExclusivityInfo(
   const isLeavingSoon = isCurrentSeason && !fish.seasons.includes(nextSeason);
 
   if (isLeavingSoon) {
-    flags.push(`Leaving end of ${currentSeason.toUpperCase()}`);
+    flags.push(`Leaving Soon`);
     exclusivityWeight += 600;
   }
 
   // 2. Season Exclusivity (Single Season)
   if (fish.seasons.length === 1) {
-    flags.push(`${fish.seasons[0].toUpperCase()} Exclusive`);
+    const seasonLabel = fish.seasons[0].charAt(0).toUpperCase() + fish.seasons[0].slice(1);
+    flags.push(`${seasonLabel} Exclusive`);
     exclusivityWeight += 400;
   }
 
@@ -119,22 +120,26 @@ export function getFishExclusivityInfo(
   const isRainOnly = fish.weathers.includes('rain') && !fish.weathers.includes('sunny') && fish.weathers.length <= 2;
 
   if (isStormOnly) {
-    flags.push(`Thunderstorm Only`);
+    flags.push(`Storm Exclusive`);
     exclusivityWeight += 350;
   } else if (isBlizzardOnly) {
-    flags.push(`Blizzard Only`);
+    flags.push(`Blizzard Exclusive`);
     exclusivityWeight += 350;
   } else if (isRainOnly) {
-    flags.push(`Rain/Storm Only`);
+    flags.push(`Rain Exclusive`);
     exclusivityWeight += 300;
   } else if (fish.weathers.length === 1 && fish.weathers[0] === 'windy') {
-    flags.push(`Windy Only`);
+    flags.push(`Windy Exclusive`);
     exclusivityWeight += 300;
+  } else if (fish.weathers.length === 1) {
+    flags.push(`Weather Exclusive`);
+    exclusivityWeight += 250;
   }
 
   // 4. Time of Day Exclusivity
   if (fish.times.length === 1) {
-    flags.push(`${fish.times[0].toUpperCase()} Only`);
+    const timeLabel = fish.times[0].charAt(0).toUpperCase() + fish.times[0].slice(1);
+    flags.push(`${timeLabel} Exclusive`);
     exclusivityWeight += 200;
   }
 
@@ -143,14 +148,8 @@ export function getFishExclusivityInfo(
     s => s.isUsingSpecificDate && s.dateRangeList && s.dateRangeList.length > 0
   );
   if (hasSpecificDates) {
-    flags.push(`Date Window Exclusive`);
+    flags.push(`Date Exclusive`);
     exclusivityWeight += 250;
-  }
-
-  // 6. Legendary Rarity
-  if (fish.rarity === 'Legendary') {
-    flags.push(`Legendary King`);
-    exclusivityWeight += 500;
   }
 
   const isExclusive = flags.length > 0;

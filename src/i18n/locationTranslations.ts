@@ -13,7 +13,13 @@ export const LOCATION_TRANSLATIONS: Record<string, Partial<Record<SupportedLangu
   'Forest Pond': { pt: 'Lagoa da Floresta', es: 'Estanque del Bosque', de: 'Waldteich', fr: 'Étang de la Forêt', zh: '森林水塘', ja: '森の池', id: 'Kolam Hutan' },
   'Water Mine (Level 1-20)': { pt: 'Mina d’Água (Nv 1-20)', es: 'Mina de Agua (Niv 1-20)', de: 'Wassermine (Stufe 1-20)', fr: 'Mine d’Eau (Niv 1-20)', zh: '水之矿洞 (1-20层)', ja: '水の鉱山 (1-20階)', id: 'Tambang Air (Lt 1-20)' },
   'Wind Mine (Level 1-40)': { pt: 'Mina de Vento (Nv 1-40)', es: 'Mina de Viento (Niv 1-40)', de: 'Windmine (Stufe 1-40)', fr: 'Mine de Vent (Niv 1-40)', zh: '风之矿洞 (1-40层)', ja: '風の鉱山 (1-40階)', id: 'Tambang Angin (Lt 1-40)' },
-  'Fire Mine (Level 1-40)': { pt: 'Mina de Fogo (Nv 1-40)', es: 'Mina de Fuego (Niv 1-40)', de: 'Feuermine (Stufe 1-40)', fr: 'Mine de Feu (Niv 1-40)', zh: '火之矿洞 (1-40层)', ja: '火の鉱山 (1-40階)', id: 'Tambang Api (Lt 1-40)' }
+  'Fire Mine (Level 1-40)': { pt: 'Mina de Fogo (Nv 1-40)', es: 'Mina de Fuego (Niv 1-40)', de: 'Feuermine (Stufe 1-40)', fr: 'Mine de Feu (Niv 1-40)', zh: '火之矿洞 (1-40层)', ja: '火の鉱山 (1-40階)', id: 'Tambang Api (Lt 1-40)' },
+  'Cave Mining Fire': { pt: 'Caverna do Fogo', es: 'Cueva de Fuego', de: 'Feuerhöhle', fr: 'Grotte de Feu', zh: '火之矿洞', ja: '火の洞窟', id: 'Gua Api' },
+  'Cave Mining Air': { pt: 'Caverna do Vento', es: 'Cueva de Viento', de: 'Windhöhle', fr: 'Grotte de Vent', zh: '风之矿洞', ja: '風の洞窟', id: 'Gua Angin' },
+  'Cave Mining Water': { pt: 'Caverna da Água', es: 'Cueva de Agua', de: 'Wasserhöhle', fr: 'Grotte d’Eau', zh: '水之矿洞', ja: '水の洞窟', id: 'Gua Air' },
+  'Cave Mining Earth': { pt: 'Caverna da Terra', es: 'Cueva de Tierra', de: 'Erdhöhle', fr: 'Grotte de Terre', zh: '土之矿洞', ja: '土の洞窟', id: 'Gua Bumi' },
+  'Cave Mining Fire Lava': { pt: 'Caverna de Lava', es: 'Cueva de Lava', de: 'Lavahöhle', fr: 'Grotte de Lave', zh: '熔岩矿洞', ja: '溶岩洞窟', id: 'Gua Lava' },
+  'Savannah': { pt: 'Savana', es: 'Sabana', de: 'Savanne', fr: 'Savane', zh: '稀树草原', ja: 'サバンナ', id: 'Sabana' }
 };
 
 export function getLocalizedLocationName(locationName: string, lang: SupportedLanguage): string {
