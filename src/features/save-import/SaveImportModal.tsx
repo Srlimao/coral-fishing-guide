@@ -1,8 +1,17 @@
-import React, { useState, useRef } from 'react';
-import { useFishing } from '../../context/FishingContext';
-import { UserProgress } from '../../types/fishing';
+import React, { useState } from 'react';
 import { parseCoralIslandSaveFile, SaveCompletionsResult } from '../../utils/saveFileParser';
-import { UploadCloud, FileCheck, AlertCircle, CheckCircle2, Copy, Check, X, Fish, Landmark, Sparkles, FolderOpen } from 'lucide-react';
+import { useLiveSync } from './LiveSyncContext';
+import {
+  X,
+  UploadCloud,
+  CheckCircle2,
+  AlertTriangle,
+  FileText,
+  Radio,
+  RefreshCw,
+  PowerOff,
+  Sparkles
+} from 'lucide-react';
 
 interface SaveImportModalProps {
   isOpen: boolean;
@@ -10,258 +19,261 @@ interface SaveImportModalProps {
 }
 
 export const SaveImportModal: React.FC<SaveImportModalProps> = ({ isOpen, onClose }) => {
-  const { setUserProgress } = useFishing();
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  const {
+    isSupported,
+    isConnected,
+    fileName,
+    lastSyncTime,
+    syncCount,
+    lastParsedResult,
+    connectLiveSave,
+    disconnectLiveSave,
+    syncNow,
+    applySaveData
+  } = useLiveSync();
 
-  const [isDragging, setIsDragging] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [copiedPath, setCopiedPath] = useState(false);
-  const [parsedResult, setParsedResult] = useState<SaveCompletionsResult | null>(null);
-  const [fileName, setFileName] = useState<string>('');
-  const [statusMessage, setStatusMessage] = useState<string | null>(null);
+  const [dragActive, setDragActive] = useState(false);
+  const [manualResult, setManualResult] = useState<SaveCompletionsResult | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [isProcessing, setIsProcessing] = useState(false);
 
   if (!isOpen) return null;
 
-  const savePathSnippet = '%LOCALAPPDATA%\\ProjectCoral\\Saved\\SaveGames';
-
-  const handleCopyPath = () => {
-    navigator.clipboard.writeText(savePathSnippet);
-    setCopiedPath(true);
-    setTimeout(() => setCopiedPath(false), 2000);
+  const handleConnectLive = async () => {
+    setIsProcessing(true);
+    setErrorMessage(null);
+    const success = await connectLiveSave();
+    setIsProcessing(false);
+    if (!success && !isConnected) {
+      setErrorMessage('Could not connect file. Make sure to select a valid DailySave_*.sav file.');
+    }
   };
 
-  const handleFileProcess = (file: File) => {
-    if (!file.name.endsWith('.sav')) {
-      setStatusMessage('Please select a valid Coral Island .sav file (e.g. EndOfDayAutoSave.sav).');
+  const processManualFile = async (file: File) => {
+    if (!file.name.endsWith('.sav') && !file.name.endsWith('.json')) {
+      setErrorMessage('Please select a valid Coral Island save file (.sav).');
       return;
     }
 
-    setIsLoading(true);
-    setStatusMessage(null);
-    setFileName(file.name);
+    setIsProcessing(true);
+    setErrorMessage(null);
 
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      try {
-        const buffer = e.target?.result as ArrayBuffer;
-        if (!buffer) throw new Error('Could not read file buffer.');
+    try {
+      const buffer = await file.arrayBuffer();
+      const result = parseCoralIslandSaveFile(buffer);
 
-        const result = parseCoralIslandSaveFile(buffer);
-        if (result.success) {
-          setParsedResult(result);
-          setStatusMessage(`Found ${result.stats.totalFishCaught} Caught, ${result.stats.totalFishDonated} Donated, and ${result.stats.totalFishOffered} Offered fish.`);
-        } else {
-          setStatusMessage(result.error || 'Failed to parse the save file format.');
-        }
-      } catch (err: unknown) {
-        setStatusMessage(err instanceof Error ? err.message : 'Error reading save file.');
-      } finally {
-        setIsLoading(false);
+      if (result.success) {
+        setManualResult(result);
+        applySaveData(result);
+      } else {
+        setErrorMessage(result.error || 'Failed to parse save file');
       }
-    };
-    reader.onerror = () => {
-      setStatusMessage('Error reading file.');
-      setIsLoading(false);
-    };
-    reader.readAsArrayBuffer(file);
+    } catch (err: unknown) {
+      setErrorMessage(err instanceof Error ? err.message : 'Unknown error reading file');
+    } finally {
+      setIsProcessing(false);
+    }
   };
 
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
-    setIsDragging(false);
+    setDragActive(false);
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      handleFileProcess(e.dataTransfer.files[0]);
+      processManualFile(e.dataTransfer.files[0]);
     }
   };
 
-  const handleApplyProgress = (merge: boolean) => {
-    if (!parsedResult) return;
-
-    setUserProgress((prev: UserProgress) => {
-      const newCaught = merge
-        ? { ...prev.caught, ...parsedResult.caughtFish }
-        : { ...parsedResult.caughtFish };
-
-      const newDonated = merge
-        ? { ...prev.donatedMuseum, ...parsedResult.donatedMuseum }
-        : { ...parsedResult.donatedMuseum };
-
-      const newOffered = merge
-        ? { ...prev.offeredTemple, ...parsedResult.offeredTemple }
-        : { ...parsedResult.offeredTemple };
-
-      return {
-        ...prev,
-        caught: newCaught,
-        donatedMuseum: newDonated,
-        offeredTemple: newOffered
-      };
-    });
-
-    onClose();
-  };
+  const activeResult = manualResult || lastParsedResult;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="bg-[#faf6ee] text-[#3d2f1a] border border-[#e8ddcb] rounded-2xl w-full max-w-xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
-        {/* Modal Header */}
-        <div className="px-6 py-4 bg-[#ede5d5] border-b border-[#e8ddcb] flex items-center justify-between">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
+      <div className="bg-[#182228] text-white border border-white/10 rounded-3xl w-full max-w-xl overflow-hidden shadow-2xl my-8">
+        
+        {/* Header */}
+        <div className="p-5 flex items-center justify-between border-b border-white/10">
           <div className="flex items-center gap-2.5">
-            <FolderOpen className="w-5 h-5 text-amber-700" />
-            <h2 className="text-lg font-black text-[#3d2f1a]">Import Coral Island Save File</h2>
+            <Radio className="w-5 h-5 text-emerald-400 animate-pulse" />
+            <div>
+              <h2 className="text-lg font-bold">Coral Island Live Save Sync</h2>
+              <p className="text-xs text-[#c4b5a0]">Real-Time In-Game Date, Weather & Checklist Watcher</p>
+            </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1 rounded-lg text-[#8c785b] hover:text-[#3d2f1a] hover:bg-[#e2d5be] transition-colors"
+            aria-label="Close"
+            className="p-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Modal Body */}
-        <div className="p-6 overflow-y-auto space-y-5 text-sm">
-          {/* Quick instructions & Copy Path */}
-          <div className="bg-[#f2ecde] border border-[#e8ddcb] rounded-xl p-3.5 space-y-2">
-            <div className="flex items-center justify-between text-xs text-[#6e583b] font-semibold">
-              <span>Save files are located on your PC at:</span>
-              <button
-                onClick={handleCopyPath}
-                className="flex items-center gap-1 text-amber-700 hover:text-amber-800 font-bold hover:underline"
-              >
-                {copiedPath ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-                <span>{copiedPath ? 'Copied!' : 'Copy Path'}</span>
-              </button>
-            </div>
-            <div className="bg-white/80 border border-[#dfd2be] rounded-lg px-3 py-1.5 font-mono text-xs text-[#4a3b25] select-all truncate">
-              {savePathSnippet}\World_X\EndOfDayAutoSave.sav
-            </div>
-          </div>
+        {/* Content */}
+        <div className="p-6 space-y-5 max-h-[75vh] overflow-y-auto text-xs">
 
-          {/* Drag and Drop Zone */}
-          <div
-            onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
-            onDragLeave={() => setIsDragging(false)}
-            onDrop={handleDrop}
-            onClick={() => fileInputRef.current?.click()}
-            className={`border-2 border-dashed rounded-xl p-6 text-center cursor-pointer transition-all ${
-              isDragging
-                ? 'border-amber-600 bg-amber-500/10 scale-[0.99]'
-                : 'border-[#dfd2be] hover:border-amber-600/70 hover:bg-[#f4efe4]'
-            }`}
-          >
-            <input
-              type="file"
-              ref={fileInputRef}
-              onChange={(e) => e.target.files?.[0] && handleFileProcess(e.target.files[0])}
-              accept=".sav"
-              className="hidden"
-            />
-            <div className="flex flex-col items-center gap-2">
-              <div className="p-3 bg-amber-600/10 rounded-full text-amber-700">
-                <UploadCloud className="w-8 h-8" />
-              </div>
-              <div>
-                <p className="font-bold text-[#3d2f1a]">
-                  Click to select or drag & drop your <span className="font-mono text-amber-700">.sav</span> file
-                </p>
-                <p className="text-xs text-[#8c785b] mt-0.5">
-                  Select <span className="font-semibold text-[#5a4627]">EndOfDayAutoSave.sav</span> or any <span className="font-semibold text-[#5a4627]">BackupSave*.sav</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Loading Indicator */}
-          {isLoading && (
-            <div className="flex items-center justify-center gap-2 text-amber-700 font-semibold py-2">
-              <div className="w-4 h-4 border-2 border-amber-600 border-t-transparent rounded-full animate-spin"></div>
-              <span>Decompressing and parsing save data...</span>
-            </div>
-          )}
-
-          {/* Status Message */}
-          {statusMessage && !parsedResult && (
-            <div className="flex items-start gap-2 p-3 bg-amber-500/10 border border-amber-300 text-amber-900 rounded-xl text-xs">
-              <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5 text-amber-700" />
-              <span>{statusMessage}</span>
-            </div>
-          )}
-
-          {/* Parsed Result Preview */}
-          {parsedResult && (
-            <div className="bg-[#ede5d5] border border-[#dfd2be] rounded-xl p-4 space-y-3 animate-in fade-in">
+          {/* Connected Active Live Sync Card */}
+          {isConnected ? (
+            <div className="bg-emerald-950/40 border-2 border-emerald-500/50 p-4 rounded-2xl space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <FileCheck className="w-5 h-5 text-emerald-600" />
-                  <span className="font-bold text-sm text-[#3d2f1a] truncate">{fileName}</span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping inline-block" />
+                  <strong className="text-sm text-emerald-300 font-bold">Live Auto-Sync Active</strong>
                 </div>
-                <span className="bg-emerald-600/15 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full border border-emerald-700/20">
-                  Ready to Sync
+                <span className="bg-emerald-900/80 text-emerald-200 px-2 py-0.5 rounded-full text-[10px] font-bold">
+                  {syncCount} syncs
                 </span>
               </div>
 
-              {/* Stats Grid */}
-              <div className="grid grid-cols-3 gap-2 text-center pt-1">
-                <div className="bg-white/80 border border-[#dfd2be] rounded-lg p-2.5">
-                  <div className="flex items-center justify-center gap-1 text-xs text-[#735f43] font-bold">
-                    <Fish className="w-3.5 h-3.5 text-emerald-600" />
-                    <span>Caught</span>
-                  </div>
-                  <div className="text-lg font-black text-[#3d2f1a] mt-0.5">
-                    {parsedResult.stats.totalFishCaught} <span className="text-xs text-[#8c785b] font-normal">/ 69</span>
-                  </div>
-                </div>
+              <p className="text-[#c4b5a0]">
+                Watching <strong>{fileName}</strong>. When you sleep or save in Coral Island, your web guide updates automatically in real time!
+              </p>
 
-                <div className="bg-white/80 border border-[#dfd2be] rounded-lg p-2.5">
-                  <div className="flex items-center justify-center gap-1 text-xs text-[#735f43] font-bold">
-                    <Landmark className="w-3.5 h-3.5 text-blue-600" />
-                    <span>Museum</span>
-                  </div>
-                  <div className="text-lg font-black text-[#3d2f1a] mt-0.5">
-                    {parsedResult.stats.totalFishDonated} <span className="text-xs text-[#8c785b] font-normal">/ 69</span>
-                  </div>
-                </div>
-
-                <div className="bg-white/80 border border-[#dfd2be] rounded-lg p-2.5">
-                  <div className="flex items-center justify-center gap-1 text-xs text-[#735f43] font-bold">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-                    <span>Temple</span>
-                  </div>
-                  <div className="text-lg font-black text-[#3d2f1a] mt-0.5">
-                    {parsedResult.stats.totalFishOffered} <span className="text-xs text-[#8c785b] font-normal">/ 24</span>
-                  </div>
+              <div className="flex items-center justify-between pt-1 text-[11px] text-neutral-300 border-t border-emerald-500/20">
+                <span>Last updated: {lastSyncTime ? lastSyncTime.toLocaleTimeString() : 'Just now'}</span>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => syncNow()}
+                    className="cg-pill px-2.5 py-1 text-[10px] text-white"
+                  >
+                    <RefreshCw className="w-3 h-3" />
+                    <span>Sync Now</span>
+                  </button>
+                  <button
+                    onClick={() => disconnectLiveSave()}
+                    className="cg-pill px-2.5 py-1 text-[10px] text-rose-300 hover:text-rose-200 hover:border-rose-400"
+                  >
+                    <PowerOff className="w-3 h-3" />
+                    <span>Disconnect</span>
+                  </button>
                 </div>
               </div>
+            </div>
+          ) : (
+            /* Connect Live Save File CTA */
+            <div className="space-y-3">
+              {isSupported ? (
+                <div className="bg-white/5 border border-white/10 p-5 rounded-2xl text-center space-y-3">
+                  <div className="w-12 h-12 rounded-2xl bg-white/10 mx-auto flex items-center justify-center">
+                    <Sparkles className="w-6 h-6 text-amber-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-white">Continuous In-Game Sync</h3>
+                    <p className="text-xs text-[#c4b5a0] max-w-md mx-auto mt-1">
+                      Grant read access to your save file once. The app will monitor in-game progress (Day, Weather, Caught Fish, Altars) while you play.
+                    </p>
+                  </div>
 
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row items-center gap-2 pt-2">
-                <button
-                  onClick={() => handleApplyProgress(true)}
-                  className="w-full py-2.5 px-4 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-xl shadow-xs transition-all flex items-center justify-center gap-2 text-xs"
-                >
-                  <CheckCircle2 className="w-4 h-4" />
-                  <span>Merge with Current Progress</span>
-                </button>
-                <button
-                  onClick={() => handleApplyProgress(false)}
-                  className="w-full py-2.5 px-4 bg-[#dfd2be] hover:bg-[#cfc0a8] text-[#4a3b25] font-bold rounded-xl transition-all text-xs"
-                >
-                  <span>Overwrite Progress</span>
-                </button>
+                  <button
+                    onClick={handleConnectLive}
+                    disabled={isProcessing}
+                    className="cg-pill cg-pill-active py-2.5 px-6 text-xs font-bold shadow-lg"
+                  >
+                    <Radio className="w-4 h-4 text-emerald-600 animate-pulse" />
+                    <span>{isProcessing ? 'Connecting...' : 'Connect Live Save File (*.sav)'}</span>
+                  </button>
+                </div>
+              ) : null}
+
+              {/* Drag and Drop Fallback Dropzone */}
+              <div
+                onDragOver={(e) => { e.preventDefault(); setDragActive(true); }}
+                onDragLeave={() => setDragActive(false)}
+                onDrop={handleDrop}
+                className={`border-2 border-dashed rounded-2xl p-6 text-center transition-all ${
+                  dragActive
+                    ? 'border-white bg-white/10'
+                    : 'border-white/15 bg-white/5 hover:border-white/30'
+                }`}
+              >
+                <UploadCloud className="w-8 h-8 text-[#c4b5a0] mx-auto mb-2" />
+                <p className="font-bold text-white mb-1">
+                  Or One-Time File Upload
+                </p>
+                <p className="text-[11px] text-[#c4b5a0] mb-3">
+                  Drag and drop your <strong>DailySave_*.sav</strong> here
+                </p>
+                <label className="cg-pill py-1.5 px-4 text-xs cursor-pointer">
+                  <span>Browse File</span>
+                  <input
+                    type="file"
+                    accept=".sav,.json"
+                    onChange={(e) => e.target.files && e.target.files[0] && processManualFile(e.target.files[0])}
+                    className="hidden"
+                  />
+                </label>
               </div>
             </div>
           )}
+
+          {/* Sync Results Summary */}
+          {activeResult && activeResult.success && (
+            <div className="bg-white/5 border border-white/10 p-4 rounded-2xl space-y-3">
+              <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+                <CheckCircle2 className="w-4 h-4" />
+                <span>Save State Synced Successfully</span>
+              </div>
+
+              {activeResult.gameDate && (
+                <div className="flex flex-wrap gap-2 text-[11px]">
+                  <span className="cg-pill px-2.5 py-0.5 text-white">
+                    📅 {activeResult.gameDate.season.toUpperCase()} Day {activeResult.gameDate.day}, Year {activeResult.gameDate.year}
+                  </span>
+                  {activeResult.weather && (
+                    <span className="cg-pill px-2.5 py-0.5 text-white">
+                      🌦️ {activeResult.weather.toUpperCase()}
+                    </span>
+                  )}
+                  {activeResult.profile?.fishingLevel !== undefined && (
+                    <span className="cg-pill px-2.5 py-0.5 text-white">
+                      🎣 Fishing Lvl {activeResult.profile.fishingLevel}
+                    </span>
+                  )}
+                </div>
+              )}
+
+              <div className="grid grid-cols-3 gap-2 text-center text-[11px]">
+                <div className="bg-black/30 p-2 rounded-xl border border-white/10">
+                  <span className="text-[#c4b5a0] block text-[9px] uppercase">Caught</span>
+                  <strong className="text-white text-sm">{activeResult.stats.totalFishCaught} / {activeResult.stats.catalogTotal}</strong>
+                </div>
+                <div className="bg-black/30 p-2 rounded-xl border border-white/10">
+                  <span className="text-[#c4b5a0] block text-[9px] uppercase">Museum</span>
+                  <strong className="text-white text-sm">{activeResult.stats.totalFishDonated} / {activeResult.stats.catalogTotal}</strong>
+                </div>
+                <div className="bg-black/30 p-2 rounded-xl border border-white/10">
+                  <span className="text-[#c4b5a0] block text-[9px] uppercase">Altars</span>
+                  <strong className="text-white text-sm">{activeResult.stats.totalFishOffered}</strong>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Error Message */}
+          {errorMessage && (
+            <div className="bg-rose-950/60 border border-rose-500/40 p-3 rounded-2xl flex items-center gap-2 text-rose-300">
+              <AlertTriangle className="w-4 h-4 flex-shrink-0" />
+              <span>{errorMessage}</span>
+            </div>
+          )}
+
+          {/* Save File Location Guide */}
+          <div className="bg-black/30 p-3.5 rounded-2xl border border-white/10 space-y-1.5 text-[11px] text-[#c4b5a0]">
+            <div className="flex items-center gap-1.5 font-bold text-white">
+              <FileText className="w-3.5 h-3.5" />
+              <span>Where is my Coral Island save file?</span>
+            </div>
+            <p>
+              Press <kbd className="bg-white/10 px-1 py-0.5 rounded text-white font-mono">Win + R</kbd> and paste:
+            </p>
+            <code className="block bg-black/50 p-2 rounded-lg text-neutral-300 font-mono text-[10px] select-all break-all border border-white/5">
+              %LOCALAPPDATA%\ProjectCoral\Saved\SaveGames
+            </code>
+            <p className="text-[10px] text-neutral-400">
+              Select your slot file (e.g. <strong>DailySave_0.sav</strong> or <strong>Backup_0.sav</strong>).
+            </p>
+          </div>
+
         </div>
 
-        {/* Modal Footer */}
-        <div className="px-6 py-3 bg-[#ede5d5] border-t border-[#e8ddcb] flex justify-end">
-          <button
-            onClick={onClose}
-            className="px-4 py-1.5 rounded-xl border border-[#dfd2be] text-[#5a4627] hover:bg-[#e2d5be] font-bold text-xs transition-colors"
-          >
-            Close
-          </button>
-        </div>
       </div>
     </div>
   );

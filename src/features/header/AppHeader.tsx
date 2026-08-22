@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { useFishing } from '../../context/FishingContext';
-import { BookOpen, Calendar, MapPin, Sparkles, Award, Settings, CheckCircle2, Layers, FolderDown } from 'lucide-react';
+import { useLiveSync } from '../save-import/LiveSyncContext';
+import { BookOpen, Calendar, MapPin, Sparkles, Award, Settings, CheckCircle2, Layers, Radio } from 'lucide-react';
 import superCoralImg from '../../assets/icons/Super_Coral.png';
 import { SaveManagerModal } from '../settings/SaveManagerModal';
 import { SaveImportModal } from '../save-import/SaveImportModal';
 
 export const AppHeader: React.FC = () => {
   const { activeTab, setActiveTab, activeNowCount, userProgress } = useFishing();
+  const { isConnected, fileName } = useLiveSync();
+
   const [showSettings, setShowSettings] = useState(false);
   const [showSaveImport, setShowSaveImport] = useState(false);
 
@@ -18,7 +21,7 @@ export const AppHeader: React.FC = () => {
     <>
       <header className="glass-header sticky top-0 z-40 px-4 py-3 sm:px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Logo & Title matching Coral Guide screenshot */}
+          {/* Logo & Title */}
           <div className="flex items-center gap-3">
             <img
               src={superCoralImg}
@@ -117,13 +120,18 @@ export const AppHeader: React.FC = () => {
               <span>Pins</span>
             </button>
 
+            {/* Live Save Sync Connection Pill */}
             <button
               onClick={() => setShowSaveImport(true)}
-              title="Import Coral Island Save Game (.sav)"
-              className="cg-pill px-2.5 py-1.5 text-xs font-bold hover:text-white"
+              title={isConnected ? `Live Sync Active: ${fileName}` : 'Connect In-Game Save File'}
+              className={`cg-pill px-3 py-1.5 text-xs font-bold transition-all ${
+                isConnected
+                  ? 'border-emerald-500/60 bg-emerald-950/40 text-emerald-300 hover:border-emerald-400'
+                  : 'hover:text-white'
+              }`}
             >
-              <FolderDown className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Import</span>
+              <Radio className={`w-3.5 h-3.5 ${isConnected ? 'text-emerald-400 animate-pulse' : 'text-[#c4b5a0]'}`} />
+              <span>{isConnected ? (fileName?.split('.')[0] || 'Live Sync') : 'Live Sync'}</span>
             </button>
 
             <button
