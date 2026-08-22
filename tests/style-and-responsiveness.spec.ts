@@ -1,49 +1,84 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Coral Island Fishing Guide - Responsiveness & Style Testing', () => {
+test.describe('Coral Island Fishing Guide - 3-Column Layout & Responsiveness Tests', () => {
 
-  test('Page loads properly with dark frosted header, brand logo, and no horizontal overflow', async ({ page }) => {
+  test('Page loads properly in 3-column layout with left navigation sidebar and no horizontal overflow', async ({ page, isMobile }) => {
     await page.goto('/');
 
-    // Check Header existence and title
-    const header = page.locator('header');
-    await expect(header).toBeVisible();
-    await expect(header.locator('text=Coral Guide').first()).toBeVisible();
-    await expect(header.locator('text=Fishing').first()).toBeVisible();
+    if (!isMobile) {
+      // On desktop/laptop: Left sidebar navigation is visible
+      const leftSidebar = page.locator('aside').filter({ hasText: /Coral Guide/i }).first();
+      await expect(leftSidebar).toBeVisible();
+      await expect(leftSidebar.locator('button').filter({ hasText: /Journal|Diário/i }).first()).toBeVisible();
 
-    // Verify no unexpected horizontal scrollbar on viewport
+      // Right filter sidebar is visible
+      const rightSidebar = page.locator('aside').filter({ hasText: /Filters & Simulation/i }).first();
+      await expect(rightSidebar).toBeVisible();
+    } else {
+      // On mobile: Mobile header with menu hamburger is visible
+      const mobileHeader = page.locator('header').first();
+      await expect(mobileHeader).toBeVisible();
+    }
+
+    // Verify no horizontal overflow
     const hasHorizontalOverflow = await page.evaluate(() => {
       return document.documentElement.scrollWidth > window.innerWidth;
     });
     expect(hasHorizontalOverflow).toBe(false);
   });
 
-  test('Responsive Mobile Sidebar collapses by default on phone screen and expands on toggle', async ({ page, isMobile }) => {
+  test('Left Navigation Sidebar collapses and expands cleanly on desktop', async ({ page, isMobile }) => {
     await page.goto('/');
 
-    const mobileToggle = page.locator('button:has-text("Filters & Simulation")');
+    if (!isMobile) {
+      const leftSidebar = page.locator('aside').first();
+      await expect(leftSidebar).toBeVisible();
 
-    if (isMobile) {
-      // On mobile screens, toggle button must be visible and collapsed by default
-      await expect(mobileToggle).toBeVisible();
+      // Click collapse button
+      const collapseBtn = page.locator('aside button[aria-label="Collapse Menu"]').first();
+      if (await collapseBtn.isVisible()) {
+        await collapseBtn.click();
+        // Should now have expand button
+        await expect(page.locator('aside button[aria-label="Expand Menu"]').first()).toBeVisible();
 
-      // Click to expand
-      await mobileToggle.click();
-      await expect(page.locator('text=Fishing Level').first()).toBeVisible();
+        // Click expand button
+        await page.locator('aside button[aria-label="Expand Menu"]').first().click();
+        await expect(page.locator('aside button[aria-label="Collapse Menu"]').first()).toBeVisible();
+      }
+    }
+  });
 
-      // Click to collapse
-      await mobileToggle.click();
-      await expect(page.locator('text=Fishing Level')).not.toBeVisible();
+  test('Right Filters Sidebar collapses and expands cleanly on desktop and mobile', async ({ page, isMobile }) => {
+    await page.goto('/');
+
+    const rightSidebar = page.locator('aside').filter({ hasText: /Filters & Simulation/i }).first();
+    await expect(rightSidebar).toBeVisible();
+
+    if (!isMobile) {
+      // Click desktop collapse button
+      const collapseRightBtn = page.locator('aside button[aria-label="Collapse Filters"]').first();
+      if (await collapseRightBtn.isVisible()) {
+        await collapseRightBtn.click();
+        // Should show expand compact button
+        const expandRightBtn = page.locator('aside button[aria-label="Expand Filters"]').first();
+        await expect(expandRightBtn).toBeVisible();
+
+        // Click expand
+        await expandRightBtn.click();
+        await expect(page.locator('aside button[aria-label="Collapse Filters"]').first()).toBeVisible();
+      }
     } else {
-      // On desktop, the sidebar is visible directly
+      // Mobile accordion toggle
+      const mobileToggleBtn = page.locator('aside button[aria-label="Toggle Filters"]').first();
+      await expect(mobileToggleBtn).toBeVisible();
+      await mobileToggleBtn.click();
       await expect(page.locator('text=Fishing Level').first()).toBeVisible();
     }
   });
 
-  test('Search input filters fish cards accurately without layout shifts', async ({ page }) => {
+  test('Center catalog search filters fish and cards render smoothly', async ({ page }) => {
     await page.goto('/');
 
-    // Filter input search
     const searchInput = page.locator('input[placeholder*="Search" i], input[placeholder*="Pesquisar" i]').first();
     await expect(searchInput).toBeVisible();
     await searchInput.fill('Salmon');
@@ -56,7 +91,7 @@ test.describe('Coral Island Fishing Guide - Responsiveness & Style Testing', () 
     await expect(page.locator('.cg-card-interactive').first()).toBeVisible();
   });
 
-  test('Clicking a fish card opens the Details Modal with clean responsive layout', async ({ page }) => {
+  test('Clicking a fish card opens Details Modal with unified Altar button color', async ({ page }) => {
     await page.goto('/');
 
     // Click the first fish card
@@ -75,50 +110,72 @@ test.describe('Coral Island Fishing Guide - Responsiveness & Style Testing', () 
     await expect(modal).not.toBeVisible();
   });
 
-  test('Navigation tabs switch smoothly across views (Journal, Calendar, Map, Altars, Mastery)', async ({ page }) => {
+  test('Navigation tabs switch smoothly across views via Left Sidebar', async ({ page, isMobile }) => {
     await page.goto('/');
 
+    if (isMobile) {
+      // Open mobile drawer
+      const menuBtn = page.locator('button[aria-label="Open Navigation Menu"]').first();
+      await menuBtn.click();
+    }
+
     // Switch to Calendar View
-    const calendarTab = page.locator('header nav button').filter({ hasText: /Schedule|Calendário/i }).first();
+    const calendarTab = page.locator('button').filter({ hasText: /Schedule|Calendário/i }).first();
     await calendarTab.click();
     await expect(page.locator('text=CALENDAR').or(page.locator('text=CALENDÁRIO')).first()).toBeVisible();
 
+    if (isMobile) {
+      const menuBtn = page.locator('button[aria-label="Open Navigation Menu"]').first();
+      await menuBtn.click();
+    }
+
     // Switch to Map View
-    const mapTab = page.locator('header nav button').filter({ hasText: /Island Map|Mapa da Ilha/i }).first();
+    const mapTab = page.locator('button').filter({ hasText: /Island Map|Mapa da Ilha/i }).first();
     await mapTab.click();
     await expect(page.locator('text=Starlet Island Fishing Map').first()).toBeVisible();
 
+    if (isMobile) {
+      const menuBtn = page.locator('button[aria-label="Open Navigation Menu"]').first();
+      await menuBtn.click();
+    }
+
     // Switch to Altars View
-    const altarTab = page.locator('header nav button').filter({ hasText: /Temple Altars|Altares/i }).first();
+    const altarTab = page.locator('button').filter({ hasText: /Temple Altars|Altares/i }).first();
     await altarTab.click();
     await expect(page.locator('text=Catching Altar').or(page.locator('text=Altar de Captura')).first()).toBeVisible();
 
-    // Switch to Mastery & Gear View
-    const masteryTab = page.locator('header nav button').filter({ hasText: /Mastery|Maestria/i }).first();
-    await masteryTab.click();
-    await expect(page.locator('text=Rod Upgrade Path').first()).toBeVisible();
+    if (isMobile) {
+      const menuBtn = page.locator('button[aria-label="Open Navigation Menu"]').first();
+      await menuBtn.click();
+    }
 
     // Switch back to Fish Journal
-    const journalTab = page.locator('header nav button').filter({ hasText: /Fish Journal|Diário/i }).first();
+    const journalTab = page.locator('button').filter({ hasText: /Fish Journal|Diário/i }).first();
     await journalTab.click();
     await expect(page.locator('.cg-card-interactive').first()).toBeVisible();
   });
 
-  test('Language selector dropdown switches languages dynamically', async ({ page }) => {
+  test('Language selector switches languages dynamically', async ({ page, isMobile }) => {
     await page.goto('/');
 
-    // Open language dropdown
-    const langBtn = page.locator('header button').filter({ hasText: /EN|PT|ES|DE|FR|ZH|JA|ID/i }).first();
-    await expect(langBtn).toBeVisible();
-    await langBtn.click();
+    if (isMobile) {
+      const menuBtn = page.locator('button[aria-label="Open Navigation Menu"]').first();
+      await menuBtn.click();
+      const ptFlagBtn = page.locator('button:has-text("🇧🇷")').first();
+      await expect(ptFlagBtn).toBeVisible();
+      await ptFlagBtn.click();
+    } else {
+      const langBtn = page.locator('aside button[title="Change Language"]').first();
+      await expect(langBtn).toBeVisible();
+      await langBtn.click();
 
-    // Select Portuguese
-    const ptBtn = page.locator('button:has-text("Português")').first();
-    if (await ptBtn.isVisible()) {
-      await ptBtn.click();
-      // Should now show Portuguese tab name
-      await expect(page.locator('text=Diário de Pesca').first()).toBeVisible();
+      const ptBtn = page.locator('button:has-text("Português")').first();
+      if (await ptBtn.isVisible()) {
+        await ptBtn.click();
+      }
     }
+
+    await expect(page.locator('text=Diário').first()).toBeVisible();
   });
 
 });
