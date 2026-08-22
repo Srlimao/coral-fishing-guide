@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
 import { useFishing } from '../../context/FishingContext';
 import { useLanguage } from '../../i18n/LanguageContext';
-import { X, Download, Upload, Trash2, Check, AlertTriangle, Globe } from 'lucide-react';
+import { X, Download, Upload, Trash2, Check, AlertTriangle, Globe, ZoomIn } from 'lucide-react';
 
 export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
-  const { exportData, importData, resetProgress } = useFishing();
+  const { exportData, importData, resetProgress, uiScale, setUiScale } = useFishing();
   const { language, setLanguage, supportedLanguages, t } = useLanguage();
 
   const [importText, setImportText] = useState('');
   const [statusMsg, setStatusMsg] = useState<{ text: string; type: 'success' | 'error' } | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
+
+  const scalePresets = [
+    { label: '90%', value: 0.90, desc: 'Compact' },
+    { label: '100%', value: 1.00, desc: 'Standard' },
+    { label: '105%', value: 1.05, desc: 'Default' },
+    { label: '115%', value: 1.15, desc: 'Large' },
+    { label: '125%', value: 1.25, desc: 'XL' }
+  ];
 
   const handleExport = () => {
     const data = exportData();
@@ -73,6 +81,54 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
               <span>{statusMsg.text}</span>
             </div>
           )}
+
+          {/* UI Scale Setting Section */}
+          <div className="bg-black/20 p-4 rounded-xl border border-white/5 space-y-3">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-1.5 font-bold text-white text-sm">
+                <ZoomIn className="w-4 h-4 text-amber-400" />
+                <span>UI Scaling & Size</span>
+              </div>
+              <span className="bg-amber-400/20 text-amber-300 border border-amber-400/40 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                {Math.round(uiScale * 100)}%
+              </span>
+            </div>
+            
+            <p className="text-[11px] text-neutral-400">
+              Adjust the overall interface size, font scale, and card dimensions for maximum readability.
+            </p>
+
+            {/* Presets Grid */}
+            <div className="grid grid-cols-5 gap-1.5">
+              {scalePresets.map(p => (
+                <button
+                  key={p.label}
+                  onClick={() => setUiScale(p.value)}
+                  className={`cg-pill py-1.5 px-1 text-xs flex flex-col items-center justify-center gap-0.5 ${
+                    Math.abs(uiScale - p.value) < 0.01 ? 'cg-pill-active' : ''
+                  }`}
+                >
+                  <span className="font-extrabold text-[11px]">{p.label}</span>
+                  <span className="text-[9px] opacity-75">{p.desc}</span>
+                </button>
+              ))}
+            </div>
+
+            {/* Range Slider for Fine Control */}
+            <div className="flex items-center gap-3 pt-1">
+              <span className="text-[10px] text-neutral-400 font-semibold">85%</span>
+              <input
+                type="range"
+                min="0.85"
+                max="1.30"
+                step="0.05"
+                value={uiScale}
+                onChange={(e) => setUiScale(parseFloat(e.target.value))}
+                className="w-full h-1.5 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-amber-400"
+              />
+              <span className="text-[10px] text-neutral-400 font-semibold">130%</span>
+            </div>
+          </div>
 
           {/* Language Selection Grid */}
           <div className="bg-black/20 p-4 rounded-xl border border-white/5 space-y-2.5">

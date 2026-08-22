@@ -35,6 +35,8 @@ interface FishingContextType {
   activeTab: 'catalog' | 'calendar' | 'map' | 'bundles' | 'stats' | 'backoffice';
   customLocations: FishingLocationPin[];
   customMapImage: string | null;
+  uiScale: number;
+  setUiScale: (scale: number) => void;
   setGameState: React.Dispatch<React.SetStateAction<ActiveGameState>>;
   setFilters: React.Dispatch<React.SetStateAction<FilterOptions>>;
   setSelectedFish: (fish: FishItem | null) => void;
@@ -103,9 +105,23 @@ export const FishingProvider: React.FC<{ children: React.ReactNode }> = ({ child
     }
   });
 
+  const [uiScale, setUiScale] = useState<number>(() => {
+    try {
+      const saved = localStorage.getItem('coral_fishing_guide_ui_scale_v1');
+      return saved ? parseFloat(saved) : 1.05;
+    } catch {
+      return 1.05;
+    }
+  });
+
   const [filters, setFilters] = useState<FilterOptions>(defaultFilters);
   const [selectedFish, setSelectedFish] = useState<FishItem | null>(null);
   const [activeTab, setActiveTab] = useState<'catalog' | 'calendar' | 'map' | 'bundles' | 'stats' | 'backoffice'>('catalog');
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--ui-scale', uiScale.toString());
+    localStorage.setItem('coral_fishing_guide_ui_scale_v1', uiScale.toString());
+  }, [uiScale]);
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY_GAMESTATE, JSON.stringify(gameState));
@@ -225,6 +241,8 @@ export const FishingProvider: React.FC<{ children: React.ReactNode }> = ({ child
         activeTab,
         customLocations,
         customMapImage,
+        uiScale,
+        setUiScale,
         setGameState,
         setFilters,
         setSelectedFish,

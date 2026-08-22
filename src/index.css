@@ -20,6 +20,7 @@
 }
 
 :root {
+  --ui-scale: 1.05;
   --cg-bg-main: #13181b;
   --cg-card-bg: #f7f2e8;
   --cg-card-subtle: #ede6db;
@@ -35,6 +36,10 @@
   --cg-header-text: #8a7c67;
   --cg-header-text-active: #d89e43;
   --cg-card-radius: 24px;
+}
+
+html {
+  font-size: calc(16px * var(--ui-scale, 1.05));
 }
 
 html, body {
