@@ -132,7 +132,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
               <button
                 onClick={() => toggleOffered(fish.id)}
                 className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all ${
-                  isOffered ? 'bg-amber-600 text-white shadow-md' : 'bg-[#fef3c7] text-[#92400e] hover:bg-[#fde68a]'
+                  isOffered ? 'bg-[#13181b] text-white shadow-md' : 'bg-white/70 text-[#5a4627] hover:bg-white'
                 }`}
               >
                 <Sparkles className="w-3.5 h-3.5" />

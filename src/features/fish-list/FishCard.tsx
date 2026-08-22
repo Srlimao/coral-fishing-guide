@@ -185,11 +185,11 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
             title={`Required for: ${fish.offerings.map(o => o.bundleName).join(', ')}`}
             className={`flex items-center gap-1 px-2.5 py-1 rounded-full font-bold transition-all ${
               isOffered
-                ? 'bg-amber-600 text-white shadow-xs'
-                : 'bg-[#fef3c7] text-[#92400e] hover:bg-[#fde68a] border border-amber-300/80'
+                ? 'bg-[#13181b] text-white shadow-xs'
+                : 'bg-[#ede5d5] text-[#8c785b] hover:bg-[#e2d5be]'
             }`}
           >
-            <Sparkles className="w-3 h-3" />
+            <Sparkles className={`w-3 h-3 ${isOffered ? 'opacity-100' : 'opacity-40'}`} />
             <span>{isOffered ? t('btn_altar_offered') : t('btn_altar_needed')}</span>
           </button>
         )}

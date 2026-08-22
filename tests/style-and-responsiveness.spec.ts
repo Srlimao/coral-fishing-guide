@@ -108,7 +108,7 @@ test.describe('Coral Island Fishing Guide - Responsiveness & Style Testing', () 
     await page.goto('/');
 
     // Open language dropdown
-    const langBtn = page.locator('header nav button:has-text("EN"), header nav button:has-text("PT")').first();
+    const langBtn = page.locator('header button').filter({ hasText: /EN|PT|ES|DE|FR|ZH|JA|ID/i }).first();
     await expect(langBtn).toBeVisible();
     await langBtn.click();
 
