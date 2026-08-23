@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FishItem } from '../../types/fishing';
 import { getFishSpriteUrl } from '../../data/fishData';
 import { useFishing } from '../../context/FishingContext';
@@ -57,9 +57,28 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
   const currentRod = RODS_DATA[gameState.equippedRod] || RODS_DATA.makeshift;
   const spriteSrc = getFishSpriteUrl(fish.iconName, fish.key, fish.id);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
-      <div className="bg-[#f7f2e8] text-[#5a4627] border border-[#e2d3be] rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl my-8">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto"
+      onClick={onClose}
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="fish-detail-modal-title"
+        className="bg-[#f7f2e8] text-[#5a4627] border border-[#e2d3be] rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl my-8"
+        onClick={(e) => e.stopPropagation()}
+      >
         
         {/* Modal Header */}
         <div className="bg-[#182228] text-white p-5 flex items-start justify-between border-b border-white/10">
@@ -80,7 +99,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
             </div>
             <div>
               <div className="flex items-center gap-2.5">
-                <h2 className="text-2xl font-bold">{localizedName}</h2>
+                <h2 id="fish-detail-modal-title" className="text-2xl font-bold">{localizedName}</h2>
                 <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full badge-rarity-${fish.rarity}`}>
                   {t(`rarity_${fish.rarity.toLowerCase()}` as any, fish.rarity)}
                 </span>
@@ -97,7 +116,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
           <button
             onClick={onClose}
             aria-label="Close modal"
-            className="p-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-neutral-300 hover:text-white transition-all"
+            className="p-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-neutral-300 hover:text-white transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
           >
             <X className="w-5 h-5" />
           </button>
