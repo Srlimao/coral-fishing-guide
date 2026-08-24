@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useFishing } from '../../context/FishingContext';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { X, Download, Upload, Trash2, Check, AlertTriangle, Globe, ZoomIn } from 'lucide-react';
@@ -10,6 +10,16 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
   const [importText, setImportText] = useState('');
   const [statusMsg, setStatusMsg] = useState<{ text: string; type: 'success' | 'error' } | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
 
   const scalePresets = [
     { label: '90%', value: 0.90, desc: 'Compact' },
@@ -51,17 +61,26 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md overflow-y-auto">
-      <div className="bg-[#182228] border border-white/10 rounded-2xl w-full max-w-lg overflow-hidden shadow-2xl text-[#f3f4f6] my-8">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md overflow-y-auto"
+      onClick={onClose}
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="settings-modal-title"
+        className="bg-[#182228] border border-white/10 rounded-2xl w-full max-w-lg overflow-hidden shadow-2xl text-[#f3f4f6] my-8"
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Modal Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
-          <h3 className="text-lg font-bold text-white flex items-center gap-2">
+          <h3 id="settings-modal-title" className="text-lg font-bold text-white flex items-center gap-2">
             <span>⚙️ {t('nav_settings')}</span>
           </h3>
           <button
             onClick={onClose}
-            aria-label="Close"
-            className="p-1 rounded-lg text-neutral-400 hover:text-white hover:bg-white/10"
+            aria-label="Close modal"
+            className="p-1 rounded-lg text-neutral-400 hover:text-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
           >
             <X className="w-5 h-5" />
           </button>

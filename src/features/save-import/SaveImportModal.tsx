@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useFishing } from '../../context/FishingContext';
 import { parseCoralIslandSaveFile, SaveCompletionsResult } from '../../utils/saveFileParser';
 import {
@@ -23,6 +23,17 @@ export const SaveImportModal: React.FC<SaveImportModalProps> = ({ isOpen, onClos
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [importedFileName, setImportedFileName] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -86,22 +97,31 @@ export const SaveImportModal: React.FC<SaveImportModalProps> = ({ isOpen, onClos
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
-      <div className="bg-[#182228] text-white border border-white/10 rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl my-8">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto"
+      onClick={onClose}
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="save-import-modal-title"
+        className="bg-[#182228] text-white border border-white/10 rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl my-8"
+        onClick={(e) => e.stopPropagation()}
+      >
         
         {/* Header */}
         <div className="p-5 flex items-center justify-between border-b border-white/10">
           <div className="flex items-center gap-2.5">
             <FolderOpen className="w-5 h-5 text-amber-400" />
             <div>
-              <h2 className="text-lg font-bold">Import Coral Island Save File</h2>
+              <h2 id="save-import-modal-title" className="text-lg font-bold">Import Coral Island Save File</h2>
               <p className="text-xs text-[#c4b5a0]">Load in-game date, weather & fishing progress</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            aria-label="Close"
-            className="p-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white transition-colors"
+            aria-label="Close modal"
+            className="p-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
           >
             <X className="w-5 h-5" />
           </button>
