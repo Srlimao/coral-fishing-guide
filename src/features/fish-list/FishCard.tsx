@@ -48,13 +48,17 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
 
   return (
     <div
-      onClick={() => setSelectedFish(fish)}
-      className={`cg-card cg-card-interactive p-3.5 sm:p-4 flex flex-col justify-between cursor-pointer relative overflow-visible transition-all border ${
+      className={`cg-card cg-card-interactive p-3.5 sm:p-4 flex flex-col justify-between relative overflow-visible transition-all border ${
         isCaught ? 'bg-[#f4efe4] opacity-95' : 'bg-[#faf6ee]'
       }`}
     >
-      {/* Top Section */}
-      <div>
+      {/* Top Section - Interactive Button to view details */}
+      <button
+        type="button"
+        onClick={() => setSelectedFish(fish)}
+        aria-label={`${localizedName}, details and tracking`}
+        className="text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-xl transition-all"
+      >
         {/* Banner Badges */}
         {exclusivity.isExclusive && (
           <div className="mb-2 -mt-0.5 flex flex-wrap items-center gap-1.5">
@@ -149,17 +153,17 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
             </span>
           </div>
         </div>
-      </div>
+      </button>
 
       {/* Footer Checklists */}
       <div
         className="mt-3 pt-2 border-t border-[#e8ddcb] flex items-center gap-1.5 text-[11px]"
-        onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={() => toggleCaught(fish.id)}
-          aria-label={`Mark ${localizedName} as caught`}
-          className={`flex-1 min-w-0 flex items-center justify-center gap-1 px-2 py-1 rounded-full font-bold transition-all ${
+          aria-pressed={isCaught}
+          aria-label={`${localizedName}: ${isCaught ? t('btn_caught') : t('btn_uncaught')}`}
+          className={`flex-1 min-w-0 flex items-center justify-center gap-1 px-2 py-1 rounded-full font-bold transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
             isCaught ? 'bg-[#13181b] text-white shadow-xs' : 'bg-[#ede5d5] text-[#8c785b] hover:bg-[#e2d5be]'
           }`}
         >
@@ -169,8 +173,9 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
 
         <button
           onClick={() => toggleDonated(fish.id)}
-          aria-label={`Mark ${localizedName} as donated`}
-          className={`flex-1 min-w-0 flex items-center justify-center gap-1 px-2 py-1 rounded-full font-bold transition-all ${
+          aria-pressed={isDonated}
+          aria-label={`${localizedName} museum status: ${isDonated ? t('btn_museum_donated') : t('btn_museum_missing')}`}
+          className={`flex-1 min-w-0 flex items-center justify-center gap-1 px-2 py-1 rounded-full font-bold transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
             isDonated ? 'bg-[#13181b] text-white shadow-xs' : 'bg-[#ede5d5] text-[#8c785b] hover:bg-[#e2d5be]'
           }`}
         >
@@ -181,9 +186,10 @@ export const FishCard: React.FC<FishCardProps> = ({ fish }) => {
         {fish.offerings.length > 0 && (
           <button
             onClick={() => toggleOffered(fish.id)}
-            aria-label={`Mark ${localizedName} as offered`}
+            aria-pressed={isOffered}
+            aria-label={`${localizedName} altar offering status: ${isOffered ? t('btn_altar_offered') : t('btn_altar_needed')}`}
             title={`Required for: ${fish.offerings.map(o => o.bundleName).join(', ')}`}
-            className={`flex-1 min-w-0 flex items-center justify-center gap-1 px-2 py-1 rounded-full font-bold transition-all ${
+            className={`flex-1 min-w-0 flex items-center justify-center gap-1 px-2 py-1 rounded-full font-bold transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
               isOffered
                 ? 'bg-[#13181b] text-white shadow-xs'
                 : 'bg-[#ede5d5] text-[#8c785b] hover:bg-[#e2d5be]'
