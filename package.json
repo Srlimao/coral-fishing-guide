@@ -21,6 +21,7 @@
     "@playwright/test": "^1.62.1",
     "@tailwindcss/postcss": "^4.3.3",
     "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.2.0",
     "@types/pako": "^2.0.4",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",

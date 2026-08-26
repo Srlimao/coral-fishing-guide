@@ -1,6 +1,8 @@
 import React from 'react';
 import { FishingProvider, useFishing } from './context/FishingContext';
 import { LanguageProvider } from './i18n/LanguageContext';
+import { LiveBridgeProvider } from './features/live-bridge/LiveBridgeContext';
+import { LiveBridgeSyncHandler } from './features/live-bridge/LiveBridgeSyncHandler';
 import { AppLeftSidebar } from './features/navigation/AppLeftSidebar';
 import { FishListRightSidebar } from './features/fish-list/FishListRightSidebar';
 import { TimeWeatherBar } from './features/time-weather/TimeWeatherBar';
@@ -11,6 +13,7 @@ import { InteractiveMapView } from './features/map/InteractiveMapView';
 import { MapEditorBackofficeView } from './features/map/MapEditorBackofficeView';
 import { OfferingsTrackerView } from './features/bundles/OfferingsTrackerView';
 import { FishingStatsView } from './features/stats/FishingStatsView';
+import { TriviaMainView } from './features/trivia/TriviaMainView';
 import { FishDetailModal } from './features/fish-list/FishDetailModal';
 import { Heart } from 'lucide-react';
 
@@ -26,8 +29,8 @@ const MainLayout: React.FC = () => {
       {/* 2. Center Column: Main Content Area */}
       <div className="flex-1 flex flex-col justify-between min-w-0 min-h-screen">
         <main className="p-4 sm:p-6 space-y-6 flex-1 w-full max-w-[1800px] mx-auto">
-          {/* Top Controls only for Non-Catalog and Non-Backoffice tabs */}
-          {activeTab !== 'catalog' && activeTab !== 'backoffice' && (
+          {/* Top Controls only for Non-Catalog, Non-Backoffice, Non-Trivia tabs */}
+          {activeTab !== 'catalog' && activeTab !== 'backoffice' && activeTab !== 'trivia' && (
             <div className="space-y-4">
               <TimeWeatherBar />
               {activeTab === 'map' && <GearSelector />}
@@ -41,6 +44,7 @@ const MainLayout: React.FC = () => {
           {activeTab === 'backoffice' && <MapEditorBackofficeView />}
           {activeTab === 'bundles' && <OfferingsTrackerView />}
           {activeTab === 'stats' && <FishingStatsView />}
+          {activeTab === 'trivia' && <TriviaMainView />}
         </main>
 
         {/* Footer */}
@@ -78,9 +82,12 @@ const MainLayout: React.FC = () => {
 export function App() {
   return (
     <LanguageProvider>
-      <FishingProvider>
-        <MainLayout />
-      </FishingProvider>
+      <LiveBridgeProvider>
+        <FishingProvider>
+          <LiveBridgeSyncHandler />
+          <MainLayout />
+        </FishingProvider>
+      </LiveBridgeProvider>
     </LanguageProvider>
   );
 }
