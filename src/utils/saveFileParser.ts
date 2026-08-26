@@ -102,50 +102,96 @@ export function decompressUe4SaveGame(buffer: Uint8Array): Uint8Array {
   return result;
 }
 
-function extractDateAndWeather(text: string): { date?: SaveGameDate; weather?: Weather; tomorrowWeather?: Weather } {
+function extractDateAndWeather(decompressedBytes: Uint8Array): { date?: SaveGameDate; weather?: Weather; tomorrowWeather?: Weather } {
+  const view = new DataView(decompressedBytes.buffer, decompressedBytes.byteOffset, decompressedBytes.byteLength);
+
+  function readFString(offset: number): { str: string; next: number } | null {
+    if (offset + 4 > decompressedBytes.length) return null;
+    const len = view.getInt32(offset, true);
+    if (len === 0) return { str: '', next: offset + 4 };
+    if (len > 0 && len < 2000 && offset + 4 + len <= decompressedBytes.length) {
+      const bytes = decompressedBytes.subarray(offset + 4, offset + 4 + len - 1);
+      const str = new TextDecoder('utf-8').decode(bytes);
+      return { str, next: offset + 4 + len };
+    }
+    return null;
+  }
+
   let season: Season = 'spring';
   let day = 1;
   let year = 1;
   let weather: Weather = 'sunny';
-  let tomorrowWeather: Weather = 'sunny';
+  let tomorrowWeather: Weather | undefined = undefined;
 
-  // 1. Season detection
-  const seasonMatch = text.match(/(?:CurrentSeason|SeasonName|E_Season::)(Spring|Summer|Fall|Winter)/i);
-  if (seasonMatch) {
-    const raw = seasonMatch[1].toLowerCase();
-    if (raw === 'spring' || raw === 'summer' || raw === 'fall' || raw === 'winter') {
-      season = raw as Season;
+  const maxScan = Math.min(decompressedBytes.length - 30, 150000);
+  let pos = 0;
+
+  while (pos < maxScan) {
+    const nameRes = readFString(pos);
+    if (nameRes && nameRes.str) {
+      if (nameRes.str === 'currentDate') {
+        const typeRes = readFString(nameRes.next);
+        if (typeRes && typeRes.str === 'StructProperty') {
+          const structSize = Number(view.getBigUint64(typeRes.next, true));
+          const structType = readFString(typeRes.next + 8);
+          if (structType && structType.str === 'C_TimeDate') {
+            const structStart = structType.next + 17;
+            let sp = structStart;
+            while (sp < structStart + structSize && sp < decompressedBytes.length - 10) {
+              const sName = readFString(sp);
+              if (!sName || !sName.str || sName.str === 'None') break;
+              const sType = readFString(sName.next);
+              if (!sType || !sType.str) break;
+              const sValOff = sType.next + 8 + 1;
+
+              if (sName.str === 'day' && sType.str === 'IntProperty') {
+                const parsedDay = view.getInt32(sValOff, true);
+                if (parsedDay >= 1 && parsedDay <= 28) day = parsedDay;
+                sp = sValOff + 4;
+              } else if (sName.str === 'year' && sType.str === 'IntProperty') {
+                const parsedYear = view.getInt32(sValOff, true);
+                if (parsedYear >= 1 && parsedYear <= 99) year = parsedYear;
+                sp = sValOff + 4;
+              } else if (sName.str === 'season' && sType.str === 'EnumProperty') {
+                const eType = readFString(sType.next + 8);
+                if (eType) {
+                  const eVal = readFString(eType.next + 1);
+                  if (eVal && eVal.str) {
+                    const rawS = eVal.str.replace(/^EC_Season::/i, '').toLowerCase();
+                    if (['spring', 'summer', 'fall', 'winter'].includes(rawS)) {
+                      season = rawS as Season;
+                    }
+                    sp = eVal.next;
+                  } else {
+                    sp++;
+                  }
+                } else {
+                  sp++;
+                }
+              } else {
+                sp++;
+              }
+            }
+          }
+        }
+      } else if (nameRes.str === 'currentWeather' || nameRes.str === 'yesterdayWeather' || nameRes.str === 'tomorrowWeather') {
+        const typeRes = readFString(nameRes.next);
+        if (typeRes && typeRes.str === 'EnumProperty') {
+          const eType = readFString(typeRes.next + 8);
+          if (eType) {
+            const eVal = readFString(eType.next + 1);
+            if (eVal && eVal.str) {
+              const rawW = eVal.str.replace(/^EC_Weather::/i, '').toLowerCase();
+              if (['sunny', 'rain', 'storm', 'snow', 'windy', 'blizzard'].includes(rawW)) {
+                if (nameRes.str === 'currentWeather') weather = rawW as Weather;
+                else if (nameRes.str === 'tomorrowWeather') tomorrowWeather = rawW as Weather;
+              }
+            }
+          }
+        }
+      }
     }
-  }
-
-  // 2. Day & Year detection
-  const dayMatch = text.match(/(?:CurrentDay|DayNumber|DayCount)\x00[^\x00]*?\x00(\d{1,2})/);
-  if (dayMatch) {
-    const parsedDay = parseInt(dayMatch[1], 10);
-    if (parsedDay >= 1 && parsedDay <= 28) day = parsedDay;
-  }
-
-  const yearMatch = text.match(/(?:CurrentYear|YearNumber)\x00[^\x00]*?\x00(\d{1,2})/);
-  if (yearMatch) {
-    const parsedYear = parseInt(yearMatch[1], 10);
-    if (parsedYear >= 1 && parsedYear <= 99) year = parsedYear;
-  }
-
-  // 3. Weather detection
-  const weatherMatch = text.match(/(?:TodayWeather|CurrentWeather|WeatherType)[^\x00]*?(Sunny|Rain|Storm|Snow|Windy|Blizzard)/i);
-  if (weatherMatch) {
-    const rawW = weatherMatch[1].toLowerCase();
-    if (['sunny', 'rain', 'storm', 'snow', 'windy', 'blizzard'].includes(rawW)) {
-      weather = rawW as Weather;
-    }
-  }
-
-  const tomorrowMatch = text.match(/(?:TomorrowWeather|ForecastWeather)[^\x00]*?(Sunny|Rain|Storm|Snow|Windy|Blizzard)/i);
-  if (tomorrowMatch) {
-    const rawTW = tomorrowMatch[1].toLowerCase();
-    if (['sunny', 'rain', 'storm', 'snow', 'windy', 'blizzard'].includes(rawTW)) {
-      tomorrowWeather = rawTW as Weather;
-    }
+    pos++;
   }
 
   return {
@@ -206,7 +252,7 @@ export function parseCoralIslandSaveFile(fileBuffer: ArrayBuffer): SaveCompletio
       });
     }
 
-    const { date, weather, tomorrowWeather } = extractDateAndWeather(decodedText);
+    const { date, weather, tomorrowWeather } = extractDateAndWeather(decompressedBytes);
 
     // 4. Player Fishing Level
     let fishingLevel = 1;

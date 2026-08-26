@@ -7,6 +7,7 @@ export const ja: TranslationDictionary = {
   nav_altars: '寺院の祭壇',
   nav_mastery: 'マスタリー',
   nav_pins: 'スポット',
+  nav_trivia: 'トリビアクイズ',
   nav_import_save: 'セーブ読込',
   nav_settings: '設定',
   nav_caught_count: '捕獲済',

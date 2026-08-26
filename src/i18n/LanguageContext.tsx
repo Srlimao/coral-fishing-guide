@@ -10,6 +10,7 @@ import { ja } from './locales/ja';
 import { id } from './locales/id';
 import { getLocalizedFishName } from './fishTranslations';
 import { getLocalizedLocationName } from './locationTranslations';
+import { getLocalizedAltarTitle, getLocalizedBundleTitle, getLocalizedOfferingItemName } from './altarTranslations';
 
 const DICTIONARIES: Record<SupportedLanguage, TranslationDictionary> = {
   en,
@@ -31,6 +32,9 @@ interface LanguageContextType {
   t: (key: keyof TranslationDictionary, fallback?: string) => string;
   getFishName: (fish: { id: string; name: string }) => string;
   getLocationName: (locationName: string) => string;
+  getAltarTitle: (altarKey: string, fallback: string) => string;
+  getBundleTitle: (bundleTitle: string) => string;
+  getOfferingItemName: (itemName: string) => string;
   supportedLanguages: LanguageInfo[];
 }
 
@@ -79,6 +83,18 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     return getLocalizedLocationName(locationName, language);
   }, [language]);
 
+  const getAltarTitle = useCallback((altarKey: string, fallback: string): string => {
+    return getLocalizedAltarTitle(altarKey, fallback, language);
+  }, [language]);
+
+  const getBundleTitle = useCallback((bundleTitle: string): string => {
+    return getLocalizedBundleTitle(bundleTitle, language);
+  }, [language]);
+
+  const getOfferingItemName = useCallback((itemName: string): string => {
+    return getLocalizedOfferingItemName(itemName, language);
+  }, [language]);
+
   const currentLanguageInfo = SUPPORTED_LANGUAGES.find(l => l.code === language) || SUPPORTED_LANGUAGES[0];
 
   return (
@@ -90,6 +106,9 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         t,
         getFishName,
         getLocationName,
+        getAltarTitle,
+        getBundleTitle,
+        getOfferingItemName,
         supportedLanguages: SUPPORTED_LANGUAGES
       }}
     >

@@ -3,6 +3,7 @@ import { useFishing } from '../../context/FishingContext';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { Season, Weather, TimeOfDay } from '../../types/fishing';
 import { Flame, ChevronLeft, ChevronRight } from 'lucide-react';
+import { LiveSyncIndicator } from '../live-bridge/LiveSyncIndicator';
 import sunnyIcon from '../../assets/icons/weather/Sunny.png';
 import rainIcon from '../../assets/icons/weather/Rain.png';
 import stormIcon from '../../assets/icons/weather/Storm.png';
@@ -124,23 +125,27 @@ export const TimeWeatherBar: React.FC = () => {
           ))}
         </div>
 
-        {/* Active Now Live Toggle */}
-        <button
-          onClick={() =>
-            setGameState(prev => ({ ...prev, liveFilterOnlyActive: !prev.liveFilterOnlyActive }))
-          }
-          className={`cg-pill px-3.5 py-2 text-xs font-bold ${
-            gameState.liveFilterOnlyActive ? 'cg-pill-active' : ''
-          }`}
-        >
-          <Flame className="w-4 h-4" />
-          <span>{t('active_right_now')}</span>
-          <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
-            gameState.liveFilterOnlyActive ? 'bg-[#13181b] text-white' : 'bg-white/15 text-white'
-          }`}>
-            {gameState.liveFilterOnlyActive ? 'ON' : 'OFF'}
-          </span>
-        </button>
+        {/* Controls Actions: Active Now & Live Bridge Indicator */}
+        <div className="flex items-center gap-2">
+          <LiveSyncIndicator />
+
+          <button
+            onClick={() =>
+              setGameState(prev => ({ ...prev, liveFilterOnlyActive: !prev.liveFilterOnlyActive }))
+            }
+            className={`cg-pill px-3.5 py-2 text-xs font-bold ${
+              gameState.liveFilterOnlyActive ? 'cg-pill-active' : ''
+            }`}
+          >
+            <Flame className="w-4 h-4" />
+            <span>{t('active_right_now')}</span>
+            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
+              gameState.liveFilterOnlyActive ? 'bg-[#13181b] text-white' : 'bg-white/15 text-white'
+            }`}>
+              {gameState.liveFilterOnlyActive ? 'ON' : 'OFF'}
+            </span>
+          </button>
+        </div>
 
       </div>
     </div>

@@ -10,7 +10,8 @@ import {
   TackleType,
   FishItem,
   FishingLocationPin,
-  MapSpotCoordinate
+  MapSpotCoordinate,
+  NavigationTab
 } from '../types/fishing';
 import { FISH_LIST } from '../data/fishData';
 import { DEFAULT_FISHING_LOCATIONS } from '../data/locationsData';
@@ -32,7 +33,7 @@ interface FishingContextType {
   userProgress: UserProgress;
   filters: FilterOptions;
   selectedFish: FishItem | null;
-  activeTab: 'catalog' | 'calendar' | 'map' | 'bundles' | 'stats' | 'backoffice';
+  activeTab: NavigationTab;
   customLocations: FishingLocationPin[];
   customMapImage: string | null;
   uiScale: number;
@@ -40,7 +41,7 @@ interface FishingContextType {
   setGameState: React.Dispatch<React.SetStateAction<ActiveGameState>>;
   setFilters: React.Dispatch<React.SetStateAction<FilterOptions>>;
   setSelectedFish: (fish: FishItem | null) => void;
-  setActiveTab: (tab: 'catalog' | 'calendar' | 'map' | 'bundles' | 'stats' | 'backoffice') => void;
+  setActiveTab: (tab: NavigationTab) => void;
   toggleCaught: (fishId: string) => void;
   toggleDonated: (fishId: string) => void;
   toggleOffered: (fishId: string) => void;
@@ -116,7 +117,7 @@ export const FishingProvider: React.FC<{ children: React.ReactNode }> = ({ child
 
   const [filters, setFilters] = useState<FilterOptions>(defaultFilters);
   const [selectedFish, setSelectedFish] = useState<FishItem | null>(null);
-  const [activeTab, setActiveTab] = useState<'catalog' | 'calendar' | 'map' | 'bundles' | 'stats' | 'backoffice'>('catalog');
+  const [activeTab, setActiveTab] = useState<NavigationTab>('catalog');
 
   useEffect(() => {
     document.documentElement.style.setProperty('--ui-scale', uiScale.toString());

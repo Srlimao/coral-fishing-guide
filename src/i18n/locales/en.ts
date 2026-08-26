@@ -7,6 +7,7 @@ export const en: TranslationDictionary = {
   nav_altars: 'Temple Altars',
   nav_mastery: 'Mastery',
   nav_pins: 'Pins',
+  nav_trivia: 'Trivia Quiz',
   nav_import_save: 'Import Save',
   nav_settings: 'Settings',
   nav_caught_count: 'Caught',

@@ -173,3 +173,5 @@ export interface ExclusivityInfo {
   tier: 'exclusive' | 'temple_museum' | 'completion';
   priorityScore: number;
 }
+
+export type NavigationTab = 'catalog' | 'calendar' | 'map' | 'bundles' | 'stats' | 'backoffice' | 'trivia';

@@ -7,6 +7,7 @@ export const de: TranslationDictionary = {
   nav_altars: 'Tempelaltäre',
   nav_mastery: 'Meisterschaft',
   nav_pins: 'Punkte',
+  nav_trivia: 'Insel-Quiz',
   nav_import_save: 'Spielstand laden',
   nav_settings: 'Einstellungen',
   nav_caught_count: 'Gefangen',

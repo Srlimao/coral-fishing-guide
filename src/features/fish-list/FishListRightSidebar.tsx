@@ -7,6 +7,7 @@ import {
   GearFilterSection,
   StatusFilterSection
 } from './FishListFilterSections';
+import { LiveSyncIndicator } from '../live-bridge/LiveSyncIndicator';
 import {
   Search,
   Flame,
@@ -103,6 +104,8 @@ export const FishListRightSidebar: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-1.5">
+          <LiveSyncIndicator />
+
           {/* Desktop Collapse Button */}
           <button
             onClick={() => setIsDesktopCollapsed(true)}

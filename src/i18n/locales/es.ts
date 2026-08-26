@@ -7,6 +7,7 @@ export const es: TranslationDictionary = {
   nav_altars: 'Altares del Templo',
   nav_mastery: 'Maestría',
   nav_pins: 'Puntos',
+  nav_trivia: 'Juego de Trívial',
   nav_import_save: 'Importar Partida',
   nav_settings: 'Ajustes',
   nav_caught_count: 'Pescados',

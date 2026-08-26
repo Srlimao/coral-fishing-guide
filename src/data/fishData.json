@@ -243,15 +243,7 @@
         "dateRangeList": []
       }
     ],
-    "offerings": [
-      {
-        "bundleName": "Fresh Water Fish Offering",
-        "altarName": "Catching Altar",
-        "roomName": "Lake Temple",
-        "amount": 1,
-        "quality": "Regular"
-      }
-    ]
+    "offerings": []
   },
   {
     "id": "item_71002",
@@ -337,8 +329,8 @@
     ],
     "offerings": [
       {
-        "bundleName": "Fresh Water Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Fresh Water Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
         "quality": "Regular"
@@ -559,8 +551,8 @@
     ],
     "offerings": [
       {
-        "bundleName": "Fresh Water Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Fresh Water Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
         "quality": "Regular"
@@ -711,15 +703,7 @@
         "dateRangeList": []
       }
     ],
-    "offerings": [
-      {
-        "bundleName": "Day Fishing Offering",
-        "altarName": "Catching Altar",
-        "roomName": "Lake Temple",
-        "amount": 1,
-        "quality": "Regular"
-      }
-    ]
+    "offerings": []
   },
   {
     "id": "item_71005",
@@ -808,8 +792,8 @@
     ],
     "offerings": [
       {
-        "bundleName": "Fresh Water Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Fresh Water Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
         "quality": "Regular"
@@ -902,11 +886,11 @@
     ],
     "offerings": [
       {
-        "bundleName": "Fresh Water Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Fresh Water Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
-        "quality": "Regular"
+        "quality": "Silver"
       }
     ]
   },
@@ -993,15 +977,7 @@
         "dateRangeList": []
       }
     ],
-    "offerings": [
-      {
-        "bundleName": "Night Fishing Offering",
-        "altarName": "Catching Altar",
-        "roomName": "Lake Temple",
-        "amount": 1,
-        "quality": "Regular"
-      }
-    ]
+    "offerings": []
   },
   {
     "id": "item_71008",
@@ -1084,8 +1060,8 @@
     ],
     "offerings": [
       {
-        "bundleName": "Rare Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Rare Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
         "quality": "Regular"
@@ -1216,8 +1192,8 @@
     ],
     "offerings": [
       {
-        "bundleName": "Fresh Water Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Fresh Water Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
         "quality": "Regular"
@@ -1814,15 +1790,7 @@
         "dateRangeList": []
       }
     ],
-    "offerings": [
-      {
-        "bundleName": "Day Fishing Offering",
-        "altarName": "Catching Altar",
-        "roomName": "Lake Temple",
-        "amount": 1,
-        "quality": "Regular"
-      }
-    ]
+    "offerings": []
   },
   {
     "id": "item_71017",
@@ -1984,8 +1952,8 @@
     ],
     "offerings": [
       {
-        "bundleName": "Rare Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Rare Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
         "quality": "Regular"
@@ -3016,15 +2984,7 @@
         "dateRangeList": []
       }
     ],
-    "offerings": [
-      {
-        "bundleName": "Salt Water Fish Offering",
-        "altarName": "Catching Altar",
-        "roomName": "Lake Temple",
-        "amount": 1,
-        "quality": "Regular"
-      }
-    ]
+    "offerings": []
   },
   {
     "id": "item_72004",
@@ -3150,15 +3110,7 @@
         "dateRangeList": []
       }
     ],
-    "offerings": [
-      {
-        "bundleName": "Day Fishing Offering",
-        "altarName": "Catching Altar",
-        "roomName": "Lake Temple",
-        "amount": 1,
-        "quality": "Regular"
-      }
-    ]
+    "offerings": []
   },
   {
     "id": "item_72006",
@@ -3405,8 +3357,8 @@
     ],
     "offerings": [
       {
-        "bundleName": "Rare Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Rare Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
         "quality": "Regular"
@@ -3537,8 +3489,8 @@
     ],
     "offerings": [
       {
-        "bundleName": "Salt Water Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Salt Water Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
         "quality": "Regular"
@@ -3870,15 +3822,7 @@
         "dateRangeList": []
       }
     ],
-    "offerings": [
-      {
-        "bundleName": "Rare Fish Offering",
-        "altarName": "Catching Altar",
-        "roomName": "Lake Temple",
-        "amount": 1,
-        "quality": "Regular"
-      }
-    ]
+    "offerings": []
   },
   {
     "id": "item_72010",
@@ -4753,8 +4697,8 @@
     ],
     "offerings": [
       {
-        "bundleName": "Salt Water Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Salt Water Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
         "quality": "Regular"
@@ -5523,8 +5467,8 @@
     ],
     "offerings": [
       {
-        "bundleName": "Salt Water Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Salt Water Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
         "quality": "Regular"
@@ -5825,8 +5769,8 @@
     ],
     "offerings": [
       {
-        "bundleName": "Salt Water Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Salt Water Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
         "quality": "Regular"
@@ -6313,8 +6257,8 @@
     ],
     "offerings": [
       {
-        "bundleName": "Rare Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Rare Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
         "quality": "Regular"
@@ -6447,11 +6391,11 @@
     ],
     "offerings": [
       {
-        "bundleName": "Salt Water Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Salt Water Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
-        "quality": "Regular"
+        "quality": "Silver"
       }
     ]
   },
@@ -6713,15 +6657,7 @@
         "dateRangeList": []
       }
     ],
-    "offerings": [
-      {
-        "bundleName": "Day Fishing Offering",
-        "altarName": "Catching Altar",
-        "roomName": "Lake Temple",
-        "amount": 1,
-        "quality": "Regular"
-      }
-    ]
+    "offerings": []
   },
   {
     "id": "item_73007",
@@ -6847,8 +6783,8 @@
     ],
     "offerings": [
       {
-        "bundleName": "Rare Fish Offering",
-        "altarName": "Catching Altar",
+        "bundleName": "Rare Fish",
+        "altarName": "Catch Altar",
         "roomName": "Lake Temple",
         "amount": 1,
         "quality": "Regular"
@@ -7189,15 +7125,7 @@
         "dateRangeList": []
       }
     ],
-    "offerings": [
-      {
-        "bundleName": "Night Fishing Offering",
-        "altarName": "Catching Altar",
-        "roomName": "Lake Temple",
-        "amount": 1,
-        "quality": "Regular"
-      }
-    ]
+    "offerings": []
   },
   {
     "id": "item_72031",

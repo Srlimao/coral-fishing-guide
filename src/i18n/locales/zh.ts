@@ -7,6 +7,7 @@ export const zh: TranslationDictionary = {
   nav_altars: '神庙祭坛',
   nav_mastery: '熟练度',
   nav_pins: '标记点',
+  nav_trivia: '问答小游戏',
   nav_import_save: '导入存档',
   nav_settings: '设置',
   nav_caught_count: '已捕获',

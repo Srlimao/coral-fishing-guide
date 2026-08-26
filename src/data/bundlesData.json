@@ -1,0 +1,1585 @@
+[
+  {
+    "key": "CropBased",
+    "title": "Crop Altar",
+    "reward": "Unlocks Greenhouse",
+    "urlPath": "cropaltar",
+    "bundles": [
+      {
+        "title": "Essential Resources",
+        "imageName": "Essential_Offerings",
+        "numOfItemRequired": 5,
+        "reward": "Recycling machine x1",
+        "items": [
+          {
+            "itemId": "item_65003",
+            "itemName": "Wood",
+            "amount": 10,
+            "quality": "base",
+            "iconName": "Wood_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_65004",
+            "itemName": "Stone",
+            "amount": 10,
+            "quality": "base",
+            "iconName": "Stone_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_65032",
+            "itemName": "Fiber",
+            "amount": 10,
+            "quality": "base",
+            "iconName": "Fiber_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_65108",
+            "itemName": "Sap",
+            "amount": 10,
+            "quality": "base",
+            "iconName": "Sap_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21047",
+            "itemName": "Maple seeds",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Maple_seeds_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21048",
+            "itemName": "Oak seeds",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Oak_seeds_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_65001",
+            "itemName": "Pine cone",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Pine_Cone_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Spring Sesajen",
+        "imageName": "Spring_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Sugarcane seeds x8",
+        "items": [
+          {
+            "itemId": "item_51103",
+            "itemName": "Wasabi",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Wasabi_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_51107",
+            "itemName": "Morel",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Morel_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21005",
+            "itemName": "Turnip",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Turnip_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21004",
+            "itemName": "Carrot",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Carrot_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21014",
+            "itemName": "Daisy",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Daisy_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Summer Sesajen",
+        "imageName": "Summer_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Tomato seeds x8",
+        "items": [
+          {
+            "itemId": "item_52102",
+            "itemName": "Shallot",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Shallot_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_52105",
+            "itemName": "Hibiscus",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Hibiscus_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_22001",
+            "itemName": "Blueberry",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Blueberry_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_22002",
+            "itemName": "Hot pepper",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Hot_Pepper_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_22015",
+            "itemName": "Sunflower",
+            "amount": 1,
+            "quality": "bronze",
+            "iconName": "Sunflower_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Fall Sesajen",
+        "imageName": "Fall_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Barley seeds x8",
+        "items": [
+          {
+            "itemId": "item_53104",
+            "itemName": "Black trumpet",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Black_Trumpet_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_53106",
+            "itemName": "Fig",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Fig_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_23016",
+            "itemName": "Orchid",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Orchid_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_23011",
+            "itemName": "Pumpkin",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Pumpkin_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_23001",
+            "itemName": "Rice",
+            "amount": 1,
+            "quality": "bronze",
+            "iconName": "Rice_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Winter Sesajen",
+        "imageName": "Winter_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Tea seed x8",
+        "items": [
+          {
+            "itemId": "item_54102",
+            "itemName": "Brussel sprouts",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Brussel_sprouts_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_54103",
+            "itemName": "Kale",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Kale_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_54108",
+            "itemName": "Rose hip",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Rose_hip_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21016",
+            "itemName": "Snowdrop",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Snowdrop_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_24002",
+            "itemName": "Tea leaf",
+            "amount": 1,
+            "quality": "bronze",
+            "iconName": "Tea_Leaf_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Ocean Loot",
+        "imageName": "Ocean_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Dehydrator x1",
+        "items": [
+          {
+            "itemId": "item_50312",
+            "itemName": "Sea salt",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Sea_Salt_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_50344",
+            "itemName": "King scallop",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "King_Scallop_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_50326",
+            "itemName": "Eastern oyster",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Eastern_Oyster_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_50308",
+            "itemName": "Blue mussel",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Blue_Mussel_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_50338",
+            "itemName": "Green sea urchin",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Green_Sea_Urchin_Sprite",
+            "isFish": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "CatchingBased",
+    "title": "Catching Altar",
+    "reward": "Unlocks Dig Site",
+    "urlPath": "catchaltar",
+    "bundles": [
+      {
+        "title": "Fresh Water Fish",
+        "imageName": "Fresh_Water_Fish_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Large fish bait x10",
+        "items": [
+          {
+            "itemId": "item_71002",
+            "itemName": "Catfish",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Catfish_Sprite",
+            "isFish": true,
+            "fishKey": "Catfish"
+          },
+          {
+            "itemId": "item_71004",
+            "itemName": "Tilapia",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Tilapia_Sprite",
+            "isFish": true,
+            "fishKey": "Tilapia"
+          },
+          {
+            "itemId": "item_71010",
+            "itemName": "Rainbow fish",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Rainbow_Fish_Sprite",
+            "isFish": true,
+            "fishKey": "RainbowFish"
+          },
+          {
+            "itemId": "item_71005",
+            "itemName": "Silver arowana",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Silver_arowana_Sprite",
+            "isFish": true,
+            "fishKey": "SilverArowana"
+          },
+          {
+            "itemId": "item_71006",
+            "itemName": "Koi",
+            "amount": 1,
+            "quality": "silver",
+            "iconName": "Koi_Sprite",
+            "isFish": true,
+            "fishKey": "Koi"
+          }
+        ]
+      },
+      {
+        "title": "Salt Water Fish",
+        "imageName": "Salt_Water_Fish_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Small fish bait x5",
+        "items": [
+          {
+            "itemId": "item_72005",
+            "itemName": "Pink snapper",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Pink_Snapper_Sprite",
+            "isFish": true,
+            "fishKey": "PinkSnapper"
+          },
+          {
+            "itemId": "item_72016",
+            "itemName": "Lionfish",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Lionfish_Sprite",
+            "isFish": true,
+            "fishKey": "Lionfish"
+          },
+          {
+            "itemId": "item_72024",
+            "itemName": "Asian sheepshead",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Asian_Sheepshead_Sprite",
+            "isFish": true,
+            "fishKey": "AsianSheepshead"
+          },
+          {
+            "itemId": "item_72027",
+            "itemName": "Yellowfin tuna",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Yellowfin_tuna_Sprite",
+            "isFish": true,
+            "fishKey": "YellowfinTuna"
+          },
+          {
+            "itemId": "item_73005",
+            "itemName": "Sardine",
+            "amount": 1,
+            "quality": "silver",
+            "iconName": "Sardines_Sprite",
+            "isFish": true,
+            "fishKey": "Sardine"
+          }
+        ]
+      },
+      {
+        "title": "Rare Fish",
+        "imageName": "Rare_Fish_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Fish pond x1",
+        "items": [
+          {
+            "itemId": "item_73007",
+            "itemName": "Sturgeon",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Sturgeon_Sprite",
+            "isFish": true,
+            "fishKey": "Sturgeon"
+          },
+          {
+            "itemId": "item_71008",
+            "itemName": "Gator gar",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Gator_Gar_Sprite",
+            "isFish": true,
+            "fishKey": "GatorGar"
+          },
+          {
+            "itemId": "item_71017",
+            "itemName": "Arapaima",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Arapaima_Sprite",
+            "isFish": true,
+            "fishKey": "Arapaima"
+          },
+          {
+            "itemId": "item_73004",
+            "itemName": "Giant sea bass",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Giant_Sea_Bass_Sprite",
+            "isFish": true,
+            "fishKey": "GiantSeaBass"
+          },
+          {
+            "itemId": "item_74003",
+            "itemName": "Yellow moray eel",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Yellow_Moray_Eel_Sprite",
+            "isFish": true,
+            "fishKey": "YellowMorayEel"
+          }
+        ]
+      },
+      {
+        "title": "Day Insect",
+        "imageName": "Day_Insects_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Bee house x1",
+        "items": [
+          {
+            "itemId": "item_131008",
+            "itemName": "Pipevine swallowtail butterfly",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Pipevine_Swallowtail_Butterfly_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_131004",
+            "itemName": "Tiger beetle",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Tiger_Beetle_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_132001",
+            "itemName": "Yucca moth",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Yucca_Moth_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_133001",
+            "itemName": "Assam silk moth",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Assam_silk_moth_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_134005",
+            "itemName": "Monarch caterpillar",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Monarch_Caterpillar_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Night Insect",
+        "imageName": "Night_Insects_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Tap x1",
+        "items": [
+          {
+            "itemId": "item_131006",
+            "itemName": "Firefly",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Firefly_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_131007",
+            "itemName": "Cecropia caterpillar",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Cecropia_Caterpillar_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_132012",
+            "itemName": "Centipede",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Centipede_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_133003",
+            "itemName": "Rove beetle",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Rove_Beetle_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_134001",
+            "itemName": "Atlas moth",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Atlas_Moth_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Ocean Critters",
+        "imageName": "Ocean_Critters_Offering",
+        "numOfItemRequired": -1,
+        "reward": "Crawler trap x1",
+        "items": [
+          {
+            "itemId": "item_72046",
+            "itemName": "Cannonball jellyfish",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "CannonBall_Jellyfish_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_72043",
+            "itemName": "Hermit crab",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Hermit_Crab_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_72058",
+            "itemName": "Sexy shrimp",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Sexy_Shrimp_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_72063",
+            "itemName": "Sunflower sea star",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Sunflower_sea_star_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_72048",
+            "itemName": "Pom-pom crab",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Pom-pom_crab_Sprite",
+            "isFish": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "SpecialityBased",
+    "title": "Advanced Altar",
+    "reward": "Unlocks Cave of Memories",
+    "urlPath": "advancedaltar",
+    "bundles": [
+      {
+        "title": "Barn Animals",
+        "imageName": "Barn_Animals_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Cheese press x1",
+        "items": [
+          {
+            "itemId": "item_31004",
+            "itemName": "Milk",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Milk_Sprite_",
+            "isFish": false
+          },
+          {
+            "itemId": "item_31005",
+            "itemName": "Goat milk",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Goat_milk_Sprite_",
+            "isFish": false
+          },
+          {
+            "itemId": "item_32001",
+            "itemName": "Wool",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Wool_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_31018",
+            "itemName": "Large goat milk",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Large_goat_milk_Sprite_",
+            "isFish": false
+          },
+          {
+            "itemId": "item_32009",
+            "itemName": "Large wool",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Large_wool_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_31016",
+            "itemName": "Large milk",
+            "amount": 1,
+            "quality": "silver",
+            "iconName": "Large_milk_Sprite_",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Coop Animals",
+        "imageName": "Coop_Animals_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Mayonnaise machine x1",
+        "items": [
+          {
+            "itemId": "item_31002",
+            "itemName": "Egg",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Egg_Sprite_",
+            "isFish": false
+          },
+          {
+            "itemId": "item_31003",
+            "itemName": "Duck egg",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Duck_egg_Sprite_",
+            "isFish": false
+          },
+          {
+            "itemId": "item_31012",
+            "itemName": "Large egg",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Large_egg_Sprite_",
+            "isFish": false
+          },
+          {
+            "itemId": "item_31014",
+            "itemName": "Large duck egg",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Large_duck_egg_Sprite_",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Basic Cooking",
+        "imageName": "Basic_Cooking_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Oil press x1",
+        "items": [
+          {
+            "itemId": "item_80045",
+            "itemName": "Smoothie",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Smoothie_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_80058",
+            "itemName": "Grilled fish",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Grilled_Fish_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_80033",
+            "itemName": "Sunny-side up egg",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Sunny-side-up_eggs_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_80026",
+            "itemName": "Tomato soup",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Tomato_Soup_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_80038",
+            "itemName": "Onigiri",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Onigiri_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Basic Artisan",
+        "imageName": "Artisan_Product_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Keg x1",
+        "items": [
+          {
+            "itemId": "Any_Mayonnaise",
+            "itemName": "Any Mayonnaise",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "T_AnyMayo_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "Any_FruitJuice",
+            "itemName": "Any Fruit Juice",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Juice",
+            "isFish": false
+          },
+          {
+            "itemId": "Any_Butter",
+            "itemName": "Any Butter",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "T_AnyButter_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "Any_DriedScavengables",
+            "itemName": "Any Dried Scavengeables",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Seafood_jerky",
+            "isFish": false
+          },
+          {
+            "itemId": "Any_Pickle",
+            "itemName": "Any Pickle",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Pickles",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Fruit Plant",
+        "imageName": "Basic_Fruits_Offerings",
+        "numOfItemRequired": 5,
+        "reward": "Sprinkler II x1",
+        "items": [
+          {
+            "itemId": "item_21044",
+            "itemName": "Rambutan",
+            "amount": 1,
+            "quality": "silver",
+            "iconName": "Rambutan_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21017",
+            "itemName": "Durian",
+            "amount": 1,
+            "quality": "silver",
+            "iconName": "Durian_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_22019",
+            "itemName": "Mango",
+            "amount": 1,
+            "quality": "silver",
+            "iconName": "Mango_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_22022",
+            "itemName": "Dragonfruit",
+            "amount": 1,
+            "quality": "silver",
+            "iconName": "Dragonfruit_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_23017",
+            "itemName": "Apple",
+            "amount": 1,
+            "quality": "silver",
+            "iconName": "Apple_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_23020",
+            "itemName": "Lemon",
+            "amount": 1,
+            "quality": "silver",
+            "iconName": "Lemon_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_24003",
+            "itemName": "Almond",
+            "amount": 1,
+            "quality": "silver",
+            "iconName": "Almond_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_23019",
+            "itemName": "Cocoa bean",
+            "amount": 1,
+            "quality": "silver",
+            "iconName": "Cocoa_Bean_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Monster Loot",
+        "imageName": "Monster_Drop_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Explosive III x5",
+        "items": [
+          {
+            "itemId": "item_50507",
+            "itemName": "Silky fur",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Silky_fur_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_50510",
+            "itemName": "Monster essence",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Monster_Essence_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_50508",
+            "itemName": "Bat wing",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Bat_Wing_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_50509",
+            "itemName": "Tough meat",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Tough_meat_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_50506",
+            "itemName": "Slime goop",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Slime_goop_Sprite",
+            "isFish": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "RareBased",
+    "title": "Rare Altar",
+    "reward": "Unlocks Warp Sesajen",
+    "urlPath": "rarealtar",
+    "bundles": [
+      {
+        "title": "Rare Crops",
+        "imageName": "Quality_Crops_Offering",
+        "numOfItemRequired": -1,
+        "reward": "Sprinkler III x1",
+        "items": [
+          {
+            "itemId": "item_21016",
+            "itemName": "Snowdrop",
+            "amount": 1,
+            "quality": "osmium",
+            "iconName": "Snowdrop_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_22012",
+            "itemName": "Coffee bean",
+            "amount": 1,
+            "quality": "osmium",
+            "iconName": "Coffee_Beans",
+            "isFish": false
+          },
+          {
+            "itemId": "item_23043",
+            "itemName": "Garlic",
+            "amount": 1,
+            "quality": "osmium",
+            "iconName": "Garlic_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_24001",
+            "itemName": "Cotton",
+            "amount": 1,
+            "quality": "osmium",
+            "iconName": "Cotton_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_23015",
+            "itemName": "Cactus",
+            "amount": 1,
+            "quality": "osmium",
+            "iconName": "Cactus_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Precious Gems",
+        "imageName": "Precious_Gems_Collection",
+        "numOfItemRequired": -1,
+        "reward": "Slime of replication x1",
+        "items": [
+          {
+            "itemId": "Any_GemUncommon",
+            "itemName": "Any Uncommon Gem",
+            "amount": 3,
+            "quality": "base",
+            "iconName": "Any_uncommon_gem_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "Any_GemRare",
+            "itemName": "Any Rare Gem",
+            "amount": 3,
+            "quality": "base",
+            "iconName": "Any_rare_gem_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "Any_GemSuperRare",
+            "itemName": "Any Super Rare Gem",
+            "amount": 3,
+            "quality": "base",
+            "iconName": "Any_super_rare_gem_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Rare Cooking",
+        "imageName": "Rare_Cooked_Dish",
+        "numOfItemRequired": -1,
+        "reward": "Jamu x1",
+        "items": [
+          {
+            "itemId": "item_80011",
+            "itemName": "Vegan taco",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Vegan_taco_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_80078",
+            "itemName": "Apple pie",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Apple_Pie_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_80086",
+            "itemName": "Serabi",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Serabi_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_80070",
+            "itemName": "Pad thai",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Pad_Thai_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_80094",
+            "itemName": "Es cendol",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Es_cendol_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Rare Artisan",
+        "imageName": "Rare_Artisan_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Aging barrel x1",
+        "items": [
+          {
+            "itemId": "item_41169",
+            "itemName": "Titan arum black honey",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Black_Honey_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "Any_Kimchi",
+            "itemName": "Any Kimchi",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Kimchi",
+            "isFish": false
+          },
+          {
+            "itemId": "Any_Wine",
+            "itemName": "Any Wine",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Wine",
+            "isFish": false
+          },
+          {
+            "itemId": "item_41178",
+            "itemName": "Fermented goat cheese wheel",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Fermented_Goat_Cheese_Wheel_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_41174",
+            "itemName": "White truffle oil",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "White_truffle_oil_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Rare Ranching Products",
+        "imageName": "Rare_Animals_Offerings",
+        "numOfItemRequired": -1,
+        "reward": "Auto petter x1",
+        "items": [
+          {
+            "itemId": "item_31001",
+            "itemName": "Black truffle",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Black_Truffle_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_32018",
+            "itemName": "Large quail egg",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Large_quail_egg_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_32011",
+            "itemName": "Large llama wool",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Large_llama_wool_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_32015",
+            "itemName": "Large feather",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Large_feather_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_32013",
+            "itemName": "Large Gesha Coffee Bean",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Large_gesha_coffee_bean_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Rare Resources",
+        "imageName": "Upgrade_Resouce",
+        "numOfItemRequired": -1,
+        "reward": "Osmium kelp essence x5",
+        "items": [
+          {
+            "itemId": "item_61006",
+            "itemName": "Gold bar",
+            "amount": 3,
+            "quality": "base",
+            "iconName": "Gold_Bar_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_61044",
+            "itemName": "Silver bar",
+            "amount": 3,
+            "quality": "base",
+            "iconName": "Silver_Bar_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_61005",
+            "itemName": "Bronze bar",
+            "amount": 3,
+            "quality": "base",
+            "iconName": "Bronze_Bar_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_62006",
+            "itemName": "Gold kelp essence",
+            "amount": 3,
+            "quality": "base",
+            "iconName": "Gold_Kelp_Essence_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_62007",
+            "itemName": "Silver kelp essence",
+            "amount": 3,
+            "quality": "base",
+            "iconName": "Silver_Kelp_Essence_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_62005",
+            "itemName": "Bronze kelp essence",
+            "amount": 3,
+            "quality": "base",
+            "iconName": "Bronze_kelp_essence_Sprite",
+            "isFish": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "DivingBased",
+    "title": "Diving Altar",
+    "reward": "",
+    "urlPath": "divingaltar",
+    "bundles": [
+      {
+        "title": "Se Pulu (10m)",
+        "imageName": "Ocean_Offerings",
+        "numOfItemRequired": 4,
+        "reward": "Seaweed starter x1",
+        "items": [
+          {
+            "itemId": "item_62005",
+            "itemName": "Bronze kelp essence",
+            "amount": 3,
+            "quality": "base",
+            "iconName": "Bronze_kelp_essence_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21072",
+            "itemName": "Marinip",
+            "amount": 2,
+            "quality": "base",
+            "iconName": "Marinip_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21077",
+            "itemName": "Bluebell blossom",
+            "amount": 2,
+            "quality": "base",
+            "iconName": "Bluebell_Blossom_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21076",
+            "itemName": "Twinshade sealeaf",
+            "amount": 2,
+            "quality": "base",
+            "iconName": "Twinshade_Sealeaf_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Dua Pulu (20m)",
+        "imageName": "Ocean_Offerings",
+        "numOfItemRequired": 4,
+        "reward": "Junonia shell x1",
+        "items": [
+          {
+            "itemId": "item_62007",
+            "itemName": "Silver kelp essence",
+            "amount": 3,
+            "quality": "base",
+            "iconName": "Silver_Kelp_Essence_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21071",
+            "itemName": "Sproutfruit",
+            "amount": 3,
+            "quality": "base",
+            "iconName": "Sproutfruit_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21080",
+            "itemName": "Helixpur blossom",
+            "amount": 3,
+            "quality": "base",
+            "iconName": "Helixpur_Blossom_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21074",
+            "itemName": "Spring sealeaf",
+            "amount": 3,
+            "quality": "base",
+            "iconName": "Spring_Sealeaf_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Empat Pulu (40m)",
+        "imageName": "Ocean_Offerings",
+        "numOfItemRequired": 4,
+        "reward": "Flame scallop x1",
+        "items": [
+          {
+            "itemId": "item_62006",
+            "itemName": "Gold kelp essence",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Gold_Kelp_Essence_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21075",
+            "itemName": "Pink coralcap",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Pink_Coralcap_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21084",
+            "itemName": "Petalia",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Petalia_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21073",
+            "itemName": "Red reefbud",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Red_Reefbud_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Lima Pulu (50m)",
+        "imageName": "Ocean_Offerings",
+        "numOfItemRequired": 4,
+        "reward": "Solar core x1",
+        "items": [
+          {
+            "itemId": "item_62008",
+            "itemName": "Osmium kelp essence",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Osmium_Kelp_Essence_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21078",
+            "itemName": "Goldglow",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Goldglow_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21083",
+            "itemName": "Bluecole",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Bluecole_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_41349",
+            "itemName": "Mermoo cheese wheel",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Mermoo_cheese_wheel_Sprite",
+            "isFish": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "HeritageBased",
+    "title": "Guardian Altar",
+    "reward": "Guardian Mural",
+    "urlPath": "guardianaltar",
+    "bundles": [
+      {
+        "title": "Master Slime",
+        "imageName": "T_Art_OfferingSlime",
+        "numOfItemRequired": 5,
+        "reward": "Master Slime outfit x1",
+        "items": [
+          {
+            "itemId": "Any_Artifact",
+            "itemName": "Any Artifact",
+            "amount": 4,
+            "quality": "base",
+            "iconName": "T_Mastery_Artifact",
+            "isFish": false
+          },
+          {
+            "itemId": "Any_Fossil",
+            "itemName": "Any Fossil",
+            "amount": 4,
+            "quality": "base",
+            "iconName": "Brontosaurus_Fossil_Bone_02",
+            "isFish": false
+          },
+          {
+            "itemId": "item_120442",
+            "itemName": "Plop backpack",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Plop_backpack_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_120360",
+            "itemName": "Hoarder ring",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Hoarder_Ring_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_65527",
+            "itemName": "Sturdy computer",
+            "amount": 1,
+            "quality": "base",
+            "iconName": "Sturdy_Computer_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "King Tan",
+        "imageName": "T_Art_OfferingKingtan",
+        "numOfItemRequired": 4,
+        "reward": "King Tan outfit x1",
+        "items": [
+          {
+            "itemId": "item_41109",
+            "itemName": "Durian jam",
+            "amount": 8,
+            "quality": "osmium",
+            "iconName": "Jam_Yellow_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_41197",
+            "itemName": "Mangosteen jam",
+            "amount": 8,
+            "quality": "osmium",
+            "iconName": "Jam_Red_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_21020",
+            "itemName": "Lychee",
+            "amount": 8,
+            "quality": "osmium",
+            "iconName": "Lychee_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_22019",
+            "itemName": "Mango",
+            "amount": 8,
+            "quality": "osmium",
+            "iconName": "Mango_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Pandazen",
+        "imageName": "T_Art_OfferingPandazen",
+        "numOfItemRequired": 4,
+        "reward": "Pandazen outfit x1",
+        "items": [
+          {
+            "itemId": "item_80071",
+            "itemName": "Popiah",
+            "amount": 4,
+            "quality": "base",
+            "iconName": "Popiah_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_80093",
+            "itemName": "Es doger",
+            "amount": 4,
+            "quality": "base",
+            "iconName": "Es_Doger_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_80057",
+            "itemName": "Herbed tempeh",
+            "amount": 4,
+            "quality": "base",
+            "iconName": "Herbed_Tempeh_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_80047",
+            "itemName": "Jackfruit casserole",
+            "amount": 4,
+            "quality": "base",
+            "iconName": "Jackfruit_casserole_Sprite",
+            "isFish": false
+          }
+        ]
+      },
+      {
+        "title": "Lady Lavanna",
+        "imageName": "T_Art_OfferingSavanna",
+        "numOfItemRequired": 5,
+        "reward": "Lady Lavanna outfit x1",
+        "items": [
+          {
+            "itemId": "item_31038",
+            "itemName": "Large buffalo milk",
+            "amount": 4,
+            "quality": "osmium",
+            "iconName": "Large_buffalo_milk_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_41355",
+            "itemName": "Fermented buffalo cheese wheel",
+            "amount": 4,
+            "quality": "osmium",
+            "iconName": "Fermented_buffalo_cheese_wheel_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_41359",
+            "itemName": "Large century ostrich egg",
+            "amount": 4,
+            "quality": "osmium",
+            "iconName": "Large_century_ostrich_egg_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "item_41337",
+            "itemName": "Large ostrich mayonnaise",
+            "amount": 4,
+            "quality": "osmium",
+            "iconName": "Large_ostrich_mayonnaise_Sprite",
+            "isFish": false
+          },
+          {
+            "itemId": "Any_DinoPrint",
+            "itemName": "Any Dino Print",
+            "amount": 5,
+            "quality": "base",
+            "iconName": "Any_Dino_Prints_Sprite",
+            "isFish": false
+          }
+        ]
+      }
+    ]
+  }
+]

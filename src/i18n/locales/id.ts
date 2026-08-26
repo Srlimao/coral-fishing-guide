@@ -7,6 +7,7 @@ export const id: TranslationDictionary = {
   nav_altars: 'Altar Kuil',
   nav_mastery: 'Keahlian',
   nav_pins: 'Titik Lokasi',
+  nav_trivia: 'Kuis Trivia',
   nav_import_save: 'Impor Simpanan',
   nav_settings: 'Pengaturan',
   nav_caught_count: 'Tertangkap',

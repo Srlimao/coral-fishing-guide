@@ -1,0 +1,623 @@
+{
+  "item_71001": {
+    "pt": "Cabeça-de-cobra-gigante",
+    "es": "Cabeza de serpiente gigante",
+    "de": "Riesen-Schlangenkopffisch",
+    "fr": "Tête de serpent géante",
+    "zh": "巨鳢",
+    "ja": "ジャイアントスネークヘッド",
+    "id": "Toman"
+  },
+  "item_71002": {
+    "pt": "Bagre",
+    "es": "Bagre",
+    "de": "Wels",
+    "fr": "Poisson-chat",
+    "zh": "鲶鱼",
+    "ja": "ナマズ",
+    "id": "Lele"
+  },
+  "item_71003": {
+    "pt": "Flowerhorn",
+    "es": "Flowerhorn",
+    "de": "Flowerhorn",
+    "fr": "Flowerhorn",
+    "zh": "罗汉鱼",
+    "ja": "フラワーホーン",
+    "id": "Flowerhorn"
+  },
+  "item_71004": {
+    "pt": "Tilápia",
+    "es": "Tilapia",
+    "de": "Tilapia",
+    "fr": "Tilapia",
+    "zh": "罗非鱼",
+    "ja": "ティラピア",
+    "id": "Nila"
+  },
+  "item_71005": {
+    "pt": "Aruanã-prata",
+    "es": "Arowana plateada",
+    "de": "Silber-Arowana",
+    "fr": "Arowana argenté",
+    "zh": "银龙鱼",
+    "ja": "シルバーアロワナ",
+    "id": "Arwana Perak"
+  },
+  "item_71006": {
+    "pt": "Koi",
+    "es": "Koi",
+    "de": "Koi",
+    "fr": "Koï",
+    "zh": "锦鲤",
+    "ja": "コイ",
+    "id": "Ikan Koi"
+  },
+  "item_71007": {
+    "pt": "Peixe-fantasma-negro",
+    "es": "Pez fantasma negro",
+    "de": "Schwarzer Geisterfisch",
+    "fr": "Poisson fantôme noir",
+    "zh": "黑魔鬼鱼",
+    "ja": "ブラックゴースト",
+    "id": "Ghost Knife Hitam"
+  },
+  "item_71008": {
+    "pt": "Peixe-jacaré",
+    "es": "Pejelagarto",
+    "de": "Kaimanfisch",
+    "fr": "Gaspareau alligator",
+    "zh": "鳄雀鳝",
+    "ja": "アリゲーターガー",
+    "id": "Aligator Gar"
+  },
+  "item_71009": {
+    "pt": "Cobia",
+    "es": "Cobia",
+    "de": "Kobia",
+    "fr": "Cobia",
+    "zh": "军曹鱼",
+    "ja": "スギ",
+    "id": "Kobia"
+  },
+  "item_71010": {
+    "pt": "Peixe-arco-íris",
+    "es": "Pez arcoíris",
+    "de": "Regenbogenfisch",
+    "fr": "Poisson arc-en-ciel",
+    "zh": "彩虹鱼",
+    "ja": "レインボーフィッシュ",
+    "id": "Ikan Pelangi"
+  },
+  "item_71011": {
+    "pt": "Barbo-tigre",
+    "es": "Barbo tigre",
+    "de": "Sumatrabarbe",
+    "fr": "Barbus tigre",
+    "zh": "虎皮鱼",
+    "ja": "スマトラ",
+    "id": "Sumatra"
+  },
+  "item_71012": {
+    "pt": "Lagostim",
+    "es": "Cangrejo de río",
+    "de": "Flusskrebs",
+    "fr": "Écrevisse",
+    "zh": "鳌虾",
+    "ja": "ザリガニ",
+    "id": "Lobster Air Tawar"
+  },
+  "item_71013": {
+    "pt": "Enguia-de-água-doce",
+    "es": "Anguila de agua dulce",
+    "de": "Süßwasseraal",
+    "fr": "Anguille d'eau douce",
+    "zh": "淡水鳗",
+    "ja": "ウナギ",
+    "id": "Sidat Air Tawar"
+  },
+  "item_71014": {
+    "pt": "Peixinho-dourado",
+    "es": "Pez dorado",
+    "de": "Goldfisch",
+    "fr": "Poisson rouge",
+    "zh": "金鱼",
+    "ja": "キンギョ",
+    "id": "Ikan Mas Koki"
+  },
+  "item_71015": {
+    "pt": "Cabeça-de-cobra",
+    "es": "Cabeza de serpiente",
+    "de": "Schlangenkopffisch",
+    "fr": "Tête de serpent",
+    "zh": "乌鳢",
+    "ja": "ライギョ",
+    "id": "Gabus"
+  },
+  "item_71016": {
+    "pt": "Peixe-lua-azul",
+    "es": "Mojarra azul",
+    "de": "Sonnenbarsch",
+    "fr": "Crapet arlequin",
+    "zh": "蓝鳃太阳鱼",
+    "ja": "ブルーギル",
+    "id": "Bluegill"
+  },
+  "item_71017": {
+    "pt": "Pirarucu",
+    "es": "Arapaima",
+    "de": "Arapaima",
+    "fr": "Arapaïma",
+    "zh": "巨骨舌鱼",
+    "ja": "ピラルク",
+    "id": "Arapaima"
+  },
+  "item_71018": {
+    "pt": "Peixe-zebra",
+    "es": "Pez cebra",
+    "de": "Zebrafisch",
+    "fr": "Poisson-zèbre",
+    "zh": "斑马鱼",
+    "ja": "ゼブラフィッシュ",
+    "id": "Ikan Zebra"
+  },
+  "item_71019": {
+    "pt": "Peixe-jacaré-dourado",
+    "es": "Pejelagarto dorado",
+    "de": "Goldener Kaimanfisch",
+    "fr": "Gaspareau alligator doré",
+    "zh": "黄金雀鳝",
+    "ja": "ゴールデンガー",
+    "id": "Golden Gar"
+  },
+  "item_71020": {
+    "pt": "Chub",
+    "es": "Cacho",
+    "de": "Döbel",
+    "fr": "Chevesne",
+    "zh": "白鲑",
+    "ja": "チャブ",
+    "id": "Chub"
+  },
+  "item_71021": {
+    "pt": "Truta-marrom",
+    "es": "Trucha marrón",
+    "de": "Bachforelle",
+    "fr": "Truite fario",
+    "zh": "褐鳟",
+    "ja": "ブラウントラウト",
+    "id": "Trout Cokelat"
+  },
+  "item_72030": {
+    "pt": "Salmão",
+    "es": "Salmón",
+    "de": "Lachs",
+    "fr": "Saumon",
+    "zh": "三文鱼",
+    "ja": "サケ",
+    "id": "Salmon"
+  },
+  "item_72001": {
+    "pt": "Peixe-sapo",
+    "es": "Pez sapo",
+    "de": "Krötenfisch",
+    "fr": "Poisson-crapaud",
+    "zh": "躄鱼",
+    "ja": "カエルアンコウ",
+    "id": "Ikan Kodok"
+  },
+  "item_72002": {
+    "pt": "Olho-de-boi",
+    "es": "Jurel de cola amarilla",
+    "de": "Gelbschwanzmakrele",
+    "fr": "Sériole",
+    "zh": "黄尾鰤",
+    "ja": "ブリ",
+    "id": "Yellowtail"
+  },
+  "item_72003": {
+    "pt": "Atum",
+    "es": "Atún",
+    "de": "Thunfisch",
+    "fr": "Thon",
+    "zh": "金枪鱼",
+    "ja": "マグロ",
+    "id": "Tuna"
+  },
+  "item_72004": {
+    "pt": "Baiacu",
+    "es": "Pez globo",
+    "de": "Kugelfisch",
+    "fr": "Poisson-globe",
+    "zh": "河豚",
+    "ja": "フグ",
+    "id": "Ikan Buntal"
+  },
+  "item_72005": {
+    "pt": "Pargo-rosa",
+    "es": "Pargo rosado",
+    "de": "Rosa Schnapper",
+    "fr": "Vivaneau rose",
+    "zh": "粉红笛鲷",
+    "ja": "ピンクスナッパー",
+    "id": "Kakap Merah Muda"
+  },
+  "item_72006": {
+    "pt": "Dragão-vermelho-rubi",
+    "es": "Dragonet rojo rubí",
+    "de": "Rubinroter Leierfisch",
+    "fr": "Dragonnet rouge rubis",
+    "zh": "红宝石䲗",
+    "ja": "ルビーレッドドラゴネット",
+    "id": "Ruby Red Dragonet"
+  },
+  "item_72007": {
+    "pt": "Lula",
+    "es": "Calamar",
+    "de": "Kalmar",
+    "fr": "Calamar",
+    "zh": "鱿鱼",
+    "ja": "イカ",
+    "id": "Cumi-cumi"
+  },
+  "item_72008": {
+    "pt": "Polvo",
+    "es": "Pulpo",
+    "de": "Oktopus",
+    "fr": "Poulpe",
+    "zh": "章鱼",
+    "ja": "タコ",
+    "id": "Gurita"
+  },
+  "item_72009": {
+    "pt": "Saltador-do-lodo-gigante",
+    "es": "Saltarín del fango gigante",
+    "de": "Riesenschlammspringer",
+    "fr": "Périophtalme géant",
+    "zh": "大弹涂鱼",
+    "ja": "オオトビハゼ",
+    "id": "Tembakul Raksasa"
+  },
+  "item_72010": {
+    "pt": "Garoupa",
+    "es": "Mero",
+    "de": "Zackenbarsch",
+    "fr": "Mérou",
+    "zh": "石斑鱼",
+    "ja": "ハタ",
+    "id": "Kerapu"
+  },
+  "item_72011": {
+    "pt": "Pepino-do-mar",
+    "es": "Pepino de mar",
+    "de": "Seegurke",
+    "fr": "Concombre de mer",
+    "zh": "海参",
+    "ja": "ナマコ",
+    "id": "Teripang"
+  },
+  "item_72012": {
+    "pt": "Peixe-papagaio",
+    "es": "Pez loro",
+    "de": "Papageifisch",
+    "fr": "Poisson-perroquet",
+    "zh": "鹦嘴鱼",
+    "ja": "ブダイ",
+    "id": "Ikan Kakatua"
+  },
+  "item_72013": {
+    "pt": "Peixe-morcego-de-pintas",
+    "es": "Pez murciélago de lunares",
+    "de": "Gefleckter Fledermausfisch",
+    "fr": "Poisson chauve-souris tacheté",
+    "zh": "圆眼燕鱼",
+    "ja": "アカククリ",
+    "id": "Polka-dot Batfish"
+  },
+  "item_72014": {
+    "pt": "Peixe-flama",
+    "es": "Pez llama",
+    "de": "Flammenbarsch",
+    "fr": "Poisson flamme",
+    "zh": "火焰神仙",
+    "ja": "フレームエンゼル",
+    "id": "Flameback"
+  },
+  "item_72015": {
+    "pt": "Lagosta",
+    "es": "Langosta",
+    "de": "Hummer",
+    "fr": "Homard",
+    "zh": "龙虾",
+    "ja": "ロブスター",
+    "id": "Lobster"
+  },
+  "item_72016": {
+    "pt": "Peixe-leão",
+    "es": "Pez león",
+    "de": "Rotfeuerfisch",
+    "fr": "Poisson-lion",
+    "zh": "狮子鱼",
+    "ja": "ミノカサゴ",
+    "id": "Ikan Singa"
+  },
+  "item_72017": {
+    "pt": "Donzela",
+    "es": "Damisela",
+    "de": "Riffbarsch",
+    "fr": "Demoiselle",
+    "zh": "雀鲷",
+    "ja": "スズメダイ",
+    "id": "Damselfish"
+  },
+  "item_72018": {
+    "pt": "Mandarim",
+    "es": "Mandarín",
+    "de": "Mandarinfisch",
+    "fr": "Poisson mandarin",
+    "zh": "青蛙鱼",
+    "ja": "ニシキテグリ",
+    "id": "Mandarin"
+  },
+  "item_72019": {
+    "pt": "Peixe-arqueiro",
+    "es": "Pez arquero",
+    "de": "Schützenfisch",
+    "fr": "Poisson-archer",
+    "zh": "射水鱼",
+    "ja": "テッポウウオ",
+    "id": "Ikan Sumpit"
+  },
+  "item_72020": {
+    "pt": "Peixe-anjo",
+    "es": "Pez ángel",
+    "de": "Skalar",
+    "fr": "Scalaire",
+    "zh": "神仙鱼",
+    "ja": "エンゼルフィッシュ",
+    "id": "Ikan Bidadari"
+  },
+  "item_72021": {
+    "pt": "Cirurgião-patela",
+    "es": "Cirujano azul",
+    "de": "Paletten-Doktorfisch",
+    "fr": "Chirurgien bleu",
+    "zh": "拟刺尾鲷",
+    "ja": "ナンヨウハギ",
+    "id": "Letter Six"
+  },
+  "item_72022": {
+    "pt": "Peixe-palhaço",
+    "es": "Pez payaso",
+    "de": "Clownfisch",
+    "fr": "Poisson-clown",
+    "zh": "小丑鱼",
+    "ja": "カクレクマノミ",
+    "id": "Ikan Badut"
+  },
+  "item_72023": {
+    "pt": "Peixe-fogo",
+    "es": "Pez dardo de fuego",
+    "de": "Prachtschwertgrundel",
+    "fr": "Gobie de feu",
+    "zh": "红斑旗鲹",
+    "ja": "ハタタテハゼ",
+    "id": "Firefish"
+  },
+  "item_72024": {
+    "pt": "Cabeça-de-ovelha-asiática",
+    "es": "Vieja asiática",
+    "de": "Asiatischer Schafskopf",
+    "fr": "Labre à tête de mouton",
+    "zh": "金黄拟开普鲷",
+    "ja": "コブダイ",
+    "id": "Kobudai"
+  },
+  "item_72025": {
+    "pt": "Peixe-cofre",
+    "es": "Pez cofre",
+    "de": "Kofferfisch",
+    "fr": "Poisson-coffre",
+    "zh": "箱鲀",
+    "ja": "ハコフグ",
+    "id": "Ikan Buntal Kotak"
+  },
+  "item_72026": {
+    "pt": "Cavala",
+    "es": "Caballa",
+    "de": "Makrele",
+    "fr": "Maquereau",
+    "zh": "鲭鱼",
+    "ja": "サバ",
+    "id": "Kembung"
+  },
+  "item_72027": {
+    "pt": "Albacora-da-laje",
+    "es": "Atún de aleta amarilla",
+    "de": "Gelbflossen-Thun",
+    "fr": "Albacore",
+    "zh": "黄鳍金枪鱼",
+    "ja": "キハダ",
+    "id": "Madidihang"
+  },
+  "item_72028": {
+    "pt": "Caranguejo",
+    "es": "Cangrejo",
+    "de": "Krabbe",
+    "fr": "Crabe",
+    "zh": "螃蟹",
+    "ja": "カニ",
+    "id": "Kepiting"
+  },
+  "item_72029": {
+    "pt": "Peixe-espada",
+    "es": "Pez espada",
+    "de": "Schwertfisch",
+    "fr": "Espadon",
+    "zh": "剑鱼",
+    "ja": "メカジキ",
+    "id": "Ikan Pedang"
+  },
+  "item_72031": {
+    "pt": "Água-viva",
+    "es": "Medusa",
+    "de": "Qualle",
+    "fr": "Méduse",
+    "zh": "水母",
+    "ja": "クラゲ",
+    "id": "Ubur-ubur"
+  },
+  "item_73001": {
+    "pt": "Bacalhau",
+    "es": "Bacalao",
+    "de": "Kabeljau",
+    "fr": "Morue",
+    "zh": "鳕鱼",
+    "ja": "タラ",
+    "id": "Ikan Kod"
+  },
+  "item_73002": {
+    "pt": "Camarão",
+    "es": "Camarón",
+    "de": "Garnele",
+    "fr": "Crevette",
+    "zh": "虾",
+    "ja": "エビ",
+    "id": "Udang"
+  },
+  "item_73003": {
+    "pt": "Barracuda",
+    "es": "Barracuda",
+    "de": "Barrakuda",
+    "fr": "Barracuda",
+    "zh": "梭子鱼",
+    "ja": "バラクーダ",
+    "id": "Barakuda"
+  },
+  "item_73004": {
+    "pt": "Mero-gigante",
+    "es": "Mero gigante del Pacífico",
+    "de": "Riesenseebarsch",
+    "fr": "Mérou géant",
+    "zh": "巨型海鲈",
+    "ja": "コクチイシナギ",
+    "id": "Giant Sea Bass"
+  },
+  "item_73005": {
+    "pt": "Sardinha",
+    "es": "Sardina",
+    "de": "Sardine",
+    "fr": "Sardine",
+    "zh": "沙丁鱼",
+    "ja": "イワシ",
+    "id": "Sarden"
+  },
+  "item_73006": {
+    "pt": "Pargo-vermelho",
+    "es": "Pargo rojo",
+    "de": "Roter Schnapper",
+    "fr": "Vivaneau campèche",
+    "zh": "红鲷鱼",
+    "ja": "マダイ",
+    "id": "Kakap Merah"
+  },
+  "item_73007": {
+    "pt": "Esturjão",
+    "es": "Esturión",
+    "de": "Stör",
+    "fr": "Esturgeon",
+    "zh": "鲟鱼",
+    "ja": "チョウザメ",
+    "id": "Sturgeon"
+  },
+  "item_73008": {
+    "pt": "Salmão-vermelho",
+    "es": "Salmón rojo",
+    "de": "Rotlachs",
+    "fr": "Saumon rouge",
+    "zh": "红大麻哈鱼",
+    "ja": "ベニザケ",
+    "id": "Salmon Merah"
+  },
+  "item_73009": {
+    "pt": "Barramundi",
+    "es": "Barramundi",
+    "de": "Barramundi",
+    "fr": "Barramundi",
+    "zh": "尖吻鲈",
+    "ja": "バラマンディ",
+    "id": "Barramundi"
+  },
+  "item_74001": {
+    "pt": "Aruanã-rei-vermelho",
+    "es": "Arowana rey rojo",
+    "de": "Roter Königs-Arowana",
+    "fr": "Arowana royal rouge",
+    "zh": "红龙鱼",
+    "ja": "スーパーレッドアロワナ",
+    "id": "Arwana Super Red"
+  },
+  "item_74002": {
+    "pt": "Tamboril",
+    "es": "Rape",
+    "de": "Seeteufel",
+    "fr": "Baudroie",
+    "zh": "鮟鱇鱼",
+    "ja": "アンコウ",
+    "id": "Monkfish"
+  },
+  "item_74003": {
+    "pt": "Moreia-amarela",
+    "es": "Morena amarilla",
+    "de": "Gelbe Muräne",
+    "fr": "Murène jaune",
+    "zh": "黄斑海鳝",
+    "ja": "キバラムネエソ",
+    "id": "Belut Moray Kuning"
+  },
+  "item_75001": {
+    "pt": "Arraia-gigante",
+    "es": "Raya gigante",
+    "de": "Riesenrochen",
+    "fr": "Raie géante",
+    "zh": "巨型黄貂鱼",
+    "ja": "オオアカエイ",
+    "id": "Pari Raksasa"
+  },
+  "item_75002": {
+    "pt": "Peixe-serra-verde",
+    "es": "Pez sierra verde",
+    "de": "Grüner Sägefisch",
+    "fr": "Poisson-scie vert",
+    "zh": "绿锯鳐",
+    "ja": "オオノコギリエイ",
+    "id": "Pari Gergaji Hijau"
+  },
+  "item_75003": {
+    "pt": "Tubarão-martelo",
+    "es": "Tiburón martillo",
+    "de": "Hammerhai",
+    "fr": "Requin-marteau",
+    "zh": "双髻鲨",
+    "ja": "シュモクザメ",
+    "id": "Hiu Martil"
+  },
+  "item_75004": {
+    "pt": "Tubarão-branco",
+    "es": "Gran tiburón blanco",
+    "de": "Weißer Hai",
+    "fr": "Grand requin blanc",
+    "zh": "大白鲨",
+    "ja": "ホホジロザメ",
+    "id": "Hiu Putih Besar"
+  },
+  "item_75005": {
+    "pt": "Tubarão-de-Raja-Ampat",
+    "es": "Tiburón de Raja Ampat",
+    "de": "Raja-Ampat-Hai",
+    "fr": "Requin de Raja Ampat",
+    "zh": "拉贾安帕鲨",
+    "ja": "ラジャ・アンパット・シャーク",
+    "id": "Hiu Raja Ampat"
+  }
+}

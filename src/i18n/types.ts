@@ -26,6 +26,7 @@ export interface TranslationDictionary {
   nav_altars: string;
   nav_mastery: string;
   nav_pins: string;
+  nav_trivia: string;
   nav_import_save: string;
   nav_settings: string;
   nav_caught_count: string;
