@@ -26,3 +26,5 @@ playwright-report
 *.sw?
 scratch_coral_guide
 .agents/
+live_debug.txt
+live_game_state.json
