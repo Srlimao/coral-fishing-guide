@@ -129,7 +129,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
           <div className="flex flex-wrap items-center justify-between gap-2 bg-[#ede6db] p-3 rounded-2xl border border-[#e5d8c3]">
             <button
               onClick={() => toggleCaught(fish.id)}
-              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all ${
+              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
                 isCaught ? 'bg-[#13181b] text-white shadow-md' : 'bg-white/70 text-[#5a4627] hover:bg-white'
               }`}
             >
@@ -139,7 +139,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
 
             <button
               onClick={() => toggleDonated(fish.id)}
-              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all ${
+              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
                 isDonated ? 'bg-[#13181b] text-white shadow-md' : 'bg-white/70 text-[#5a4627] hover:bg-white'
               }`}
             >
@@ -150,7 +150,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
             {fish.offerings.length > 0 && (
               <button
                 onClick={() => toggleOffered(fish.id)}
-                className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all ${
+                className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
                   isOffered ? 'bg-[#13181b] text-white shadow-md' : 'bg-white/70 text-[#5a4627] hover:bg-white'
                 }`}
               >
