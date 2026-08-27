@@ -40,6 +40,7 @@ interface UserProfileContextType {
   pullCloudProfile: (profileId: string) => Promise<boolean>;
   pullAllCloudProfiles: () => Promise<UserProfile[]>;
   deleteCloudProfileDoc: (profileId: string) => Promise<boolean>;
+  restoreAccountProfiles: (profiles: UserProfile[], activeId: string) => void;
   setDbConfig: (config: GcpDbConfig) => void;
   openProfileModal: () => void;
   closeProfileModal: () => void;
@@ -227,6 +228,16 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
     return res.ok;
   };
 
+  const restoreAccountProfiles = (newProfiles: UserProfile[], activeId: string) => {
+    if (Array.isArray(newProfiles) && newProfiles.length > 0) {
+      setProfilesData({
+        profiles: newProfiles,
+        activeId: newProfiles.some(p => p.id === activeId) ? activeId : newProfiles[0].id
+      });
+      setCloudSyncStatus('synced');
+    }
+  };
+
   return (
     <UserProfileContext.Provider
       value={{
@@ -247,6 +258,7 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
         pullCloudProfile,
         pullAllCloudProfiles,
         deleteCloudProfileDoc,
+        restoreAccountProfiles,
         setDbConfig,
         openProfileModal: () => setIsProfileModalOpen(true),
         closeProfileModal: () => setIsProfileModalOpen(false)

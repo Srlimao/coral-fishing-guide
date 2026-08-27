@@ -42,7 +42,7 @@ export const generateTownLeaderboard = (
       id: 'player_current',
       name: playerName,
       score: playerScore,
-      portrait: '/cotal-fishing-guide/trivia/townies/T_QuestNPCTownDefault.png',
+      portrait: '/coral-fishing-guide/trivia/townies/T_QuestNPCTownDefault.png',
       title: 'Farmer',
       isPlayer: true
     });

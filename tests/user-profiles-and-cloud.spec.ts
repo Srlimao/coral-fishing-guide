@@ -165,10 +165,11 @@ test.describe('Coral Island Fishing Guide - User Profile & GCP Cloud Sync System
     const cloudTab = modal.locator('button:has-text("Cloud & Multiplayer")').first();
     await cloudTab.click();
 
-    // Verify Cloud Backup panel and Multiplayer Sharing
-    await expect(modal.locator('text=Cloud Backup & Sync')).toBeVisible();
+    // Verify Cloud Vault panel and Multiplayer Sharing
+    await expect(modal.locator('text=Private Cloud Vault & Account')).toBeVisible();
     await expect(modal.locator('text=Multiplayer Co-Op Sharing')).toBeVisible();
-    await expect(modal.locator('button:has-text("Save to Cloud")').first()).toBeVisible();
+    await expect(modal.locator('button:has-text("Sign In")').first()).toBeVisible();
+    await expect(modal.locator('button:has-text("Create Account")').first()).toBeVisible();
   });
 
 });

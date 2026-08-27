@@ -133,7 +133,7 @@ categories.forEach(cat => {
           englishName: baseName,
           translations,
           imageName: destFile,
-          imagePath: '/cotal-fishing-guide/trivia/items/' + destFile
+          imagePath: '/coral-fishing-guide/trivia/items/' + destFile
         });
       });
     }
@@ -158,7 +158,7 @@ if (fs.existsSync(npcBase)) {
       fs.copyFileSync(path.join(npcBase, npcFile), path.join(publicTowniesDir, npcFile));
       towniesData.push({
         name: t,
-        portrait: '/cotal-fishing-guide/trivia/townies/' + npcFile,
+        portrait: '/coral-fishing-guide/trivia/townies/' + npcFile,
         title: 'Starlet Townie'
       });
     }

@@ -17,6 +17,8 @@ import { FishingStatsView } from './features/stats/FishingStatsView';
 import { TriviaMainView } from './features/trivia/TriviaMainView';
 import { FishDetailModal } from './features/fish-list/FishDetailModal';
 import { MultiplayerIncomingModal } from './features/user-profiles/MultiplayerIncomingModal';
+import { AuthProvider } from './features/auth/AuthContext';
+import { AuthModal } from './features/auth/AuthModal';
 import { Heart } from 'lucide-react';
 
 const MainLayout: React.FC = () => {
@@ -86,11 +88,14 @@ export function App() {
     <LanguageProvider>
       <LiveBridgeProvider>
         <UserProfileProvider>
-          <FishingProvider>
-            <LiveBridgeSyncHandler />
-            <MultiplayerIncomingModal />
-            <MainLayout />
-          </FishingProvider>
+          <AuthProvider>
+            <FishingProvider>
+              <LiveBridgeSyncHandler />
+              <MultiplayerIncomingModal />
+              <AuthModal />
+              <MainLayout />
+            </FishingProvider>
+          </AuthProvider>
         </UserProfileProvider>
       </LiveBridgeProvider>
     </LanguageProvider>

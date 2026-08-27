@@ -122,7 +122,7 @@ export const TriviaQuestionCard: React.FC<TriviaQuestionCardProps> = ({
           <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl bg-black/60 border border-white/20 p-4 flex items-center justify-center shadow-inner relative group">
             <img
               data-testid="trivia-item-image"
-              src={targetItem.imagePath}
+              src={targetItem.imagePath.startsWith('/') ? `${import.meta.env.BASE_URL}${targetItem.imagePath.replace(/^\/(?:cotal|coral)-fishing-guide\//, '')}` : targetItem.imagePath}
               alt={targetItem.englishName}
               className="max-w-full max-h-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)] animate-pulse-slow"
               onError={e => {

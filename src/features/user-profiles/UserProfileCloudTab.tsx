@@ -1,9 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useUserProfile } from './UserProfileContext';
-import { checkDbHealth } from './userProfileApi';
-import { UserProfile } from './types';
+import { useAuth } from '../auth/AuthContext';
 import { MultiplayerShareModal } from './MultiplayerShareModal';
-import { Cloud, HardDriveDownload, RefreshCw, X, Share2, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import {
+  Cloud,
+  HardDriveDownload,
+  Share2,
+  CheckCircle2,
+  LogIn,
+  UserPlus,
+  LogOut,
+  UserCheck,
+  RotateCw,
+  Trash2
+} from 'lucide-react';
 
 interface UserProfileCloudTabProps {
   onFeedback: (feedback: { type: 'success' | 'error'; msg: string }) => void;
@@ -11,59 +21,57 @@ interface UserProfileCloudTabProps {
 
 export const UserProfileCloudTab: React.FC<UserProfileCloudTabProps> = ({ onFeedback }) => {
   const {
-    activeProfile,
-    dbConfig,
-    syncActiveProfile,
-    pullCloudProfile,
-    pullAllCloudProfiles,
-    deleteCloudProfileDoc
+    profiles,
+    activeProfileId,
+    restoreAccountProfiles
   } = useUserProfile();
 
-  const [cloudProfiles, setCloudProfiles] = useState<UserProfile[]>([]);
-  const [isLoadingCloud, setIsLoadingCloud] = useState(false);
-  const [healthStatus, setHealthStatus] = useState<{ ok: boolean } | null>(null);
+  const {
+    account,
+    session,
+    isAuthenticated,
+    openLoginModal,
+    openRegisterModal,
+    logout,
+    syncAccountData
+  } = useAuth();
+
+  const [isSyncing, setIsSyncing] = useState(false);
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const [shareModalTab, setShareModalTab] = useState<'share' | 'import'>('share');
 
-  const handleLoadCloudProfiles = async () => {
-    setIsLoadingCloud(true);
-    try {
-      const list = await pullAllCloudProfiles();
-      setCloudProfiles(list);
-      const health = await checkDbHealth(dbConfig);
-      setHealthStatus({ ok: health.ok });
-    } catch {
-      onFeedback({ type: 'error', msg: 'Failed to connect to cloud service' });
-    } finally {
-      setIsLoadingCloud(false);
+  const handleAccountSync = async () => {
+    if (!isAuthenticated) return;
+    setIsSyncing(true);
+    const ok = await syncAccountData(profiles, activeProfileId);
+    setIsSyncing(false);
+    if (ok) {
+      onFeedback({ type: 'success', msg: `Synced ${profiles.length} profile(s) to @${session?.username}!` });
+    } else {
+      onFeedback({ type: 'error', msg: 'Failed to sync with account. Check connection.' });
     }
   };
 
-  useEffect(() => {
-    handleLoadCloudProfiles();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const handleManualSync = async () => {
-    setIsLoadingCloud(true);
-    const ok = await syncActiveProfile();
-    setIsLoadingCloud(false);
-    if (ok) {
-      onFeedback({ type: 'success', msg: `Backed up "${activeProfile.name}" to cloud!` });
-      handleLoadCloudProfiles();
-    } else {
-      onFeedback({ type: 'error', msg: 'Cloud sync failed. Check internet connection.' });
-    }
+  const handleRestoreFromAccount = (profileId: string) => {
+    if (!account || !account.profiles) return;
+    restoreAccountProfiles(account.profiles, profileId);
+    onFeedback({ type: 'success', msg: 'Restored account profiles!' });
   };
 
-  const handleImportCloudProfile = async (id: string) => {
-    setIsLoadingCloud(true);
-    const ok = await pullCloudProfile(id);
-    setIsLoadingCloud(false);
+  const handleDeleteProfileFromAccount = async (profileId: string) => {
+    if (!account) return;
+    if (account.profiles.length <= 1) {
+      onFeedback({ type: 'error', msg: 'Cannot delete the only profile in your account.' });
+      return;
+    }
+    const nextProfiles = account.profiles.filter(p => p.id !== profileId);
+    const nextActiveId = account.activeProfileId === profileId ? nextProfiles[0].id : account.activeProfileId;
+    const ok = await syncAccountData(nextProfiles, nextActiveId);
     if (ok) {
-      onFeedback({ type: 'success', msg: 'Cloud profile downloaded and set as active!' });
+      restoreAccountProfiles(nextProfiles, nextActiveId);
+      onFeedback({ type: 'success', msg: 'Deleted profile from cloud account.' });
     } else {
-      onFeedback({ type: 'error', msg: 'Failed to import cloud profile' });
+      onFeedback({ type: 'error', msg: 'Failed to update account data.' });
     }
   };
 
@@ -105,106 +113,123 @@ export const UserProfileCloudTab: React.FC<UserProfileCloudTabProps> = ({ onFeed
         </div>
       </div>
 
-      {/* Cloud Backup Status Bar */}
-      <div className="p-3.5 rounded-2xl bg-black/20 border border-white/10 flex items-center justify-between">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
-            <Cloud className="w-4 h-4" />
-          </div>
-          <div>
-            <h4 className="text-xs font-bold text-white">Cloud Backup & Sync</h4>
-            <div className="flex items-center gap-1.5 mt-0.5">
-              <span
-                className={`inline-flex items-center gap-1 text-[10px] font-bold ${
-                  healthStatus?.ok ? 'text-emerald-400' : 'text-neutral-400'
-                }`}
+      {/* Account Cloud Status */}
+      {isAuthenticated && account && session ? (
+        <div className="space-y-3">
+          <div className="p-3.5 rounded-2xl bg-cyan-950/40 border border-cyan-500/30 flex items-center justify-between">
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-xl bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-300">
+                <UserCheck className="w-4 h-4" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <h4 className="text-xs font-bold text-white">@{session.username}</h4>
+                  <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> Private Vault
+                  </span>
+                </div>
+                <span className="text-[10px] text-neutral-400">
+                  {account.profiles?.length || 1} profile(s) synced • Last updated{' '}
+                  {new Date(account.updatedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                onClick={handleAccountSync}
+                disabled={isSyncing}
+                className="cg-pill text-xs py-1.5 px-3 font-bold flex items-center gap-1.5"
+                title="Sync local changes to cloud account"
               >
-                {healthStatus?.ok ? (
-                  <>
-                    <CheckCircle2 className="w-3 h-3 text-emerald-400" />
-                    <span>Cloud Connected</span>
-                  </>
-                ) : (
-                  <>
-                    <ShieldCheck className="w-3 h-3 text-neutral-400" />
-                    <span>Local Mode</span>
-                  </>
-                )}
-              </span>
+                <RotateCw className={`w-3.5 h-3.5 text-cyan-300 ${isSyncing ? 'animate-spin' : ''}`} />
+                <span>{isSyncing ? 'Syncing...' : 'Save to Cloud'}</span>
+              </button>
+              <button
+                onClick={logout}
+                className="p-1.5 rounded-xl bg-white/5 hover:bg-rose-950/50 hover:text-rose-300 border border-white/10 text-neutral-400 transition-colors"
+                title="Log out from cloud vault"
+              >
+                <LogOut className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          {/* Account Cloud Profiles List */}
+          <div className="space-y-2">
+            <span className="text-xs text-neutral-300 font-semibold block">Your Private Cloud Saves</span>
+            <div className="space-y-2">
+              {(account.profiles || []).map(cp => {
+                const count = Object.values(cp.userProgress?.caught || {}).filter(Boolean).length;
+                return (
+                  <div
+                    key={cp.id}
+                    className="p-3 rounded-xl border border-white/10 bg-black/25 flex items-center justify-between"
+                  >
+                    <div>
+                      <h5 className="text-xs font-bold text-white">{cp.name}</h5>
+                      <p className="text-[10px] text-neutral-400">
+                        🎣 {count}/69 Fish • {cp.gameState?.season || 'Spring'} Day {cp.gameState?.day || 1}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => handleRestoreFromAccount(cp.id)}
+                        className="cg-pill text-xs py-1 px-2.5 font-bold flex items-center gap-1"
+                        title="Restore this profile as active"
+                      >
+                        <HardDriveDownload className="w-3.5 h-3.5" />
+                        <span>Restore</span>
+                      </button>
+                      {(account.profiles || []).length > 1 && (
+                        <button
+                          onClick={() => handleDeleteProfileFromAccount(cp.id)}
+                          className="text-rose-400 hover:text-rose-300 p-1"
+                          title="Delete from cloud"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
+      ) : (
+        /* Guest / Not Logged In State */
+        <div className="p-4 rounded-2xl bg-black/30 border border-white/10 space-y-3">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center text-cyan-400">
+              <Cloud className="w-4 h-4" />
+            </div>
+            <div>
+              <h4 className="text-xs font-bold text-white">Private Cloud Vault & Account</h4>
+              <p className="text-[11px] text-neutral-400">
+                Log in or register to sync your fishing progress privately across all your devices.
+              </p>
+            </div>
+          </div>
 
-        <button
-          onClick={handleManualSync}
-          disabled={isLoadingCloud}
-          className="cg-pill text-xs py-1.5 px-3 font-bold flex items-center gap-1.5"
-        >
-          <Cloud className="w-3.5 h-3.5 text-cyan-300" />
-          <span>Save to Cloud</span>
-        </button>
-      </div>
-
-      {/* Cloud Profiles Explorer */}
-      <div className="space-y-2">
-        <div className="flex items-center justify-between">
-          <span className="text-xs text-neutral-300 font-semibold">Your Cloud Saves</span>
-          <button
-            onClick={handleLoadCloudProfiles}
-            disabled={isLoadingCloud}
-            className="text-xs text-cyan-300 hover:text-cyan-200 inline-flex items-center gap-1 font-semibold"
-          >
-            <RefreshCw className={`w-3 h-3 ${isLoadingCloud ? 'animate-spin' : ''}`} />
-            <span>Refresh</span>
-          </button>
+          <div className="grid grid-cols-2 gap-2 pt-1">
+            <button
+              onClick={openLoginModal}
+              className="cg-pill cg-pill-active py-2 px-3 text-xs font-bold flex items-center justify-center gap-1.5"
+            >
+              <LogIn className="w-3.5 h-3.5" />
+              <span>Sign In</span>
+            </button>
+            <button
+              onClick={openRegisterModal}
+              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 py-2 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-colors"
+            >
+              <UserPlus className="w-3.5 h-3.5 text-cyan-300" />
+              <span>Create Account</span>
+            </button>
+          </div>
         </div>
-
-        {cloudProfiles.length === 0 ? (
-          <div className="p-4 rounded-xl border border-white/5 bg-black/10 text-center text-neutral-400 space-y-1">
-            <p>No cloud backup saves found for this account.</p>
-            <p className="text-[10px] text-neutral-500">
-              Click "Save to Cloud" above to back up your active profile.
-            </p>
-          </div>
-        ) : (
-          <div className="space-y-2">
-            {cloudProfiles.map(cp => (
-              <div
-                key={cp.id}
-                className="p-3 rounded-xl border border-white/10 bg-black/25 flex items-center justify-between"
-              >
-                <div>
-                  <h5 className="text-xs font-bold text-white">{cp.name}</h5>
-                  <p className="text-[10px] text-neutral-400">
-                    🎣 {Object.values(cp.userProgress?.caught || {}).filter(Boolean).length}/69 Fish • Level{' '}
-                    {cp.gameState?.fishingLevel || 1}
-                  </p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => handleImportCloudProfile(cp.id)}
-                    className="cg-pill text-xs py-1 px-2.5 font-bold flex items-center gap-1"
-                    title="Download and restore this save"
-                  >
-                    <HardDriveDownload className="w-3.5 h-3.5" />
-                    <span>Restore</span>
-                  </button>
-                  <button
-                    onClick={async () => {
-                      await deleteCloudProfileDoc(cp.id);
-                      handleLoadCloudProfiles();
-                    }}
-                    className="text-rose-400 hover:text-rose-300 p-1"
-                    title="Delete cloud backup"
-                  >
-                    <X className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+      )}
 
       {/* Multiplayer Share Modal */}
       <MultiplayerShareModal
