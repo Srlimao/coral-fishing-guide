@@ -1,15 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { useFishing } from '../../context/FishingContext';
 import { useLanguage } from '../../i18n/LanguageContext';
-import { X, Download, Upload, Trash2, Check, AlertTriangle, Globe, ZoomIn } from 'lucide-react';
+import { useUserProfile } from '../user-profiles/UserProfileContext';
+import { getAvatarById } from '../user-profiles/defaultProfiles';
+import {
+  X,
+  Download,
+  Upload,
+  Trash2,
+  Check,
+  AlertTriangle,
+  Globe,
+  ZoomIn,
+  Users,
+  Cloud
+} from 'lucide-react';
 
 export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const { exportData, importData, resetProgress, uiScale, setUiScale } = useFishing();
   const { language, setLanguage, supportedLanguages, t } = useLanguage();
+  const { activeProfile, openProfileModal, cloudSyncStatus } = useUserProfile();
 
   const [importText, setImportText] = useState('');
   const [statusMsg, setStatusMsg] = useState<{ text: string; type: 'success' | 'error' } | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
+
+  const avatar = getAvatarById(activeProfile.avatar);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -35,7 +51,7 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `coral-island-fishing-save-${new Date().toISOString().split('T')[0]}.json`;
+    a.download = `coral-island-${activeProfile.name.toLowerCase().replace(/\s+/g, '-')}-save-${new Date().toISOString().split('T')[0]}.json`;
     a.click();
     URL.revokeObjectURL(url);
     setStatusMsg({ text: 'Progress exported to JSON file!', type: 'success' });
@@ -45,7 +61,7 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
     if (!importText.trim()) return;
     const ok = importData(importText);
     if (ok) {
-      setStatusMsg({ text: 'Data imported successfully!', type: 'success' });
+      setStatusMsg({ text: 'Data imported successfully into current profile!', type: 'success' });
       setTimeout(() => {
         onClose();
       }, 1200);
@@ -57,7 +73,7 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
   const handleReset = () => {
     resetProgress();
     setConfirmReset(false);
-    setStatusMsg({ text: 'Progress reset to default.', type: 'success' });
+    setStatusMsg({ text: 'Current profile progress reset to default.', type: 'success' });
   };
 
   return (
@@ -87,7 +103,7 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
         </div>
 
         {/* Modal Body */}
-        <div className="p-6 space-y-5 max-h-[75vh] overflow-y-auto text-xs">
+        <div className="p-6 space-y-4 max-h-[75vh] overflow-y-auto text-xs">
           {statusMsg && (
             <div
               className={`p-3 rounded-xl text-xs font-medium flex items-center gap-2 ${
@@ -101,6 +117,39 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
             </div>
           )}
 
+          {/* Active Profile & GCP DB Sync Card */}
+          <div className="bg-gradient-to-r from-cyan-950/30 via-black/20 to-black/20 p-4 rounded-xl border border-cyan-500/30 space-y-2.5">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <div className={`w-8 h-8 rounded-xl bg-gradient-to-br ${avatar.bgGradient} flex items-center justify-center text-sm shadow`}>
+                  <span>{avatar.emoji}</span>
+                </div>
+                <div>
+                  <span className="text-[10px] text-cyan-400 uppercase font-bold tracking-wider block">Active Profile</span>
+                  <strong className="text-white text-xs">{activeProfile.name}</strong>
+                </div>
+              </div>
+
+              <button
+                onClick={() => {
+                  onClose();
+                  openProfileModal();
+                }}
+                className="cg-pill text-[11px] py-1 px-2.5 font-bold flex items-center gap-1 hover:text-white"
+              >
+                <Users className="w-3.5 h-3.5" />
+                <span>Switch / Manage</span>
+              </button>
+            </div>
+
+            <div className="flex items-center justify-between text-[11px] text-neutral-400 pt-1 border-t border-white/5">
+              <span>Cloud Status: <strong className="text-white capitalize">{cloudSyncStatus}</strong></span>
+              <span className="flex items-center gap-1 text-cyan-300">
+                <Cloud className="w-3 h-3" /> db.dunhas.com
+              </span>
+            </div>
+          </div>
+
           {/* UI Scale Setting Section */}
           <div className="bg-black/20 p-4 rounded-xl border border-white/5 space-y-3">
             <div className="flex items-center justify-between">
@@ -113,11 +162,6 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
               </span>
             </div>
             
-            <p className="text-[11px] text-neutral-400">
-              Adjust the overall interface size, font scale, and card dimensions for maximum readability.
-            </p>
-
-            {/* Presets Grid */}
             <div className="grid grid-cols-5 gap-1.5">
               {scalePresets.map(p => (
                 <button
@@ -133,7 +177,6 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
               ))}
             </div>
 
-            {/* Range Slider for Fine Control */}
             <div className="flex items-center gap-3 pt-1">
               <span className="text-[10px] text-neutral-400 font-semibold">85%</span>
               <input
@@ -173,13 +216,10 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
 
           {/* Export Section */}
           <div className="bg-black/20 p-4 rounded-xl border border-white/5 space-y-2">
-            <h4 className="font-semibold text-xs text-neutral-200">Export Backup</h4>
-            <p className="text-[11px] text-neutral-400">
-              Download your caught fish, temple offerings, and museum checklist as a JSON backup file.
-            </p>
+            <h4 className="font-semibold text-xs text-neutral-200">Export Current Profile</h4>
             <button
               onClick={handleExport}
-              className="cg-pill cg-pill-active text-xs py-1.5 px-3 mt-1 inline-flex items-center gap-1.5 font-bold"
+              className="cg-pill cg-pill-active text-xs py-1.5 px-3 inline-flex items-center gap-1.5 font-bold"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Download Backup JSON</span>
@@ -189,9 +229,6 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
           {/* Import Section */}
           <div className="bg-black/20 p-4 rounded-xl border border-white/5 space-y-2">
             <h4 className="font-semibold text-xs text-neutral-200">Import Progress</h4>
-            <p className="text-[11px] text-neutral-400">
-              Paste previously exported JSON data to restore your progress:
-            </p>
             <textarea
               rows={2}
               value={importText}
@@ -212,8 +249,8 @@ export const SaveManagerModal: React.FC<{ onClose: () => void }> = ({ onClose })
           {/* Reset Section */}
           <div className="pt-2 border-t border-white/10 flex items-center justify-between">
             <div>
-              <p className="text-xs font-semibold text-rose-300">Reset All Data</p>
-              <p className="text-[10px] text-neutral-400">Clears all caught checkboxes and reset gear settings.</p>
+              <p className="text-xs font-semibold text-rose-300">Reset Profile Progress</p>
+              <p className="text-[10px] text-neutral-400">Clears caught checklist for active profile.</p>
             </div>
             {confirmReset ? (
               <div className="flex items-center gap-2">

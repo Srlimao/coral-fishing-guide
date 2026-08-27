@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationTab } from '../../types/fishing';
 import { useLanguage } from '../../i18n/LanguageContext';
+import { UserProfileSelector } from '../user-profiles/UserProfileSelector';
 import {
   BookOpen,
   Calendar,
@@ -72,6 +73,11 @@ export const AppMobileDrawer: React.FC<AppMobileDrawerProps> = ({
             >
               <X className="w-4 h-4" />
             </button>
+          </div>
+
+          {/* User Profile Selector on Mobile */}
+          <div className="pt-1" onClick={onClose}>
+            <UserProfileSelector />
           </div>
 
           <nav className="space-y-1.5">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FishingProvider, useFishing } from './context/FishingContext';
 import { LanguageProvider } from './i18n/LanguageContext';
+import { UserProfileProvider } from './features/user-profiles/UserProfileContext';
 import { LiveBridgeProvider } from './features/live-bridge/LiveBridgeContext';
 import { LiveBridgeSyncHandler } from './features/live-bridge/LiveBridgeSyncHandler';
 import { AppLeftSidebar } from './features/navigation/AppLeftSidebar';
@@ -15,6 +16,7 @@ import { OfferingsTrackerView } from './features/bundles/OfferingsTrackerView';
 import { FishingStatsView } from './features/stats/FishingStatsView';
 import { TriviaMainView } from './features/trivia/TriviaMainView';
 import { FishDetailModal } from './features/fish-list/FishDetailModal';
+import { MultiplayerIncomingModal } from './features/user-profiles/MultiplayerIncomingModal';
 import { Heart } from 'lucide-react';
 
 const MainLayout: React.FC = () => {
@@ -60,9 +62,9 @@ const MainLayout: React.FC = () => {
         </footer>
       </div>
 
-      {/* 3. Right Column: Filters & Simulation Panel (Shown on Fish Journal Catalog) */}
+      {/* 3. Right Column: Filters & Simulation Panel (Shown on Fish Journal Catalog on Desktop) */}
       {activeTab === 'catalog' && (
-        <div className="p-4 sm:p-6 lg:pl-0 flex-shrink-0">
+        <div className="hidden lg:block p-4 sm:p-6 lg:pl-0 flex-shrink-0">
           <FishListRightSidebar />
         </div>
       )}
@@ -83,10 +85,13 @@ export function App() {
   return (
     <LanguageProvider>
       <LiveBridgeProvider>
-        <FishingProvider>
-          <LiveBridgeSyncHandler />
-          <MainLayout />
-        </FishingProvider>
+        <UserProfileProvider>
+          <FishingProvider>
+            <LiveBridgeSyncHandler />
+            <MultiplayerIncomingModal />
+            <MainLayout />
+          </FishingProvider>
+        </UserProfileProvider>
       </LiveBridgeProvider>
     </LanguageProvider>
   );

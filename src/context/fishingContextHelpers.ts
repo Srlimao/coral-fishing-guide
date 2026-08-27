@@ -1,4 +1,15 @@
-import { FishItem, Season, Weather, TimeOfDay, FishRarity, FishSize, ActiveGameState, UserProgress } from '../types/fishing';
+import {
+  FishItem,
+  Season,
+  Weather,
+  TimeOfDay,
+  FishRarity,
+  FishSize,
+  ActiveGameState,
+  UserProgress,
+  FishingLocationPin,
+  MapSpotCoordinate
+} from '../types/fishing';
 import { FISH_LIST } from '../data/fishData';
 import { isFishSpawnActive, getFishExclusivityInfo } from '../features/calculator/FishingCalculations';
 import { FISH_NAME_TRANSLATIONS } from '../i18n/fishTranslations';
@@ -61,6 +72,59 @@ export const defaultFilters: FilterOptions = {
   sortOrder: 'desc'
 };
 
+export const addSpotHelper = (
+  locations: FishingLocationPin[],
+  locationId: string,
+  spot: Omit<MapSpotCoordinate, 'id'>
+): FishingLocationPin[] => {
+  const newSpot: MapSpotCoordinate = {
+    ...spot,
+    id: `spot_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`
+  };
+  return locations.map(loc => {
+    if (loc.id === locationId) {
+      const currentSpots = loc.spots || [{ id: 'main', x: loc.x, y: loc.y, label: 'Spot 1' }];
+      return { ...loc, spots: [...currentSpots, newSpot] };
+    }
+    return loc;
+  });
+};
+
+export const removeSpotHelper = (
+  locations: FishingLocationPin[],
+  locationId: string,
+  spotId: string
+): FishingLocationPin[] => {
+  return locations.map(loc => {
+    if (loc.id === locationId) {
+      const currentSpots = (loc.spots || []).filter(s => s.id !== spotId);
+      return {
+        ...loc,
+        spots: currentSpots,
+        x: currentSpots[0]?.x ?? loc.x,
+        y: currentSpots[0]?.y ?? loc.y
+      };
+    }
+    return loc;
+  });
+};
+
+export const updateSpotHelper = (
+  locations: FishingLocationPin[],
+  locationId: string,
+  spotId: string,
+  x: number,
+  y: number
+): FishingLocationPin[] => {
+  return locations.map(loc => {
+    if (loc.id === locationId) {
+      const currentSpots = (loc.spots || []).map(s => (s.id === spotId ? { ...s, x, y } : s));
+      return { ...loc, spots: currentSpots };
+    }
+    return loc;
+  });
+};
+
 export const filterAndSortFish = (
   filters: FilterOptions,
   gameState: ActiveGameState,
@@ -70,10 +134,10 @@ export const filterAndSortFish = (
     if (filters.search) {
       const term = filters.search.toLowerCase();
       const matchName = fish.name.toLowerCase().includes(term);
-      
-      // Match localized fish names in any language
       const translations = FISH_NAME_TRANSLATIONS[fish.id];
-      const matchTranslated = translations ? Object.values(translations).some(t => t?.toLowerCase().includes(term)) : false;
+      const matchTranslated = translations
+        ? Object.values(translations).some(t => t?.toLowerCase().includes(term))
+        : false;
 
       const matchLoc = fish.locations.some(l => {
         if (l.toLowerCase().includes(term)) return true;

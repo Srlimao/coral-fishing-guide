@@ -48,13 +48,13 @@ test.describe('Coral Island Fishing Guide - 3-Column Layout & Responsiveness Tes
     }
   });
 
-  test('Right Filters Sidebar collapses and expands cleanly on desktop and mobile', async ({ page, isMobile }) => {
+  test('Right Filters Sidebar on desktop and Mobile Filter Modal on mobile open and toggle cleanly', async ({ page, isMobile }) => {
     await page.goto('/');
 
-    const rightSidebar = page.locator('aside').filter({ hasText: /Filters & Simulation/i }).first();
-    await expect(rightSidebar).toBeVisible();
-
     if (!isMobile) {
+      const rightSidebar = page.locator('aside').filter({ hasText: /Filters & Simulation/i }).first();
+      await expect(rightSidebar).toBeVisible();
+
       // Click desktop collapse button
       const collapseRightBtn = page.locator('aside button[aria-label="Collapse Filters"]').first();
       if (await collapseRightBtn.isVisible()) {
@@ -68,18 +68,27 @@ test.describe('Coral Island Fishing Guide - 3-Column Layout & Responsiveness Tes
         await expect(page.locator('aside button[aria-label="Collapse Filters"]').first()).toBeVisible();
       }
     } else {
-      // Mobile accordion toggle
-      const mobileToggleBtn = page.locator('aside button[aria-label="Toggle Filters"]').first();
+      // On mobile: top filter button opens the mobile bottom sheet modal
+      const mobileToggleBtn = page.locator('button[aria-label="Toggle Filters"]').first();
       await expect(mobileToggleBtn).toBeVisible();
       await mobileToggleBtn.click();
+
+      // Mobile filter modal should open with Fishing Level and Season controls
+      const mobileModal = page.locator('aside[aria-label="Filters & Simulation"]').first();
+      await expect(mobileModal).toBeVisible();
       await expect(page.locator('text=Fishing Level').first()).toBeVisible();
+
+      // Close modal by clicking Close button
+      const closeBtn = page.locator('button[aria-label="Close Filters"]').first();
+      await closeBtn.click();
+      await expect(mobileModal).not.toBeVisible();
     }
   });
 
   test('Center catalog search filters fish and cards render smoothly', async ({ page }) => {
     await page.goto('/');
 
-    const searchInput = page.locator('input[placeholder*="Search" i], input[placeholder*="Pesquisar" i]').first();
+    const searchInput = page.locator('input[placeholder*="Search" i]:visible, input[placeholder*="Pesquisar" i]:visible').first();
     await expect(searchInput).toBeVisible();
     await searchInput.fill('Salmon');
 
@@ -91,7 +100,7 @@ test.describe('Coral Island Fishing Guide - 3-Column Layout & Responsiveness Tes
     await expect(page.locator('.cg-card-interactive').first()).toBeVisible();
   });
 
-  test('Clicking a fish card opens Details Modal with unified Altar button color', async ({ page }) => {
+  test('Clicking a fish card opens Details Modal with Map Location preview', async ({ page }) => {
     await page.goto('/');
 
     // Click the first fish card
@@ -102,7 +111,7 @@ test.describe('Coral Island Fishing Guide - 3-Column Layout & Responsiveness Tes
     // Modal should be open
     const modal = page.locator('.fixed.inset-0.z-50');
     await expect(modal).toBeVisible();
-    await expect(modal.locator('text=In-Game Fishing Minigame Simulation')).toBeVisible();
+    await expect(modal.locator('text=Spawn Map Location')).toBeVisible();
 
     // Close modal
     const closeBtn = page.locator('button[aria-label*="Close" i]').first();
@@ -178,4 +187,26 @@ test.describe('Coral Island Fishing Guide - 3-Column Layout & Responsiveness Tes
     await expect(page.locator('text=Diário').first()).toBeVisible();
   });
 
+  test('Mobile floating filter button opens filter modal and adjusts simulation', async ({ page, isMobile }) => {
+    await page.goto('/');
+
+    if (isMobile) {
+      // FAB button should be visible on mobile
+      const fabBtn = page.locator('button[aria-label="Open Filters & Simulation Modal"]').first();
+      await expect(fabBtn).toBeVisible();
+      await fabBtn.click();
+
+      // Modal should open
+      const mobileModal = page.locator('aside[aria-label="Filters & Simulation"]').first();
+      await expect(mobileModal).toBeVisible();
+
+      // Click "Show X Fish" button to close
+      const showFishBtn = mobileModal.locator('button:has-text("Show")').first();
+      await expect(showFishBtn).toBeVisible();
+      await showFishBtn.click();
+      await expect(mobileModal).not.toBeVisible();
+    }
+  });
+
 });
+

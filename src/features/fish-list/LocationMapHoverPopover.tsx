@@ -83,26 +83,32 @@ export const LocationMapHoverPopover: React.FC<LocationMapHoverPopoverProps> = (
                 </div>
 
                 {/* Zoomed-in Minimap Viewport */}
-                <div className="relative w-full h-24 rounded-xl overflow-hidden border border-white/20 shadow-inner bg-[#718096]">
-                  <img
-                    src={mapSrc}
-                    alt={loc.name}
-                    className="w-full h-full object-cover select-none"
+                <div className="relative w-full h-24 rounded-xl overflow-hidden border border-white/20 shadow-inner bg-[#4a5568] select-none">
+                  <div
+                    className="absolute top-0 left-0 w-full aspect-[1000/780] transition-transform duration-300 origin-top-left"
                     style={{
-                      transform: 'scale(2.8)',
-                      transformOrigin: `${primarySpot.x}% ${primarySpot.y}%`
+                      transform: `translate(${50 - primarySpot.x * 2.5}%, ${50 - primarySpot.y * 2.5}%) scale(2.5)`
                     }}
-                  />
+                  >
+                    <img
+                      src={mapSrc}
+                      alt={loc.name}
+                      className="w-full h-full object-contain select-none pointer-events-none block"
+                    />
 
-                  {/* Centered Pulsing Pin Indicator */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center pointer-events-none">
-                    <span className="relative flex h-3 w-3">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500 border border-white"></span>
-                    </span>
-                    <span className="bg-black/90 text-white text-[8px] font-extrabold px-1.5 py-0.2 rounded shadow-md border border-white/20 whitespace-nowrap mt-0.5">
-                      {primarySpot.label || loc.name}
-                    </span>
+                    {/* Anchored Pin Indicator */}
+                    <div
+                      className="absolute transform -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center pointer-events-none"
+                      style={{ left: `${primarySpot.x}%`, top: `${primarySpot.y}%` }}
+                    >
+                      <span className="relative flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500 border border-white shadow-md"></span>
+                      </span>
+                      <span className="bg-black/90 text-white text-[8px] font-extrabold px-1.5 py-0.2 rounded shadow-md border border-white/20 whitespace-nowrap mt-0.5">
+                        {primarySpot.label || loc.name}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

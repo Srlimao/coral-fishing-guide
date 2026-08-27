@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 import {
   ActiveGameState,
   UserProgress,
@@ -16,16 +16,18 @@ import {
 import { FISH_LIST } from '../data/fishData';
 import { DEFAULT_FISHING_LOCATIONS } from '../data/locationsData';
 import { isFishSpawnActive } from '../features/calculator/FishingCalculations';
+import { useUserProfile } from '../features/user-profiles/UserProfileContext';
 import {
   FilterOptions,
   LOCAL_STORAGE_KEY_PROGRESS,
   LOCAL_STORAGE_KEY_GAMESTATE,
   LOCAL_STORAGE_KEY_LOCATIONS,
   LOCAL_STORAGE_KEY_MAP_IMG,
-  defaultGameState,
-  defaultUserProgress,
   defaultFilters,
-  filterAndSortFish
+  filterAndSortFish,
+  addSpotHelper,
+  removeSpotHelper,
+  updateSpotHelper
 } from './fishingContextHelpers';
 
 interface FishingContextType {
@@ -71,73 +73,58 @@ interface FishingContextType {
 const FishingContext = createContext<FishingContextType | undefined>(undefined);
 
 export const FishingProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [gameState, setGameState] = useState<ActiveGameState>(() => {
-    try {
-      const saved = localStorage.getItem(LOCAL_STORAGE_KEY_GAMESTATE);
-      return saved ? { ...defaultGameState, ...JSON.parse(saved) } : defaultGameState;
-    } catch {
-      return defaultGameState;
-    }
-  });
+  const { activeProfile, updateActiveProfile } = useUserProfile();
 
-  const [userProgress, setUserProgress] = useState<UserProgress>(() => {
-    try {
-      const saved = localStorage.getItem(LOCAL_STORAGE_KEY_PROGRESS);
-      return saved ? { ...defaultUserProgress, ...JSON.parse(saved) } : defaultUserProgress;
-    } catch {
-      return defaultUserProgress;
-    }
-  });
-
-  const [customLocations, setCustomLocations] = useState<FishingLocationPin[]>(() => {
-    try {
-      const saved = localStorage.getItem(LOCAL_STORAGE_KEY_LOCATIONS);
-      return saved ? JSON.parse(saved) : DEFAULT_FISHING_LOCATIONS;
-    } catch {
-      return DEFAULT_FISHING_LOCATIONS;
-    }
-  });
-
-  const [customMapImage, setCustomMapImageState] = useState<string | null>(() => {
-    try {
-      return localStorage.getItem(LOCAL_STORAGE_KEY_MAP_IMG);
-    } catch {
-      return null;
-    }
-  });
-
-  const [uiScale, setUiScale] = useState<number>(() => {
-    try {
-      const saved = localStorage.getItem('coral_fishing_guide_ui_scale_v1');
-      return saved ? parseFloat(saved) : 1.05;
-    } catch {
-      return 1.05;
-    }
-  });
+  const [gameState, setGameState] = useState<ActiveGameState>(activeProfile.gameState);
+  const [userProgress, setUserProgress] = useState<UserProgress>(activeProfile.userProgress);
+  const [customLocations, setCustomLocations] = useState<FishingLocationPin[]>(
+    activeProfile.customLocations || DEFAULT_FISHING_LOCATIONS
+  );
+  const [customMapImage, setCustomMapImageState] = useState<string | null>(activeProfile.customMapImage || null);
+  const [uiScale, setUiScale] = useState<number>(activeProfile.settings?.uiScale || 1.05);
 
   const [filters, setFilters] = useState<FilterOptions>(defaultFilters);
   const [selectedFish, setSelectedFish] = useState<FishItem | null>(null);
   const [activeTab, setActiveTab] = useState<NavigationTab>('catalog');
+
+  const currentProfileIdRef = useRef<string>(activeProfile.id);
+
+  // Sync state when active profile switches
+  useEffect(() => {
+    if (currentProfileIdRef.current !== activeProfile.id) {
+      currentProfileIdRef.current = activeProfile.id;
+      setGameState(activeProfile.gameState);
+      setUserProgress(activeProfile.userProgress);
+      setCustomLocations(activeProfile.customLocations || DEFAULT_FISHING_LOCATIONS);
+      setCustomMapImageState(activeProfile.customMapImage || null);
+      setUiScale(activeProfile.settings?.uiScale || 1.05);
+    }
+  }, [activeProfile]);
 
   useEffect(() => {
     document.documentElement.style.setProperty('--ui-scale', uiScale.toString());
     localStorage.setItem('coral_fishing_guide_ui_scale_v1', uiScale.toString());
   }, [uiScale]);
 
+  // Persist and update active profile on state changes
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY_GAMESTATE, JSON.stringify(gameState));
-  }, [gameState]);
+    updateActiveProfile({ gameState });
+  }, [gameState, updateActiveProfile]);
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY_PROGRESS, JSON.stringify(userProgress));
-  }, [userProgress]);
+    updateActiveProfile({ userProgress });
+  }, [userProgress, updateActiveProfile]);
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY_LOCATIONS, JSON.stringify(customLocations));
-  }, [customLocations]);
+    updateActiveProfile({ customLocations });
+  }, [customLocations, updateActiveProfile]);
 
   const setCustomMapImage = (img: string | null) => {
     setCustomMapImageState(img);
+    updateActiveProfile({ customMapImage: img });
     if (img) {
       localStorage.setItem(LOCAL_STORAGE_KEY_MAP_IMG, img);
     } else {
@@ -146,48 +133,15 @@ export const FishingProvider: React.FC<{ children: React.ReactNode }> = ({ child
   };
 
   const addSpotToLocation = (locationId: string, spot: Omit<MapSpotCoordinate, 'id'>) => {
-    const newSpot: MapSpotCoordinate = {
-      ...spot,
-      id: `spot_${Date.now()}_${Math.random().toString(36).substr(2, 4)}`
-    };
-    setCustomLocations(prev =>
-      prev.map(loc => {
-        if (loc.id === locationId) {
-          const currentSpots = loc.spots || [{ id: 'main', x: loc.x, y: loc.y, label: 'Spot 1' }];
-          return { ...loc, spots: [...currentSpots, newSpot] };
-        }
-        return loc;
-      })
-    );
+    setCustomLocations(prev => addSpotHelper(prev, locationId, spot));
   };
 
   const removeSpotFromLocation = (locationId: string, spotId: string) => {
-    setCustomLocations(prev =>
-      prev.map(loc => {
-        if (loc.id === locationId) {
-          const currentSpots = (loc.spots || []).filter(s => s.id !== spotId);
-          return {
-            ...loc,
-            spots: currentSpots,
-            x: currentSpots[0]?.x ?? loc.x,
-            y: currentSpots[0]?.y ?? loc.y
-          };
-        }
-        return loc;
-      })
-    );
+    setCustomLocations(prev => removeSpotHelper(prev, locationId, spotId));
   };
 
   const updateSpotCoordinate = (locationId: string, spotId: string, x: number, y: number) => {
-    setCustomLocations(prev =>
-      prev.map(loc => {
-        if (loc.id === locationId) {
-          const currentSpots = (loc.spots || []).map(s => (s.id === spotId ? { ...s, x, y } : s));
-          return { ...loc, spots: currentSpots };
-        }
-        return loc;
-      })
-    );
+    setCustomLocations(prev => updateSpotHelper(prev, locationId, spotId, x, y));
   };
 
   const toggleCaught = (id: string) => {
@@ -224,7 +178,9 @@ export const FishingProvider: React.FC<{ children: React.ReactNode }> = ({ child
     }
   };
 
-  const resetProgress = () => setUserProgress(defaultUserProgress);
+  const resetProgress = () => {
+    setUserProgress({ caught: {}, donatedMuseum: {}, offeredTemple: {}, customNotes: {} });
+  };
 
   const activeNowCount = FISH_LIST.filter(f =>
     isFishSpawnActive(f, gameState.season, gameState.day, gameState.timeOfDay, gameState.weather, gameState.equippedBait)

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useFishing } from '../../context/FishingContext';
 import { useLanguage } from '../../i18n/LanguageContext';
+import { useUserProfile } from '../user-profiles/UserProfileContext';
 import { NavigationTab } from '../../types/fishing';
 import {
   BookOpen,
@@ -15,16 +16,20 @@ import {
   Globe,
   ChevronLeft,
   ChevronRight,
-  Menu
+  Menu,
+  Users
 } from 'lucide-react';
 import superCoralImg from '../../assets/icons/Super_Coral.png';
 import { SaveManagerModal } from '../settings/SaveManagerModal';
 import { SaveImportModal } from '../save-import/SaveImportModal';
+import { UserProfileModal } from '../user-profiles/UserProfileModal';
+import { UserProfileSelector } from '../user-profiles/UserProfileSelector';
 import { AppMobileDrawer } from './AppMobileDrawer';
 
 export const AppLeftSidebar: React.FC = () => {
   const { activeTab, setActiveTab, activeNowCount, userProgress } = useFishing();
   const { language, currentLanguageInfo, setLanguage, supportedLanguages, t } = useLanguage();
+  const { openProfileModal } = useUserProfile();
 
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -83,10 +88,16 @@ export const AppLeftSidebar: React.FC = () => {
           </span>
         </div>
 
-        <div className="flex items-center gap-2 text-xs text-[#c4b5a0]">
-          <span>🎣 <strong className="text-white">{caughtCount}/69</strong></span>
-          <div className="w-[1px] h-2.5 bg-white/20" />
-          <span>🏛️ <strong className="text-white">{donatedCount}/69</strong></span>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={openProfileModal}
+            aria-label="Open Profile Manager"
+            className="flex items-center gap-2 text-xs text-[#c4b5a0] bg-white/5 px-2.5 py-1 rounded-xl border border-white/10 hover:bg-white/10"
+          >
+            <span>🎣 <strong className="text-white">{caughtCount}/69</strong></span>
+            <div className="w-[1px] h-2.5 bg-white/20" />
+            <Users className="w-3.5 h-3.5 text-cyan-300" />
+          </button>
         </div>
       </header>
 
@@ -107,8 +118,8 @@ export const AppLeftSidebar: React.FC = () => {
           isCollapsed ? 'w-20 items-center' : 'w-64'
         }`}
       >
-        {/* Top: Logo & Title + Collapse Toggle */}
-        <div className="space-y-4 w-full">
+        {/* Top: Logo & Title + User Profile Selector + Nav Links */}
+        <div className="space-y-3 w-full">
           <div className={`flex items-center ${isCollapsed ? 'justify-center' : 'justify-between'} border-b border-white/10 pb-3`}>
             {!isCollapsed && (
               <div className="flex items-center gap-2.5">
@@ -129,6 +140,11 @@ export const AppLeftSidebar: React.FC = () => {
             >
               {isCollapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
             </button>
+          </div>
+
+          {/* User Profile Selector Pill */}
+          <div className="w-full">
+            <UserProfileSelector isCollapsed={isCollapsed} />
           </div>
 
           {/* Nav Links */}
@@ -239,6 +255,7 @@ export const AppLeftSidebar: React.FC = () => {
       {/* Modals */}
       {showSaveImport && <SaveImportModal isOpen={showSaveImport} onClose={() => setShowSaveImport(false)} />}
       {showSettings && <SaveManagerModal onClose={() => setShowSettings(false)} />}
+      <UserProfileModal />
     </>
   );
 };

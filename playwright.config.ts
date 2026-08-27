@@ -8,7 +8,7 @@ export default defineConfig({
   workers: 1,
   reporter: [['list'], ['html', { open: 'never' }]],
   use: {
-    baseURL: 'http://localhost:3000/cotal-fishing-guide/',
+    baseURL: 'http://localhost:3000/coral-fishing-guide/',
     trace: 'on-first-retry',
     screenshot: 'on',
   },
@@ -48,7 +48,7 @@ export default defineConfig({
   ],
   webServer: {
     command: 'npm run dev',
-    url: 'http://localhost:3000/cotal-fishing-guide/',
+    url: 'http://localhost:3000/coral-fishing-guide/',
     reuseExistingServer: true,
     timeout: 10000,
   },

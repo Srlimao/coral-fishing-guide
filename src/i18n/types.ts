@@ -31,6 +31,20 @@ export interface TranslationDictionary {
   nav_settings: string;
   nav_caught_count: string;
   nav_museum_count: string;
+  nav_profiles: string;
+
+  // Profiles & Cloud Sync
+  profile_title: string;
+  profile_active: string;
+  profile_create: string;
+  profile_name_placeholder: string;
+  profile_select_avatar: string;
+  profile_switch: string;
+  cloud_sync_title: string;
+  cloud_sync_now: string;
+  cloud_synced: string;
+  cloud_syncing: string;
+  cloud_offline: string;
 
   // Filters & Sidebar
   search_placeholder: string;

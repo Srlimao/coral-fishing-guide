@@ -14,9 +14,7 @@ import {
   RotateCcw,
   SlidersHorizontal,
   ChevronRight,
-  ChevronLeft,
-  ChevronDown,
-  ChevronUp
+  ChevronLeft
 } from 'lucide-react';
 
 export const FishListRightSidebar: React.FC = () => {
@@ -33,7 +31,6 @@ export const FishListRightSidebar: React.FC = () => {
 
   const { t } = useLanguage();
   const [isDesktopCollapsed, setIsDesktopCollapsed] = useState(false);
-  const [isMobileExpanded, setIsMobileExpanded] = useState(false);
 
   const handleFilterChange = (key: string, value: any) => {
     setFilters((prev: any) => ({ ...prev, [key]: value }));
@@ -111,18 +108,9 @@ export const FishListRightSidebar: React.FC = () => {
             onClick={() => setIsDesktopCollapsed(true)}
             title="Collapse Filters Panel"
             aria-label="Collapse Filters"
-            className="hidden lg:flex cg-pill p-1.5 hover:text-white"
+            className="flex cg-pill p-1.5 hover:text-white"
           >
             <ChevronRight className="w-4 h-4" />
-          </button>
-
-          {/* Mobile Accordion Toggle Button */}
-          <button
-            onClick={() => setIsMobileExpanded(prev => !prev)}
-            aria-label="Toggle Filters"
-            className="lg:hidden cg-pill p-1.5 hover:text-white"
-          >
-            {isMobileExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
           </button>
         </div>
       </div>
@@ -148,7 +136,7 @@ export const FishListRightSidebar: React.FC = () => {
       </div>
 
       {/* Main Filter Panel Body */}
-      <div className={`${isMobileExpanded ? 'block space-y-4 pt-1' : 'hidden lg:block lg:space-y-4'}`}>
+      <div className="space-y-4">
         
         {/* 2. Active RIGHT NOW Capsule Toggle */}
         <button

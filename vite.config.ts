@@ -5,7 +5,7 @@ import { liveBridgePlugin } from './src/server/liveBridgePlugin';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/cotal-fishing-guide/',
+  base: '/coral-fishing-guide/',
   plugins: [
     react(),
     tailwindcss(),
