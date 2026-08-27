@@ -149,13 +149,14 @@ export const SaveImportModal: React.FC<SaveImportModalProps> = ({ isOpen, onClos
               Upload your <strong>DailySave_*.sav</strong> or <strong>Backup_*.sav</strong> file
             </p>
             
-            <label className="cg-pill cg-pill-active py-2 px-5 text-xs font-bold cursor-pointer inline-flex">
+            <label className="cg-pill cg-pill-active py-2 px-5 text-xs font-bold cursor-pointer inline-flex focus-within:ring-2 focus-within:ring-amber-400 focus-within:ring-offset-2 focus-within:ring-offset-[#182228]">
               <span>{isProcessing ? 'Reading file...' : 'Browse File (.sav)'}</span>
               <input
                 type="file"
                 accept=".sav,.json"
+                aria-label="Upload Coral Island save file"
                 onChange={(e) => e.target.files && e.target.files[0] && processFile(e.target.files[0])}
-                className="hidden"
+                className="sr-only"
               />
             </label>
           </div>
