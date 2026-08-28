@@ -122,5 +122,35 @@ export const pt: TranslationDictionary = {
   bundle_complete: 'Completo!',
 
   language_modal_title: 'Selecionar Idioma',
-  language_modal_desc: 'Escolha seu idioma de preferência para os nomes do jogo e interface.'
+  language_modal_desc: 'Escolha seu idioma de preferência para os nomes do jogo e interface.',
+
+  // Craft & Building Wiki
+  nav_crafting_building: 'Criação & Edifícios',
+  wiki_title: 'WIKI DE CRIAÇÃO E CONSTRUÇÃO',
+  wiki_subtitle: 'Catálogo completo de itens fabricáveis, construções da fazenda, níveis de melhoria, requisitos de desbloqueio e planejador de materiais.',
+  wiki_tab_crafting: 'Receitas de Fabricação',
+  wiki_tab_buildings: 'Edifícios da Fazenda',
+  wiki_tab_planner: 'Planejador de Projetos',
+  wiki_search_placeholder: 'Buscar itens, edifícios, materiais, condições de desbloqueio...',
+  wiki_filter_all_categories: 'Todas as Categorias',
+  wiki_filter_unlock_source: 'Fonte de Desbloqueio',
+  wiki_all_unlocks: 'Todos os Desbloqueios',
+  wiki_planner_add: '+ Adicionar ao Planejador',
+  wiki_planner_remove: 'Remover',
+  wiki_planner_view: 'Ver Planejador',
+  wiki_planner_title: 'Planejador de Projetos & Lista de Compras',
+  wiki_planner_empty: 'Nenhum item ou edifício adicionado ao planejador ainda. Explore o catálogo e clique em "+ Adicionar ao Planejador" para calcular os materiais!',
+  wiki_planner_clear: 'Limpar Tudo',
+  wiki_planner_copy: 'Copiar Lista de Compras',
+  wiki_planner_copied: 'Copiado para a Área de Transferência!',
+  wiki_total_gold: 'Custo Total em Ouro',
+  wiki_total_materials: 'Materiais Brutos Agregados',
+  wiki_days_to_build: 'Dias para Construir',
+  wiki_footprint: 'Dimensões (Tiles)',
+  wiki_unlock_condition: 'Critério de Desbloqueio',
+  wiki_yield: 'Rendimento',
+  wiki_sell_price: 'Valor Base',
+  wiki_materials_needed: 'Materiais Necessários',
+  wiki_upgrade_tier: 'Nível de Melhoria',
+  wiki_benefits: 'Recursos & Desbloqueios'
 };

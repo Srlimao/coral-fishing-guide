@@ -122,5 +122,35 @@ export const fr: TranslationDictionary = {
   bundle_complete: 'Terminé !',
 
   language_modal_title: 'Choisir la Langue',
-  language_modal_desc: "Choisissez votre langue préférée pour les noms du jeu et l'interface."
+  language_modal_desc: "Choisissez votre langue préférée pour les noms du jeu et l'interface.",
+
+  // Craft & Building Wiki
+  nav_crafting_building: 'Artisanat & Bâtiments',
+  wiki_title: 'WIKI ARTISANAT ET BÂTIMENTS',
+  wiki_subtitle: 'Catalogue complet des objets fabricables, bâtiments de ferme, niveaux d’amélioration, prérequis et planificateur.',
+  wiki_tab_crafting: 'Recettes d’Artisanat',
+  wiki_tab_buildings: 'Bâtiments de Ferme',
+  wiki_tab_planner: 'Planificateur de Projets',
+  wiki_search_placeholder: 'Rechercher objets, bâtiments, matériaux, critères...',
+  wiki_filter_all_categories: 'Toutes les Catégories',
+  wiki_filter_unlock_source: 'Source de Déblocage',
+  wiki_all_unlocks: 'Tous les Déblocages',
+  wiki_planner_add: '+ Ajouter au Planificateur',
+  wiki_planner_remove: 'Retirer',
+  wiki_planner_view: 'Voir le Planificateur',
+  wiki_planner_title: 'Planificateur de Projets & Liste de Courses',
+  wiki_planner_empty: 'Aucun objet dans votre planificateur. Explorez le catalogue et ajoutez des projets pour calculer les matériaux !',
+  wiki_planner_clear: 'Tout Effacer',
+  wiki_planner_copy: 'Copier la Liste',
+  wiki_planner_copied: 'Copié dans le Presse-papier !',
+  wiki_total_gold: 'Coût Total en Pièces d’Or',
+  wiki_total_materials: 'Matériaux Bruts Cumulés',
+  wiki_days_to_build: 'Jours de Construction',
+  wiki_footprint: 'Emprise au Sol (Cases)',
+  wiki_unlock_condition: 'Critère de Déblocage',
+  wiki_yield: 'Quantité Produite',
+  wiki_sell_price: 'Valeur de Base',
+  wiki_materials_needed: 'Matériaux Requis',
+  wiki_upgrade_tier: 'Niveau d’Amélioration',
+  wiki_benefits: 'Avantages & Déblocages'
 };

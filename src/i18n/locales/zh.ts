@@ -122,5 +122,35 @@ export const zh: TranslationDictionary = {
   bundle_complete: '已完成！',
 
   language_modal_title: '选择语言',
-  language_modal_desc: '选择适合您的游戏名称和界面显示语言。'
+  language_modal_desc: '选择适合您的游戏名称和界面显示语言。',
+
+  // Craft & Building Wiki
+  nav_crafting_building: '制作与建筑',
+  wiki_title: '制作与建筑百科',
+  wiki_subtitle: '可制作物品、农场建筑、升级阶段、解锁条件与材料采购规划器的全面图鉴。',
+  wiki_tab_crafting: '制作配方',
+  wiki_tab_buildings: '农场建筑与升级',
+  wiki_tab_planner: '项目规划器',
+  wiki_search_placeholder: '搜索物品、建筑、材料、解锁条件...',
+  wiki_filter_all_categories: '全部类别',
+  wiki_filter_unlock_source: '解锁途径',
+  wiki_all_unlocks: '全部解锁要求',
+  wiki_planner_add: '+ 加入规划器',
+  wiki_planner_remove: '移除',
+  wiki_planner_view: '查看规划清单',
+  wiki_planner_title: '农场建造与采购规划清单',
+  wiki_planner_empty: '规划清单暂无内容。浏览图鉴并点击“+ 加入规划器”即可自动汇总所需原材料与金币！',
+  wiki_planner_clear: '清空全部',
+  wiki_planner_copy: '复制采购清单',
+  wiki_planner_copied: '已复制到剪贴板！',
+  wiki_total_gold: '金币总花费',
+  wiki_total_materials: '汇总所需原材料',
+  wiki_days_to_build: '建造天数',
+  wiki_footprint: '占地面积 (格)',
+  wiki_unlock_condition: '解锁条件',
+  wiki_yield: '单次产出',
+  wiki_sell_price: '基础售价',
+  wiki_materials_needed: '所需材料',
+  wiki_upgrade_tier: '升级等级',
+  wiki_benefits: '功能与解锁项'
 };

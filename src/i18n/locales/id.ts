@@ -122,5 +122,35 @@ export const id: TranslationDictionary = {
   bundle_complete: 'Selesai!',
 
   language_modal_title: 'Pilih Bahasa',
-  language_modal_desc: 'Pilih bahasa antarmuka dan nama-nama ikan.'
+  language_modal_desc: 'Pilih bahasa antarmuka dan nama-nama ikan.',
+
+  // Craft & Building Wiki
+  nav_crafting_building: 'Kerajinan & Bangunan',
+  wiki_title: 'WIKI KERAJINAN & BANGUNAN',
+  wiki_subtitle: 'Katalog lengkap barang kerajinan, bangunan perkebunan, tingkat peningkatan, syarat buka, dan perencana bahan.',
+  wiki_tab_crafting: 'Resep Kerajinan',
+  wiki_tab_buildings: 'Bangunan & Peningkatan',
+  wiki_tab_planner: 'Perencana Proyek',
+  wiki_search_placeholder: 'Cari barang, bangunan, bahan, syarat buka...',
+  wiki_filter_all_categories: 'Semua Kategori',
+  wiki_filter_unlock_source: 'Sumber Buka Kunci',
+  wiki_all_unlocks: 'Semua Syarat Buka Kunci',
+  wiki_planner_add: '+ Tambah ke Perencana',
+  wiki_planner_remove: 'Hapus',
+  wiki_planner_view: 'Lihat Perencana',
+  wiki_planner_title: 'Perencana Proyek & Daftar Belanja',
+  wiki_planner_empty: 'Belum ada barang di perencana. Jelajahi katalog dan klik "+ Tambah ke Perencana" untuk menghitung total bahan!',
+  wiki_planner_clear: 'Hapus Semua',
+  wiki_planner_copy: 'Salin Daftar Belanja',
+  wiki_planner_copied: 'Tersalin ke Papan Klip!',
+  wiki_total_gold: 'Total Biaya Koin',
+  wiki_total_materials: 'Total Bahan Baku',
+  wiki_days_to_build: 'Hari Pengerjaan',
+  wiki_footprint: 'Ukuran Petak (Tiles)',
+  wiki_unlock_condition: 'Syarat Buka Kunci',
+  wiki_yield: 'Hasil Produksi',
+  wiki_sell_price: 'Harga Dasar',
+  wiki_materials_needed: 'Bahan Diperlukan',
+  wiki_upgrade_tier: 'Tingkat Peningkatan',
+  wiki_benefits: 'Fitur & Pembukaan'
 };

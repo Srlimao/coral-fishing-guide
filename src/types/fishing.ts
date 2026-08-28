@@ -174,4 +174,4 @@ export interface ExclusivityInfo {
   priorityScore: number;
 }
 
-export type NavigationTab = 'catalog' | 'calendar' | 'map' | 'bundles' | 'stats' | 'backoffice' | 'trivia';
+export type NavigationTab = 'catalog' | 'calendar' | 'map' | 'bundles' | 'crafting' | 'stats' | 'backoffice' | 'trivia';

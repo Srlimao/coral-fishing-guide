@@ -12,7 +12,8 @@ import {
   Gamepad2,
   FolderDown,
   Settings,
-  X
+  X,
+  Hammer
 } from 'lucide-react';
 import superCoralImg from '../../assets/icons/Super_Coral.png';
 
@@ -48,6 +49,7 @@ export const AppMobileDrawer: React.FC<AppMobileDrawerProps> = ({
 
   const navItems: NavItem[] = [
     { id: 'catalog', label: t('nav_journal'), icon: BookOpen, badge: activeNowCount },
+    { id: 'crafting', label: t('nav_crafting_building'), icon: Hammer },
     { id: 'calendar', label: t('nav_calendar'), icon: Calendar },
     { id: 'map', label: t('nav_map'), icon: MapPin },
     { id: 'bundles', label: t('nav_altars'), icon: Sparkles },

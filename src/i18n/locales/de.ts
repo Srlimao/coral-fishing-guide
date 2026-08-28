@@ -122,5 +122,35 @@ export const de: TranslationDictionary = {
   bundle_complete: 'Vollständig!',
 
   language_modal_title: 'Sprache wählen',
-  language_modal_desc: 'Wähle deine bevorzugte Sprache für Spielnamen und Benutzeroberfläche.'
+  language_modal_desc: 'Wähle deine bevorzugte Sprache für Spielnamen und Benutzeroberfläche.',
+
+  // Craft & Building Wiki
+  nav_crafting_building: 'Herstellung & Gebäude',
+  wiki_title: 'HERSTELLUNGS- & GEBÄUDE-WIKI',
+  wiki_subtitle: 'Umfassender Katalog für herstellbare Gegenstände, Farmgebäude, Verbesserungsstufen, Freischaltungen und Materialplaner.',
+  wiki_tab_crafting: 'Herstellungsrezepte',
+  wiki_tab_buildings: 'Farmgebäude & Upgrades',
+  wiki_tab_planner: 'Projektplaner',
+  wiki_search_placeholder: 'Gegenstände, Gebäude, Materialien, Bedingungen suchen...',
+  wiki_filter_all_categories: 'Alle Kategorien',
+  wiki_filter_unlock_source: 'Freischaltquelle',
+  wiki_all_unlocks: 'Alle Freischaltungen',
+  wiki_planner_add: '+ Zum Planer hinzufügen',
+  wiki_planner_remove: 'Entfernen',
+  wiki_planner_view: 'Planer ansehen',
+  wiki_planner_title: 'Bauprojekt- & Einkaufsplaner',
+  wiki_planner_empty: 'Noch keine Gegenstände im Planer. Stöbere im Katalog und füge Projekte hinzu, um benötigte Materialien zu berechnen!',
+  wiki_planner_clear: 'Alles leeren',
+  wiki_planner_copy: 'Einkaufsliste kopieren',
+  wiki_planner_copied: 'In Zwischenablage kopiert!',
+  wiki_total_gold: 'Gesamte Goldkosten',
+  wiki_total_materials: 'Benötigte Rohstoffe',
+  wiki_days_to_build: 'Bauzeit in Tagen',
+  wiki_footprint: 'Baufläche (Tiles)',
+  wiki_unlock_condition: 'Freischaltbedingung',
+  wiki_yield: 'Ertrag',
+  wiki_sell_price: 'Basiswert',
+  wiki_materials_needed: 'Erforderliche Materialien',
+  wiki_upgrade_tier: 'Ausbaustufe',
+  wiki_benefits: 'Funktionen & Freischaltungen'
 };

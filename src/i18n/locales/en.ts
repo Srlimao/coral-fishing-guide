@@ -122,5 +122,35 @@ export const en: TranslationDictionary = {
   bundle_complete: 'Complete!',
 
   language_modal_title: 'Select Language',
-  language_modal_desc: 'Choose your preferred language for game names and interface.'
+  language_modal_desc: 'Choose your preferred language for game names and interface.',
+
+  // Craft & Building Wiki
+  nav_crafting_building: 'Craft & Buildings',
+  wiki_title: 'CRAFT & BUILDING WIKI',
+  wiki_subtitle: 'Comprehensive catalogue of craftable items, farm buildings, upgrade tiers, unlock criteria, and shopping planner.',
+  wiki_tab_crafting: 'Crafting Recipes',
+  wiki_tab_buildings: 'Farm Buildings & Upgrades',
+  wiki_tab_planner: 'Project Planner',
+  wiki_search_placeholder: 'Search items, buildings, materials, unlock conditions...',
+  wiki_filter_all_categories: 'All Categories',
+  wiki_filter_unlock_source: 'Unlock Source',
+  wiki_all_unlocks: 'All Unlock Requirements',
+  wiki_planner_add: '+ Add to Planner',
+  wiki_planner_remove: 'Remove',
+  wiki_planner_view: 'View Planner',
+  wiki_planner_title: 'Farm Project & Shopping Planner',
+  wiki_planner_empty: 'No items or buildings added to your planner yet. Browse the catalogue and click "+ Add to Planner" to calculate required materials!',
+  wiki_planner_clear: 'Clear All',
+  wiki_planner_copy: 'Copy Shopping List',
+  wiki_planner_copied: 'Copied to Clipboard!',
+  wiki_total_gold: 'Total Gold Cost',
+  wiki_total_materials: 'Aggregated Raw Materials',
+  wiki_days_to_build: 'Days to Build',
+  wiki_footprint: 'Footprint Size',
+  wiki_unlock_condition: 'Unlock Criteria',
+  wiki_yield: 'Yield',
+  wiki_sell_price: 'Base Value',
+  wiki_materials_needed: 'Required Materials',
+  wiki_upgrade_tier: 'Upgrade Tier',
+  wiki_benefits: 'Features & Unlocks'
 };

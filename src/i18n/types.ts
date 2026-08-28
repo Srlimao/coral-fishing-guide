@@ -155,4 +155,34 @@ export interface TranslationDictionary {
   // Language Modal
   language_modal_title: string;
   language_modal_desc: string;
+
+  // Craft & Building Wiki
+  nav_crafting_building: string;
+  wiki_title: string;
+  wiki_subtitle: string;
+  wiki_tab_crafting: string;
+  wiki_tab_buildings: string;
+  wiki_tab_planner: string;
+  wiki_search_placeholder: string;
+  wiki_filter_all_categories: string;
+  wiki_filter_unlock_source: string;
+  wiki_all_unlocks: string;
+  wiki_planner_add: string;
+  wiki_planner_remove: string;
+  wiki_planner_view: string;
+  wiki_planner_title: string;
+  wiki_planner_empty: string;
+  wiki_planner_clear: string;
+  wiki_planner_copy: string;
+  wiki_planner_copied: string;
+  wiki_total_gold: string;
+  wiki_total_materials: string;
+  wiki_days_to_build: string;
+  wiki_footprint: string;
+  wiki_unlock_condition: string;
+  wiki_yield: string;
+  wiki_sell_price: string;
+  wiki_materials_needed: string;
+  wiki_upgrade_tier: string;
+  wiki_benefits: string;
 }

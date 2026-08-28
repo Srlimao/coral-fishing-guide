@@ -122,5 +122,35 @@ export const ja: TranslationDictionary = {
   bundle_complete: '完了！',
 
   language_modal_title: '言語を選択',
-  language_modal_desc: 'お好みの言語を選択してください。'
+  language_modal_desc: 'お好みの言語を選択してください。',
+
+  // Craft & Building Wiki
+  nav_crafting_building: 'クラフト＆建築',
+  wiki_title: 'クラフト＆建築 Wiki',
+  wiki_subtitle: 'クラフトアイテム、農場建築、アップグレード段階、解放条件、必要素材プランナーの総合カタログ。',
+  wiki_tab_crafting: 'クラフトレシピ',
+  wiki_tab_buildings: '農場建築＆アップグレード',
+  wiki_tab_planner: 'プロジェクトプランナー',
+  wiki_search_placeholder: 'アイテム名、建築物、素材、解放条件を検索...',
+  wiki_filter_all_categories: '全カテゴリー',
+  wiki_filter_unlock_source: '解放条件タイプ',
+  wiki_all_unlocks: 'すべての解放条件',
+  wiki_planner_add: '+ プランナーに追加',
+  wiki_planner_remove: '削除',
+  wiki_planner_view: 'プランナーを表示',
+  wiki_planner_title: '建築・クラフト買い物リストプランナー',
+  wiki_planner_empty: 'プランナーにアイテムがありません。カタログから「+ プランナーに追加」をクリックして必要素材を計算しましょう！',
+  wiki_planner_clear: 'すべてクリア',
+  wiki_planner_copy: '買い物リストをコピー',
+  wiki_planner_copied: 'クリップボードにコピーしました！',
+  wiki_total_gold: '必要ゴールド合計',
+  wiki_total_materials: '必要原材料合計',
+  wiki_days_to_build: '建築日数',
+  wiki_footprint: '占有サイズ (タイル)',
+  wiki_unlock_condition: '解放条件',
+  wiki_yield: '生産個数',
+  wiki_sell_price: '基本価格',
+  wiki_materials_needed: '必要素材',
+  wiki_upgrade_tier: 'アップグレード段階',
+  wiki_benefits: '効果＆解放要素'
 };
