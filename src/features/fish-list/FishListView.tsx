@@ -121,18 +121,18 @@ export const FishListView: React.FC = () => {
         {/* Sort By Dropdown */}
         <div className="flex items-center gap-1.5 w-full sm:w-auto justify-end">
           <SlidersHorizontal className="w-3.5 h-3.5 text-[#c4b5a0]" />
-          <span className="text-[#c4b5a0] font-semibold text-[11px]">Sort:</span>
+          <span className="text-[#c4b5a0] font-semibold text-[11px]">{t('sort_label')}</span>
           <select
             value={`${filters.sortBy}-${filters.sortOrder}`}
             onChange={handleSortChange}
             className="bg-white/5 border-2 border-white/20 text-xs font-bold text-white rounded-full px-3 py-1 focus:outline-none focus:border-white transition-all cursor-pointer"
           >
             <option value="priority-desc" className="bg-[#13181b] text-white">🚩 Priority: Exclusives First</option>
-            <option value="name-asc" className="bg-[#13181b] text-white">Name (A-Z)</option>
-            <option value="name-desc" className="bg-[#13181b] text-white">Name (Z-A)</option>
-            <option value="sellPrice-desc" className="bg-[#13181b] text-white">Sell Value (High to Low)</option>
-            <option value="sellPrice-asc" className="bg-[#13181b] text-white">Sell Value (Low to High)</option>
-            <option value="exp-desc" className="bg-[#13181b] text-white">XP Granted (High to Low)</option>
+            <option value="name-asc" className="bg-[#13181b] text-white">{t('sort_name_asc')}</option>
+            <option value="name-desc" className="bg-[#13181b] text-white">{t('sort_name_desc')}</option>
+            <option value="sellPrice-desc" className="bg-[#13181b] text-white">{t('sort_sell_high')}</option>
+            <option value="sellPrice-asc" className="bg-[#13181b] text-white">{t('sort_sell_low')}</option>
+            <option value="exp-desc" className="bg-[#13181b] text-white">{t('sort_exp_high')}</option>
           </select>
         </div>
       </div>
@@ -147,7 +147,7 @@ export const FishListView: React.FC = () => {
       ) : (
         <div className="cg-card p-10 text-center space-y-3">
           <span className="text-4xl block">🎣</span>
-          <h3 className="text-lg font-bold text-[#3d2f1a]">No Matching Fish Found</h3>
+          <h3 className="text-lg font-bold text-[#3d2f1a]">{t('empty_no_matching_fish')}</h3>
           <p className="text-xs text-[#8c785b] max-w-sm mx-auto">
             No fish match your current filters. Try adjusting season, time, weather, or resetting filters.
           </p>

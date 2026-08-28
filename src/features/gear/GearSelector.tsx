@@ -1,11 +1,13 @@
 import React from 'react';
 import { useFishing } from '../../context/FishingContext';
+import { useLanguage } from '../../i18n/LanguageContext';
 import { RodTier, BaitType, TackleType } from '../../types/fishing';
 import { RODS_DATA, BAITS_DATA, TACKLES_DATA } from '../../data/gearData';
 import { Shield, Zap, Target, Anchor } from 'lucide-react';
 
 export const GearSelector: React.FC = () => {
   const { gameState, setFishingLevel, setEquippedRod, setEquippedBait, setEquippedTackle } = useFishing();
+  const { t } = useLanguage();
 
   const currentRod = RODS_DATA[gameState.equippedRod] || RODS_DATA.makeshift;
   const currentBait = BAITS_DATA[gameState.equippedBait] || BAITS_DATA.none;
@@ -20,8 +22,8 @@ export const GearSelector: React.FC = () => {
           <div className="flex items-center gap-2">
             <span className="text-xl">🎣</span>
             <div>
-              <span className="text-xs uppercase font-bold tracking-wider text-neutral-400 block">Skill Level</span>
-              <span className="text-base font-extrabold text-amber-400">Level {gameState.fishingLevel}</span>
+              <span className="text-xs uppercase font-bold tracking-wider text-neutral-400 block">{t('gear_skill_level')}</span>
+              <span className="text-base font-extrabold text-amber-400">{t('level_prefix')} {gameState.fishingLevel}</span>
             </div>
           </div>
           <div className="flex-1 min-w-[120px] max-w-[200px]">
@@ -34,9 +36,9 @@ export const GearSelector: React.FC = () => {
               className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-amber-500"
             />
             <div className="flex justify-between text-[10px] text-neutral-400 mt-1">
-              <span>Lvl 0</span>
-              <span>Lvl 5</span>
-              <span>Lvl 10 (Master)</span>
+              <span>{t('level_prefix')} 0</span>
+              <span>{t('level_prefix')} 5</span>
+              <span>{t('level_prefix')} 10 ({t('gear_lvl_master')})</span>
             </div>
           </div>
         </div>
@@ -44,7 +46,7 @@ export const GearSelector: React.FC = () => {
         {/* Rod Tier Select */}
         <div className="flex flex-wrap items-center gap-1.5 bg-black/40 p-1 rounded-xl border border-white/10">
           <span className="text-xs font-semibold text-neutral-400 px-2 flex items-center gap-1">
-            <Anchor className="w-3.5 h-3.5" /> Rod:
+            <Anchor className="w-3.5 h-3.5" /> {t('gear_rod_label')}
           </span>
           {Object.values(RODS_DATA).map(rod => (
             <button
@@ -59,7 +61,7 @@ export const GearSelector: React.FC = () => {
                 color: gameState.equippedRod === rod.id ? rod.color : undefined
               }}
             >
-              {rod.name.replace(' Fishing Rod', '')}
+              {t(`rod_${rod.id}` as any, rod.name.replace(' Fishing Rod', ''))}
             </button>
           ))}
         </div>
@@ -67,7 +69,7 @@ export const GearSelector: React.FC = () => {
         {/* Bait Selector */}
         <div className="flex flex-wrap items-center gap-1.5 bg-black/40 p-1 rounded-xl border border-white/10">
           <span className="text-xs font-semibold text-neutral-400 px-2 flex items-center gap-1">
-            <Target className="w-3.5 h-3.5" /> Bait:
+            <Target className="w-3.5 h-3.5" /> {t('gear_bait_label')}
           </span>
           {Object.values(BAITS_DATA).map(bait => (
             <button
@@ -87,7 +89,7 @@ export const GearSelector: React.FC = () => {
         {/* Tackle Selector */}
         <div className="flex flex-wrap items-center gap-1.5 bg-black/40 p-1 rounded-xl border border-white/10">
           <span className="text-xs font-semibold text-neutral-400 px-2 flex items-center gap-1">
-            <Shield className="w-3.5 h-3.5" /> Tackle:
+            <Shield className="w-3.5 h-3.5" /> {t('gear_tackle_label')}
           </span>
           {Object.values(TACKLES_DATA).map(tackle => (
             <button
@@ -113,7 +115,7 @@ export const GearSelector: React.FC = () => {
             <Zap className="w-4 h-4" />
           </div>
           <div>
-            <span className="text-neutral-400 font-medium block">Reeling Power:</span>
+            <span className="text-neutral-400 font-medium block">{t('gear_reeling_power')}</span>
             <span className="text-white font-bold">{currentRod.reelingMultiplier}x Speed ({currentRod.maxDistance})</span>
           </div>
         </div>
@@ -123,7 +125,7 @@ export const GearSelector: React.FC = () => {
             <Shield className="w-4 h-4" />
           </div>
           <div>
-            <span className="text-neutral-400 font-medium block">Line Tension Tolerance:</span>
+            <span className="text-neutral-400 font-medium block">{t('gear_line_tension')}</span>
             <span className="text-white font-bold">
               {currentRod.lineStrength + gameState.fishingLevel * 5} Base + {currentTackle.name}
             </span>
@@ -135,7 +137,7 @@ export const GearSelector: React.FC = () => {
             <Target className="w-4 h-4" />
           </div>
           <div>
-            <span className="text-neutral-400 font-medium block">Active Bait Bonus:</span>
+            <span className="text-neutral-400 font-medium block">{t('gear_bait_bonus')}</span>
             <span className="text-amber-300 font-semibold">{currentBait.bonusText}</span>
           </div>
         </div>

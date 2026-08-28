@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFishing } from '../../context/FishingContext';
+import { useLanguage } from '../../i18n/LanguageContext';
 import { FISH_LIST } from '../../data/fishData';
 import { RODS_DATA } from '../../data/gearData';
 import { Award, Zap, Anchor, Landmark, Sparkles, CheckCircle2 } from 'lucide-react';
@@ -20,6 +21,7 @@ const MASTERY_PERKS = [
 
 export const FishingStatsView: React.FC = () => {
   const { gameState, userProgress } = useFishing();
+  const { t } = useLanguage();
 
   const caughtIds = Object.keys(userProgress.caught).filter(id => userProgress.caught[id]);
   const caughtFishList = FISH_LIST.filter(f => userProgress.caught[f.id]);
@@ -35,32 +37,32 @@ export const FishingStatsView: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="cg-card p-5 space-y-1">
           <span className="text-xs uppercase font-bold text-[#8c785b] flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Fish Journal
+            <CheckCircle2 className="w-4 h-4 text-emerald-600" /> {t('nav_journal')}
           </span>
           <h3 className="text-2xl font-black text-[#3d2f1a]">
             {caughtIds.length} <span className="text-sm font-semibold text-[#8c785b]">/ 69 ({Math.round((caughtIds.length / 69) * 100)}%)</span>
           </h3>
-          <p className="text-[11px] text-[#8c785b]">Total unique species cataloged</p>
+          <p className="text-[11px] text-[#8c785b]">{t('stats_total_cataloged')}</p>
         </div>
 
         <div className="cg-card p-5 space-y-1">
           <span className="text-xs uppercase font-bold text-[#8c785b] flex items-center gap-1.5">
-            <Landmark className="w-4 h-4 text-blue-600" /> Museum Donations
+            <Landmark className="w-4 h-4 text-blue-600" /> {t('nav_museum_count')}
           </span>
           <h3 className="text-2xl font-black text-[#3d2f1a]">
             {museumDonatedCount} <span className="text-sm font-semibold text-[#8c785b]">/ 69 ({Math.round((museumDonatedCount / 69) * 100)}%)</span>
           </h3>
-          <p className="text-[11px] text-[#8c785b]">Donated to Museum Wing</p>
+          <p className="text-[11px] text-[#8c785b]">{t('stats_donated_museum')}</p>
         </div>
 
         <div className="cg-card p-5 space-y-1">
           <span className="text-xs uppercase font-bold text-[#8c785b] flex items-center gap-1.5">
-            <Sparkles className="w-4 h-4 text-amber-600" /> Temple Offerings
+            <Sparkles className="w-4 h-4 text-amber-600" /> {t('nav_altars')}
           </span>
           <h3 className="text-2xl font-black text-[#3d2f1a]">
             {altarOfferedCount} <span className="text-sm font-semibold text-[#8c785b]">/ 22 Bundles</span>
           </h3>
-          <p className="text-[11px] text-[#8c785b]">Catching Altar restored</p>
+          <p className="text-[11px] text-[#8c785b]">{t('stats_altar_restored')}</p>
         </div>
 
         <div className="cg-card p-5 space-y-1">
@@ -79,7 +81,7 @@ export const FishingStatsView: React.FC = () => {
       <div className="glass-panel p-5 shadow-xl space-y-4">
         <h2 className="text-xl font-bold text-white flex items-center gap-2">
           <Anchor className="w-5 h-5 text-amber-400" />
-          <span>Sunny’s Beach Shack - Rod Upgrade Path</span>
+          <span>{t('stats_rod_path_title')}</span>
         </h2>
         <p className="text-xs text-neutral-300">
           Upgrade your fishing rod at the Beach Shack (Sunny & Eleanor) to increase line resistance and cast distance.
@@ -109,7 +111,7 @@ export const FishingStatsView: React.FC = () => {
                 </div>
 
                 <div className="mt-3 pt-3 border-t border-white/10 space-y-1 text-[11px]">
-                  <p><strong>Min Level:</strong> Lvl {rod.minLevel}</p>
+                  <p><strong>Min Level:</strong> {t('level_prefix')} {rod.minLevel}</p>
                   <p><strong>Reeling:</strong> {rod.reelingMultiplier}x Speed</p>
                   <p><strong>Distance:</strong> {rod.maxDistance}</p>
                 </div>
@@ -123,7 +125,7 @@ export const FishingStatsView: React.FC = () => {
       <div className="glass-panel p-5 shadow-xl space-y-4">
         <h2 className="text-xl font-bold text-white flex items-center gap-2">
           <Award className="w-5 h-5 text-amber-400" />
-          <span>Fishing Mastery Perks (Levels 1 - 10)</span>
+          <span>{t('stats_mastery_title')}</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

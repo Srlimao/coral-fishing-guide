@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BuildingInfo, BuildingTier } from './types';
 import { Plus, Check, Info, Clock, Coins, Maximize2 } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 interface BuildingCardProps {
   building: BuildingInfo;
@@ -17,6 +18,10 @@ export const BuildingCard: React.FC<BuildingCardProps> = ({
 }) => {
   const [selectedTierIdx, setSelectedTierIdx] = useState(0);
   const activeTier = building.tiers[selectedTierIdx] || building.tiers[0];
+  const { getItemName, getBuildingName, getCategoryName, t } = useLanguage();
+
+  const localizedTierName = getBuildingName(activeTier.name, activeTier.name);
+  const localizedCategory = getCategoryName(building.category);
 
   return (
     <div
@@ -33,14 +38,14 @@ export const BuildingCard: React.FC<BuildingCardProps> = ({
             </div>
             <div>
               <h3 className="font-bold text-white text-base group-hover:text-amber-300 transition-colors leading-tight">
-                {activeTier.name}
+                {localizedTierName}
               </h3>
               <span className="text-[11px] text-[#c4b5a0]">{building.builder}</span>
             </div>
           </div>
 
           <span className="bg-amber-500/20 border border-amber-400/40 text-amber-300 text-[10px] font-black px-2 py-0.5 rounded-full">
-            {building.category}
+            {localizedCategory}
           </span>
         </div>
 
@@ -50,9 +55,9 @@ export const BuildingCard: React.FC<BuildingCardProps> = ({
             className="flex items-center gap-1 bg-[#13181b] p-1 rounded-xl border border-white/10 mb-3"
             onClick={e => e.stopPropagation()}
           >
-            {building.tiers.map((t, idx) => (
+            {building.tiers.map((tItem, idx) => (
               <button
-                key={t.tierNumber}
+                key={tItem.tierNumber}
                 onClick={() => setSelectedTierIdx(idx)}
                 className={`flex-1 py-1 px-2 rounded-lg text-[11px] font-bold transition-all ${
                   selectedTierIdx === idx
@@ -60,7 +65,7 @@ export const BuildingCard: React.FC<BuildingCardProps> = ({
                     : 'text-[#c4b5a0] hover:text-white hover:bg-white/5'
                 }`}
               >
-                Lvl {t.tierNumber}
+                Lvl {tItem.tierNumber}
               </button>
             ))}
           </div>
@@ -73,13 +78,13 @@ export const BuildingCard: React.FC<BuildingCardProps> = ({
               <Coins className="w-3 h-3 text-amber-400" /> Cost
             </span>
             <span className="text-xs font-bold text-white">
-              {activeTier.goldCost > 0 ? `${activeTier.goldCost.toLocaleString()}g` : 'Free (Altar)'}
+              {activeTier.goldCost > 0 ? `${activeTier.goldCost.toLocaleString()}g` : 'Free'}
             </span>
           </div>
 
           <div className="space-y-0.5 border-x border-white/10">
             <span className="text-[10px] text-[#c4b5a0] block uppercase flex items-center justify-center gap-1">
-              <Clock className="w-3 h-3 text-cyan-400" /> Build Time
+              <Clock className="w-3 h-3 text-cyan-400" /> {t('wiki_days_to_build', 'Days')}
             </span>
             <span className="text-xs font-bold text-white">
               {activeTier.daysToBuild} {activeTier.daysToBuild === 1 ? 'Day' : 'Days'}
@@ -88,7 +93,7 @@ export const BuildingCard: React.FC<BuildingCardProps> = ({
 
           <div className="space-y-0.5">
             <span className="text-[10px] text-[#c4b5a0] block uppercase flex items-center justify-center gap-1">
-              <Maximize2 className="w-3 h-3 text-purple-400" /> Size
+              <Maximize2 className="w-3 h-3 text-purple-400" /> {t('wiki_footprint', 'Size')}
             </span>
             <span className="text-xs font-bold text-white">{activeTier.dimensions}</span>
           </div>
@@ -116,7 +121,7 @@ export const BuildingCard: React.FC<BuildingCardProps> = ({
             >
               <span>{mat.iconEmoji || '📦'}</span>
               <span>
-                {mat.amount}x {mat.name}
+                {mat.amount}x {getItemName(mat.name, mat.name)}
               </span>
             </span>
           ))}
@@ -141,7 +146,7 @@ export const BuildingCard: React.FC<BuildingCardProps> = ({
           }`}
         >
           {isPlanned ? <Check className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
-          <span>{isPlanned ? 'Planned' : 'Plan Build'}</span>
+          <span>{isPlanned ? 'Planned' : 'Plan'}</span>
         </button>
       </div>
     </div>

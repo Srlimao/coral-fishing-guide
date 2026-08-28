@@ -2,7 +2,8 @@ import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { CRAFTING_RECIPES } from './craftingData';
 import { BUILDING_CATALOGUE } from './buildingData';
-import { CraftingRecipe, BuildingInfo, UnlockSourceType } from './types';
+import { CraftingRecipe, BuildingInfo } from './types';
+import { CRAFTING_CATEGORIES, BUILDING_CATEGORIES, UNLOCK_SOURCES } from './wikiConstants';
 import { WikiFiltersBar } from './WikiFiltersBar';
 import { CraftingCatalogTab } from './CraftingCatalogTab';
 import { BuildingCatalogTab } from './BuildingCatalogTab';
@@ -12,41 +13,8 @@ import { PlannerDrawer } from './PlannerDrawer';
 import { useWikiPlanner } from './useWikiPlanner';
 import { Hammer, Home, Sparkles } from 'lucide-react';
 
-const CRAFTING_CATEGORIES = [
-  'All',
-  'Artisan & Processing',
-  'Farming & Sprinklers',
-  'Storage & Chests',
-  'Bombs & Mining',
-  'Baits & Traps',
-  'Consumables & Survival',
-  'Ocean & Diving'
-];
-
-const BUILDING_CATEGORIES = [
-  'All',
-  'Animal Housing',
-  'Farm Production',
-  'Specialty Facilities',
-  'House Upgrades'
-];
-
-const UNLOCK_SOURCES: UnlockSourceType[] = [
-  'Default',
-  'Farming',
-  'Mining',
-  'Foraging',
-  'Diving',
-  'Fishing',
-  'Catching',
-  'Combat',
-  'TownRank',
-  'Lab',
-  'Altar'
-];
-
 export const CraftBuildingWikiView: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, getItemName, getBuildingName, getCategoryName, getUnlockSourceName } = useLanguage();
   const [activeCatalogMode, setActiveCatalogMode] = useState<'crafting' | 'buildings'>('crafting');
 
   // Filters State
@@ -90,7 +58,6 @@ export const CraftBuildingWikiView: React.FC = () => {
     );
   }, [plannerItems]);
 
-  // Mode Switch Handlers
   const handleSwitchMode = (mode: 'crafting' | 'buildings') => {
     setActiveCatalogMode(mode);
     setSelectedCategory('All');
@@ -99,22 +66,22 @@ export const CraftBuildingWikiView: React.FC = () => {
   // Filtered Crafting Recipes
   const filteredRecipes = useMemo(() => {
     return CRAFTING_RECIPES.filter(recipe => {
-      // Category Match
       if (selectedCategory !== 'All' && recipe.category !== selectedCategory) {
         return false;
       }
-      // Unlock Source Match
       if (selectedUnlockSource !== 'All' && recipe.unlock.source !== selectedUnlockSource) {
         return false;
       }
-      // Search Query Match (Name, description, materials, unlock)
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
-        const matchesName = recipe.name.toLowerCase().includes(q);
-        const matchesCategory = recipe.category.toLowerCase().includes(q);
+        const locName = getItemName(recipe.name, recipe.name).toLowerCase();
+        const matchesName = recipe.name.toLowerCase().includes(q) || locName.includes(q);
+        const matchesCategory = recipe.category.toLowerCase().includes(q) || getCategoryName(recipe.category).toLowerCase().includes(q);
         const matchesDesc = recipe.description.toLowerCase().includes(q);
-        const matchesUnlock = recipe.unlock.description.toLowerCase().includes(q);
-        const matchesMaterials = recipe.materials.some(m => m.name.toLowerCase().includes(q));
+        const matchesUnlock = recipe.unlock.description.toLowerCase().includes(q) || getUnlockSourceName(recipe.unlock.source).toLowerCase().includes(q);
+        const matchesMaterials = recipe.materials.some(
+          m => m.name.toLowerCase().includes(q) || getItemName(m.name, m.name).toLowerCase().includes(q)
+        );
 
         if (!matchesName && !matchesCategory && !matchesDesc && !matchesUnlock && !matchesMaterials) {
           return false;
@@ -122,36 +89,39 @@ export const CraftBuildingWikiView: React.FC = () => {
       }
       return true;
     }).sort((a, b) => {
-      if (sortBy === 'name') return a.name.localeCompare(b.name);
+      if (sortBy === 'name') {
+        const nameA = getItemName(a.name, a.name);
+        const nameB = getItemName(b.name, b.name);
+        return nameA.localeCompare(nameB);
+      }
       if (sortBy === 'unlock') return (a.unlock.level || 0) - (b.unlock.level || 0);
       if (sortBy === 'cost') return (b.sellPrice || 0) - (a.sellPrice || 0);
       return 0;
     });
-  }, [selectedCategory, selectedUnlockSource, searchQuery, sortBy]);
+  }, [selectedCategory, selectedUnlockSource, searchQuery, sortBy, getItemName, getCategoryName, getUnlockSourceName]);
 
   // Filtered Buildings
   const filteredBuildings = useMemo(() => {
     return BUILDING_CATALOGUE.filter(building => {
-      // Category Match
       if (selectedCategory !== 'All' && building.category !== selectedCategory) {
         return false;
       }
-      // Unlock Source Match
       if (selectedUnlockSource !== 'All') {
         const hasMatchingTier = building.tiers.some(t => t.unlock.source === selectedUnlockSource);
         if (!hasMatchingTier) return false;
       }
-      // Search Query Match
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
-        const matchesName = building.name.toLowerCase().includes(q);
-        const matchesCategory = building.category.toLowerCase().includes(q);
+        const locBuildingName = getBuildingName(building.name, building.name).toLowerCase();
+        const matchesName = building.name.toLowerCase().includes(q) || locBuildingName.includes(q);
+        const matchesCategory = building.category.toLowerCase().includes(q) || getCategoryName(building.category).toLowerCase().includes(q);
         const matchesBuilder = building.builder.toLowerCase().includes(q);
         const matchesTiers = building.tiers.some(
           t =>
             t.name.toLowerCase().includes(q) ||
+            getBuildingName(t.name, t.name).toLowerCase().includes(q) ||
             t.description.toLowerCase().includes(q) ||
-            t.materials.some(m => m.name.toLowerCase().includes(q)) ||
+            t.materials.some(m => m.name.toLowerCase().includes(q) || getItemName(m.name, m.name).toLowerCase().includes(q)) ||
             t.featuresUnlocked.some(f => f.toLowerCase().includes(q))
         );
 
@@ -161,11 +131,15 @@ export const CraftBuildingWikiView: React.FC = () => {
       }
       return true;
     }).sort((a, b) => {
-      if (sortBy === 'name') return a.name.localeCompare(b.name);
+      if (sortBy === 'name') {
+        const nameA = getBuildingName(a.name, a.name);
+        const nameB = getBuildingName(b.name, b.name);
+        return nameA.localeCompare(nameB);
+      }
       if (sortBy === 'cost') return (b.tiers[0]?.goldCost || 0) - (a.tiers[0]?.goldCost || 0);
       return 0;
     });
-  }, [selectedCategory, selectedUnlockSource, searchQuery, sortBy]);
+  }, [selectedCategory, selectedUnlockSource, searchQuery, sortBy, getItemName, getBuildingName, getCategoryName]);
 
   return (
     <div className="space-y-6">
@@ -189,7 +163,6 @@ export const CraftBuildingWikiView: React.FC = () => {
             </p>
           </div>
 
-          {/* Mode Switcher Pill */}
           <div className="flex items-center bg-[#13181b] p-1.5 rounded-2xl border border-white/15 self-start sm:self-auto flex-shrink-0">
             <button
               onClick={() => handleSwitchMode('crafting')}

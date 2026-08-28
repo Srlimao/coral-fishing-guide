@@ -8,9 +8,20 @@ import { fr } from './locales/fr';
 import { zh } from './locales/zh';
 import { ja } from './locales/ja';
 import { id } from './locales/id';
-import { getLocalizedFishName } from './fishTranslations';
-import { getLocalizedLocationName } from './locationTranslations';
-import { getLocalizedAltarTitle, getLocalizedBundleTitle, getLocalizedOfferingItemName } from './altarTranslations';
+import {
+  getLocalizedFishName,
+  getLocalizedItemName,
+  getLocalizedBuildingName,
+  getLocalizedLocationName,
+  getLocalizedAltarTitle,
+  getLocalizedBundleTitle,
+  getLocalizedOfferingItemName,
+  getLocalizedSeason,
+  getLocalizedWeather,
+  getLocalizedTime,
+  getLocalizedCategory,
+  getLocalizedUnlockSource
+} from './gameTranslations';
 
 const DICTIONARIES: Record<SupportedLanguage, TranslationDictionary> = {
   en,
@@ -31,10 +42,17 @@ interface LanguageContextType {
   setLanguage: (lang: SupportedLanguage) => void;
   t: (key: keyof TranslationDictionary, fallback?: string) => string;
   getFishName: (fish: { id: string; name: string }) => string;
+  getItemName: (nameOrId: string, fallback?: string) => string;
+  getBuildingName: (nameOrId: string, fallback?: string) => string;
   getLocationName: (locationName: string) => string;
   getAltarTitle: (altarKey: string, fallback: string) => string;
   getBundleTitle: (bundleTitle: string) => string;
   getOfferingItemName: (itemName: string) => string;
+  getCategoryName: (category: string) => string;
+  getUnlockSourceName: (source: string) => string;
+  getSeasonName: (season: string) => string;
+  getWeatherName: (weather: string) => string;
+  getTimeName: (time: string) => string;
   supportedLanguages: LanguageInfo[];
 }
 
@@ -46,7 +64,6 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       const saved = localStorage.getItem(LOCAL_STORAGE_KEY_LANG) as SupportedLanguage;
       if (saved && DICTIONARIES[saved]) return saved;
       
-      // Auto-detect browser language
       const browserLang = navigator.language.toLowerCase();
       if (browserLang.startsWith('pt')) return 'pt';
       if (browserLang.startsWith('es')) return 'es';
@@ -79,6 +96,14 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     return getLocalizedFishName(fish.id, fish.name, language);
   }, [language]);
 
+  const getItemName = useCallback((nameOrId: string, fallback?: string): string => {
+    return getLocalizedItemName(nameOrId, fallback || nameOrId, language);
+  }, [language]);
+
+  const getBuildingName = useCallback((nameOrId: string, fallback?: string): string => {
+    return getLocalizedBuildingName(nameOrId, fallback || nameOrId, language);
+  }, [language]);
+
   const getLocationName = useCallback((locationName: string): string => {
     return getLocalizedLocationName(locationName, language);
   }, [language]);
@@ -95,6 +120,26 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     return getLocalizedOfferingItemName(itemName, language);
   }, [language]);
 
+  const getCategoryName = useCallback((category: string): string => {
+    return getLocalizedCategory(category, language);
+  }, [language]);
+
+  const getUnlockSourceName = useCallback((source: string): string => {
+    return getLocalizedUnlockSource(source, language);
+  }, [language]);
+
+  const getSeasonName = useCallback((season: string): string => {
+    return getLocalizedSeason(season, language);
+  }, [language]);
+
+  const getWeatherName = useCallback((weather: string): string => {
+    return getLocalizedWeather(weather, language);
+  }, [language]);
+
+  const getTimeName = useCallback((time: string): string => {
+    return getLocalizedTime(time, language);
+  }, [language]);
+
   const currentLanguageInfo = SUPPORTED_LANGUAGES.find(l => l.code === language) || SUPPORTED_LANGUAGES[0];
 
   return (
@@ -105,10 +150,17 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         setLanguage,
         t,
         getFishName,
+        getItemName,
+        getBuildingName,
         getLocationName,
         getAltarTitle,
         getBundleTitle,
         getOfferingItemName,
+        getCategoryName,
+        getUnlockSourceName,
+        getSeasonName,
+        getWeatherName,
+        getTimeName,
         supportedLanguages: SUPPORTED_LANGUAGES
       }}
     >

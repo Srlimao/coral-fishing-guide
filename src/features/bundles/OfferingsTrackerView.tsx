@@ -30,17 +30,17 @@ export const OfferingsTrackerView: React.FC = () => {
           <div>
             <h2 className="text-xl font-bold text-white flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-amber-400" />
-              <span>Goddess Lake Temple & Guardian Offerings</span>
+              <span>{t('altar_header_main_title')}</span>
             </h2>
             <p className="text-xs text-neutral-300 mt-0.5">
-              Complete altars and bundles from Coral Island game files to restore the island and unlock rewards.
+              {t('altar_header_desc')}
             </p>
           </div>
 
           <div className="bg-black/30 border border-white/10 px-4 py-2 rounded-2xl flex items-center gap-3">
             <Layers className="w-5 h-5 text-amber-400" />
             <div className="text-right">
-              <span className="text-[10px] text-neutral-400 block uppercase font-semibold">Total Progress</span>
+              <span className="text-[10px] text-neutral-400 block uppercase font-semibold">{t('altar_total_progress')}</span>
               <span className="text-sm font-bold text-white">
                 {completedOfferingsCount} / {totalOfferingsCount} ({Math.round((completedOfferingsCount / totalOfferingsCount) * 100 || 0)}%)
               </span>
@@ -59,7 +59,7 @@ export const OfferingsTrackerView: React.FC = () => {
             }`}
           >
             <Layers className="w-3.5 h-3.5" />
-            <span>All Altars</span>
+            <span>{t('altar_filter_all')}</span>
           </button>
 
           {ALL_ALTARS.map(altar => {

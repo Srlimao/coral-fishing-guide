@@ -37,6 +37,7 @@ interface UserProfileContextType {
   renameProfile: (profileId: string, newName: string) => void;
   changeAvatar: (profileId: string, avatarId: string) => void;
   syncActiveProfile: () => Promise<boolean>;
+  syncSpecificProfile: (profile: UserProfile) => Promise<boolean>;
   pullCloudProfile: (profileId: string) => Promise<boolean>;
   pullAllCloudProfiles: () => Promise<UserProfile[]>;
   deleteCloudProfileDoc: (profileId: string) => Promise<boolean>;
@@ -131,7 +132,6 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
     if (!targetProfile.settings.autoCloudSync) return;
     if (syncTimeoutRef.current) clearTimeout(syncTimeoutRef.current);
 
-    setCloudSyncStatus('syncing');
     syncTimeoutRef.current = setTimeout(() => {
       syncProfileDirect(targetProfile);
     }, 3000);
@@ -255,6 +255,7 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
         renameProfile,
         changeAvatar,
         syncActiveProfile,
+        syncSpecificProfile: syncProfileDirect,
         pullCloudProfile,
         pullAllCloudProfiles,
         deleteCloudProfileDoc,

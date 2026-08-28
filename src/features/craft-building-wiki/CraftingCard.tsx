@@ -1,6 +1,7 @@
 import React from 'react';
 import { CraftingRecipe } from './types';
 import { Plus, Check, Info } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 interface CraftingCardProps {
   recipe: CraftingRecipe;
@@ -15,6 +16,8 @@ export const CraftingCard: React.FC<CraftingCardProps> = ({
   onAddToPlanner,
   isPlanned = false
 }) => {
+  const { getItemName, getCategoryName, getUnlockSourceName, t } = useLanguage();
+
   const getUnlockBadgeColor = (source: string) => {
     switch (source) {
       case 'Farming':
@@ -42,6 +45,10 @@ export const CraftingCard: React.FC<CraftingCardProps> = ({
     }
   };
 
+  const localizedName = getItemName(recipe.name, recipe.name);
+  const localizedCategory = getCategoryName(recipe.category);
+  const localizedSource = getUnlockSourceName(recipe.unlock.source);
+
   return (
     <div
       data-recipe-id={recipe.id}
@@ -57,15 +64,15 @@ export const CraftingCard: React.FC<CraftingCardProps> = ({
             </div>
             <div>
               <h3 className="font-bold text-white text-sm group-hover:text-cyan-300 transition-colors leading-snug">
-                {recipe.name}
+                {localizedName}
               </h3>
-              <span className="text-[11px] text-[#c4b5a0]">{recipe.category}</span>
+              <span className="text-[11px] text-[#c4b5a0]">{localizedCategory}</span>
             </div>
           </div>
 
           {recipe.yieldCount > 1 && (
             <span className="bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 text-[10px] font-black px-2 py-0.5 rounded-full">
-              Yield: x{recipe.yieldCount}
+              {t('wiki_yield', 'Yield')}: x{recipe.yieldCount}
             </span>
           )}
         </div>
@@ -78,7 +85,7 @@ export const CraftingCard: React.FC<CraftingCardProps> = ({
             )}`}
           >
             <span>🔓</span>
-            <span>{recipe.unlock.description}</span>
+            <span>{recipe.unlock.level ? `${localizedSource} ${t('level_prefix', 'Lv.')} ${recipe.unlock.level}` : recipe.unlock.description}</span>
           </span>
         </div>
 
@@ -96,7 +103,7 @@ export const CraftingCard: React.FC<CraftingCardProps> = ({
             >
               <span>{mat.iconEmoji || '📦'}</span>
               <span>
-                {mat.amount}x {mat.name}
+                {mat.amount}x {getItemName(mat.name, mat.name)}
               </span>
             </span>
           ))}

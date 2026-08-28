@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CraftingRecipe } from './types';
 import { X, Plus, Minus, Check, Sparkles, HelpCircle, Coins } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 interface CraftingDetailModalProps {
   recipe: CraftingRecipe | null;
@@ -16,8 +17,13 @@ export const CraftingDetailModal: React.FC<CraftingDetailModalProps> = ({
   isPlanned = false
 }) => {
   const [craftQuantity, setCraftQuantity] = useState(1);
+  const { getItemName, getCategoryName, getUnlockSourceName, t } = useLanguage();
 
   if (!recipe) return null;
+
+  const localizedName = getItemName(recipe.name, recipe.name);
+  const localizedCategory = getCategoryName(recipe.category);
+  const localizedSource = getUnlockSourceName(recipe.unlock.source);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
@@ -35,14 +41,14 @@ export const CraftingDetailModal: React.FC<CraftingDetailModalProps> = ({
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-lg font-bold text-white leading-tight">{recipe.name}</h2>
+                <h2 className="text-lg font-bold text-white leading-tight">{localizedName}</h2>
                 {recipe.yieldCount > 1 && (
                   <span className="bg-cyan-500/20 text-cyan-300 border border-cyan-400/40 text-[10px] font-black px-2 py-0.5 rounded-full">
-                    Yield: x{recipe.yieldCount}
+                    {t('wiki_yield', 'Yield')}: x{recipe.yieldCount}
                   </span>
                 )}
               </div>
-              <span className="text-xs text-[#c4b5a0]">{recipe.category}</span>
+              <span className="text-xs text-[#c4b5a0]">{localizedCategory}</span>
             </div>
           </div>
 
@@ -61,8 +67,10 @@ export const CraftingDetailModal: React.FC<CraftingDetailModalProps> = ({
             🔓
           </div>
           <div>
-            <span className="text-[10px] text-cyan-300 uppercase font-black block">Unlock Criteria</span>
-            <span className="text-xs text-white font-bold">{recipe.unlock.description}</span>
+            <span className="text-[10px] text-cyan-300 uppercase font-black block">{t('wiki_unlock_condition', 'Unlock Criteria')}</span>
+            <span className="text-xs text-white font-bold">
+              {recipe.unlock.level ? `${localizedSource} ${t('level_prefix', 'Level')} ${recipe.unlock.level}` : recipe.unlock.description}
+            </span>
           </div>
         </div>
 
@@ -81,7 +89,7 @@ export const CraftingDetailModal: React.FC<CraftingDetailModalProps> = ({
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold text-white uppercase tracking-wider">
-              Required Materials ({craftQuantity}x Craft)
+              {t('wiki_materials_needed', 'Required Materials')} ({craftQuantity}x)
             </span>
 
             {/* Stepper */}
@@ -113,7 +121,7 @@ export const CraftingDetailModal: React.FC<CraftingDetailModalProps> = ({
                 <div className="flex items-center gap-2.5">
                   <span className="text-base">{mat.iconEmoji || '📦'}</span>
                   <div>
-                    <span className="font-bold text-white text-xs block">{mat.name}</span>
+                    <span className="font-bold text-white text-xs block">{getItemName(mat.name, mat.name)}</span>
                     {mat.source && (
                       <span className="text-[10px] text-[#c4b5a0] flex items-center gap-1">
                         <HelpCircle className="w-2.5 h-2.5 text-neutral-400" /> {mat.source}
@@ -136,22 +144,28 @@ export const CraftingDetailModal: React.FC<CraftingDetailModalProps> = ({
         {/* Sell Price Value */}
         <div className="flex items-center justify-between bg-white/5 p-3 rounded-xl border border-white/10">
           <span className="text-xs text-[#c4b5a0] flex items-center gap-1.5">
-            <Coins className="w-4 h-4 text-amber-400" /> Base Item Value
+            <Coins className="w-4 h-4 text-amber-400" /> {t('wiki_sell_price', 'Base Value')}
           </span>
-          <span className="text-xs font-bold text-white">{recipe.sellPrice}g</span>
+          <span className="text-xs font-bold text-white">
+            {recipe.sellPrice ? `${(recipe.sellPrice * craftQuantity).toLocaleString()}g` : 'N/A'}
+          </span>
         </div>
 
-        {/* Action Button */}
-        <div className="pt-2">
+        {/* Actions */}
+        <div className="flex items-center gap-3 pt-2">
           <button
             onClick={() => {
               onAddToPlanner(recipe, craftQuantity);
               onClose();
             }}
-            className="w-full py-3 rounded-2xl font-bold text-xs flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-black hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/25"
+            className={`flex-1 py-2.5 px-4 rounded-2xl font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-lg ${
+              isPlanned
+                ? 'bg-cyan-400 text-black shadow-cyan-400/30'
+                : 'bg-cyan-500 hover:bg-cyan-400 text-black shadow-cyan-500/30'
+            }`}
           >
             {isPlanned ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
-            <span>Add {craftQuantity}x {recipe.name} to Farm Planner</span>
+            <span>{t('wiki_planner_add', '+ Add to Planner')} ({craftQuantity}x)</span>
           </button>
         </div>
       </div>

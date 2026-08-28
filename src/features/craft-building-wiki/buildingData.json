@@ -1,0 +1,419 @@
+[
+  {
+    "id": "coop",
+    "name": "Coop",
+    "category": "Animal Housing",
+    "builder": "Carpenter (Dinda & Joko)",
+    "iconEmoji": "🐔",
+    "description": "Housing for poultry and small animals. Protected from bad weather.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Basic Coop",
+        "goldCost": 2000,
+        "daysToBuild": 2,
+        "dimensions": "5x4 Tiles",
+        "unlock": { "source": "Default", "description": "Available from Day 1 at Carpenter" },
+        "capacityText": "4 Small Animals (Chickens, Ducks)",
+        "featuresUnlocked": ["Buy Chickens & Ducks from Ranch", "Egg Hatching Incubator", "Hay trough feeding"],
+        "materials": [
+          { "name": "Wood", "amount": 100, "iconEmoji": "🪵", "source": "Chopping Trees / Debris" },
+          { "name": "Stone", "amount": 50, "iconEmoji": "🪨", "source": "Mining Rocks / Caverns" },
+          { "name": "Bronze Bar", "amount": 5, "iconEmoji": "🟤", "source": "Smelt 5 Bronze Ore + 1 Coal" },
+          { "name": "Fiber", "amount": 10, "iconEmoji": "🌿", "source": "Cutting Weeds / Scythe" }
+        ],
+        "description": "Starter coop holding up to 4 chickens or ducks for daily egg harvests."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Upgraded Coop",
+        "goldCost": 4500,
+        "daysToBuild": 2,
+        "dimensions": "5x4 Tiles",
+        "unlock": { "source": "TownRank", "rank": "D", "description": "Town Rank D" },
+        "capacityText": "8 Small Animals (Unlocks Quails)",
+        "featuresUnlocked": ["Buy Quails from Jack’s Ranch", "Automatic hay distribution system", "Faster heart friendship rate"],
+        "materials": [
+          { "name": "Hardwood", "amount": 20, "iconEmoji": "🪵", "source": "Hardwood Stumps / Logs" },
+          { "name": "Stone", "amount": 50, "iconEmoji": "🪨", "source": "Mining Rocks / Caverns" },
+          { "name": "Fiber", "amount": 10, "iconEmoji": "🌿", "source": "Cutting Weeds / Scythe" },
+          { "name": "Silver Bar", "amount": 3, "iconEmoji": "⚪", "source": "Smelt 5 Silver Ore + 1 Coal" }
+        ],
+        "description": "Expands capacity to 8 animals and unlocks Quail purchases at Jack’s Ranch."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Deluxe Coop",
+        "goldCost": 10000,
+        "daysToBuild": 2,
+        "dimensions": "5x4 Tiles",
+        "unlock": { "source": "TownRank", "rank": "C", "description": "Town Rank C" },
+        "capacityText": "12 Small Animals (Unlocks Peacocks)",
+        "featuresUnlocked": ["Buy Peacocks from Jack’s Ranch", "Integrated Silo Auto-Feeder", "Auto-collector slot compatibility"],
+        "materials": [
+          { "name": "Hardwood", "amount": 35, "iconEmoji": "🪵", "source": "Hardwood Stumps / Logs" },
+          { "name": "Stone", "amount": 70, "iconEmoji": "🪨", "source": "Mining Rocks / Caverns" },
+          { "name": "Fiber", "amount": 20, "iconEmoji": "🌿", "source": "Cutting Weeds / Scythe" },
+          { "name": "Gold Bar", "amount": 3, "iconEmoji": "🟡", "source": "Smelt 5 Gold Ore + 1 Coal" }
+        ],
+        "description": "Top-tier poultry facility with 12 animal capacity, auto-feeder connection, and exotic Peacocks."
+      }
+    ]
+  },
+  {
+    "id": "barn",
+    "name": "Barn",
+    "category": "Animal Housing",
+    "builder": "Carpenter (Dinda & Joko)",
+    "iconEmoji": "🐄",
+    "description": "Sturdy shelter for livestock including cows, sheep, goats, llamas, and pigs.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Basic Barn",
+        "goldCost": 3000,
+        "daysToBuild": 2,
+        "dimensions": "7x4 Tiles",
+        "unlock": { "source": "Default", "description": "Available from Day 1 at Carpenter" },
+        "capacityText": "4 Livestock (Cows, Sheep)",
+        "featuresUnlocked": ["Buy Cows & Sheep from Ranch", "Milk Pail & Shears usage", "Breeding pasture zone"],
+        "materials": [
+          { "name": "Wood", "amount": 200, "iconEmoji": "🪵", "source": "Chopping Trees / Debris" },
+          { "name": "Stone", "amount": 100, "iconEmoji": "🪨", "source": "Mining Rocks / Caverns" },
+          { "name": "Bronze Bar", "amount": 5, "iconEmoji": "🟤", "source": "Smelt 5 Bronze Ore + 1 Coal" },
+          { "name": "Fiber", "amount": 10, "iconEmoji": "🌿", "source": "Cutting Weeds / Scythe" }
+        ],
+        "description": "Houses 4 large livestock for daily fresh milk and wool harvests."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Upgraded Barn",
+        "goldCost": 6500,
+        "daysToBuild": 2,
+        "dimensions": "7x4 Tiles",
+        "unlock": { "source": "TownRank", "rank": "D", "description": "Town Rank D" },
+        "capacityText": "8 Livestock (Unlocks Goats & Llamas)",
+        "featuresUnlocked": ["Buy Goats & Llamas from Ranch", "Automatic Hay Distribution", "Faster wool & milk replenishment"],
+        "materials": [
+          { "name": "Hardwood", "amount": 40, "iconEmoji": "🪵", "source": "Hardwood Stumps / Logs" },
+          { "name": "Stone", "amount": 100, "iconEmoji": "🪨", "source": "Mining Rocks / Caverns" },
+          { "name": "Fiber", "amount": 10, "iconEmoji": "🌿", "source": "Cutting Weeds / Scythe" },
+          { "name": "Silver Bar", "amount": 5, "iconEmoji": "⚪", "source": "Smelt 5 Silver Ore + 1 Coal" }
+        ],
+        "description": "Expands capacity to 8 animals and unlocks Goats and Llamas at Jack’s Ranch."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Deluxe Barn",
+        "goldCost": 15000,
+        "daysToBuild": 2,
+        "dimensions": "7x4 Tiles",
+        "unlock": { "source": "TownRank", "rank": "C", "description": "Town Rank C" },
+        "capacityText": "12 Livestock (Unlocks Pigs & Luwaks)",
+        "featuresUnlocked": ["Buy Pigs & Luwaks", "Truffle forage outside", "Integrated Silo Auto-Feeder", "Auto-collector slot"],
+        "materials": [
+          { "name": "Hardwood", "amount": 60, "iconEmoji": "🪵", "source": "Hardwood Stumps / Logs" },
+          { "name": "Stone", "amount": 120, "iconEmoji": "🪨", "source": "Mining Rocks / Caverns" },
+          { "name": "Fiber", "amount": 20, "iconEmoji": "🌿", "source": "Cutting Weeds / Scythe" },
+          { "name": "Gold Bar", "amount": 5, "iconEmoji": "🟡", "source": "Smelt 5 Gold Ore + 1 Coal" }
+        ],
+        "description": "Max-tier livestock shelter holding 12 animals with auto-feeder pipelines and Pigs for Truffles."
+      }
+    ]
+  },
+  {
+    "id": "underwater_barn",
+    "name": "Underwater Barn",
+    "category": "Animal Housing",
+    "builder": "Merfolk Kingdom Carpenter",
+    "iconEmoji": "🧜‍♀️",
+    "description": "Subaquatic shelter for underwater ranch animals including Mermoos and Merfalos.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Underwater Barn",
+        "goldCost": 5000,
+        "daysToBuild": 2,
+        "dimensions": "7x4 Tiles",
+        "unlock": { "source": "Quest", "description": "Unlock Underwater Farm in Merfolk Kingdom" },
+        "capacityText": "4 Underwater Ranch Animals",
+        "featuresUnlocked": ["Buy Mermoos & Merfalos from Sea Animal Shop", "Seaweed feeder system"],
+        "materials": [
+          { "name": "Stone", "amount": 100, "iconEmoji": "🪨", "source": "Mining Rocks / Caverns" },
+          { "name": "Seaweed", "amount": 30, "iconEmoji": "🌿", "source": "Ocean Diving / Scavenging" },
+          { "name": "Scrap", "amount": 10, "iconEmoji": "⚙️", "source": "Recycling Ocean Trash" },
+          { "name": "Osmium Kelp Essence", "amount": 3, "iconEmoji": "🌿", "source": "Lab Extractor (10 Osmium Kelp + 1 Glass)" }
+        ],
+        "description": "Allows raising aquatic livestock in the sunken ocean farm for underwater artisan goods."
+      }
+    ]
+  },
+  {
+    "id": "silo",
+    "name": "Silo",
+    "category": "Farm Production",
+    "builder": "Carpenter (Dinda & Joko)",
+    "iconEmoji": "🌾",
+    "description": "Tall storage tower for storing dry hay harvested from grass. Feeds coops and barns.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Hay Silo",
+        "goldCost": 2500,
+        "daysToBuild": 2,
+        "dimensions": "3x3 Tiles",
+        "unlock": { "source": "Default", "description": "Available from Day 1 at Carpenter" },
+        "capacityText": "Stores up to 300 Hay",
+        "featuresUnlocked": ["Scything grass directly deposits hay into silo", "Feeds all barn and coop feed troughs"],
+        "materials": [
+          { "name": "Stone", "amount": 300, "iconEmoji": "🪨", "source": "Mining Rocks / Caverns" },
+          { "name": "Scrap", "amount": 20, "iconEmoji": "⚙️", "source": "Recycling Ocean Trash" },
+          { "name": "Resin", "amount": 2, "iconEmoji": "🍯", "source": "Tree Tapper on Pine Tree" }
+        ],
+        "description": "Stores up to 300 hay cut from wild grass with your scythe."
+      }
+    ]
+  },
+  {
+    "id": "mill",
+    "name": "Mill",
+    "category": "Farm Production",
+    "builder": "Carpenter (Dinda & Joko)",
+    "iconEmoji": "🛖",
+    "description": "Grain mill to process wheat, rice, and sugarcane into cooking staples.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Crop Mill",
+        "goldCost": 2000,
+        "daysToBuild": 0,
+        "dimensions": "3x3 Tiles",
+        "unlock": { "source": "Default", "description": "Available from Day 1 at Carpenter" },
+        "capacityText": "Processes unlimited grain daily",
+        "featuresUnlocked": ["Wheat to Flour", "Sugarcane to Sugar", "Rice to Rice Flour"],
+        "materials": [
+          { "name": "Wood", "amount": 50, "iconEmoji": "🪵", "source": "Chopping Trees" },
+          { "name": "Scrap", "amount": 20, "iconEmoji": "⚙️", "source": "Recycling Ocean Trash" },
+          { "name": "Bronze Bar", "amount": 2, "iconEmoji": "🟤", "source": "Smelt 5 Bronze Ore + 1 Coal" }
+        ],
+        "description": "Turns grains into cooking ingredients overnight with zero energy cost."
+      }
+    ]
+  },
+  {
+    "id": "shed",
+    "name": "Shed",
+    "category": "Farm Production",
+    "builder": "Carpenter (Dinda & Joko)",
+    "iconEmoji": "🏠",
+    "description": "Spacious indoor workshop to organize artisan machines, kegs, jars, and storage chests.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Standard Shed",
+        "goldCost": 20000,
+        "daysToBuild": 2,
+        "dimensions": "5x4 Tiles",
+        "unlock": { "source": "TownRank", "rank": "D", "description": "Town Rank D" },
+        "capacityText": "Interior workshop layout",
+        "featuresUnlocked": ["Indoor decor & machine placement", "Compact farm footprint"],
+        "materials": [
+          { "name": "Wood", "amount": 200, "iconEmoji": "🪵", "source": "Chopping Trees" },
+          { "name": "Stone", "amount": 200, "iconEmoji": "🪨", "source": "Mining Rocks" },
+          { "name": "Gold Bar", "amount": 5, "iconEmoji": "🟡", "source": "Smelt 5 Gold Ore + 1 Coal" }
+        ],
+        "description": "Provides a large indoor space on a compact 5x4 outdoor footprint."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Large Shed",
+        "goldCost": 12000,
+        "daysToBuild": 2,
+        "dimensions": "5x4 Tiles",
+        "unlock": { "source": "TownRank", "rank": "C", "description": "Town Rank C" },
+        "capacityText": "Doubled Interior Floor Space",
+        "featuresUnlocked": ["2x interior floor space for mega artisan production"],
+        "materials": [
+          { "name": "Hardwood", "amount": 40, "iconEmoji": "🪵", "source": "Hardwood Stumps / Logs" },
+          { "name": "Stone", "amount": 150, "iconEmoji": "🪨", "source": "Mining Rocks" }
+        ],
+        "description": "Doubles the internal room space without increasing outdoor tile consumption."
+      }
+    ]
+  },
+  {
+    "id": "stable",
+    "name": "Stable",
+    "category": "Specialty Facilities",
+    "builder": "Carpenter (Dinda & Joko)",
+    "iconEmoji": "🐴",
+    "description": "Houses your trusty horse mount for rapid navigation across Coral Island.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Horse Stable",
+        "goldCost": 15000,
+        "daysToBuild": 0,
+        "dimensions": "4x3 Tiles",
+        "unlock": { "source": "TownRank", "rank": "C", "description": "Town Rank C" },
+        "capacityText": "1 Horse Mount",
+        "featuresUnlocked": ["Buy Horse from Ranch", "Fast Island Transportation", "Tethering outside buildings"],
+        "materials": [
+          { "name": "Stone", "amount": 200, "iconEmoji": "🪨", "source": "Mining Rocks" },
+          { "name": "Scrap", "amount": 50, "iconEmoji": "⚙️", "source": "Recycling Ocean Trash" },
+          { "name": "Silver Bar", "amount": 5, "iconEmoji": "⚪", "source": "Smelt 5 Silver Ore + 1 Coal" }
+        ],
+        "description": "Houses 1 horse mount for fast travel around town, beach, and forest."
+      }
+    ]
+  },
+  {
+    "id": "fish_pond",
+    "name": "Fish Pond",
+    "category": "Specialty Facilities",
+    "builder": "Carpenter (Dinda & Joko)",
+    "iconEmoji": "🐟",
+    "description": "Cultivate and breed fish over time. Multiplies rare fish and generates valuable Roe.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Fish Pond",
+        "goldCost": 7000,
+        "daysToBuild": 1,
+        "dimensions": "5x5 Tiles",
+        "unlock": { "source": "Fishing", "level": 4, "description": "Fishing Mastery Level 4" },
+        "capacityText": "Cultivates Fish (Up to 10 Fish capacity)",
+        "featuresUnlocked": ["Fish multiplication", "Daily Roe / Caviar production"],
+        "materials": [
+          { "name": "Stone", "amount": 50, "iconEmoji": "🪨", "source": "Mining Rocks" },
+          { "name": "Scrap", "amount": 20, "iconEmoji": "⚙️", "source": "Recycling Ocean Trash" },
+          { "name": "Seaweed", "amount": 20, "iconEmoji": "🌿", "source": "Ocean Diving / Scavenging" },
+          { "name": "Gold Kelp Essence", "amount": 1, "iconEmoji": "🌿", "source": "Lab Extractor (10 Gold Kelp + 1 Glass)" }
+        ],
+        "description": "Populate with any caught fish to multiply them and produce roe."
+      }
+    ]
+  },
+  {
+    "id": "insect_house",
+    "name": "Insect House",
+    "category": "Specialty Facilities",
+    "builder": "Carpenter (Dinda & Joko)",
+    "iconEmoji": "🦗",
+    "description": "Vivarium facility to breed critters, butterflies, beetles, and legendary bugs.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Insect House",
+        "goldCost": 7000,
+        "daysToBuild": 1,
+        "dimensions": "5x5 Tiles",
+        "unlock": { "source": "Catching", "level": 4, "description": "Catching Mastery Level 4" },
+        "capacityText": "Cultivates Insects & Critters",
+        "featuresUnlocked": ["Critter reproduction", "Daily insect drops"],
+        "materials": [
+          { "name": "Compost", "amount": 20, "iconEmoji": "🍂", "source": "Compost Bin" },
+          { "name": "Hardwood", "amount": 15, "iconEmoji": "🪵", "source": "Hardwood Stumps / Logs" },
+          { "name": "Sap", "amount": 10, "iconEmoji": "💧", "source": "Chopping Trees" },
+          { "name": "Gold Bar", "amount": 1, "iconEmoji": "🟡", "source": "Smelt 5 Gold Ore + 1 Coal" }
+        ],
+        "description": "Put any captured insect inside to replicate rare specimens over time."
+      }
+    ]
+  },
+  {
+    "id": "well",
+    "name": "Well",
+    "category": "Specialty Facilities",
+    "builder": "Carpenter (Dinda & Joko)",
+    "iconEmoji": "🪣",
+    "description": "Convenient freshwater source positioned strategically across your farm field.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Water Well",
+        "goldCost": 2000,
+        "daysToBuild": 0,
+        "dimensions": "3x3 Tiles",
+        "unlock": { "source": "Default", "description": "Available from Day 1 at Carpenter" },
+        "capacityText": "Infinite Water Refill",
+        "featuresUnlocked": ["Instant watering can refill anywhere on your crop fields"],
+        "materials": [
+          { "name": "Stone", "amount": 60, "iconEmoji": "🪨", "source": "Mining Rocks" },
+          { "name": "Wood", "amount": 10, "iconEmoji": "🪵", "source": "Chopping Trees" },
+          { "name": "Bronze Kelp Essence", "amount": 1, "iconEmoji": "🌿", "source": "Lab Extractor (10 Bronze Kelp + 1 Glass)" }
+        ],
+        "description": "Place near distant farm plots to refill your watering can without running to the pond."
+      }
+    ]
+  },
+  {
+    "id": "farmhouse",
+    "name": "Farmhouse",
+    "category": "House Upgrades",
+    "builder": "Carpenter (Dinda & Joko)",
+    "iconEmoji": "🏡",
+    "description": "Your primary home on the island. Upgrading expands interior rooms, adds a kitchen, and allows family living.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Repaired Farmhouse",
+        "goldCost": 0,
+        "daysToBuild": 0,
+        "dimensions": "Original Cabin",
+        "unlock": { "source": "Default", "description": "Available from Day 1" },
+        "featuresUnlocked": ["Decorate interior with furniture", "Wall & flooring customization", "Storage chests indoors"],
+        "materials": [
+          { "name": "Wood", "amount": 50, "iconEmoji": "🪵", "source": "Chopping Trees" },
+          { "name": "Stone", "amount": 20, "iconEmoji": "🪨", "source": "Mining Rocks" }
+        ],
+        "description": "Fixes up the starter rundown cabin and enables full interior decorating."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Kitchen & Living Space",
+        "goldCost": 5000,
+        "daysToBuild": 2,
+        "dimensions": "Expanded Ground Floor",
+        "unlock": { "source": "TownRank", "rank": "D", "description": "Town Rank D" },
+        "featuresUnlocked": ["Kitchen cooking counter", "Refrigerator food storage", "Cook recipes with cooking utensils"],
+        "materials": [
+          { "name": "Wood", "amount": 100, "iconEmoji": "🪵", "source": "Chopping Trees" },
+          { "name": "Stone", "amount": 50, "iconEmoji": "🪨", "source": "Mining Rocks" },
+          { "name": "Bronze Bar", "amount": 10, "iconEmoji": "🟤", "source": "Smelt 5 Bronze Ore + 1 Coal" }
+        ],
+        "description": "Adds a complete kitchen and living room. Enables the ability to cook gourmet meals."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Second Floor & Marriage Suite",
+        "goldCost": 40000,
+        "daysToBuild": 2,
+        "dimensions": "Two-Story House",
+        "unlock": { "source": "TownRank", "rank": "C", "description": "Town Rank C" },
+        "featuresUnlocked": ["Second floor upper level", "Double bed for marriage", "Enables Marriage & 1st Child"],
+        "materials": [
+          { "name": "Wood", "amount": 200, "iconEmoji": "🪵", "source": "Chopping Trees" },
+          { "name": "Stone", "amount": 150, "iconEmoji": "🪨", "source": "Mining Rocks" },
+          { "name": "Silver Bar", "amount": 10, "iconEmoji": "⚪", "source": "Smelt 5 Silver Ore + 1 Coal" }
+        ],
+        "description": "Adds a full upper floor, spacious bedroom, and enables marriage and children."
+      },
+      {
+        "tierNumber": 4,
+        "name": "Deluxe Estate",
+        "goldCost": 120000,
+        "daysToBuild": 2,
+        "dimensions": "Palatial Estate",
+        "unlock": { "source": "TownRank", "rank": "B", "description": "Town Rank B" },
+        "featuresUnlocked": ["Expanded upper floor wings", "Second child bedroom & cribs", "Max decorative room space"],
+        "materials": [
+          { "name": "Hardwood", "amount": 200, "iconEmoji": "🪵", "source": "Hardwood Stumps / Logs" },
+          { "name": "Stone", "amount": 300, "iconEmoji": "🪨", "source": "Mining Rocks" },
+          { "name": "Gold Bar", "amount": 10, "iconEmoji": "🟡", "source": "Smelt 5 Gold Ore + 1 Coal" }
+        ],
+        "description": "Magnificent mansion upgrade offering ultimate interior space and 2nd child expansion."
+      }
+    ]
+  }
+]

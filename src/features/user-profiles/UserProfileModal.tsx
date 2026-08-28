@@ -14,7 +14,7 @@ export const UserProfileModal: React.FC = () => {
     switchProfile,
     deleteProfile,
     renameProfile,
-    syncActiveProfile
+    syncSpecificProfile
   } = useUserProfile();
 
   const [activeTab, setActiveTab] = useState<'profiles' | 'cloud'>('profiles');
@@ -136,7 +136,7 @@ export const UserProfileModal: React.FC = () => {
                     onDelete={() => deleteProfile(p.id)}
                     onRename={(name) => renameProfile(p.id, name)}
                     onSync={async () => {
-                      const ok = await syncActiveProfile();
+                      const ok = await syncSpecificProfile(p);
                       if (ok) setFeedback({ type: 'success', msg: `Saved "${p.name}" to cloud!` });
                       else setFeedback({ type: 'error', msg: 'Sync failed. Check internet connection.' });
                     }}

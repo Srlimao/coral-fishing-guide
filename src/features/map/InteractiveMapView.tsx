@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useFishing } from '../../context/FishingContext';
+import { useLanguage } from '../../i18n/LanguageContext';
 import { FISH_LIST } from '../../data/fishData';
 import { isFishSpawnActive } from '../calculator/FishingCalculations';
 import { FishingLocationPin, MapSpotCoordinate } from '../../types/fishing';
@@ -8,6 +9,7 @@ import officialMapImg from '../../assets/images/coral_island_game_map.png';
 
 export const InteractiveMapView: React.FC = () => {
   const { gameState, setSelectedFish, userProgress, customLocations, customMapImage, setActiveTab } = useFishing();
+  const { t, getLocationName, getFishName } = useLanguage();
   const [activePin, setActivePin] = useState<FishingLocationPin>(customLocations[0] || {} as FishingLocationPin);
   const [filterActiveOnly, setFilterActiveOnly] = useState(false);
 
@@ -66,7 +68,7 @@ export const InteractiveMapView: React.FC = () => {
             <div>
               <h2 className="text-xl font-bold text-white flex items-center gap-2">
                 <Navigation className="w-5 h-5 text-amber-400" />
-                <span>Starlet Island Fishing Map</span>
+                <span>{t('map_main_title')}</span>
               </h2>
               <p className="text-xs text-neutral-300">
                 Click any marker on the island to inspect species swimming in that water zone.
@@ -75,7 +77,7 @@ export const InteractiveMapView: React.FC = () => {
             
             <div className="flex items-center gap-2">
               <span className="text-xs bg-black/50 border border-amber-400/40 px-3 py-1 rounded-xl text-amber-400 font-extrabold shadow-sm">
-                📍 {activePin.name}
+                📍 {getLocationName(activePin.name)}
               </span>
               <button
                 onClick={() => setActiveTab('backoffice')}
@@ -83,7 +85,7 @@ export const InteractiveMapView: React.FC = () => {
                 title="Open Map Editor & Back Office"
               >
                 <Edit3 className="w-3.5 h-3.5 text-amber-400" />
-                <span>Edit Pins</span>
+                <span>{t('map_edit_pins')}</span>
               </button>
             </div>
           </div>
@@ -126,7 +128,7 @@ export const InteractiveMapView: React.FC = () => {
 
                   {/* Tooltip on Hover */}
                   <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block bg-black/95 text-white text-[11px] font-black px-2.5 py-1 rounded-lg whitespace-nowrap border border-white/20 shadow-xl pointer-events-none z-50">
-                    {loc.name} {spot.label ? `(${spot.label})` : ''}
+                    {getLocationName(loc.name)} {spot.label ? `(${spot.label})` : ''}
                   </span>
                 </button>
               ));
@@ -161,7 +163,7 @@ export const InteractiveMapView: React.FC = () => {
             <span className="text-[10px] uppercase font-black tracking-wider text-amber-400 block">
               {activePin.category} Zone ({activePin.spots?.length || 1} Spots on Map)
             </span>
-            <h3 className="text-xl font-black text-white mt-0.5">{activePin.name}</h3>
+            <h3 className="text-xl font-black text-white mt-0.5">{getLocationName(activePin.name)}</h3>
             <p className="text-xs text-neutral-300 mt-1.5 leading-relaxed">{activePin.description}</p>
           </div>
 
@@ -179,7 +181,7 @@ export const InteractiveMapView: React.FC = () => {
               }`}
             >
               <Filter className="w-3 h-3" />
-              <span>{filterActiveOnly ? 'Active Now' : 'Show All'}</span>
+              <span>{filterActiveOnly ? t('badge_active_now') : t('rarity_all')}</span>
             </button>
           </div>
 
@@ -209,10 +211,10 @@ export const InteractiveMapView: React.FC = () => {
                     </span>
                     <div>
                       <strong className="text-white group-hover:text-amber-400 block font-bold text-xs">
-                        {fish.name}
+                        {getFishName(fish)}
                       </strong>
                       <span className="text-[10px] text-neutral-400">
-                        {fish.seasons.join(', ')} • {fish.sellPrice}g
+                        {fish.seasons.map(s => t(`season_${s}` as any, s)).join(', ')} • {fish.sellPrice}g
                       </span>
                     </div>
                   </div>
@@ -222,7 +224,7 @@ export const InteractiveMapView: React.FC = () => {
                       <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" title="Active Now!" />
                     )}
                     <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded badge-rarity-${fish.rarity}`}>
-                      {fish.rarity}
+                      {t(`rarity_${fish.rarity.toLowerCase()}` as any, fish.rarity)}
                     </span>
                     {isCaught && <Check className="w-3.5 h-3.5 text-emerald-400" />}
                     {isOffered && <Sparkles className="w-3.5 h-3.5 text-amber-400" />}

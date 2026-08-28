@@ -1,0 +1,4833 @@
+[
+  {
+    "id": "aging_barrel",
+    "name": "Aging barrel",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 2895,
+    "unlock": {
+      "source": "Farming",
+      "level": 10,
+      "description": "Farming Mastery Level 10"
+    },
+    "materials": [
+      {
+        "name": "Hardwood",
+        "amount": 25,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Osmium bar",
+        "amount": 2,
+        "iconEmoji": "🟣",
+        "source": "Smelting 5 Osmium Ore + 1 Coal"
+      },
+      {
+        "name": "Resin",
+        "amount": 1,
+        "iconEmoji": "🍯",
+        "source": "Tree Tapper on Pine Tree"
+      }
+    ],
+    "description": "Produces aged products, such as wine, kombucha, and aged cheese.",
+    "usageNotes": "",
+    "iconEmoji": "🍷"
+  },
+  {
+    "id": "item_65016",
+    "name": "Bee house",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 175,
+    "unlock": {
+      "source": "Catching",
+      "level": 6,
+      "description": "Catching Mastery Level 6"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 50,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Bronze ore",
+        "amount": 15,
+        "iconEmoji": "🟤",
+        "source": "Mining in Earth Shaft (Caverns 1-40)"
+      }
+    ],
+    "description": "Place a flower to produce honey.",
+    "usageNotes": "",
+    "iconEmoji": "🐝"
+  },
+  {
+    "id": "cheese_press",
+    "name": "Cheese press",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 350,
+    "unlock": {
+      "source": "Ranching",
+      "level": 4,
+      "description": "Ranching Mastery Level 4"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 30,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Scrap",
+        "amount": 30,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Bronze bar",
+        "amount": 2,
+        "iconEmoji": "🟤",
+        "source": "Smelting 5 Bronze Ore + 1 Coal"
+      },
+      {
+        "name": "Silver bar",
+        "amount": 2,
+        "iconEmoji": "⚪",
+        "source": "Smelting 5 Silver Ore + 1 Coal"
+      }
+    ],
+    "description": "Turns milk into a block of cheese, and sugarcane into syrup.",
+    "usageNotes": "",
+    "iconEmoji": "🧀"
+  },
+  {
+    "id": "compost_bin",
+    "name": "Compost bin",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 50,
+    "unlock": {
+      "source": "Farming",
+      "level": 2,
+      "description": "Farming Mastery Level 2"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 20,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Trash",
+        "amount": 5,
+        "iconEmoji": "🗑️",
+        "source": "Ocean Diving / Trash Cans"
+      },
+      {
+        "name": "Sap",
+        "amount": 5,
+        "iconEmoji": "💧",
+        "source": "Felling Trees / Branches"
+      }
+    ],
+    "description": "Turns trash into compost. Helpful in making fertilizer.",
+    "usageNotes": "",
+    "iconEmoji": "🍂"
+  },
+  {
+    "id": "dehydrator",
+    "name": "Dehydrator",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 1240,
+    "unlock": {
+      "source": "Diving",
+      "level": 4,
+      "description": "Diving Mastery Level 4"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 30,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Silver kelp essence",
+        "amount": 2,
+        "iconEmoji": "⚪",
+        "source": "Lab Extractor (10 Silver Kelp + 1 Glass)"
+      },
+      {
+        "name": "Sea salt",
+        "amount": 5,
+        "iconEmoji": "🧂",
+        "source": "Ocean Diving Loot"
+      },
+      {
+        "name": "Silver bar",
+        "amount": 2,
+        "iconEmoji": "⚪",
+        "source": "Smelting 5 Silver Ore + 1 Coal"
+      }
+    ],
+    "description": "Removes moisture from ocean loot such as oysters and scallops. Produces dried artisan goods.",
+    "usageNotes": "",
+    "iconEmoji": "🍄"
+  },
+  {
+    "id": "extractor",
+    "name": "Extractor",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 240,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Bronze kelp",
+        "amount": 20,
+        "iconEmoji": "🟤",
+        "source": "Diving (10m–20m Bronze Depth)"
+      },
+      {
+        "name": "Wood",
+        "amount": 40,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      }
+    ],
+    "description": "Extracts and bottles nutrients from kelp.",
+    "usageNotes": "",
+    "iconEmoji": "🧪"
+  },
+  {
+    "id": "furnace",
+    "name": "Furnace",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 140,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Stone",
+        "amount": 40,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      },
+      {
+        "name": "Bronze ore",
+        "amount": 20,
+        "iconEmoji": "🟤",
+        "source": "Mining in Earth Shaft (Caverns 1-40)"
+      }
+    ],
+    "description": "A machine to make metal bars.",
+    "usageNotes": "",
+    "iconEmoji": "🌋"
+  },
+  {
+    "id": "keg",
+    "name": "Keg",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 245,
+    "unlock": {
+      "source": "Farming",
+      "level": 6,
+      "description": "Farming Mastery Level 6"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 30,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Bronze bar",
+        "amount": 2,
+        "iconEmoji": "🟤",
+        "source": "Smelting 5 Bronze Ore + 1 Coal"
+      },
+      {
+        "name": "Silver bar",
+        "amount": 1,
+        "iconEmoji": "⚪",
+        "source": "Smelting 5 Silver Ore + 1 Coal"
+      },
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      }
+    ],
+    "description": "Processes fruits or vegetables into beverages. Makes juice, beer, sake, coffee, and green tea.",
+    "usageNotes": "",
+    "iconEmoji": "🛢️"
+  },
+  {
+    "id": "kiln",
+    "name": "Kiln",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 125,
+    "unlock": {
+      "source": "Foraging",
+      "level": 2,
+      "description": "Foraging Mastery Level 2"
+    },
+    "materials": [
+      {
+        "name": "Bronze ore",
+        "amount": 20,
+        "iconEmoji": "🟤",
+        "source": "Mining in Earth Shaft (Caverns 1-40)"
+      },
+      {
+        "name": "Stone",
+        "amount": 25,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      }
+    ],
+    "description": "This processes wood into coal, scrap into glass, and stone into glass.",
+    "usageNotes": "",
+    "iconEmoji": "🔥"
+  },
+  {
+    "id": "loom",
+    "name": "Loom",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 1135,
+    "unlock": {
+      "source": "Ranching",
+      "level": 6,
+      "description": "Ranching Mastery Level 6"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 25,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Wood",
+        "amount": 30,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Gold bar",
+        "amount": 4,
+        "iconEmoji": "🟡",
+        "source": "Smelting 5 Gold Ore + 1 Coal"
+      }
+    ],
+    "description": "Turns wool into cloth.",
+    "usageNotes": "",
+    "iconEmoji": "🧶"
+  },
+  {
+    "id": "mason_jar",
+    "name": "Mason jar",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 180,
+    "unlock": {
+      "source": "Farming",
+      "level": 3,
+      "description": "Farming Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 30,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Glass",
+        "amount": 12,
+        "iconEmoji": "🪟",
+        "source": "Kiln (Stone/Scrap) / Ocean Diving"
+      }
+    ],
+    "description": "Preserves fruits and vegetables.",
+    "usageNotes": "",
+    "iconEmoji": "🏺"
+  },
+  {
+    "id": "mayonnaise_machine",
+    "name": "Mayonnaise machine",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 150,
+    "unlock": {
+      "source": "Ranching",
+      "level": 2,
+      "description": "Ranching Mastery Level 2"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 20,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Bronze bar",
+        "amount": 2,
+        "iconEmoji": "🟤",
+        "source": "Smelting 5 Bronze Ore + 1 Coal"
+      }
+    ],
+    "description": "Turns an egg into a jar of mayonnaise.",
+    "usageNotes": "",
+    "iconEmoji": "🥚"
+  },
+  {
+    "id": "item_65136",
+    "name": "Mushroom log",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 80,
+    "unlock": {
+      "source": "Foraging",
+      "level": 6,
+      "description": "Foraging Mastery Level 6"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 25,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Compost",
+        "amount": 10,
+        "iconEmoji": "🍂",
+        "source": "Compost Bin / Processing Kelp"
+      }
+    ],
+    "description": "Add a mushroom to cultivate more.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "oil_press",
+    "name": "Oil press",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 890,
+    "unlock": {
+      "source": "Foraging",
+      "level": 8,
+      "description": "Foraging Mastery Level 8"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 30,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Glass",
+        "amount": 20,
+        "iconEmoji": "🪟",
+        "source": "Kiln (Stone/Scrap) / Ocean Diving"
+      },
+      {
+        "name": "Gold bar",
+        "amount": 2,
+        "iconEmoji": "🟡",
+        "source": "Smelting 5 Gold Ore + 1 Coal"
+      },
+      {
+        "name": "Hardwood",
+        "amount": 2,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      }
+    ],
+    "description": "Used for making all kinds of oil.",
+    "usageNotes": "",
+    "iconEmoji": "🫒"
+  },
+  {
+    "id": "recycling_machine",
+    "name": "Recycling machine",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 125,
+    "unlock": {
+      "source": "Diving",
+      "level": 2,
+      "description": "Diving Mastery Level 2"
+    },
+    "materials": [
+      {
+        "name": "Trash",
+        "amount": 20,
+        "iconEmoji": "🗑️",
+        "source": "Ocean Diving / Trash Cans"
+      },
+      {
+        "name": "Stone",
+        "amount": 30,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      },
+      {
+        "name": "Bronze kelp",
+        "amount": 15,
+        "iconEmoji": "🟤",
+        "source": "Diving (10m–20m Bronze Depth)"
+      }
+    ],
+    "description": "Turns one resource into another resource.",
+    "usageNotes": "",
+    "iconEmoji": "♻️"
+  },
+  {
+    "id": "item_65268",
+    "name": "Slime of replication",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 4750,
+    "unlock": {
+      "source": "Combat",
+      "level": 10,
+      "description": "Combat Mastery Level 10"
+    },
+    "materials": [
+      {
+        "name": "Slime goop",
+        "amount": 20,
+        "iconEmoji": "📦",
+        "source": "Defeating Slimes in Caverns"
+      },
+      {
+        "name": "Gold bar",
+        "amount": 5,
+        "iconEmoji": "🟡",
+        "source": "Smelting 5 Gold Ore + 1 Coal"
+      },
+      {
+        "name": "Osmium kelp essence",
+        "amount": 2,
+        "iconEmoji": "🟣",
+        "source": "Lab Extractor (10 Osmium Kelp + 1 Glass)"
+      },
+      {
+        "name": "Glass",
+        "amount": 30,
+        "iconEmoji": "🪟",
+        "source": "Kiln (Stone/Scrap) / Ocean Diving"
+      }
+    ],
+    "description": "This Slime of Replication can duplicate items. Just give it three days or so.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65316",
+    "name": "Slime of transmutation",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 3250,
+    "unlock": {
+      "source": "Combat",
+      "level": 8,
+      "description": "Combat Mastery Level 8"
+    },
+    "materials": [
+      {
+        "name": "Slime goop",
+        "amount": 20,
+        "iconEmoji": "📦",
+        "source": "Defeating Slimes in Caverns"
+      },
+      {
+        "name": "Gold bar",
+        "amount": 5,
+        "iconEmoji": "🟡",
+        "source": "Smelting 5 Gold Ore + 1 Coal"
+      },
+      {
+        "name": "Osmium bar",
+        "amount": 2,
+        "iconEmoji": "🟣",
+        "source": "Smelting 5 Osmium Ore + 1 Coal"
+      },
+      {
+        "name": "Glass",
+        "amount": 30,
+        "iconEmoji": "🪟",
+        "source": "Kiln (Stone/Scrap) / Ocean Diving"
+      }
+    ],
+    "description": "Place an item to increase its quality.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "solar_panel",
+    "name": "Solar panel",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 1010,
+    "unlock": {
+      "source": "Diving",
+      "level": 7,
+      "description": "Diving Mastery Level 7"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Gold bar",
+        "amount": 3,
+        "iconEmoji": "🟡",
+        "source": "Smelting 5 Gold Ore + 1 Coal"
+      },
+      {
+        "name": "Glass",
+        "amount": 20,
+        "iconEmoji": "🪟",
+        "source": "Kiln (Stone/Scrap) / Ocean Diving"
+      }
+    ],
+    "description": "A solar-powered battery converter. It needs to be placed outdoors to harness sunlight and convert it into battery.",
+    "usageNotes": "",
+    "iconEmoji": "☀️"
+  },
+  {
+    "id": "tapper",
+    "name": "Tap",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 155,
+    "unlock": {
+      "source": "Foraging",
+      "level": 4,
+      "description": "Foraging Mastery Level 4"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 40,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Bronze bar",
+        "amount": 3,
+        "iconEmoji": "🟤",
+        "source": "Smelting 5 Bronze Ore + 1 Coal"
+      }
+    ],
+    "description": "Collects nutty sap, maple syrup and resin from a tree. Cannot be put on fruit trees.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65512",
+    "name": "Temperature machine",
+    "category": "Artisan & Processing",
+    "yieldCount": 1,
+    "sellPrice": 310,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Battery",
+        "amount": 1,
+        "iconEmoji": "🔋",
+        "source": "Solar Panel / Lightning Rod"
+      },
+      {
+        "name": "Flame essence",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Ocean Diving & Monsters"
+      },
+      {
+        "name": "Water essence",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Ocean Diving & Monsters"
+      },
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65602",
+    "name": "Alien scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 255,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Slime goop",
+        "amount": 5,
+        "iconEmoji": "📦",
+        "source": "Defeating Slimes in Caverns"
+      },
+      {
+        "name": "Resin",
+        "amount": 1,
+        "iconEmoji": "🍯",
+        "source": "Tree Tapper on Pine Tree"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65776",
+    "name": "Anemone auto fertilizer",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 1500,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Bronze kelp essence",
+        "amount": 3,
+        "iconEmoji": "🟤",
+        "source": "Lab Extractor (10 Bronze Kelp + 1 Glass)"
+      },
+      {
+        "name": "Slime goop",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Defeating Slimes in Caverns"
+      },
+      {
+        "name": "Solar core",
+        "amount": 1,
+        "iconEmoji": "☀️",
+        "source": "Crafting / Altar Offering"
+      },
+      {
+        "name": "Any_SeaScavenge",
+        "amount": 5,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "An anemone for lumina sprinkler attachment. Automatically applies fertilizer to nearby seeds when loaded with it.",
+    "usageNotes": "",
+    "iconEmoji": "🌱"
+  },
+  {
+    "id": "item_65777",
+    "name": "Anemone auto harvest",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 2800,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Silver kelp essence",
+        "amount": 3,
+        "iconEmoji": "⚪",
+        "source": "Lab Extractor (10 Silver Kelp + 1 Glass)"
+      },
+      {
+        "name": "Slime goop",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Defeating Slimes in Caverns"
+      },
+      {
+        "name": "Solar core",
+        "amount": 1,
+        "iconEmoji": "☀️",
+        "source": "Crafting / Altar Offering"
+      },
+      {
+        "name": "Any_SeaScavenge",
+        "amount": 5,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "An anemone for lumina sprinkler attachment. Automatically harvest underwater crops.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65778",
+    "name": "Anemone auto seed",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 4850,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Gold kelp essence",
+        "amount": 3,
+        "iconEmoji": "🟡",
+        "source": "Lab Extractor (10 Gold Kelp + 1 Glass)"
+      },
+      {
+        "name": "Slime goop",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Defeating Slimes in Caverns"
+      },
+      {
+        "name": "Solar core",
+        "amount": 1,
+        "iconEmoji": "☀️",
+        "source": "Crafting / Altar Offering"
+      },
+      {
+        "name": "Any_SeaScavenge",
+        "amount": 5,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "An anemone for lumina sprinkler attachment. Automatically plants seeds to empty tilled soil when loaded with it.",
+    "usageNotes": "",
+    "iconEmoji": "🌰"
+  },
+  {
+    "id": "item_65779",
+    "name": "Anemone auto SFH",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 8350,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Osmium kelp essence",
+        "amount": 3,
+        "iconEmoji": "🟣",
+        "source": "Lab Extractor (10 Osmium Kelp + 1 Glass)"
+      },
+      {
+        "name": "Slime goop",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Defeating Slimes in Caverns"
+      },
+      {
+        "name": "Solar core",
+        "amount": 1,
+        "iconEmoji": "☀️",
+        "source": "Crafting / Altar Offering"
+      },
+      {
+        "name": "Any_SeaScavenge",
+        "amount": 5,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "An anemone for lumina sprinkler attachment. Automatically fertilizes, plants seeds and harvest crops to empty tilled soil.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65531",
+    "name": "Architect desk",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 10,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Stone",
+        "amount": 100,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65535",
+    "name": "Auto chest",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 20,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Battery",
+        "amount": 3,
+        "iconEmoji": "🔋",
+        "source": "Solar Panel / Lightning Rod"
+      },
+      {
+        "name": "Osmium kelp essence",
+        "amount": 2,
+        "iconEmoji": "🟣",
+        "source": "Lab Extractor (10 Osmium Kelp + 1 Glass)"
+      },
+      {
+        "name": "Osmium bar",
+        "amount": 3,
+        "iconEmoji": "🟣",
+        "source": "Smelting 5 Osmium Ore + 1 Coal"
+      }
+    ],
+    "description": "A chest that automatically pushes or pulls items from machines placed to the right or left of it. Can hold up to 40 objects.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65510",
+    "name": "Auto collector",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 5350,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Battery",
+        "amount": 3,
+        "iconEmoji": "🔋",
+        "source": "Solar Panel / Lightning Rod"
+      },
+      {
+        "name": "Osmium kelp essence",
+        "amount": 3,
+        "iconEmoji": "🟣",
+        "source": "Lab Extractor (10 Osmium Kelp + 1 Glass)"
+      },
+      {
+        "name": "Silver ore",
+        "amount": 15,
+        "iconEmoji": "⚪",
+        "source": "Mining in Water Shaft (Caverns 1-40)"
+      },
+      {
+        "name": "Scrap",
+        "amount": 50,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      }
+    ],
+    "description": "Automatically collects resources from animals. Must be placed inside a barn or a coop.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65511",
+    "name": "Auto feeder",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 850,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Battery",
+        "amount": 1,
+        "iconEmoji": "🔋",
+        "source": "Solar Panel / Lightning Rod"
+      },
+      {
+        "name": "Silver kelp essence",
+        "amount": 3,
+        "iconEmoji": "⚪",
+        "source": "Lab Extractor (10 Silver Kelp + 1 Glass)"
+      },
+      {
+        "name": "Hay",
+        "amount": 20,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Scrap",
+        "amount": 50,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65338",
+    "name": "Auto fertilizer",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 350,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Silver kelp essence",
+        "amount": 1,
+        "iconEmoji": "⚪",
+        "source": "Lab Extractor (10 Silver Kelp + 1 Glass)"
+      },
+      {
+        "name": "Gold bar",
+        "amount": 1,
+        "iconEmoji": "🟡",
+        "source": "Smelting 5 Gold Ore + 1 Coal"
+      },
+      {
+        "name": "Battery",
+        "amount": 1,
+        "iconEmoji": "🔋",
+        "source": "Solar Panel / Lightning Rod"
+      }
+    ],
+    "description": "A sprinkler attachment. Automatically applies fertilizer to nearby seeds when loaded with it.",
+    "usageNotes": "",
+    "iconEmoji": "🌱"
+  },
+  {
+    "id": "item_65530",
+    "name": "Auto harvest",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 2950,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Gold kelp essence",
+        "amount": 1,
+        "iconEmoji": "🟡",
+        "source": "Lab Extractor (10 Gold Kelp + 1 Glass)"
+      },
+      {
+        "name": "Gold bar",
+        "amount": 1,
+        "iconEmoji": "🟡",
+        "source": "Smelting 5 Gold Ore + 1 Coal"
+      },
+      {
+        "name": "Battery",
+        "amount": 1,
+        "iconEmoji": "🔋",
+        "source": "Solar Panel / Lightning Rod"
+      }
+    ],
+    "description": "A sprinkler attachment. Automatically harvest crops.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65509",
+    "name": "Auto petter",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 2800,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Battery",
+        "amount": 4,
+        "iconEmoji": "🔋",
+        "source": "Solar Panel / Lightning Rod"
+      },
+      {
+        "name": "Gold kelp essence",
+        "amount": 3,
+        "iconEmoji": "🟡",
+        "source": "Lab Extractor (10 Gold Kelp + 1 Glass)"
+      },
+      {
+        "name": "Large wool",
+        "amount": 3,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Scrap",
+        "amount": 50,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65339",
+    "name": "Auto seed",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 800,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Gold kelp essence",
+        "amount": 1,
+        "iconEmoji": "🟡",
+        "source": "Lab Extractor (10 Gold Kelp + 1 Glass)"
+      },
+      {
+        "name": "Gold bar",
+        "amount": 1,
+        "iconEmoji": "🟡",
+        "source": "Smelting 5 Gold Ore + 1 Coal"
+      },
+      {
+        "name": "Battery",
+        "amount": 1,
+        "iconEmoji": "🔋",
+        "source": "Solar Panel / Lightning Rod"
+      }
+    ],
+    "description": "A sprinkler attachment. Automatically plants seeds to empty tilled soil when loaded with it.",
+    "usageNotes": "",
+    "iconEmoji": "🌰"
+  },
+  {
+    "id": "item_65340",
+    "name": "Auto SFH",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 4710,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Osmium kelp essence",
+        "amount": 1,
+        "iconEmoji": "🟣",
+        "source": "Lab Extractor (10 Osmium Kelp + 1 Glass)"
+      },
+      {
+        "name": "Osmium bar",
+        "amount": 1,
+        "iconEmoji": "🟣",
+        "source": "Smelting 5 Osmium Ore + 1 Coal"
+      },
+      {
+        "name": "Battery",
+        "amount": 1,
+        "iconEmoji": "🔋",
+        "source": "Solar Panel / Lightning Rod"
+      }
+    ],
+    "description": "A sprinkler attachment. Automatically fertilizes, plants seeds and harvest crops to empty tilled soil.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65513",
+    "name": "Auto trash collector",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 10,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 100,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Gold kelp essence",
+        "amount": 3,
+        "iconEmoji": "🟡",
+        "source": "Lab Extractor (10 Gold Kelp + 1 Glass)"
+      },
+      {
+        "name": "Battery",
+        "amount": 2,
+        "iconEmoji": "🔋",
+        "source": "Solar Panel / Lightning Rod"
+      },
+      {
+        "name": "Wind essence",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Ocean Diving & Monsters"
+      }
+    ],
+    "description": "Place on the ground to collect trash underwater.",
+    "usageNotes": "",
+    "iconEmoji": "🗑️"
+  },
+  {
+    "id": "item_64015",
+    "name": "Bamboo net large",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 800,
+    "unlock": {
+      "source": "Fishing",
+      "level": 7,
+      "description": "Fishing Mastery Level 7"
+    },
+    "materials": [
+      {
+        "name": "Gold kelp",
+        "amount": 3,
+        "iconEmoji": "🟡",
+        "source": "Diving (40m–50m Gold Depth)"
+      },
+      {
+        "name": "Fiber",
+        "amount": 3,
+        "iconEmoji": "🌿",
+        "source": "Cutting Weeds / Scythe"
+      },
+      {
+        "name": "Hardwood",
+        "amount": 4,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Any_DriedScavengables",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Put it in the water to catch fish.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "small_fish_bait",
+    "name": "Bamboo net small",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 240,
+    "unlock": {
+      "source": "Fishing",
+      "level": 3,
+      "description": "Fishing Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Silver kelp",
+        "amount": 3,
+        "iconEmoji": "⚪",
+        "source": "Diving (20m–40m Silver Depth)"
+      },
+      {
+        "name": "Fiber",
+        "amount": 2,
+        "iconEmoji": "🌿",
+        "source": "Cutting Weeds / Scythe"
+      },
+      {
+        "name": "Wood",
+        "amount": 4,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Any_DriedScavengables",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Put it in the water to catch fish.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65594",
+    "name": "Chef scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 345,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 20,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Cotton",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Maple syrup",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65607",
+    "name": "Chieftain scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 425,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Hardwood",
+        "amount": 5,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Gold ore",
+        "amount": 2,
+        "iconEmoji": "🟡",
+        "source": "Mining in Wind Shaft (Caverns 1-40)"
+      },
+      {
+        "name": "Generic_Flower",
+        "amount": 5,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65605",
+    "name": "Coral Hero scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 240,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 20,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Hay",
+        "amount": 10,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Osmium ore",
+        "amount": 1,
+        "iconEmoji": "🟣",
+        "source": "Mining in Fire Shaft (Caverns 1-40)"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "fertilizer_1",
+    "name": "Fertilizer I",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 7,
+    "unlock": {
+      "source": "Farming",
+      "level": 1,
+      "description": "Farming Mastery Level 1"
+    },
+    "materials": [
+      {
+        "name": "Compost",
+        "amount": 2,
+        "iconEmoji": "🍂",
+        "source": "Compost Bin / Processing Kelp"
+      },
+      {
+        "name": "Sap",
+        "amount": 1,
+        "iconEmoji": "💧",
+        "source": "Felling Trees / Branches"
+      }
+    ],
+    "description": "A chance to grow better quality crops if mixed with soil.",
+    "usageNotes": "",
+    "iconEmoji": "🌱"
+  },
+  {
+    "id": "fertilizer_2",
+    "name": "Fertilizer II",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 22,
+    "unlock": {
+      "source": "Farming",
+      "level": 5,
+      "description": "Farming Mastery Level 5"
+    },
+    "materials": [
+      {
+        "name": "Compost",
+        "amount": 2,
+        "iconEmoji": "🍂",
+        "source": "Compost Bin / Processing Kelp"
+      },
+      {
+        "name": "Sap",
+        "amount": 1,
+        "iconEmoji": "💧",
+        "source": "Felling Trees / Branches"
+      },
+      {
+        "name": "Silver kelp",
+        "amount": 1,
+        "iconEmoji": "⚪",
+        "source": "Diving (20m–40m Silver Depth)"
+      }
+    ],
+    "description": "There is an excellent chance to grow better quality crops if mixed with soil.",
+    "usageNotes": "",
+    "iconEmoji": "🌱"
+  },
+  {
+    "id": "fertilizer_3",
+    "name": "Fertilizer III",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 157,
+    "unlock": {
+      "source": "Farming",
+      "level": 8,
+      "description": "Farming Mastery Level 8"
+    },
+    "materials": [
+      {
+        "name": "Compost",
+        "amount": 3,
+        "iconEmoji": "🍂",
+        "source": "Compost Bin / Processing Kelp"
+      },
+      {
+        "name": "Sap",
+        "amount": 1,
+        "iconEmoji": "💧",
+        "source": "Felling Trees / Branches"
+      },
+      {
+        "name": "Osmium kelp",
+        "amount": 1,
+        "iconEmoji": "🟣",
+        "source": "Diving (50m+ Osmium Depth / Caves)"
+      }
+    ],
+    "description": "This will grow better quality crops if mixed with soil.",
+    "usageNotes": "",
+    "iconEmoji": "🌱"
+  },
+  {
+    "id": "item_65058",
+    "name": "Fish kite scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 160,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 20,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Rope",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Any_Fish",
+        "amount": 3,
+        "iconEmoji": "🐟",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65308",
+    "name": "Flash I",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 36,
+    "unlock": {
+      "source": "Farming",
+      "level": 2,
+      "description": "Farming Mastery Level 2"
+    },
+    "materials": [
+      {
+        "name": "Compost",
+        "amount": 2,
+        "iconEmoji": "🍂",
+        "source": "Compost Bin / Processing Kelp"
+      },
+      {
+        "name": "Any_SeaScavenge",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Increase growth rate a little bit.",
+    "usageNotes": "",
+    "iconEmoji": "🌱"
+  },
+  {
+    "id": "item_65309",
+    "name": "Flash II",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 66,
+    "unlock": {
+      "source": "Farming",
+      "level": 7,
+      "description": "Farming Mastery Level 7"
+    },
+    "materials": [
+      {
+        "name": "Compost",
+        "amount": 2,
+        "iconEmoji": "🍂",
+        "source": "Compost Bin / Processing Kelp"
+      },
+      {
+        "name": "Silver kelp",
+        "amount": 2,
+        "iconEmoji": "⚪",
+        "source": "Diving (20m–40m Silver Depth)"
+      },
+      {
+        "name": "Any_SeaScavenge",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Increase growth rate.",
+    "usageNotes": "",
+    "iconEmoji": "🌱"
+  },
+  {
+    "id": "item_65310",
+    "name": "Flash III",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 166,
+    "unlock": {
+      "source": "Farming",
+      "level": 9,
+      "description": "Farming Mastery Level 9"
+    },
+    "materials": [
+      {
+        "name": "Compost",
+        "amount": 2,
+        "iconEmoji": "🍂",
+        "source": "Compost Bin / Processing Kelp"
+      },
+      {
+        "name": "Gold kelp",
+        "amount": 2,
+        "iconEmoji": "🟡",
+        "source": "Diving (40m–50m Gold Depth)"
+      },
+      {
+        "name": "Any_SeaScavenge",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Increase growth rate tremendously.",
+    "usageNotes": "",
+    "iconEmoji": "🌱"
+  },
+  {
+    "id": "flower_bouquet",
+    "name": "Flower bouquet",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 75,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Fiber",
+        "amount": 1,
+        "iconEmoji": "🌿",
+        "source": "Cutting Weeds / Scythe"
+      },
+      {
+        "name": "Generic_Flower",
+        "amount": 5,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "An arrangement of flowers.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65916",
+    "name": "Fungarian chest",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 11,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 30,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Morel",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Storage for all kinds of items. Can be placed around the farm, and hold up to 40 objects",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65604",
+    "name": "Gingerbread scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 380,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wheat flour",
+        "amount": 3,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Ginger",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Sugar",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Any_Egg",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65347",
+    "name": "Hay chest",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 190,
+    "unlock": {
+      "source": "Ranching",
+      "level": 5,
+      "description": "Ranching Mastery Level 5"
+    },
+    "materials": [
+      {
+        "name": "Hay",
+        "amount": 30,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Wood",
+        "amount": 20,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      }
+    ],
+    "description": "Storage for all kinds of items. Can be placed around the farm, and hold up to 40 objects.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65595",
+    "name": "Humpty scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 280,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Large egg",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Resin",
+        "amount": 1,
+        "iconEmoji": "🍯",
+        "source": "Tree Tapper on Pine Tree"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65311",
+    "name": "Hydro I",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 2,
+    "unlock": {
+      "source": "Farming",
+      "level": 3,
+      "description": "Farming Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Stone",
+        "amount": 2,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      }
+    ],
+    "description": "A chance of the soil staying watered overnight if mixed with soil.",
+    "usageNotes": "",
+    "iconEmoji": "🌱"
+  },
+  {
+    "id": "item_65312",
+    "name": "Hydro II",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 8,
+    "unlock": {
+      "source": "Farming",
+      "level": 4,
+      "description": "Farming Mastery Level 4"
+    },
+    "materials": [
+      {
+        "name": "Stone",
+        "amount": 2,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      },
+      {
+        "name": "Compost",
+        "amount": 2,
+        "iconEmoji": "🍂",
+        "source": "Compost Bin / Processing Kelp"
+      }
+    ],
+    "description": "There is an excellent chance of the soil staying watered overnight if mixed with soil.",
+    "usageNotes": "",
+    "iconEmoji": "🌱"
+  },
+  {
+    "id": "item_65313",
+    "name": "Hydro III",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 18,
+    "unlock": {
+      "source": "Farming",
+      "level": 8,
+      "description": "Farming Mastery Level 8"
+    },
+    "materials": [
+      {
+        "name": "Stone",
+        "amount": 2,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      },
+      {
+        "name": "Compost",
+        "amount": 2,
+        "iconEmoji": "🍂",
+        "source": "Compost Bin / Processing Kelp"
+      },
+      {
+        "name": "Slime goop",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Defeating Slimes in Caverns"
+      }
+    ],
+    "description": "This will keep the soil staying watered overnight if mixed with soil.",
+    "usageNotes": "",
+    "iconEmoji": "🌱"
+  },
+  {
+    "id": "item_63029",
+    "name": "Item_63029",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 2,
+    "sellPrice": 0,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Generic_Ore",
+        "amount": 10,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Spikes",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_63030",
+    "name": "Item_63030",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 2,
+    "sellPrice": 0,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Slime goop",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Defeating Slimes in Caverns"
+      },
+      {
+        "name": "Generic_Ore",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Slime trap",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_63031",
+    "name": "Item_63031",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 2,
+    "sellPrice": 0,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 5,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Generic_Ore",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Spring trap",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_63032",
+    "name": "Item_63032",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 2,
+    "sellPrice": 0,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Sap",
+        "amount": 5,
+        "iconEmoji": "💧",
+        "source": "Felling Trees / Branches"
+      },
+      {
+        "name": "Dark essence",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Ocean Diving & Monsters"
+      },
+      {
+        "name": "Generic_Ore",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Glue trap",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_63033",
+    "name": "Item_63033",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 3,
+    "sellPrice": 0,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Battery",
+        "amount": 1,
+        "iconEmoji": "🔋",
+        "source": "Solar Panel / Lightning Rod"
+      },
+      {
+        "name": "Generic_Ore",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Shock trap",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_63034",
+    "name": "Item_63034",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 2,
+    "sellPrice": 0,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Tough meat",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Silky fur",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Generic_Ore",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Decoy",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65115",
+    "name": "Item_65115",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 0,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 10,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Trash",
+        "amount": 10,
+        "iconEmoji": "🗑️",
+        "source": "Ocean Diving / Trash Cans"
+      },
+      {
+        "name": "Sap",
+        "amount": 10,
+        "iconEmoji": "💧",
+        "source": "Felling Trees / Branches"
+      }
+    ],
+    "description": "Scrap scarecrow",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65317",
+    "name": "Item_65317",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 0,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 10,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Trash",
+        "amount": 15,
+        "iconEmoji": "🗑️",
+        "source": "Ocean Diving / Trash Cans"
+      }
+    ],
+    "description": "Makeshift scarecrow",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65603",
+    "name": "Jolly Stalk scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 405,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Large wool",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Tea berry",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65120",
+    "name": "Kunti ghost scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 310,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Dark essence",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Ocean Diving & Monsters"
+      },
+      {
+        "name": "Cotton cloth",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Scrap",
+        "amount": 10,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65773",
+    "name": "Lumina sprinkler I",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 1200,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Bronze bar",
+        "amount": 2,
+        "iconEmoji": "🟤",
+        "source": "Smelting 5 Bronze Ore + 1 Coal"
+      },
+      {
+        "name": "Silver kelp",
+        "amount": 10,
+        "iconEmoji": "⚪",
+        "source": "Diving (20m–40m Silver Depth)"
+      },
+      {
+        "name": "Solar core",
+        "amount": 1,
+        "iconEmoji": "☀️",
+        "source": "Crafting / Altar Offering"
+      }
+    ],
+    "description": "An automatic sunlight system for your underwater farm.",
+    "usageNotes": "",
+    "iconEmoji": "💦"
+  },
+  {
+    "id": "item_65774",
+    "name": "Lumina sprinkler II",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 3650,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Silver bar",
+        "amount": 2,
+        "iconEmoji": "⚪",
+        "source": "Smelting 5 Silver Ore + 1 Coal"
+      },
+      {
+        "name": "Gold kelp",
+        "amount": 10,
+        "iconEmoji": "🟡",
+        "source": "Diving (40m–50m Gold Depth)"
+      },
+      {
+        "name": "Solar core",
+        "amount": 3,
+        "iconEmoji": "☀️",
+        "source": "Crafting / Altar Offering"
+      }
+    ],
+    "description": "An automatic sunlight system for your underwater farm.",
+    "usageNotes": "",
+    "iconEmoji": "💦"
+  },
+  {
+    "id": "item_65775",
+    "name": "Lumina sprinkler III",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 7000,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Gold bar",
+        "amount": 2,
+        "iconEmoji": "🟡",
+        "source": "Smelting 5 Gold Ore + 1 Coal"
+      },
+      {
+        "name": "Osmium kelp",
+        "amount": 10,
+        "iconEmoji": "🟣",
+        "source": "Diving (50m+ Osmium Depth / Caves)"
+      },
+      {
+        "name": "Solar core",
+        "amount": 5,
+        "iconEmoji": "☀️",
+        "source": "Crafting / Altar Offering"
+      }
+    ],
+    "description": "An automatic sunlight system for your underwater farm.",
+    "usageNotes": "",
+    "iconEmoji": "💦"
+  },
+  {
+    "id": "makeshift_chest",
+    "name": "Makeshift chest",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 40,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 20,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Trash",
+        "amount": 10,
+        "iconEmoji": "🗑️",
+        "source": "Ocean Diving / Trash Cans"
+      }
+    ],
+    "description": "Storage for all kinds of items. Can be placed around the farm, and hold up to 20 objects.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65593",
+    "name": "Mermaid scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 150,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Seaweed",
+        "amount": 20,
+        "iconEmoji": "🌿",
+        "source": "Ocean Diving / Beach Scavenging"
+      },
+      {
+        "name": "Water essence",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Ocean Diving & Monsters"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65057",
+    "name": "Monster scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 455,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Monster essence",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Ocean Diving & Monsters"
+      },
+      {
+        "name": "Scrap",
+        "amount": 10,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Any_Wool",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65601",
+    "name": "Mummy scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 130,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 20,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Hay",
+        "amount": 10,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Silky fur",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65533",
+    "name": "Ocean Explorer chest",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 150,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Bronze ore",
+        "amount": 30,
+        "iconEmoji": "🟤",
+        "source": "Mining in Earth Shaft (Caverns 1-40)"
+      }
+    ],
+    "description": "Storage for all kinds of items. Can be placed around the farm, and hold up to 40 objects",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65532",
+    "name": "Ocean Explorer scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 90,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 20,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Fiber",
+        "amount": 20,
+        "iconEmoji": "🌿",
+        "source": "Cutting Weeds / Scythe"
+      },
+      {
+        "name": "Sap",
+        "amount": 10,
+        "iconEmoji": "💧",
+        "source": "Felling Trees / Branches"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects a 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65507",
+    "name": "Ocean guardian chest",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 150,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Trash",
+        "amount": 50,
+        "iconEmoji": "🗑️",
+        "source": "Ocean Diving / Trash Cans"
+      }
+    ],
+    "description": "Storage for all kinds of items. Can be placed around the farm, and hold up to 40 objects",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65508",
+    "name": "Ocean guardian scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 60,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Trash",
+        "amount": 30,
+        "iconEmoji": "🗑️",
+        "source": "Ocean Diving / Trash Cans"
+      },
+      {
+        "name": "Stone",
+        "amount": 20,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      },
+      {
+        "name": "Sap",
+        "amount": 10,
+        "iconEmoji": "💧",
+        "source": "Felling Trees / Branches"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects a 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65599",
+    "name": "Ondel-ondel handsome scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 320,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Wood",
+        "amount": 5,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Cotton cloth",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Larkspur",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65598",
+    "name": "Ondel-ondel pretty scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 315,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Wood",
+        "amount": 5,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Cotton cloth",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Jepun",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "ordinary_scarecrow",
+    "name": "Ordinary scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 90,
+    "unlock": {
+      "source": "Farming",
+      "level": 4,
+      "description": "Farming Mastery Level 4"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 20,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Fiber",
+        "amount": 20,
+        "iconEmoji": "🌿",
+        "source": "Cutting Weeds / Scythe"
+      },
+      {
+        "name": "Sap",
+        "amount": 10,
+        "iconEmoji": "💧",
+        "source": "Felling Trees / Branches"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65600",
+    "name": "Pino scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 130,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 20,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Hardwood",
+        "amount": 1,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Cricket",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65121",
+    "name": "Poci ghost scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 290,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Bone",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Cotton cloth",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Scrap",
+        "amount": 10,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65596",
+    "name": "Prankenstein scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 390,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 20,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Tough meat",
+        "amount": 5,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Silver ore",
+        "amount": 2,
+        "iconEmoji": "⚪",
+        "source": "Mining in Water Shaft (Caverns 1-40)"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65248",
+    "name": "Rope",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 200,
+    "unlock": {
+      "source": "Mining",
+      "level": 2,
+      "description": "Mining Mastery Level 2"
+    },
+    "materials": [
+      {
+        "name": "Stone",
+        "amount": 199,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      }
+    ],
+    "description": "Can be used to descend into the mine.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65354",
+    "name": "Scrap chest",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 110,
+    "unlock": {
+      "source": "Diving",
+      "level": 5,
+      "description": "Diving Mastery Level 5"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 30,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Stone",
+        "amount": 20,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      }
+    ],
+    "description": "Storage for all kinds of items. Can be placed around the farm, and hold up to 40 objects.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "solar_core",
+    "name": "Solar core",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 200,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Solar fragment",
+        "amount": 10,
+        "iconEmoji": "☀️",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "A magical concentration of sunlight, radiating warmth and joy to its bearer.",
+    "usageNotes": "",
+    "iconEmoji": "☀️"
+  },
+  {
+    "id": "sprinkler_1",
+    "name": "Sprinkler I",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 55,
+    "unlock": {
+      "source": "Farming",
+      "level": 2,
+      "description": "Farming Mastery Level 2"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 10,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Silver kelp",
+        "amount": 5,
+        "iconEmoji": "⚪",
+        "source": "Diving (20m–40m Silver Depth)"
+      },
+      {
+        "name": "Bronze kelp",
+        "amount": 5,
+        "iconEmoji": "🟤",
+        "source": "Diving (10m–20m Bronze Depth)"
+      }
+    ],
+    "description": "An automatic watering system. Waters a 3x3 area.",
+    "usageNotes": "",
+    "iconEmoji": "💦"
+  },
+  {
+    "id": "sprinkler_2",
+    "name": "Sprinkler II",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 485,
+    "unlock": {
+      "source": "Farming",
+      "level": 6,
+      "description": "Farming Mastery Level 6"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 10,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Silver kelp",
+        "amount": 7,
+        "iconEmoji": "⚪",
+        "source": "Diving (20m–40m Silver Depth)"
+      },
+      {
+        "name": "Gold kelp",
+        "amount": 7,
+        "iconEmoji": "🟡",
+        "source": "Diving (40m–50m Gold Depth)"
+      }
+    ],
+    "description": "An automatic watering system. Waters a 5x5 area.",
+    "usageNotes": "",
+    "iconEmoji": "💦"
+  },
+  {
+    "id": "sprinkler_3",
+    "name": "Sprinkler III",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 2180,
+    "unlock": {
+      "source": "Farming",
+      "level": 9,
+      "description": "Farming Mastery Level 9"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 10,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Gold kelp",
+        "amount": 10,
+        "iconEmoji": "🟡",
+        "source": "Diving (40m–50m Gold Depth)"
+      },
+      {
+        "name": "Osmium kelp",
+        "amount": 10,
+        "iconEmoji": "🟣",
+        "source": "Diving (50m+ Osmium Depth / Caves)"
+      },
+      {
+        "name": "Battery",
+        "amount": 1,
+        "iconEmoji": "🔋",
+        "source": "Solar Panel / Lightning Rod"
+      }
+    ],
+    "description": "An automatic watering system. Waters a 9x9 area.",
+    "usageNotes": "",
+    "iconEmoji": "💦"
+  },
+  {
+    "id": "stone_chest",
+    "name": "Stone chest",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 50,
+    "unlock": {
+      "source": "Mining",
+      "level": 5,
+      "description": "Mining Mastery Level 5"
+    },
+    "materials": [
+      {
+        "name": "Stone",
+        "amount": 50,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      }
+    ],
+    "description": "Storage for all kinds of items. Can be placed around the farm, and hold up to 40 objects.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65534",
+    "name": "Ultimate scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 1010,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Hardwood",
+        "amount": 10,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Battery",
+        "amount": 2,
+        "iconEmoji": "🔋",
+        "source": "Solar Panel / Lightning Rod"
+      },
+      {
+        "name": "Resin",
+        "amount": 1,
+        "iconEmoji": "🍯",
+        "source": "Tree Tapper on Pine Tree"
+      },
+      {
+        "name": "Osmium bar",
+        "amount": 1,
+        "iconEmoji": "🟣",
+        "source": "Smelting 5 Osmium Ore + 1 Coal"
+      }
+    ],
+    "description": "Place on the farm. Protects a 19x19 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65606",
+    "name": "Undead scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 140,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 20,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Hay",
+        "amount": 10,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Cursed fragment",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "item_65597",
+    "name": "Walnutcracker scarecrow",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 330,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Hardwood",
+        "amount": 5,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Hay",
+        "amount": 10,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Silver ore",
+        "amount": 2,
+        "iconEmoji": "⚪",
+        "source": "Mining in Water Shaft (Caverns 1-40)"
+      }
+    ],
+    "description": "Discourages crows from disturbing crops. Protects an 11x11 area.",
+    "usageNotes": "",
+    "iconEmoji": "🌾"
+  },
+  {
+    "id": "warp_sesajen",
+    "name": "Warp sesajen",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 45,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Generic_Flower",
+        "amount": 3,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "A warping device when used on teleport temple. One-time use.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "wooden_chest",
+    "name": "Wooden chest",
+    "category": "Farming & Sprinklers",
+    "yieldCount": 1,
+    "sellPrice": 100,
+    "unlock": {
+      "source": "Foraging",
+      "level": 5,
+      "description": "Foraging Mastery Level 5"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 50,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      }
+    ],
+    "description": "Storage for all kinds of items. Can be placed around the farm, and hold up to 40 objects",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "crawling_insect_scent",
+    "name": "Crawler trap",
+    "category": "Baits & Traps",
+    "yieldCount": 1,
+    "sellPrice": 95,
+    "unlock": {
+      "source": "Catching",
+      "level": 5,
+      "description": "Catching Mastery Level 5"
+    },
+    "materials": [
+      {
+        "name": "Silver bar",
+        "amount": 1,
+        "iconEmoji": "⚪",
+        "source": "Smelting 5 Silver Ore + 1 Coal"
+      },
+      {
+        "name": "Seaweed",
+        "amount": 5,
+        "iconEmoji": "🌿",
+        "source": "Ocean Diving / Beach Scavenging"
+      },
+      {
+        "name": "Wood",
+        "amount": 5,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      }
+    ],
+    "description": "A trap.",
+    "usageNotes": "",
+    "iconEmoji": "🦋"
+  },
+  {
+    "id": "flying_insect_scent",
+    "name": "Crawling critter scent",
+    "category": "Baits & Traps",
+    "yieldCount": 2,
+    "sellPrice": 13,
+    "unlock": {
+      "source": "Catching",
+      "level": 4,
+      "description": "Catching Mastery Level 4"
+    },
+    "materials": [
+      {
+        "name": "Seaweed",
+        "amount": 5,
+        "iconEmoji": "🌿",
+        "source": "Ocean Diving / Beach Scavenging"
+      },
+      {
+        "name": "Generic_Flower",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "A craftable scent that lowers awareness of crawling ocean critters. Can be consumed or attached to a trap.",
+    "usageNotes": "",
+    "iconEmoji": "🦋"
+  },
+  {
+    "id": "ocean_critter_trap",
+    "name": "Float trap",
+    "category": "Baits & Traps",
+    "yieldCount": 1,
+    "sellPrice": 265,
+    "unlock": {
+      "source": "Catching",
+      "level": 8,
+      "description": "Catching Mastery Level 8"
+    },
+    "materials": [
+      {
+        "name": "Gold bar",
+        "amount": 1,
+        "iconEmoji": "🟡",
+        "source": "Smelting 5 Gold Ore + 1 Coal"
+      },
+      {
+        "name": "Glass",
+        "amount": 1,
+        "iconEmoji": "🪟",
+        "source": "Kiln (Stone/Scrap) / Ocean Diving"
+      },
+      {
+        "name": "Any_DriedScavengables",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "A trap.",
+    "usageNotes": "",
+    "iconEmoji": "🦋"
+  },
+  {
+    "id": "item_64008",
+    "name": "Floating critter scent",
+    "category": "Baits & Traps",
+    "yieldCount": 2,
+    "sellPrice": 28,
+    "unlock": {
+      "source": "Catching",
+      "level": 9,
+      "description": "Catching Mastery Level 9"
+    },
+    "materials": [
+      {
+        "name": "Sea salt",
+        "amount": 2,
+        "iconEmoji": "🧂",
+        "source": "Ocean Diving Loot"
+      },
+      {
+        "name": "Generic_Flower",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "A craftable scent that lowers awareness of floating ocean critters. Can be consumed or attached to a trap.",
+    "usageNotes": "",
+    "iconEmoji": "🦋"
+  },
+  {
+    "id": "crawling_insect_trap",
+    "name": "Flying insect scent",
+    "category": "Baits & Traps",
+    "yieldCount": 2,
+    "sellPrice": 13,
+    "unlock": {
+      "source": "Catching",
+      "level": 7,
+      "description": "Catching Mastery Level 7"
+    },
+    "materials": [
+      {
+        "name": "Fiber",
+        "amount": 5,
+        "iconEmoji": "🌿",
+        "source": "Cutting Weeds / Scythe"
+      },
+      {
+        "name": "Generic_Flower",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "A craftable scent that lowers awareness of flying insects. Can be consumed or attached to a trap.",
+    "usageNotes": "",
+    "iconEmoji": "🦋"
+  },
+  {
+    "id": "flying_insect_trap",
+    "name": "Flying insect trap",
+    "category": "Baits & Traps",
+    "yieldCount": 1,
+    "sellPrice": 305,
+    "unlock": {
+      "source": "Catching",
+      "level": 6,
+      "description": "Catching Mastery Level 6"
+    },
+    "materials": [
+      {
+        "name": "Gold bar",
+        "amount": 1,
+        "iconEmoji": "🟡",
+        "source": "Smelting 5 Gold Ore + 1 Coal"
+      },
+      {
+        "name": "Glass",
+        "amount": 1,
+        "iconEmoji": "🪟",
+        "source": "Kiln (Stone/Scrap) / Ocean Diving"
+      },
+      {
+        "name": "Any_Honey",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "A trap.",
+    "usageNotes": "",
+    "iconEmoji": "🦋"
+  },
+  {
+    "id": "item_64005",
+    "name": "Ground insect scent ",
+    "category": "Baits & Traps",
+    "yieldCount": 2,
+    "sellPrice": 10,
+    "unlock": {
+      "source": "Catching",
+      "level": 1,
+      "description": "Catching Mastery Level 1"
+    },
+    "materials": [
+      {
+        "name": "Sap",
+        "amount": 5,
+        "iconEmoji": "💧",
+        "source": "Felling Trees / Branches"
+      },
+      {
+        "name": "Generic_Flower",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "A craftable scent that lowers awareness of ground insects. Can be consumed or attached to a trap.",
+    "usageNotes": "",
+    "iconEmoji": "🦋"
+  },
+  {
+    "id": "ground_insect_scent",
+    "name": "Ground insect trap",
+    "category": "Baits & Traps",
+    "yieldCount": 1,
+    "sellPrice": 95,
+    "unlock": {
+      "source": "Catching",
+      "level": 3,
+      "description": "Catching Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Silver bar",
+        "amount": 1,
+        "iconEmoji": "⚪",
+        "source": "Smelting 5 Silver Ore + 1 Coal"
+      },
+      {
+        "name": "Fiber",
+        "amount": 5,
+        "iconEmoji": "🌿",
+        "source": "Cutting Weeds / Scythe"
+      },
+      {
+        "name": "Wood",
+        "amount": 5,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      }
+    ],
+    "description": "A trap.",
+    "usageNotes": "",
+    "iconEmoji": "🦋"
+  },
+  {
+    "id": "large_fish_bait",
+    "name": "Large fish bait",
+    "category": "Baits & Traps",
+    "yieldCount": 2,
+    "sellPrice": 20,
+    "unlock": {
+      "source": "Fishing",
+      "level": 8,
+      "description": "Fishing Mastery Level 8"
+    },
+    "materials": [
+      {
+        "name": "Seaweed",
+        "amount": 2,
+        "iconEmoji": "🌿",
+        "source": "Ocean Diving / Beach Scavenging"
+      },
+      {
+        "name": "Generic_SmallFish",
+        "amount": 1,
+        "iconEmoji": "🐟",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Needs to be attached to a fishing rod.",
+    "usageNotes": "",
+    "iconEmoji": "🐟"
+  },
+  {
+    "id": "medium_fish_bait",
+    "name": "Medium fish bait",
+    "category": "Baits & Traps",
+    "yieldCount": 2,
+    "sellPrice": 12,
+    "unlock": {
+      "source": "Fishing",
+      "level": 4,
+      "description": "Fishing Mastery Level 4"
+    },
+    "materials": [
+      {
+        "name": "Seaweed",
+        "amount": 2,
+        "iconEmoji": "🌿",
+        "source": "Ocean Diving / Beach Scavenging"
+      },
+      {
+        "name": "Generic_Insect",
+        "amount": 1,
+        "iconEmoji": "🦋",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Needs to be attached to a fishing rod.",
+    "usageNotes": "",
+    "iconEmoji": "🐟"
+  },
+  {
+    "id": "item_64010",
+    "name": "Monster lure scent",
+    "category": "Baits & Traps",
+    "yieldCount": 2,
+    "sellPrice": 35,
+    "unlock": {
+      "source": "Combat",
+      "level": 6,
+      "description": "Combat Mastery Level 6"
+    },
+    "materials": [
+      {
+        "name": "Any_MonsterEssence",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      },
+      {
+        "name": "Any_Egg",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "The scent lures monsters to attack the wearer.",
+    "usageNotes": "",
+    "iconEmoji": "🦋"
+  },
+  {
+    "id": "item_64012",
+    "name": "Monster lure scent II",
+    "category": "Baits & Traps",
+    "yieldCount": 2,
+    "sellPrice": 35,
+    "unlock": {
+      "source": "Combat",
+      "level": 9,
+      "description": "Combat Mastery Level 9"
+    },
+    "materials": [
+      {
+        "name": "Any_MonsterEssence",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      },
+      {
+        "name": "Any_Honey",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Increase spawn scent",
+    "usageNotes": "",
+    "iconEmoji": "🦋"
+  },
+  {
+    "id": "item_64011",
+    "name": "Monster scent",
+    "category": "Baits & Traps",
+    "yieldCount": 2,
+    "sellPrice": 18,
+    "unlock": {
+      "source": "Combat",
+      "level": 4,
+      "description": "Combat Mastery Level 4"
+    },
+    "materials": [
+      {
+        "name": "Fiber",
+        "amount": 5,
+        "iconEmoji": "🌿",
+        "source": "Cutting Weeds / Scythe"
+      },
+      {
+        "name": "Any_MonsterEssence",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Decrease aggro scent",
+    "usageNotes": "",
+    "iconEmoji": "🦋"
+  },
+  {
+    "id": "item_64013",
+    "name": "Monster scent II",
+    "category": "Baits & Traps",
+    "yieldCount": 2,
+    "sellPrice": 25,
+    "unlock": {
+      "source": "Combat",
+      "level": 7,
+      "description": "Combat Mastery Level 7"
+    },
+    "materials": [
+      {
+        "name": "Cursed fragment",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Any_MonsterEssence",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Decrease spawn scent",
+    "usageNotes": "",
+    "iconEmoji": "🦋"
+  },
+  {
+    "id": "item_65357",
+    "name": "Small fish bait",
+    "category": "Baits & Traps",
+    "yieldCount": 2,
+    "sellPrice": 5,
+    "unlock": {
+      "source": "Fishing",
+      "level": 1,
+      "description": "Fishing Mastery Level 1"
+    },
+    "materials": [
+      {
+        "name": "Bronze kelp",
+        "amount": 1,
+        "iconEmoji": "🟤",
+        "source": "Diving (10m–20m Bronze Depth)"
+      },
+      {
+        "name": "Seaweed",
+        "amount": 2,
+        "iconEmoji": "🌿",
+        "source": "Ocean Diving / Beach Scavenging"
+      }
+    ],
+    "description": "Needs to be attached to a fishing rod.",
+    "usageNotes": "",
+    "iconEmoji": "🐟"
+  },
+  {
+    "id": "explosive_1",
+    "name": "Explosive I",
+    "category": "Bombs & Mining",
+    "yieldCount": 1,
+    "sellPrice": 14,
+    "unlock": {
+      "source": "Mining",
+      "level": 1,
+      "description": "Mining Mastery Level 1"
+    },
+    "materials": [
+      {
+        "name": "Bronze ore",
+        "amount": 2,
+        "iconEmoji": "🟤",
+        "source": "Mining in Earth Shaft (Caverns 1-40)"
+      },
+      {
+        "name": "Coal",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Generates a small explosion on land. Can not be used underwater.",
+    "usageNotes": "",
+    "iconEmoji": "💣"
+  },
+  {
+    "id": "explosive_2",
+    "name": "Explosive II",
+    "category": "Bombs & Mining",
+    "yieldCount": 1,
+    "sellPrice": 53,
+    "unlock": {
+      "source": "Mining",
+      "level": 6,
+      "description": "Mining Mastery Level 6"
+    },
+    "materials": [
+      {
+        "name": "Silver ore",
+        "amount": 3,
+        "iconEmoji": "⚪",
+        "source": "Mining in Water Shaft (Caverns 1-40)"
+      },
+      {
+        "name": "Coal",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Generates an explosion on land. Can not be used underwater.",
+    "usageNotes": "",
+    "iconEmoji": "💣"
+  },
+  {
+    "id": "explosive_3",
+    "name": "Explosive III",
+    "category": "Bombs & Mining",
+    "yieldCount": 1,
+    "sellPrice": 612,
+    "unlock": {
+      "source": "Mining",
+      "level": 9,
+      "description": "Mining Mastery Level 9"
+    },
+    "materials": [
+      {
+        "name": "Osmium ore",
+        "amount": 4,
+        "iconEmoji": "🟣",
+        "source": "Mining in Fire Shaft (Caverns 1-40)"
+      },
+      {
+        "name": "Coal",
+        "amount": 3,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Generates a huge explosion on land. Can not be used underwater.",
+    "usageNotes": "",
+    "iconEmoji": "💣"
+  },
+  {
+    "id": "item_63035",
+    "name": "Vortexanator I",
+    "category": "Bombs & Mining",
+    "yieldCount": 1,
+    "sellPrice": 20,
+    "unlock": {
+      "source": "Diving",
+      "level": 1,
+      "description": "Diving Mastery Level 1"
+    },
+    "materials": [
+      {
+        "name": "Bronze kelp",
+        "amount": 2,
+        "iconEmoji": "🟤",
+        "source": "Diving (10m–20m Bronze Depth)"
+      },
+      {
+        "name": "Glass",
+        "amount": 1,
+        "iconEmoji": "🪟",
+        "source": "Kiln (Stone/Scrap) / Ocean Diving"
+      }
+    ],
+    "description": "Creates a small vortex underwater, perfect for clearing out trash. When used in land, it will collect crops.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_63036",
+    "name": "Vortexanator II",
+    "category": "Bombs & Mining",
+    "yieldCount": 1,
+    "sellPrice": 125,
+    "unlock": {
+      "source": "Diving",
+      "level": 6,
+      "description": "Diving Mastery Level 6"
+    },
+    "materials": [
+      {
+        "name": "Silver kelp",
+        "amount": 3,
+        "iconEmoji": "⚪",
+        "source": "Diving (20m–40m Silver Depth)"
+      },
+      {
+        "name": "Glass",
+        "amount": 2,
+        "iconEmoji": "🪟",
+        "source": "Kiln (Stone/Scrap) / Ocean Diving"
+      }
+    ],
+    "description": "Creates a vortex underwater, perfect for clearing out trash. When used in land, it will collect crops.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_63037",
+    "name": "Vortexanator III",
+    "category": "Bombs & Mining",
+    "yieldCount": 1,
+    "sellPrice": 1230,
+    "unlock": {
+      "source": "Diving",
+      "level": 9,
+      "description": "Diving Mastery Level 9"
+    },
+    "materials": [
+      {
+        "name": "Osmium kelp",
+        "amount": 4,
+        "iconEmoji": "🟣",
+        "source": "Diving (50m+ Osmium Depth / Caves)"
+      },
+      {
+        "name": "Glass",
+        "amount": 3,
+        "iconEmoji": "🪟",
+        "source": "Kiln (Stone/Scrap) / Ocean Diving"
+      }
+    ],
+    "description": "Creates a huge vortex underwater, perfect for clearing out trash. When used in land, it will collect crops.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "weather_conch",
+    "name": "Weather conch",
+    "category": "Ocean & Diving",
+    "yieldCount": 1,
+    "sellPrice": 2000,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Solar core",
+        "amount": 1,
+        "iconEmoji": "☀️",
+        "source": "Crafting / Altar Offering"
+      },
+      {
+        "name": "Wind essence",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Ocean Diving & Monsters"
+      },
+      {
+        "name": "Water essence",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Ocean Diving & Monsters"
+      },
+      {
+        "name": "Any_SeaScavenge",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "This mystical conch unlocks the ability to change the weather, but be mindful—it comes at a cost.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "candied_tree_seed",
+    "name": "Candied tree seed",
+    "category": "Consumables & Survival",
+    "yieldCount": 1,
+    "sellPrice": 20,
+    "unlock": {
+      "source": "Foraging",
+      "level": 1,
+      "description": "Foraging Mastery Level 1"
+    },
+    "materials": [
+      {
+        "name": "Sap",
+        "amount": 1,
+        "iconEmoji": "💧",
+        "source": "Felling Trees / Branches"
+      },
+      {
+        "name": "Generic_TreeSeed",
+        "amount": 3,
+        "iconEmoji": "🌰",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "A craftable snack to satisfy thrifty foragers.",
+    "usageNotes": "",
+    "iconEmoji": "🌰"
+  },
+  {
+    "id": "item_65721",
+    "name": "Coral fence",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 60,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Any_BeachScavenge",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65722",
+    "name": "Coral gate",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 270,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Any_BeachScavenge",
+        "amount": 5,
+        "iconEmoji": "📦",
+        "source": "Foraging / Farming Harvest"
+      }
+    ],
+    "description": "Must be installed between 2 fences.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65348",
+    "name": "Hay fence",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 5,
+    "unlock": {
+      "source": "Ranching",
+      "level": 3,
+      "description": "Ranching Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Hay",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "A fence made of hay.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65346",
+    "name": "Hay floor tile",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 10,
+    "unlock": {
+      "source": "Ranching",
+      "level": 3,
+      "description": "Ranching Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Hay",
+        "amount": 2,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Place on the ground.",
+    "usageNotes": "",
+    "iconEmoji": "🧱"
+  },
+  {
+    "id": "item_65349",
+    "name": "Hay gate",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 25,
+    "unlock": {
+      "source": "Ranching",
+      "level": 3,
+      "description": "Ranching Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Hay",
+        "amount": 5,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Must be installed between 2 fences.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65344",
+    "name": "Hay path",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 5,
+    "unlock": {
+      "source": "Ranching",
+      "level": 3,
+      "description": "Ranching Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Hay",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Place on the ground.",
+    "usageNotes": "",
+    "iconEmoji": "🧱"
+  },
+  {
+    "id": "item_65112",
+    "name": "Hedge fence",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 10,
+    "unlock": {
+      "source": "Foraging",
+      "level": 7,
+      "description": "Foraging Mastery Level 7"
+    },
+    "materials": [
+      {
+        "name": "Fiber",
+        "amount": 1,
+        "iconEmoji": "🌿",
+        "source": "Cutting Weeds / Scythe"
+      }
+    ],
+    "description": "A fence made of living bushes.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65114",
+    "name": "Hedge gate",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 30,
+    "unlock": {
+      "source": "Foraging",
+      "level": 7,
+      "description": "Foraging Mastery Level 7"
+    },
+    "materials": [
+      {
+        "name": "Fiber",
+        "amount": 5,
+        "iconEmoji": "🌿",
+        "source": "Cutting Weeds / Scythe"
+      },
+      {
+        "name": "Compost",
+        "amount": 1,
+        "iconEmoji": "🍂",
+        "source": "Compost Bin / Processing Kelp"
+      }
+    ],
+    "description": "Must be installed between 2 fences.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65723",
+    "name": "Kelp fence",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 60,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Seaweed",
+        "amount": 1,
+        "iconEmoji": "🌿",
+        "source": "Ocean Diving / Beach Scavenging"
+      },
+      {
+        "name": "Stone",
+        "amount": 1,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65318",
+    "name": "Makeshift fence",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 3,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 1,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Trash",
+        "amount": 1,
+        "iconEmoji": "🗑️",
+        "source": "Ocean Diving / Trash Cans"
+      }
+    ],
+    "description": "A fence made of wood and trash",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65361",
+    "name": "Makeshift floor tile",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 4,
+    "unlock": {
+      "source": "Farming",
+      "level": 3,
+      "description": "Farming Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 1,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Trash",
+        "amount": 2,
+        "iconEmoji": "🗑️",
+        "source": "Ocean Diving / Trash Cans"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "🧱"
+  },
+  {
+    "id": "item_65319",
+    "name": "Makeshift gate",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 9,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 2,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Trash",
+        "amount": 5,
+        "iconEmoji": "🗑️",
+        "source": "Ocean Diving / Trash Cans"
+      }
+    ],
+    "description": "Must be installed between 2 fences.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65320",
+    "name": "Makeshift path",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 3,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Trash",
+        "amount": 1,
+        "iconEmoji": "🗑️",
+        "source": "Ocean Diving / Trash Cans"
+      }
+    ],
+    "description": "Place on the ground.",
+    "usageNotes": "",
+    "iconEmoji": "🧱"
+  },
+  {
+    "id": "item_65725",
+    "name": "Reef fence",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 60,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 1,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Bone",
+        "amount": 1,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65113",
+    "name": "Scrap fence",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 3,
+    "unlock": {
+      "source": "Diving",
+      "level": 3,
+      "description": "Diving Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 1,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      }
+    ],
+    "description": "A fence made out of scrap.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65127",
+    "name": "Scrap floor tile",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 6,
+    "unlock": {
+      "source": "Diving",
+      "level": 3,
+      "description": "Diving Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 2,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      }
+    ],
+    "description": "Place on the ground.",
+    "usageNotes": "",
+    "iconEmoji": "🧱"
+  },
+  {
+    "id": "item_65119",
+    "name": "Scrap gate",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 15,
+    "unlock": {
+      "source": "Diving",
+      "level": 3,
+      "description": "Diving Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 5,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      }
+    ],
+    "description": "Must be installed between 2 fences.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65353",
+    "name": "Scrap path",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 3,
+    "unlock": {
+      "source": "Diving",
+      "level": 3,
+      "description": "Diving Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 1,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      }
+    ],
+    "description": "Place on the ground.",
+    "usageNotes": "",
+    "iconEmoji": "🧱"
+  },
+  {
+    "id": "item_65011",
+    "name": "Stone fence",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 1,
+    "unlock": {
+      "source": "Mining",
+      "level": 3,
+      "description": "Mining Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Stone",
+        "amount": 1,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      }
+    ],
+    "description": "Made of stone. Sturdier than a wood fence.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65098",
+    "name": "Stone floor tile",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 2,
+    "unlock": {
+      "source": "Mining",
+      "level": 3,
+      "description": "Mining Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Stone",
+        "amount": 2,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      }
+    ],
+    "description": "Place on the ground.",
+    "usageNotes": "",
+    "iconEmoji": "🧱"
+  },
+  {
+    "id": "item_65089",
+    "name": "Stone gate",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 5,
+    "unlock": {
+      "source": "Mining",
+      "level": 3,
+      "description": "Mining Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Stone",
+        "amount": 5,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      }
+    ],
+    "description": "Made of stone. Must be installed between 2 fences.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65085",
+    "name": "Stone path",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 1,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Stone",
+        "amount": 1,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      }
+    ],
+    "description": "Place on the ground.",
+    "usageNotes": "",
+    "iconEmoji": "🧱"
+  },
+  {
+    "id": "item_65097",
+    "name": "Wood floor tile",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 4,
+    "unlock": {
+      "source": "Foraging",
+      "level": 3,
+      "description": "Foraging Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 2,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      }
+    ],
+    "description": "Place on the ground.",
+    "usageNotes": "",
+    "iconEmoji": "🧱"
+  },
+  {
+    "id": "item_65084",
+    "name": "Wood path",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 2,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 1,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      }
+    ],
+    "description": "Place on the ground.",
+    "usageNotes": "",
+    "iconEmoji": "🧱"
+  },
+  {
+    "id": "item_65010",
+    "name": "Wooden fence",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 2,
+    "unlock": {
+      "source": "Foraging",
+      "level": 3,
+      "description": "Foraging Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 1,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      }
+    ],
+    "description": "A durable fence.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65009",
+    "name": "Wooden gate",
+    "category": "Fences & Paths",
+    "yieldCount": 1,
+    "sellPrice": 10,
+    "unlock": {
+      "source": "Foraging",
+      "level": 3,
+      "description": "Foraging Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 5,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      }
+    ],
+    "description": "Made of wood. Must be installed between 2 fences.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65345",
+    "name": "Hay arch",
+    "category": "Decor & Lighting",
+    "yieldCount": 1,
+    "sellPrice": 50,
+    "unlock": {
+      "source": "Ranching",
+      "level": 5,
+      "description": "Ranching Mastery Level 5"
+    },
+    "materials": [
+      {
+        "name": "Hay",
+        "amount": 10,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65350",
+    "name": "Hay sign",
+    "category": "Decor & Lighting",
+    "yieldCount": 1,
+    "sellPrice": 29,
+    "unlock": {
+      "source": "Ranching",
+      "level": 4,
+      "description": "Ranching Mastery Level 4"
+    },
+    "materials": [
+      {
+        "name": "Hay",
+        "amount": 5,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      },
+      {
+        "name": "Wood",
+        "amount": 2,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      }
+    ],
+    "description": "Made from hay. Use an item to set the display.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65724",
+    "name": "Kelp arch",
+    "category": "Decor & Lighting",
+    "yieldCount": 1,
+    "sellPrice": 270,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Seaweed",
+        "amount": 10,
+        "iconEmoji": "🌿",
+        "source": "Ocean Diving / Beach Scavenging"
+      },
+      {
+        "name": "Stone",
+        "amount": 5,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "🌿"
+  },
+  {
+    "id": "item_65360",
+    "name": "Makeshift arch",
+    "category": "Decor & Lighting",
+    "yieldCount": 1,
+    "sellPrice": 12,
+    "unlock": {
+      "source": "Farming",
+      "level": 3,
+      "description": "Farming Mastery Level 3"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 1,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Trash",
+        "amount": 10,
+        "iconEmoji": "🗑️",
+        "source": "Ocean Diving / Trash Cans"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65342",
+    "name": "Makeshift sign",
+    "category": "Decor & Lighting",
+    "yieldCount": 1,
+    "sellPrice": 9,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 2,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      },
+      {
+        "name": "Trash",
+        "amount": 5,
+        "iconEmoji": "🗑️",
+        "source": "Ocean Diving / Trash Cans"
+      }
+    ],
+    "description": "Made from wood and trash. Use an item to set the display.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65726",
+    "name": "Reef arch",
+    "category": "Decor & Lighting",
+    "yieldCount": 1,
+    "sellPrice": 270,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 10,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      },
+      {
+        "name": "Bone",
+        "amount": 5,
+        "iconEmoji": "📦",
+        "source": "Gathering & Crafting"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "item_65351",
+    "name": "Scrap arch",
+    "category": "Decor & Lighting",
+    "yieldCount": 1,
+    "sellPrice": 30,
+    "unlock": {
+      "source": "Diving",
+      "level": 5,
+      "description": "Diving Mastery Level 5"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 10,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "⚙️"
+  },
+  {
+    "id": "item_65352",
+    "name": "Scrap sign",
+    "category": "Decor & Lighting",
+    "yieldCount": 1,
+    "sellPrice": 15,
+    "unlock": {
+      "source": "Diving",
+      "level": 4,
+      "description": "Diving Mastery Level 4"
+    },
+    "materials": [
+      {
+        "name": "Scrap",
+        "amount": 5,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      }
+    ],
+    "description": "Made from scrap. Use an item to set the display.",
+    "usageNotes": "",
+    "iconEmoji": "⚙️"
+  },
+  {
+    "id": "item_65356",
+    "name": "Stone arch",
+    "category": "Decor & Lighting",
+    "yieldCount": 1,
+    "sellPrice": 10,
+    "unlock": {
+      "source": "Mining",
+      "level": 5,
+      "description": "Mining Mastery Level 5"
+    },
+    "materials": [
+      {
+        "name": "Stone",
+        "amount": 10,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "🪨"
+  },
+  {
+    "id": "item_65029",
+    "name": "Stone sign",
+    "category": "Decor & Lighting",
+    "yieldCount": 1,
+    "sellPrice": 5,
+    "unlock": {
+      "source": "Mining",
+      "level": 2,
+      "description": "Mining Mastery Level 2"
+    },
+    "materials": [
+      {
+        "name": "Stone",
+        "amount": 5,
+        "iconEmoji": "🪨",
+        "source": "Mining Rocks / Caverns"
+      }
+    ],
+    "description": "Made from stone. Use an item to set the display.",
+    "usageNotes": "",
+    "iconEmoji": "🪨"
+  },
+  {
+    "id": "item_65527",
+    "name": "Sturdy computer",
+    "category": "Decor & Lighting",
+    "yieldCount": 1,
+    "sellPrice": 2135,
+    "unlock": {
+      "source": "Default",
+      "description": "Available from Start"
+    },
+    "materials": [
+      {
+        "name": "Battery",
+        "amount": 10,
+        "iconEmoji": "🔋",
+        "source": "Solar Panel / Lightning Rod"
+      },
+      {
+        "name": "Silver bar",
+        "amount": 5,
+        "iconEmoji": "⚪",
+        "source": "Smelting 5 Silver Ore + 1 Coal"
+      },
+      {
+        "name": "Bronze ore",
+        "amount": 10,
+        "iconEmoji": "🟤",
+        "source": "Mining in Earth Shaft (Caverns 1-40)"
+      },
+      {
+        "name": "Scrap",
+        "amount": 70,
+        "iconEmoji": "⚙️",
+        "source": "Recycling Ocean Trash"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "📦"
+  },
+  {
+    "id": "beehive",
+    "name": "Wood sign",
+    "category": "Decor & Lighting",
+    "yieldCount": 1,
+    "sellPrice": 10,
+    "unlock": {
+      "source": "Foraging",
+      "level": 4,
+      "description": "Foraging Mastery Level 4"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 5,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      }
+    ],
+    "description": "Made from renewable wood. Use an item to set the display.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  },
+  {
+    "id": "item_65362",
+    "name": "Wooden arch",
+    "category": "Decor & Lighting",
+    "yieldCount": 1,
+    "sellPrice": 20,
+    "unlock": {
+      "source": "Foraging",
+      "level": 5,
+      "description": "Foraging Mastery Level 5"
+    },
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 10,
+        "iconEmoji": "🪵",
+        "source": "Chopping Trees / Fallen Branches"
+      }
+    ],
+    "description": "Place on the farm.",
+    "usageNotes": "",
+    "iconEmoji": "🪵"
+  }
+]

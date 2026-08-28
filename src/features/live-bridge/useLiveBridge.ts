@@ -69,18 +69,31 @@ export function useLiveBridge(options: UseLiveBridgeOptions = {}) {
       }
     };
 
+    let consecutiveErrors = 0;
     const pollFallback = async () => {
       try {
         const res = await fetch('/api/live-state');
         if (res.ok) {
+          consecutiveErrors = 0;
           const data: LiveGameState = await res.json();
           setLiveState(data);
           if (onUpdateRef.current) {
             onUpdateRef.current(data);
           }
+        } else {
+          consecutiveErrors++;
+          if (consecutiveErrors >= 3 && fallbackInterval) {
+            clearInterval(fallbackInterval);
+            fallbackInterval = null;
+          }
         }
       } catch {
+        consecutiveErrors++;
         setLiveState(prev => prev.connected ? { ...prev, connected: false } : prev);
+        if (consecutiveErrors >= 3 && fallbackInterval) {
+          clearInterval(fallbackInterval);
+          fallbackInterval = null;
+        }
       }
     };
 

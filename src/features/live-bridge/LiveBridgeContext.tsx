@@ -66,15 +66,28 @@ export const LiveBridgeProvider: React.FC<{ children: React.ReactNode }> = ({ ch
       }
     };
 
+    let consecutiveErrors = 0;
     const pollFallback = async () => {
       try {
         const res = await fetch('/api/live-state');
         if (res.ok) {
+          consecutiveErrors = 0;
           const data: LiveGameState = await res.json();
           setLiveState(data);
+        } else {
+          consecutiveErrors++;
+          if (consecutiveErrors >= 3 && fallbackInterval) {
+            clearInterval(fallbackInterval);
+            fallbackInterval = null;
+          }
         }
       } catch {
+        consecutiveErrors++;
         setLiveState(prev => prev.connected ? { ...prev, connected: false } : prev);
+        if (consecutiveErrors >= 3 && fallbackInterval) {
+          clearInterval(fallbackInterval);
+          fallbackInterval = null;
+        }
       }
     };
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useFishing } from '../../context/FishingContext';
+import { useLanguage } from '../../i18n/LanguageContext';
 import { parseCoralIslandSaveFile, SaveCompletionsResult } from '../../utils/saveFileParser';
 import {
   X,
@@ -17,6 +18,7 @@ interface SaveImportModalProps {
 
 export const SaveImportModal: React.FC<SaveImportModalProps> = ({ isOpen, onClose }) => {
   const { setUserProgress, setGameState } = useFishing();
+  const { t } = useLanguage();
 
   const [dragActive, setDragActive] = useState(false);
   const [importResult, setImportResult] = useState<SaveCompletionsResult | null>(null);
@@ -114,8 +116,8 @@ export const SaveImportModal: React.FC<SaveImportModalProps> = ({ isOpen, onClos
           <div className="flex items-center gap-2.5">
             <FolderOpen className="w-5 h-5 text-amber-400" />
             <div>
-              <h2 id="save-import-modal-title" className="text-lg font-bold">Import Coral Island Save File</h2>
-              <p className="text-xs text-[#c4b5a0]">Load in-game date, weather & fishing progress</p>
+              <h2 id="save-import-modal-title" className="text-lg font-bold">{t('save_import_main_title')}</h2>
+              <p className="text-xs text-[#c4b5a0]">{t('save_import_main_subtitle')}</p>
             </div>
           </div>
           <button
@@ -166,7 +168,7 @@ export const SaveImportModal: React.FC<SaveImportModalProps> = ({ isOpen, onClos
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm">
                   <CheckCircle2 className="w-4 h-4" />
-                  <span>Save Loaded Successfully</span>
+                  <span>{t('save_import_success')}</span>
                 </div>
                 {importedFileName && (
                   <span className="text-[10px] text-emerald-300 font-bold bg-emerald-900/60 px-2 py-0.5 rounded-full">
@@ -178,16 +180,16 @@ export const SaveImportModal: React.FC<SaveImportModalProps> = ({ isOpen, onClos
               {importResult.gameDate && (
                 <div className="flex flex-wrap gap-1.5 text-[11px]">
                   <span className="cg-pill px-2.5 py-0.5 text-white">
-                    📅 {importResult.gameDate.season.toUpperCase()} Day {importResult.gameDate.day}, Year {importResult.gameDate.year}
+                    📅 {t(`season_${importResult.gameDate.season}` as any, importResult.gameDate.season)} {t('day_label')} {importResult.gameDate.day}, Year {importResult.gameDate.year}
                   </span>
                   {importResult.weather && (
                     <span className="cg-pill px-2.5 py-0.5 text-white">
-                      🌦️ {importResult.weather.toUpperCase()}
+                      🌦️ {t(`weather_${importResult.weather}` as any, importResult.weather)}
                     </span>
                   )}
                   {importResult.profile?.fishingLevel !== undefined && (
                     <span className="cg-pill px-2.5 py-0.5 text-white">
-                      🎣 Fishing Lvl {importResult.profile.fishingLevel}
+                      🎣 {t('level_prefix')} {importResult.profile.fishingLevel}
                     </span>
                   )}
                 </div>
@@ -195,15 +197,15 @@ export const SaveImportModal: React.FC<SaveImportModalProps> = ({ isOpen, onClos
 
               <div className="grid grid-cols-3 gap-2 text-center text-[11px]">
                 <div className="bg-black/30 p-2 rounded-xl border border-white/10">
-                  <span className="text-[#c4b5a0] block text-[9px] uppercase">Caught Fish</span>
+                  <span className="text-[#c4b5a0] block text-[9px] uppercase">{t('save_import_caught')}</span>
                   <strong className="text-white text-sm">{importResult.stats.totalFishCaught} / {importResult.stats.catalogTotal}</strong>
                 </div>
                 <div className="bg-black/30 p-2 rounded-xl border border-white/10">
-                  <span className="text-[#c4b5a0] block text-[9px] uppercase">Museum Donated</span>
+                  <span className="text-[#c4b5a0] block text-[9px] uppercase">{t('save_import_museum')}</span>
                   <strong className="text-white text-sm">{importResult.stats.totalFishDonated} / {importResult.stats.catalogTotal}</strong>
                 </div>
                 <div className="bg-black/30 p-2 rounded-xl border border-white/10">
-                  <span className="text-[#c4b5a0] block text-[9px] uppercase">Temple Altars</span>
+                  <span className="text-[#c4b5a0] block text-[9px] uppercase">{t('save_import_altars')}</span>
                   <strong className="text-white text-sm">{importResult.stats.totalFishOffered}</strong>
                 </div>
               </div>
@@ -222,7 +224,7 @@ export const SaveImportModal: React.FC<SaveImportModalProps> = ({ isOpen, onClos
           <div className="bg-black/30 p-3.5 rounded-2xl border border-white/10 space-y-1.5 text-[11px] text-[#c4b5a0]">
             <div className="flex items-center gap-1.5 font-bold text-white">
               <FileText className="w-3.5 h-3.5" />
-              <span>Where is my Coral Island save file?</span>
+              <span>{t('save_import_where_file')}</span>
             </div>
             <p>
               Press <kbd className="bg-white/10 px-1 py-0.5 rounded text-white font-mono">Win + R</kbd> and paste:

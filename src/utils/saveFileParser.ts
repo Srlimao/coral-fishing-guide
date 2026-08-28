@@ -209,11 +209,7 @@ export function parseCoralIslandSaveFile(fileBuffer: ArrayBuffer): SaveCompletio
     const rawBytes = new Uint8Array(fileBuffer);
     const decompressedBytes = decompressUe4SaveGame(rawBytes);
 
-    let decodedText = '';
-    for (let i = 0; i < decompressedBytes.length; i += 65536) {
-      const chunk = decompressedBytes.subarray(i, Math.min(i + 65536, decompressedBytes.length));
-      decodedText += String.fromCharCode.apply(null, Array.from(chunk));
-    }
+    const decodedText = new TextDecoder('latin1').decode(decompressedBytes);
 
     const caughtFish: Record<string, boolean> = {};
     const donatedMuseum: Record<string, boolean> = {};

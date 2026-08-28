@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLanguage } from '../../i18n/LanguageContext';
 import { CraftingRecipe } from './types';
 import { CraftingCard } from './CraftingCard';
 import { Sparkles } from 'lucide-react';
@@ -16,11 +17,13 @@ export const CraftingCatalogTab: React.FC<CraftingCatalogTabProps> = ({
   onAddToPlanner,
   plannedRecipeIds
 }) => {
+  const { t } = useLanguage();
+
   if (recipes.length === 0) {
     return (
       <div className="bg-[#182228]/80 border border-white/10 rounded-2xl p-12 text-center space-y-3">
         <div className="text-4xl">🔍</div>
-        <h3 className="text-base font-bold text-white">No Crafting Recipes Found</h3>
+        <h3 className="text-base font-bold text-white">{t('wiki_empty_crafting')}</h3>
         <p className="text-xs text-[#c4b5a0] max-w-md mx-auto">
           No craftable items matched your active search query and filter criteria. Try clearing search or selecting "All Categories".
         </p>
@@ -34,9 +37,9 @@ export const CraftingCatalogTab: React.FC<CraftingCatalogTabProps> = ({
       <div className="flex items-center justify-between text-xs text-[#c4b5a0] px-1">
         <div className="flex items-center gap-1.5 font-bold">
           <Sparkles className="w-4 h-4 text-cyan-400" />
-          <span>Showing <strong className="text-white">{recipes.length}</strong> Crafting Recipes</span>
+          <span>{t('wiki_showing_count')} <strong className="text-white">{recipes.length}</strong> {t('wiki_tab_crafting')}</span>
         </div>
-        <span>Click any card for full recipe & material breakdown</span>
+        <span>{t('wiki_crafting_subtitle')}</span>
       </div>
 
       {/* Grid */}

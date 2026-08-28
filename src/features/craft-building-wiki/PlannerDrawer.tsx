@@ -1,6 +1,7 @@
 import React from 'react';
 import { PlannerItem, AggregatedMaterial } from './types';
 import { X, Trash2, Plus, Minus, Check, Copy, Coins, Boxes, CheckCircle2 } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 interface PlannerDrawerProps {
   isOpen: boolean;
@@ -29,6 +30,8 @@ export const PlannerDrawer: React.FC<PlannerDrawerProps> = ({
   onCopyShoppingList,
   copiedNotification
 }) => {
+  const { getItemName, getBuildingName, t } = useLanguage();
+
   if (!isOpen) return null;
 
   return (
@@ -42,7 +45,9 @@ export const PlannerDrawer: React.FC<PlannerDrawerProps> = ({
             <div className="flex items-center gap-2">
               <Boxes className="w-5 h-5 text-cyan-400" />
               <div>
-                <h2 className="text-base font-bold text-white leading-tight">Project Planner</h2>
+                <h2 className="text-base font-bold text-white leading-tight">
+                  {t('wiki_planner_title', 'Project Planner')}
+                </h2>
                 <span className="text-[11px] text-[#c4b5a0]">
                   {plannerItems.length} {plannerItems.length === 1 ? 'Project' : 'Projects'} Planned
                 </span>
@@ -53,7 +58,7 @@ export const PlannerDrawer: React.FC<PlannerDrawerProps> = ({
               {plannerItems.length > 0 && (
                 <button
                   onClick={onClearPlanner}
-                  title="Clear All Projects"
+                  title={t('wiki_planner_clear', 'Clear All')}
                   className="p-1.5 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/20 transition-colors"
                 >
                   <Trash2 className="w-4 h-4" />
@@ -74,7 +79,7 @@ export const PlannerDrawer: React.FC<PlannerDrawerProps> = ({
             <div className="grid grid-cols-2 gap-2">
               <div className="bg-[#13181b] p-2.5 rounded-xl border border-white/5">
                 <span className="text-[10px] text-[#c4b5a0] uppercase font-bold flex items-center gap-1">
-                  <Coins className="w-3 h-3 text-amber-400" /> Total Gold
+                  <Coins className="w-3 h-3 text-amber-400" /> {t('wiki_total_gold', 'Total Gold Cost')}
                 </span>
                 <span className="text-sm font-black text-amber-300">
                   {totalGoldCost.toLocaleString()}g
@@ -83,7 +88,7 @@ export const PlannerDrawer: React.FC<PlannerDrawerProps> = ({
 
               <div className="bg-[#13181b] p-2.5 rounded-xl border border-white/5">
                 <span className="text-[10px] text-[#c4b5a0] uppercase font-bold flex items-center gap-1">
-                  📦 Materials Needed
+                  📦 {t('wiki_total_materials', 'Materials Needed')}
                 </span>
                 <span className="text-sm font-black text-cyan-300">
                   {aggregatedMaterials.length} Types
@@ -100,7 +105,10 @@ export const PlannerDrawer: React.FC<PlannerDrawerProps> = ({
               <div className="text-4xl">📋</div>
               <h3 className="font-bold text-white text-sm">Your Planner is Empty</h3>
               <p className="text-xs text-[#c4b5a0] leading-relaxed">
-                Browse through Crafting Recipes and Farm Buildings in the catalogue and click <strong>"+ Plan"</strong> to calculate total raw materials.
+                {t(
+                  'wiki_planner_empty',
+                  'Browse through Crafting Recipes and Farm Buildings in the catalogue and click "+ Add to Planner" to calculate total raw materials.'
+                )}
               </p>
             </div>
           ) : (
@@ -112,76 +120,83 @@ export const PlannerDrawer: React.FC<PlannerDrawerProps> = ({
                 </span>
 
                 <div className="space-y-1.5">
-                  {plannerItems.map(item => (
-                    <div
-                      key={item.id}
-                      className={`p-2.5 rounded-xl border transition-all flex items-center justify-between gap-2 ${
-                        item.completed
-                          ? 'bg-[#13181b]/50 border-emerald-500/30 opacity-70'
-                          : 'bg-[#13181b] border-white/10'
-                      }`}
-                    >
-                      <div className="flex items-center gap-2.5 min-w-0">
-                        <button
-                          onClick={() => onToggleComplete(item.id)}
-                          className={`p-1 rounded-lg transition-colors ${
-                            item.completed
-                              ? 'text-emerald-400 bg-emerald-500/20'
-                              : 'text-neutral-500 hover:text-white bg-white/5'
-                          }`}
-                        >
-                          <CheckCircle2 className="w-4 h-4" />
-                        </button>
-                        <div className="min-w-0">
-                          <span
-                            className={`font-bold text-xs truncate block ${
-                              item.completed ? 'line-through text-neutral-400' : 'text-white'
+                  {plannerItems.map(item => {
+                    const localizedItemName =
+                      item.type === 'crafting'
+                        ? getItemName(item.name, item.name)
+                        : getBuildingName(item.name, item.name);
+
+                    return (
+                      <div
+                        key={item.id}
+                        className={`p-2.5 rounded-xl border transition-all flex items-center justify-between gap-2 ${
+                          item.completed
+                            ? 'bg-[#13181b]/50 border-emerald-500/30 opacity-70'
+                            : 'bg-[#13181b] border-white/10'
+                        }`}
+                      >
+                        <div className="flex items-center gap-2.5 min-w-0">
+                          <button
+                            onClick={() => onToggleComplete(item.id)}
+                            className={`p-1 rounded-lg transition-colors ${
+                              item.completed
+                                ? 'text-emerald-400 bg-emerald-500/20'
+                                : 'text-neutral-500 hover:text-white bg-white/5'
                             }`}
                           >
-                            {item.name}
-                          </span>
-                          <span className="text-[10px] text-[#c4b5a0]">
-                            {item.type === 'crafting' ? 'Recipe' : 'Building'}
-                            {item.goldCost > 0 && ` • ${(item.goldCost * item.quantity).toLocaleString()}g`}
-                          </span>
+                            <CheckCircle2 className="w-4 h-4" />
+                          </button>
+                          <div className="min-w-0">
+                            <span
+                              className={`font-bold text-xs truncate block ${
+                                item.completed ? 'line-through text-neutral-400' : 'text-white'
+                              }`}
+                            >
+                              {localizedItemName}
+                            </span>
+                            <span className="text-[10px] text-[#c4b5a0]">
+                              {item.type === 'crafting' ? 'Recipe' : 'Building'}
+                              {item.goldCost > 0 && ` • ${(item.goldCost * item.quantity).toLocaleString()}g`}
+                            </span>
+                          </div>
                         </div>
-                      </div>
 
-                      {/* Stepper + Delete */}
-                      <div className="flex items-center gap-1.5 flex-shrink-0">
-                        <div className="flex items-center bg-white/5 rounded-lg border border-white/10">
+                        {/* Stepper + Delete */}
+                        <div className="flex items-center gap-1.5 flex-shrink-0">
+                          <div className="flex items-center bg-white/5 rounded-lg border border-white/10">
+                            <button
+                              onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
+                              className="p-1 text-neutral-400 hover:text-white"
+                            >
+                              <Minus className="w-3 h-3" />
+                            </button>
+                            <span className="px-1.5 text-xs font-bold text-cyan-300 min-w-[1.5rem] text-center">
+                              {item.quantity}
+                            </span>
+                            <button
+                              onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
+                              className="p-1 text-neutral-400 hover:text-white"
+                            >
+                              <Plus className="w-3 h-3" />
+                            </button>
+                          </div>
                           <button
-                            onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
-                            className="p-1 text-neutral-400 hover:text-white"
+                            onClick={() => onRemoveItem(item.id)}
+                            className="p-1 text-neutral-400 hover:text-red-400"
                           >
-                            <Minus className="w-3 h-3" />
-                          </button>
-                          <span className="px-1.5 text-xs font-bold text-cyan-300 min-w-[1.5rem] text-center">
-                            {item.quantity}
-                          </span>
-                          <button
-                            onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
-                            className="p-1 text-neutral-400 hover:text-white"
-                          >
-                            <Plus className="w-3 h-3" />
+                            <Trash2 className="w-3.5 h-3.5" />
                           </button>
                         </div>
-                        <button
-                          onClick={() => onRemoveItem(item.id)}
-                          className="p-1 text-neutral-400 hover:text-red-400"
-                        >
-                          <Trash2 className="w-3.5 h-3.5" />
-                        </button>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
 
               {/* Aggregated Raw Materials Section */}
               <div className="space-y-2 pt-2 border-t border-white/10">
                 <span className="text-[11px] font-bold text-[#c4b5a0] uppercase tracking-wider block">
-                  Aggregated Raw Materials Required
+                  {t('wiki_total_materials', 'Aggregated Raw Materials Required')}
                 </span>
 
                 <div className="space-y-1">
@@ -193,7 +208,9 @@ export const PlannerDrawer: React.FC<PlannerDrawerProps> = ({
                       <div className="flex items-center gap-2">
                         <span>{mat.iconEmoji || '📦'}</span>
                         <div>
-                          <span className="font-bold text-white text-xs block">{mat.name}</span>
+                          <span className="font-bold text-white text-xs block">
+                            {getItemName(mat.name, mat.name)}
+                          </span>
                           {mat.source && (
                             <span className="text-[10px] text-neutral-400 block">{mat.source}</span>
                           )}
@@ -218,7 +235,11 @@ export const PlannerDrawer: React.FC<PlannerDrawerProps> = ({
               className="w-full py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-black hover:from-cyan-400 hover:to-teal-400 transition-all shadow-md shadow-cyan-500/20"
             >
               {copiedNotification ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-              <span>{copiedNotification ? 'Copied to Clipboard!' : 'Copy Shopping List'}</span>
+              <span>
+                {copiedNotification
+                  ? t('wiki_planner_copied', 'Copied to Clipboard!')
+                  : t('wiki_planner_copy', 'Copy Shopping List')}
+              </span>
             </button>
           </div>
         )}

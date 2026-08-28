@@ -29,7 +29,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
     customMapImage
   } = useFishing();
 
-  const { getFishName, t } = useLanguage();
+  const { getFishName, getBundleTitle, getAltarTitle, t } = useLanguage();
 
   const [imgError, setImgError] = useState(false);
 
@@ -270,7 +270,7 @@ export const FishDetailModal: React.FC<FishDetailModalProps> = ({ fish, onClose 
               </div>
               {fish.offerings.map((o, idx) => (
                 <p key={idx} className="text-[11px]">
-                  Required for <strong>{o.bundleName}</strong> ({o.roomName} - {o.altarName})
+                  {t('altar_required_for')} <strong>{getBundleTitle(o.bundleName)}</strong> ({getAltarTitle(o.roomName, o.altarName)})
                 </p>
               ))}
             </div>

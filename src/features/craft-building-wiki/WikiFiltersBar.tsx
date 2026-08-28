@@ -1,6 +1,7 @@
 import React from 'react';
 import { Search, X, ClipboardList, Filter } from 'lucide-react';
 import { UnlockSourceType } from './types';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 interface WikiFiltersBarProps {
   searchQuery: string;
@@ -31,8 +32,10 @@ export const WikiFiltersBar: React.FC<WikiFiltersBarProps> = ({
   onOpenPlanner,
   sortBy,
   onSortChange,
-  searchPlaceholder = 'Search items, buildings, materials, unlock conditions...'
+  searchPlaceholder
 }) => {
+  const { getCategoryName, getUnlockSourceName, t } = useLanguage();
+
   return (
     <div className="space-y-3 bg-[#182228]/80 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-white/10 shadow-lg">
       {/* Top Search & Planner Button Row */}
@@ -44,7 +47,7 @@ export const WikiFiltersBar: React.FC<WikiFiltersBarProps> = ({
             type="text"
             value={searchQuery}
             onChange={e => onSearchChange(e.target.value)}
-            placeholder={searchPlaceholder}
+            placeholder={searchPlaceholder || t('wiki_search_placeholder', 'Search items, buildings, materials, unlock conditions...')}
             className="w-full pl-9 pr-8 py-2 bg-[#13181b] border border-white/15 rounded-xl text-xs text-white placeholder-neutral-400 focus:outline-none focus:border-cyan-400/80 transition-colors"
           />
           {searchQuery && (
@@ -66,10 +69,10 @@ export const WikiFiltersBar: React.FC<WikiFiltersBarProps> = ({
               onChange={e => onSelectUnlockSource(e.target.value)}
               className="pl-8 pr-7 py-2 bg-[#13181b] border border-white/15 rounded-xl text-xs text-[#c4b5a0] hover:text-white focus:outline-none focus:border-cyan-400 cursor-pointer transition-colors"
             >
-              <option value="All">All Unlock Sources</option>
+              <option value="All">{t('wiki_all_unlocks', 'All Unlock Requirements')}</option>
               {unlockSources.map(src => (
                 <option key={src} value={src}>
-                  {src === 'TownRank' ? 'Town Rank' : src}
+                  {getUnlockSourceName(src)}
                 </option>
               ))}
             </select>
@@ -81,9 +84,9 @@ export const WikiFiltersBar: React.FC<WikiFiltersBarProps> = ({
             onChange={e => onSortChange(e.target.value as 'name' | 'unlock' | 'cost')}
             className="px-3 py-2 bg-[#13181b] border border-white/15 rounded-xl text-xs text-[#c4b5a0] hover:text-white focus:outline-none focus:border-cyan-400 cursor-pointer transition-colors"
           >
-            <option value="name">Sort: Name (A-Z)</option>
-            <option value="unlock">Sort: Unlock Level</option>
-            <option value="cost">Sort: Cost / Value</option>
+            <option value="name">{t('wiki_sort_name')}</option>
+            <option value="unlock">{t('wiki_sort_level')}</option>
+            <option value="cost">{t('wiki_sort_cost')}</option>
           </select>
 
           {/* Planner Quick Action Button */}
@@ -95,7 +98,7 @@ export const WikiFiltersBar: React.FC<WikiFiltersBarProps> = ({
             className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-400/40 transition-all flex-shrink-0"
           >
             <ClipboardList className="w-4 h-4" />
-            <span className="hidden md:inline">Planner</span>
+            <span className="hidden md:inline">{t('wiki_tab_planner', 'Planner')}</span>
             {plannerItemCount > 0 && (
               <span className="bg-cyan-400 text-black text-[10px] font-black px-1.5 py-0.2 rounded-full">
                 {plannerItemCount}
@@ -109,6 +112,7 @@ export const WikiFiltersBar: React.FC<WikiFiltersBarProps> = ({
       <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-thin scrollbar-thumb-white/10">
         {categories.map(cat => {
           const isActive = selectedCategory === cat;
+          const label = cat === 'All' ? t('wiki_filter_all_categories', 'All Categories') : getCategoryName(cat);
           return (
             <button
               key={cat}
@@ -119,7 +123,7 @@ export const WikiFiltersBar: React.FC<WikiFiltersBarProps> = ({
                   : 'bg-white/5 text-[#c4b5a0] hover:bg-white/10 hover:text-white border border-white/5'
               }`}
             >
-              {cat}
+              {label}
             </button>
           );
         })}
