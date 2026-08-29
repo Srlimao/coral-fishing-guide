@@ -13,7 +13,8 @@ import {
   FolderDown,
   Settings,
   X,
-  Hammer
+  Hammer,
+  Save
 } from 'lucide-react';
 import superCoralImg from '../../assets/icons/Super_Coral.png';
 
@@ -55,6 +56,7 @@ export const AppMobileDrawer: React.FC<AppMobileDrawerProps> = ({
     { id: 'bundles', label: t('nav_altars'), icon: Sparkles },
     { id: 'stats', label: t('nav_mastery'), icon: Award },
     { id: 'trivia', label: t('nav_trivia'), icon: Gamepad2 },
+    { id: 'save-editor', label: t('nav_save_editor'), icon: Save },
     { id: 'backoffice', label: t('nav_pins'), icon: Layers }
   ];
 

@@ -13,6 +13,7 @@ export const ja: TranslationDictionary = {
   nav_caught_count: '釣獲数',
   nav_museum_count: '博物館',
   nav_profiles: 'プロフィール',
+  nav_save_editor: 'セーブエディター',
   profile_title: 'プレイヤープロフィール',
   profile_active: 'アクティブなプロフィール',
   profile_create: '新規作成',

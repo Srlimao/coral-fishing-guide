@@ -32,6 +32,7 @@ export interface TranslationDictionary {
   nav_caught_count: string;
   nav_museum_count: string;
   nav_profiles: string;
+  nav_save_editor: string;
 
   // Profiles & Cloud Sync
   profile_title: string;

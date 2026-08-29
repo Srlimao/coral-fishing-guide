@@ -13,6 +13,7 @@ export const de: TranslationDictionary = {
   nav_caught_count: 'Gefangen',
   nav_museum_count: 'Museum',
   nav_profiles: 'Profile',
+  nav_save_editor: 'Save-Editor',
   profile_title: 'Spielerprofile',
   profile_active: 'Aktives Profil',
   profile_create: 'Neues Profil',

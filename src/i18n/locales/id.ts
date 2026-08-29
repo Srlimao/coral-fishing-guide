@@ -13,6 +13,7 @@ export const id: TranslationDictionary = {
   nav_caught_count: 'Tertangkap',
   nav_museum_count: 'Museum',
   nav_profiles: 'Profil',
+  nav_save_editor: 'Editor Simpanan',
   profile_title: 'Profil Pemain',
   profile_active: 'Profil Aktif',
   profile_create: 'Profil Baru',

@@ -13,6 +13,7 @@ export const zh: TranslationDictionary = {
   nav_caught_count: '已捕获',
   nav_museum_count: '博物馆',
   nav_profiles: '玩家档案',
+  nav_save_editor: '存档编辑器',
   profile_title: '玩家档案管理',
   profile_active: '当前档案',
   profile_create: '新建档案',

@@ -13,6 +13,7 @@ export const en: TranslationDictionary = {
   nav_caught_count: 'Caught',
   nav_museum_count: 'Museum',
   nav_profiles: 'Profiles',
+  nav_save_editor: 'Save Editor',
 
   profile_title: 'Player Profiles',
   profile_active: 'Active Profile',

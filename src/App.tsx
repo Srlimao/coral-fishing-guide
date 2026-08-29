@@ -16,6 +16,8 @@ import { OfferingsTrackerView } from './features/bundles/OfferingsTrackerView';
 import { FishingStatsView } from './features/stats/FishingStatsView';
 import { TriviaMainView } from './features/trivia/TriviaMainView';
 import { CraftBuildingWikiView } from './features/craft-building-wiki/CraftBuildingWikiView';
+import { SaveEditorProvider } from './features/save-editor/context/SaveEditorContext';
+import { SaveEditorWorkbench } from './features/save-editor/components/SaveEditorWorkbench';
 import { FishDetailModal } from './features/fish-list/FishDetailModal';
 import { MultiplayerIncomingModal } from './features/user-profiles/MultiplayerIncomingModal';
 import { AuthProvider } from './features/auth/AuthContext';
@@ -34,8 +36,8 @@ const MainLayout: React.FC = () => {
       {/* 2. Center Column: Main Content Area */}
       <div className="flex-1 flex flex-col justify-between min-w-0 min-h-screen">
         <main className="p-4 sm:p-6 space-y-6 flex-1 w-full max-w-[1800px] mx-auto">
-          {/* Top Controls only for Non-Catalog, Non-Backoffice, Non-Trivia, Non-Crafting tabs */}
-          {activeTab !== 'catalog' && activeTab !== 'backoffice' && activeTab !== 'trivia' && activeTab !== 'crafting' && (
+          {/* Top Controls only for Non-Catalog, Non-Backoffice, Non-Trivia, Non-Crafting, Non-Save-Editor tabs */}
+          {activeTab !== 'catalog' && activeTab !== 'backoffice' && activeTab !== 'trivia' && activeTab !== 'crafting' && activeTab !== 'save-editor' && (
             <div className="space-y-4">
               <TimeWeatherBar />
               {activeTab === 'map' && <GearSelector />}
@@ -51,6 +53,7 @@ const MainLayout: React.FC = () => {
           {activeTab === 'bundles' && <OfferingsTrackerView />}
           {activeTab === 'stats' && <FishingStatsView />}
           {activeTab === 'trivia' && <TriviaMainView />}
+          {activeTab === 'save-editor' && <SaveEditorWorkbench />}
         </main>
 
         {/* Footer */}
@@ -92,10 +95,12 @@ export function App() {
         <UserProfileProvider>
           <AuthProvider>
             <FishingProvider>
-              <LiveBridgeSyncHandler />
-              <MultiplayerIncomingModal />
-              <AuthModal />
-              <MainLayout />
+              <SaveEditorProvider>
+                <LiveBridgeSyncHandler />
+                <MultiplayerIncomingModal />
+                <AuthModal />
+                <MainLayout />
+              </SaveEditorProvider>
             </FishingProvider>
           </AuthProvider>
         </UserProfileProvider>
