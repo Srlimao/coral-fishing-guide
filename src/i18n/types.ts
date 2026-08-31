@@ -163,6 +163,9 @@ export interface TranslationDictionary {
   wiki_subtitle: string;
   wiki_tab_crafting: string;
   wiki_tab_buildings: string;
+  wiki_tab_tools: string;
+  wiki_tab_lab: string;
+  wiki_tab_ocean: string;
   wiki_tab_planner: string;
   wiki_search_placeholder: string;
   wiki_filter_all_categories: string;

@@ -1,5 +1,10 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { PlannerItem, AggregatedMaterial, MaterialRequirement } from './types';
+import {
+  calculateAggregatedMaterials,
+  formatShoppingListText,
+  copyTextToClipboard
+} from './wikiPlannerHelpers';
 
 const STORAGE_KEY = 'coral_wiki_planner_v1';
 
@@ -86,6 +91,108 @@ export function useWikiPlanner() {
     });
   }, []);
 
+  const addToolItem = useCallback((
+    toolId: string,
+    tierIndex: number,
+    tierName: string,
+    goldCost: number,
+    materials: MaterialRequirement[],
+    quantity = 1
+  ) => {
+    setPlannerItems(prev => {
+      const existing = prev.find(
+        item => item.type === 'tool' && item.targetId === toolId && item.tierIndex === tierIndex
+      );
+      if (existing) {
+        return prev.map(item =>
+          item.id === existing.id
+            ? { ...item, quantity: item.quantity + quantity }
+            : item
+        );
+      }
+      const newItem: PlannerItem = {
+        id: `tool_${toolId}_${tierIndex}_${Date.now()}`,
+        type: 'tool',
+        targetId: toolId,
+        tierIndex,
+        name: tierName,
+        goldCost,
+        materials,
+        quantity,
+        completed: false
+      };
+      return [...prev, newItem];
+    });
+  }, []);
+
+  const addLabItem = useCallback((
+    researchId: string,
+    tierIndex: number,
+    tierName: string,
+    goldCost: number,
+    materials: MaterialRequirement[],
+    quantity = 1
+  ) => {
+    setPlannerItems(prev => {
+      const existing = prev.find(
+        item => item.type === 'lab' && item.targetId === researchId && item.tierIndex === tierIndex
+      );
+      if (existing) {
+        return prev.map(item =>
+          item.id === existing.id
+            ? { ...item, quantity: item.quantity + quantity }
+            : item
+        );
+      }
+      const newItem: PlannerItem = {
+        id: `lab_${researchId}_${tierIndex}_${Date.now()}`,
+        type: 'lab',
+        targetId: researchId,
+        tierIndex,
+        name: tierName,
+        goldCost,
+        materials,
+        quantity,
+        completed: false
+      };
+      return [...prev, newItem];
+    });
+  }, []);
+
+  const addOceanItem = useCallback((
+    techId: string,
+    tierIndex: number,
+    tierName: string,
+    goldCost: number,
+    materials: MaterialRequirement[],
+    quantity = 1
+  ) => {
+    setPlannerItems(prev => {
+      const existing = prev.find(
+        item => item.type === 'ocean' && item.targetId === techId && item.tierIndex === tierIndex
+      );
+      if (existing) {
+        return prev.map(item =>
+          item.id === existing.id
+            ? { ...item, quantity: item.quantity + quantity }
+            : item
+        );
+      }
+      const newItem: PlannerItem = {
+        id: `ocean_${techId}_${tierIndex}_${Date.now()}`,
+        type: 'ocean',
+        targetId: techId,
+        tierIndex,
+        name: tierName,
+        goldCost,
+        materials,
+        quantity,
+        completed: false
+      };
+      return [...prev, newItem];
+    });
+  }, []);
+
   const updateQuantity = useCallback((id: string, newQty: number) => {
     if (newQty <= 0) {
       setPlannerItems(prev => prev.filter(item => item.id !== id));
@@ -115,87 +222,16 @@ export function useWikiPlanner() {
   }, [plannerItems]);
 
   const aggregatedMaterials = useMemo<AggregatedMaterial[]>(() => {
-    const map = new Map<string, { totalAmount: number; source?: string; iconEmoji?: string }>();
-
-    for (const item of plannerItems) {
-      for (const mat of item.materials) {
-        const requiredAmount = mat.amount * item.quantity;
-        const current = map.get(mat.name) || {
-          totalAmount: 0,
-          source: mat.source,
-          iconEmoji: mat.iconEmoji
-        };
-        map.set(mat.name, {
-          totalAmount: current.totalAmount + requiredAmount,
-          source: mat.source || current.source,
-          iconEmoji: mat.iconEmoji || current.iconEmoji
-        });
-      }
-    }
-
-    return Array.from(map.entries())
-      .map(([name, data]) => ({
-        name,
-        totalAmount: data.totalAmount,
-        source: data.source,
-        iconEmoji: data.iconEmoji
-      }))
-      .sort((a, b) => b.totalAmount - a.totalAmount);
+    return calculateAggregatedMaterials(plannerItems);
   }, [plannerItems]);
 
   const copyShoppingList = useCallback(async () => {
     if (plannerItems.length === 0) return;
-
-    let text = `🏝️ CORAL ISLAND - FARM PROJECT SHOPPING LIST\n`;
-    text += `==============================================\n`;
-    if (totalGoldCost > 0) {
-      text += `💰 Total Gold: ${totalGoldCost.toLocaleString()}g\n\n`;
-    }
-
-    text += `📦 PLANNED PROJECTS:\n`;
-    plannerItems.forEach(item => {
-      text += `  • [${item.completed ? 'X' : ' '}] ${item.quantity}x ${item.name}`;
-      if (item.goldCost > 0) text += ` (${(item.goldCost * item.quantity).toLocaleString()}g)`;
-      text += `\n`;
-    });
-
-    text += `\n🧱 AGGREGATED RAW MATERIALS NEEDED:\n`;
-    aggregatedMaterials.forEach(mat => {
-      text += `  • ${mat.iconEmoji || '•'} ${mat.name}: ${mat.totalAmount.toLocaleString()}`;
-      if (mat.source) text += ` (${mat.source})`;
-      text += `\n`;
-    });
-
-    text += `==============================================\n`;
-    text += `Generated with Coral Guide Companion\n`;
-
-    try {
-      if (navigator?.clipboard?.writeText) {
-        await navigator.clipboard.writeText(text);
-      } else {
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-      }
+    const text = formatShoppingListText(plannerItems, totalGoldCost, aggregatedMaterials);
+    const success = await copyTextToClipboard(text);
+    if (success) {
       setCopiedNotification(true);
       setTimeout(() => setCopiedNotification(false), 2500);
-    } catch {
-      try {
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-        setCopiedNotification(true);
-        setTimeout(() => setCopiedNotification(false), 2500);
-      } catch {
-        setCopiedNotification(true);
-        setTimeout(() => setCopiedNotification(false), 2500);
-      }
     }
   }, [plannerItems, totalGoldCost, aggregatedMaterials]);
 
@@ -203,6 +239,9 @@ export function useWikiPlanner() {
     plannerItems,
     addCraftingItem,
     addBuildingItem,
+    addToolItem,
+    addLabItem,
+    addOceanItem,
     updateQuantity,
     removeItem,
     toggleComplete,

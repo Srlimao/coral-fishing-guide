@@ -80,9 +80,89 @@ export interface BuildingInfo {
   description: string;
 }
 
+export type ToolCategory =
+  | 'Farming Tools'
+  | 'Gathering & Mining'
+  | 'Exploration & Trapping'
+  | 'Inventory & Storage';
+
+export interface ToolTier {
+  tierNumber: number; // 0=Basic, 1=Bronze, 2=Silver, 3=Gold, 4=Osmium
+  name: string;
+  goldCost: number;
+  daysToUpgrade: number;
+  materials: MaterialRequirement[];
+  staminaCost: string;
+  aoeChargeArea: string;
+  perks: string[];
+  description: string;
+}
+
+export interface ToolInfo {
+  id: string;
+  name: string;
+  category: ToolCategory;
+  shop: string;
+  iconEmoji: string;
+  description: string;
+  tiers: ToolTier[];
+}
+
+export type LabResearchCategory =
+  | 'Crop & Quality Tech'
+  | 'Farm Automation'
+  | 'Material Synthesis'
+  | 'Ocean Tech';
+
+export interface LabResearchTier {
+  tierNumber: number;
+  name: string;
+  goldCost: number;
+  unlock: UnlockCriteria;
+  materials: MaterialRequirement[];
+  benefits: string[];
+  description: string;
+}
+
+export interface LabResearchInfo {
+  id: string;
+  name: string;
+  category: LabResearchCategory;
+  laboratory: string;
+  iconEmoji: string;
+  description: string;
+  tiers: LabResearchTier[];
+}
+
+export type OceanTechCategory =
+  | 'Diving & Exploration'
+  | 'Lumina Tech'
+  | 'Underwater Farming'
+  | 'Merfolk Crafts';
+
+export interface OceanTechTier {
+  tierNumber: number;
+  name: string;
+  goldCost: number;
+  unlock: UnlockCriteria;
+  materials: MaterialRequirement[];
+  benefits: string[];
+  description: string;
+}
+
+export interface OceanTechInfo {
+  id: string;
+  name: string;
+  category: OceanTechCategory;
+  source: string;
+  iconEmoji: string;
+  description: string;
+  tiers: OceanTechTier[];
+}
+
 export interface PlannerItem {
   id: string; // unique cart entry ID
-  type: 'crafting' | 'building';
+  type: 'crafting' | 'building' | 'tool' | 'lab' | 'ocean';
   targetId: string;
   tierIndex?: number;
   quantity: number;

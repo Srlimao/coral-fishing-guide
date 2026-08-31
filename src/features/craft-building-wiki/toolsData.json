@@ -1,0 +1,1097 @@
+[
+  {
+    "id": "hoe",
+    "name": "Hoe",
+    "category": "Farming Tools",
+    "shop": "Blacksmith (Sanchez & Rafael)",
+    "iconEmoji": "🌾",
+    "description": "Tills soil for planting crops and digging up clovers, fossils, and hidden treasures.",
+    "tiers": [
+      {
+        "tierNumber": 0,
+        "name": "Basic Hoe",
+        "goldCost": 0,
+        "daysToUpgrade": 0,
+        "materials": [],
+        "staminaCost": "5.0 Energy",
+        "aoeChargeArea": "1x1 Tile",
+        "perks": [
+          "Tills single tile",
+          "Starter equipment"
+        ],
+        "description": "Starter hoe for preparing basic farm plots."
+      },
+      {
+        "tierNumber": 1,
+        "name": "Bronze Hoe",
+        "goldCost": 1500,
+        "daysToUpgrade": 1,
+        "materials": [
+          {
+            "name": "Bronze bar",
+            "amount": 5,
+            "iconEmoji": "🟤",
+            "source": "Smelt 5 Bronze Ore + 1 Coal"
+          },
+          {
+            "name": "Wood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Trees / Debris"
+          }
+        ],
+        "staminaCost": "4.0 Energy",
+        "aoeChargeArea": "1x3 Line (3 Tiles)",
+        "perks": [
+          "Charge level 1 (1x3 line)",
+          "-20% stamina consumption"
+        ],
+        "description": "Tills a straight line of 3 tiles when charged."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Silver Hoe",
+        "goldCost": 3000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Silver bar",
+            "amount": 5,
+            "iconEmoji": "⚪",
+            "source": "Smelt 5 Silver Ore + 1 Coal"
+          },
+          {
+            "name": "Wood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Trees / Debris"
+          }
+        ],
+        "staminaCost": "3.5 Energy",
+        "aoeChargeArea": "1x5 Line (5 Tiles)",
+        "perks": [
+          "Charge level 2 (1x5 line)",
+          "Faster charge rate"
+        ],
+        "description": "Tills a straight line of 5 tiles in a single stroke."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Gold Hoe",
+        "goldCost": 6000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Gold bar",
+            "amount": 5,
+            "iconEmoji": "🟡",
+            "source": "Smelt 5 Gold Ore + 1 Coal"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Hardwood Stumps"
+          }
+        ],
+        "staminaCost": "3.0 Energy",
+        "aoeChargeArea": "3x3 Area (9 Tiles)",
+        "perks": [
+          "Charge level 3 (3x3 grid)",
+          "Tills 9 tiles simultaneously"
+        ],
+        "description": "Prepares large square crop fields in seconds."
+      },
+      {
+        "tierNumber": 4,
+        "name": "Osmium Hoe",
+        "goldCost": 15000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Osmium bar",
+            "amount": 5,
+            "iconEmoji": "🟣",
+            "source": "Smelt 5 Osmium Ore + 1 Coal"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Hardwood Stumps"
+          }
+        ],
+        "staminaCost": "2.0 Energy",
+        "aoeChargeArea": "5x5 Area (25 Tiles)",
+        "perks": [
+          "Charge level 4 (5x5 grid)",
+          "Massive agricultural efficiency"
+        ],
+        "description": "The pinnacle of farming tools. Tills 25 tiles in a single charge."
+      }
+    ]
+  },
+  {
+    "id": "watering_can",
+    "name": "Watering Can",
+    "category": "Farming Tools",
+    "shop": "Blacksmith (Sanchez & Rafael)",
+    "iconEmoji": "💧",
+    "description": "Irrigates crops and fills pet bowls. Upgrades increase water capacity and charged area.",
+    "tiers": [
+      {
+        "tierNumber": 0,
+        "name": "Basic Watering Can",
+        "goldCost": 0,
+        "daysToUpgrade": 0,
+        "materials": [],
+        "staminaCost": "5.0 Energy",
+        "aoeChargeArea": "1x1 Tile (40 Capacity)",
+        "perks": [
+          "Holds 40 units of water",
+          "Waters single tile"
+        ],
+        "description": "Starter watering can."
+      },
+      {
+        "tierNumber": 1,
+        "name": "Bronze Watering Can",
+        "goldCost": 1500,
+        "daysToUpgrade": 1,
+        "materials": [
+          {
+            "name": "Bronze bar",
+            "amount": 5,
+            "iconEmoji": "🟤",
+            "source": "Smelt 5 Bronze Ore + 1 Coal"
+          },
+          {
+            "name": "Wood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Trees / Debris"
+          }
+        ],
+        "staminaCost": "4.0 Energy",
+        "aoeChargeArea": "1x3 Line (70 Capacity)",
+        "perks": [
+          "Holds 70 units of water",
+          "Waters 3 tiles in a line"
+        ],
+        "description": "Waters 3 crops in a single swing."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Silver Watering Can",
+        "goldCost": 3000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Silver bar",
+            "amount": 5,
+            "iconEmoji": "⚪",
+            "source": "Smelt 5 Silver Ore + 1 Coal"
+          },
+          {
+            "name": "Wood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Trees / Debris"
+          }
+        ],
+        "staminaCost": "3.5 Energy",
+        "aoeChargeArea": "1x5 Line (120 Capacity)",
+        "perks": [
+          "Holds 120 units of water",
+          "Waters 5 tiles in a line"
+        ],
+        "description": "Waters 5 crops in a single swing."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Gold Watering Can",
+        "goldCost": 6000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Gold bar",
+            "amount": 5,
+            "iconEmoji": "🟡",
+            "source": "Smelt 5 Gold Ore + 1 Coal"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Hardwood Stumps"
+          }
+        ],
+        "staminaCost": "3.0 Energy",
+        "aoeChargeArea": "3x3 Area (200 Capacity)",
+        "perks": [
+          "Holds 200 units of water",
+          "Waters 9 tiles in a 3x3 grid"
+        ],
+        "description": "Covers entire 3x3 crop grids with generous water volume."
+      },
+      {
+        "tierNumber": 4,
+        "name": "Osmium Watering Can",
+        "goldCost": 15000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Osmium bar",
+            "amount": 5,
+            "iconEmoji": "🟣",
+            "source": "Smelt 5 Osmium Ore + 1 Coal"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Hardwood Stumps"
+          }
+        ],
+        "staminaCost": "2.0 Energy",
+        "aoeChargeArea": "5x5 Area (350 Capacity)",
+        "perks": [
+          "Holds 350 units of water",
+          "Waters 25 tiles simultaneously"
+        ],
+        "description": "Maximum capacity and covers 25 crops per charge."
+      }
+    ]
+  },
+  {
+    "id": "pickaxe",
+    "name": "Pickaxe",
+    "category": "Gathering & Mining",
+    "shop": "Blacksmith (Sanchez & Rafael)",
+    "iconEmoji": "⛏️",
+    "description": "Breaks rocks, mines ore nodes, and smashes cavern geodes and crates.",
+    "tiers": [
+      {
+        "tierNumber": 0,
+        "name": "Basic Pickaxe",
+        "goldCost": 0,
+        "daysToUpgrade": 0,
+        "materials": [],
+        "staminaCost": "5.0 Energy",
+        "aoeChargeArea": "Single Hit",
+        "perks": [
+          "Breaks basic surface rocks",
+          "Starter mining tool"
+        ],
+        "description": "Starter pickaxe for farm clearing."
+      },
+      {
+        "tierNumber": 1,
+        "name": "Bronze Pickaxe",
+        "goldCost": 1500,
+        "daysToUpgrade": 1,
+        "materials": [
+          {
+            "name": "Bronze bar",
+            "amount": 5,
+            "iconEmoji": "🟤",
+            "source": "Smelt 5 Bronze Ore + 1 Coal"
+          },
+          {
+            "name": "Wood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Trees / Debris"
+          }
+        ],
+        "staminaCost": "4.0 Energy",
+        "aoeChargeArea": "1x2 Break Area",
+        "perks": [
+          "Breaks Bronze boulders on farm",
+          "Earth shaft 1-hit breaking"
+        ],
+        "description": "Easily breaks copper boulders and speeds up Earth Shaft mining."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Silver Pickaxe",
+        "goldCost": 3000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Silver bar",
+            "amount": 5,
+            "iconEmoji": "⚪",
+            "source": "Smelt 5 Silver Ore + 1 Coal"
+          },
+          {
+            "name": "Wood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Trees / Debris"
+          }
+        ],
+        "staminaCost": "3.5 Energy",
+        "aoeChargeArea": "1x3 Break Area",
+        "perks": [
+          "Breaks Silver boulders",
+          "Water shaft fast clearing"
+        ],
+        "description": "Efficiently mines Water Shaft minerals and silver boulders."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Gold Pickaxe",
+        "goldCost": 6000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Gold bar",
+            "amount": 5,
+            "iconEmoji": "🟡",
+            "source": "Smelt 5 Gold Ore + 1 Coal"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Hardwood Stumps"
+          }
+        ],
+        "staminaCost": "3.0 Energy",
+        "aoeChargeArea": "3x3 Heavy Smash",
+        "perks": [
+          "Breaks Gold boulders",
+          "Wind shaft fast clearing"
+        ],
+        "description": "Tears through Wind Shaft caverns and golden ore clusters."
+      },
+      {
+        "tierNumber": 4,
+        "name": "Osmium Pickaxe",
+        "goldCost": 15000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Osmium bar",
+            "amount": 5,
+            "iconEmoji": "🟣",
+            "source": "Smelt 5 Osmium Ore + 1 Coal"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Hardwood Stumps"
+          }
+        ],
+        "staminaCost": "2.0 Energy",
+        "aoeChargeArea": "3x3 Instant Break",
+        "perks": [
+          "Breaks Fire shaft obsidian nodes",
+          "1-hit breaks almost all cavern rocks"
+        ],
+        "description": "The ultimate mining tool. Obliterates the deepest cavern rocks in 1 strike."
+      }
+    ]
+  },
+  {
+    "id": "axe",
+    "name": "Axe",
+    "category": "Gathering & Mining",
+    "shop": "Blacksmith (Sanchez & Rafael)",
+    "iconEmoji": "🪓",
+    "description": "Chops trees, logs, and hardwood stumps to gather wood, resin, and sap.",
+    "tiers": [
+      {
+        "tierNumber": 0,
+        "name": "Basic Axe",
+        "goldCost": 0,
+        "daysToUpgrade": 0,
+        "materials": [],
+        "staminaCost": "5.0 Energy",
+        "aoeChargeArea": "Single Hit (8-10 hits/tree)",
+        "perks": [
+          "Chops basic trees & branches",
+          "Starter woodcutting tool"
+        ],
+        "description": "Starter axe for farm clearing."
+      },
+      {
+        "tierNumber": 1,
+        "name": "Bronze Axe",
+        "goldCost": 1500,
+        "daysToUpgrade": 1,
+        "materials": [
+          {
+            "name": "Bronze bar",
+            "amount": 5,
+            "iconEmoji": "🟤",
+            "source": "Smelt 5 Bronze Ore + 1 Coal"
+          },
+          {
+            "name": "Wood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Trees / Debris"
+          }
+        ],
+        "staminaCost": "4.0 Energy",
+        "aoeChargeArea": "6 hits/tree",
+        "perks": [
+          "Chops fallen logs on farm",
+          "Gathers Hardwood from logs"
+        ],
+        "description": "Can chop fallen logs on the farm to harvest Hardwood."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Silver Axe",
+        "goldCost": 3000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Silver bar",
+            "amount": 5,
+            "iconEmoji": "⚪",
+            "source": "Smelt 5 Silver Ore + 1 Coal"
+          },
+          {
+            "name": "Wood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Trees / Debris"
+          }
+        ],
+        "staminaCost": "3.5 Energy",
+        "aoeChargeArea": "4 hits/tree",
+        "perks": [
+          "Chops large hardwood stumps",
+          "Unlocks Mid Forest access"
+        ],
+        "description": "Can chop hardwood stumps and unlocks pathway to the Mid Forest."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Gold Axe",
+        "goldCost": 6000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Gold bar",
+            "amount": 5,
+            "iconEmoji": "🟡",
+            "source": "Smelt 5 Gold Ore + 1 Coal"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Hardwood Stumps"
+          }
+        ],
+        "staminaCost": "3.0 Energy",
+        "aoeChargeArea": "3 hits/tree",
+        "perks": [
+          "Chops giant logs & Deep Forest barriers",
+          "Clears Deep Forest path"
+        ],
+        "description": "Chops giant fallen trees blocking the Deep Forest."
+      },
+      {
+        "tierNumber": 4,
+        "name": "Osmium Axe",
+        "goldCost": 15000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Osmium bar",
+            "amount": 5,
+            "iconEmoji": "🟣",
+            "source": "Smelt 5 Osmium Ore + 1 Coal"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Hardwood Stumps"
+          }
+        ],
+        "staminaCost": "2.0 Energy",
+        "aoeChargeArea": "2 hits/tree",
+        "perks": [
+          "Fells full-grown trees in 2 hits",
+          "Double hardwood drop chance"
+        ],
+        "description": "Fells mature trees in 2 strokes and extracts maximum wood."
+      }
+    ]
+  },
+  {
+    "id": "scythe",
+    "name": "Scythe",
+    "category": "Farming Tools",
+    "shop": "Blacksmith (Sanchez & Rafael)",
+    "iconEmoji": "🌾",
+    "description": "Harvests crops, cuts grass into hay for silos, and clears underwater trash & pollution.",
+    "tiers": [
+      {
+        "tierNumber": 0,
+        "name": "Basic Scythe",
+        "goldCost": 0,
+        "daysToUpgrade": 0,
+        "materials": [],
+        "staminaCost": "4.0 Energy",
+        "aoeChargeArea": "1x1 Arc",
+        "perks": [
+          "Harvests crops & hay",
+          "Clears shallow ocean trash"
+        ],
+        "description": "Basic harvesting and ocean clearing tool."
+      },
+      {
+        "tierNumber": 1,
+        "name": "Bronze Scythe",
+        "goldCost": 1500,
+        "daysToUpgrade": 1,
+        "materials": [
+          {
+            "name": "Bronze bar",
+            "amount": 5,
+            "iconEmoji": "🟤",
+            "source": "Smelt 5 Bronze Ore + 1 Coal"
+          },
+          {
+            "name": "Wood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Trees / Debris"
+          }
+        ],
+        "staminaCost": "3.5 Energy",
+        "aoeChargeArea": "1x3 Arc",
+        "perks": [
+          "+25% Ocean trash clearing speed",
+          "Cuts wider weed patches"
+        ],
+        "description": "Sweeps away 10m-20m ocean trash clusters faster."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Silver Scythe",
+        "goldCost": 3000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Silver bar",
+            "amount": 5,
+            "iconEmoji": "⚪",
+            "source": "Smelt 5 Silver Ore + 1 Coal"
+          },
+          {
+            "name": "Wood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Trees / Debris"
+          }
+        ],
+        "staminaCost": "3.0 Energy",
+        "aoeChargeArea": "1x5 Arc",
+        "perks": [
+          "Clears 20m-30m ocean trash in 2 hits",
+          "Faster swing rate"
+        ],
+        "description": "Large sweeping arc for deep ocean cleanup and rapid field harvests."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Gold Scythe",
+        "goldCost": 6000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Gold bar",
+            "amount": 5,
+            "iconEmoji": "🟡",
+            "source": "Smelt 5 Gold Ore + 1 Coal"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Hardwood Stumps"
+          }
+        ],
+        "staminaCost": "2.5 Energy",
+        "aoeChargeArea": "3x3 Charged Vortex Arc",
+        "perks": [
+          "Clears 40m ocean trash easily",
+          "High scrap drop rate"
+        ],
+        "description": "Wide vortex sweep that cleans heavy oil and dense trash piles effortlessly."
+      },
+      {
+        "tierNumber": 4,
+        "name": "Osmium Scythe",
+        "goldCost": 15000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Osmium bar",
+            "amount": 5,
+            "iconEmoji": "🟣",
+            "source": "Smelt 5 Osmium Ore + 1 Coal"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Chopping Hardwood Stumps"
+          }
+        ],
+        "staminaCost": "1.5 Energy",
+        "aoeChargeArea": "5x5 Whirlwind Arc",
+        "perks": [
+          "Clears 50m Trench trash in 1 hit",
+          "Harvests massive crop fields instantly"
+        ],
+        "description": "The master scythe. Cleans deepest ocean trenches and giant crop fields in seconds."
+      }
+    ]
+  },
+  {
+    "id": "bug_net",
+    "name": "Bug Net",
+    "category": "Exploration & Trapping",
+    "shop": "Beach Shack (Sunny) / Blacksmith",
+    "iconEmoji": "🦋",
+    "description": "Catches insects, butterflies, beetles, and critters on land and underwater.",
+    "tiers": [
+      {
+        "tierNumber": 0,
+        "name": "Basic Bug Net",
+        "goldCost": 0,
+        "daysToUpgrade": 0,
+        "materials": [],
+        "staminaCost": "4.0 Energy",
+        "aoeChargeArea": "Short Range",
+        "perks": [
+          "Catches calm/slow insects",
+          "Starter net from Sunny"
+        ],
+        "description": "Standard net for catching slow insects."
+      },
+      {
+        "tierNumber": 1,
+        "name": "Bronze Bug Net",
+        "goldCost": 2000,
+        "daysToUpgrade": 1,
+        "materials": [
+          {
+            "name": "Bronze bar",
+            "amount": 5,
+            "iconEmoji": "🟤",
+            "source": "Smelt 5 Bronze Ore + 1 Coal"
+          },
+          {
+            "name": "Wood",
+            "amount": 10,
+            "iconEmoji": "🪵",
+            "source": "Chopping Trees / Debris"
+          }
+        ],
+        "staminaCost": "3.5 Energy",
+        "aoeChargeArea": "Medium Range Arc",
+        "perks": [
+          "+25% Swing range",
+          "Catches alert insects easier"
+        ],
+        "description": "Increased catch radius for medium-speed butterflies and beetles."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Silver Bug Net",
+        "goldCost": 4000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Silver bar",
+            "amount": 5,
+            "iconEmoji": "⚪",
+            "source": "Smelt 5 Silver Ore + 1 Coal"
+          },
+          {
+            "name": "Wood",
+            "amount": 10,
+            "iconEmoji": "🪵",
+            "source": "Chopping Trees / Debris"
+          }
+        ],
+        "staminaCost": "3.0 Energy",
+        "aoeChargeArea": "Extended Sweep Cone",
+        "perks": [
+          "+50% Swing range",
+          "Faster stealth approach movement"
+        ],
+        "description": "Stealth approach bonus and wide sweep for skittish bugs."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Gold Bug Net",
+        "goldCost": 8000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Gold bar",
+            "amount": 5,
+            "iconEmoji": "🟡",
+            "source": "Smelt 5 Gold Ore + 1 Coal"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 10,
+            "iconEmoji": "🪵",
+            "source": "Chopping Hardwood Stumps"
+          }
+        ],
+        "staminaCost": "2.5 Energy",
+        "aoeChargeArea": "Large Sweep Cone",
+        "perks": [
+          "+75% Swing range",
+          "Catches very fast dragonflies"
+        ],
+        "description": "Extended net capable of snaring rapid dragonflies and flying critters."
+      },
+      {
+        "tierNumber": 4,
+        "name": "Osmium Bug Net",
+        "goldCost": 16000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Osmium bar",
+            "amount": 5,
+            "iconEmoji": "🟣",
+            "source": "Smelt 5 Osmium Ore + 1 Coal"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 10,
+            "iconEmoji": "🪵",
+            "source": "Chopping Hardwood Stumps"
+          }
+        ],
+        "staminaCost": "1.5 Energy",
+        "aoeChargeArea": "Massive Catch Radius",
+        "perks": [
+          "Maximum catch range",
+          "Instant catch for legendary & rare insects"
+        ],
+        "description": "Catches even the most elusive legendary beetles and Atlas moths with ease."
+      }
+    ]
+  },
+  {
+    "id": "fishing_rod",
+    "name": "Fishing Rod",
+    "category": "Exploration & Trapping",
+    "shop": "Beach Shack (Sunny) / Blacksmith",
+    "iconEmoji": "🎣",
+    "description": "Catches fish across ocean, river, lake, and cave waters. Upgrades reduce line tension and increase reel power.",
+    "tiers": [
+      {
+        "tierNumber": 0,
+        "name": "Basic Fishing Rod",
+        "goldCost": 0,
+        "daysToUpgrade": 0,
+        "materials": [],
+        "staminaCost": "5.0 Energy",
+        "aoeChargeArea": "Cast Distance 1",
+        "perks": [
+          "Basic line strength",
+          "Starter rod from Sunny"
+        ],
+        "description": "Starter fishing rod for common small fish."
+      },
+      {
+        "tierNumber": 1,
+        "name": "Bronze Fishing Rod",
+        "goldCost": 2000,
+        "daysToUpgrade": 1,
+        "materials": [
+          {
+            "name": "Bronze bar",
+            "amount": 5,
+            "iconEmoji": "🟤",
+            "source": "Smelt 5 Bronze Ore + 1 Coal"
+          },
+          {
+            "name": "Wood",
+            "amount": 10,
+            "iconEmoji": "🪵",
+            "source": "Chopping Trees / Debris"
+          }
+        ],
+        "staminaCost": "4.0 Energy",
+        "aoeChargeArea": "Cast Distance 2",
+        "perks": [
+          "+25% Line tension resistance",
+          "+15% Reel speed"
+        ],
+        "description": "Sturdier line for medium fish and less line snap risk."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Silver Fishing Rod",
+        "goldCost": 4000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Silver bar",
+            "amount": 5,
+            "iconEmoji": "⚪",
+            "source": "Smelt 5 Silver Ore + 1 Coal"
+          },
+          {
+            "name": "Wood",
+            "amount": 10,
+            "iconEmoji": "🪵",
+            "source": "Chopping Trees / Debris"
+          }
+        ],
+        "staminaCost": "3.5 Energy",
+        "aoeChargeArea": "Cast Distance 3",
+        "perks": [
+          "+50% Line tension resistance",
+          "+30% Reel speed",
+          "Equip bait & tackle"
+        ],
+        "description": "Handles strong saltwater game fish with ease."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Gold Fishing Rod",
+        "goldCost": 8000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Gold bar",
+            "amount": 5,
+            "iconEmoji": "🟡",
+            "source": "Smelt 5 Gold Ore + 1 Coal"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 10,
+            "iconEmoji": "🪵",
+            "source": "Chopping Hardwood Stumps"
+          }
+        ],
+        "staminaCost": "3.0 Energy",
+        "aoeChargeArea": "Cast Distance 4",
+        "perks": [
+          "+80% Line tension resistance",
+          "+50% Reel speed",
+          "Slows fish rage buildup"
+        ],
+        "description": "High performance rod for fast and aggressive apex ocean fish."
+      },
+      {
+        "tierNumber": 4,
+        "name": "Osmium Fishing Rod",
+        "goldCost": 16000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Osmium bar",
+            "amount": 5,
+            "iconEmoji": "🟣",
+            "source": "Smelt 5 Osmium Ore + 1 Coal"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 10,
+            "iconEmoji": "🪵",
+            "source": "Chopping Hardwood Stumps"
+          }
+        ],
+        "staminaCost": "2.0 Energy",
+        "aoeChargeArea": "Maximum Cast Distance",
+        "perks": [
+          "Maximum line strength",
+          "Double reel speed",
+          "Tames legendary sharks & arapaimas"
+        ],
+        "description": "The master angler rod. Subdues legendary ocean beasts with extreme power."
+      }
+    ]
+  },
+  {
+    "id": "trash_can",
+    "name": "Trash Can",
+    "category": "Inventory & Storage",
+    "shop": "Blacksmith (Sanchez & Rafael)",
+    "iconEmoji": "🗑️",
+    "description": "Destroys unwanted items directly from inventory, returning a percentage of the item value as gold.",
+    "tiers": [
+      {
+        "tierNumber": 0,
+        "name": "Basic Trash Can",
+        "goldCost": 0,
+        "daysToUpgrade": 0,
+        "materials": [],
+        "staminaCost": "0 Energy",
+        "aoeChargeArea": "Inventory Slot",
+        "perks": [
+          "Discards items with 0% gold return"
+        ],
+        "description": "Standard inventory trash can."
+      },
+      {
+        "tierNumber": 1,
+        "name": "Bronze Trash Can",
+        "goldCost": 1500,
+        "daysToUpgrade": 1,
+        "materials": [
+          {
+            "name": "Bronze bar",
+            "amount": 5,
+            "iconEmoji": "🟤",
+            "source": "Smelt 5 Bronze Ore + 1 Coal"
+          }
+        ],
+        "staminaCost": "0 Energy",
+        "aoeChargeArea": "Inventory Slot",
+        "perks": [
+          "Recovers 15% item value as Gold"
+        ],
+        "description": "Returns 15% of sell value when discarding items."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Silver Trash Can",
+        "goldCost": 3000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Silver bar",
+            "amount": 5,
+            "iconEmoji": "⚪",
+            "source": "Smelt 5 Silver Ore + 1 Coal"
+          }
+        ],
+        "staminaCost": "0 Energy",
+        "aoeChargeArea": "Inventory Slot",
+        "perks": [
+          "Recovers 30% item value as Gold"
+        ],
+        "description": "Returns 30% of sell value when discarding items."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Gold Trash Can",
+        "goldCost": 6000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Gold bar",
+            "amount": 5,
+            "iconEmoji": "🟡",
+            "source": "Smelt 5 Gold Ore + 1 Coal"
+          }
+        ],
+        "staminaCost": "0 Energy",
+        "aoeChargeArea": "Inventory Slot",
+        "perks": [
+          "Recovers 45% item value as Gold"
+        ],
+        "description": "Returns 45% of sell value when discarding items."
+      },
+      {
+        "tierNumber": 4,
+        "name": "Osmium Trash Can",
+        "goldCost": 10000,
+        "daysToUpgrade": 2,
+        "materials": [
+          {
+            "name": "Osmium bar",
+            "amount": 5,
+            "iconEmoji": "🟣",
+            "source": "Smelt 5 Osmium Ore + 1 Coal"
+          }
+        ],
+        "staminaCost": "0 Energy",
+        "aoeChargeArea": "Inventory Slot",
+        "perks": [
+          "Recovers 60% item value as Gold"
+        ],
+        "description": "Returns 60% of sell value when discarding items in the field."
+      }
+    ]
+  },
+  {
+    "id": "backpack",
+    "name": "Backpack Expansion",
+    "category": "Inventory & Storage",
+    "shop": "General Store (Sam)",
+    "iconEmoji": "🎒",
+    "description": "Expands player inventory carry capacity from 10 slots up to 40 slots.",
+    "tiers": [
+      {
+        "tierNumber": 0,
+        "name": "Starter Pouch (10 Slots)",
+        "goldCost": 0,
+        "daysToUpgrade": 0,
+        "materials": [],
+        "staminaCost": "Passive",
+        "aoeChargeArea": "10 Inventory Slots (1 Row)",
+        "perks": [
+          "10 item slots"
+        ],
+        "description": "Starter pocket capacity."
+      },
+      {
+        "tierNumber": 1,
+        "name": "Belt Bag (20 Slots)",
+        "goldCost": 500,
+        "daysToUpgrade": 0,
+        "materials": [],
+        "staminaCost": "Passive",
+        "aoeChargeArea": "20 Inventory Slots (2 Rows)",
+        "perks": [
+          "+10 item slots (20 total)",
+          "Unlocks row 2 in inventory"
+        ],
+        "description": "Instant 20-slot inventory expansion bought from Sam."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Explorer Backpack (30 Slots)",
+        "goldCost": 3500,
+        "daysToUpgrade": 0,
+        "materials": [],
+        "staminaCost": "Passive",
+        "aoeChargeArea": "30 Inventory Slots (3 Rows)",
+        "perks": [
+          "+10 item slots (30 total)",
+          "Unlocks row 3 in inventory"
+        ],
+        "description": "Expands inventory to 30 items. Essential for mine and ocean diving runs."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Heavy Duty Pack (40 Slots)",
+        "goldCost": 12000,
+        "daysToUpgrade": 0,
+        "materials": [],
+        "staminaCost": "Passive",
+        "aoeChargeArea": "40 Inventory Slots (4 Full Rows)",
+        "perks": [
+          "+10 item slots (40 total)",
+          "Maximum inventory capacity"
+        ],
+        "description": "The maximum 40-slot backpack. Carry everything you need without constant chest runs."
+      }
+    ]
+  }
+]

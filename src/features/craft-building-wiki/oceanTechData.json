@@ -1,0 +1,521 @@
+[
+  {
+    "id": "lumina_wands",
+    "name": "Lumina Wands",
+    "category": "Lumina Tech",
+    "source": "Ling's Lab / Sunken Shrines",
+    "iconEmoji": "✨",
+    "description": "Ancient underwater energy foci that project Lumina light, clearing heavy corruption and activating deep ocean altars.",
+    "tiers": [
+      {
+        "tierNumber": 0,
+        "name": "Basic Lumina Wand",
+        "goldCost": 0,
+        "unlock": {
+          "source": "Diving",
+          "description": "Obtained after healing the 10m Coral Reef zone"
+        },
+        "materials": [],
+        "benefits": [
+          "Channels 1 Lumina beam",
+          "Activates Tier 1 ocean solar shrines (10m zone)"
+        ],
+        "description": "Starter underwater wand channeling solar energy."
+      },
+      {
+        "tierNumber": 1,
+        "name": "Bronze Lumina Wand",
+        "goldCost": 2500,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "D",
+          "description": "Town Rank D"
+        },
+        "materials": [
+          {
+            "name": "Bronze kelp essence",
+            "amount": 5,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Bronze bar",
+            "amount": 5,
+            "iconEmoji": "🟤",
+            "source": "Smelter"
+          },
+          {
+            "name": "Solar fragment",
+            "amount": 3,
+            "iconEmoji": "☀️",
+            "source": "Ocean Solar Orbs"
+          }
+        ],
+        "benefits": [
+          "Channels 2 Lumina beams",
+          "Clears 20m ocean oil barriers and corrupt roots"
+        ],
+        "description": "Enhanced wand capable of purging 20m depth corruption."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Silver Lumina Wand",
+        "goldCost": 5000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "C",
+          "description": "Town Rank C"
+        },
+        "materials": [
+          {
+            "name": "Silver kelp essence",
+            "amount": 5,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Silver bar",
+            "amount": 5,
+            "iconEmoji": "⚪",
+            "source": "Smelter"
+          },
+          {
+            "name": "Solar fragment",
+            "amount": 5,
+            "iconEmoji": "☀️",
+            "source": "Ocean Solar Orbs"
+          }
+        ],
+        "benefits": [
+          "Channels 3 Lumina beams",
+          "Clears 30m ocean corruption and deep coral gates"
+        ],
+        "description": "Mid-tier wand piercing deep 30m marine waters."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Gold Lumina Wand",
+        "goldCost": 10000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "B",
+          "description": "Town Rank B"
+        },
+        "materials": [
+          {
+            "name": "Gold kelp essence",
+            "amount": 5,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Gold bar",
+            "amount": 5,
+            "iconEmoji": "🟡",
+            "source": "Smelter"
+          },
+          {
+            "name": "Solar fragment",
+            "amount": 10,
+            "iconEmoji": "☀️",
+            "source": "Ocean Solar Orbs"
+          }
+        ],
+        "benefits": [
+          "Channels 4 Lumina beams",
+          "Clears 40m-50m Trench corruption and Merfolk gates"
+        ],
+        "description": "High-energy wand granting entry to the deepest oceanic trenches."
+      },
+      {
+        "tierNumber": 4,
+        "name": "Osmium Lumina Wand",
+        "goldCost": 20000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "A",
+          "description": "Town Rank A"
+        },
+        "materials": [
+          {
+            "name": "Osmium kelp essence",
+            "amount": 5,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Osmium bar",
+            "amount": 5,
+            "iconEmoji": "🟣",
+            "source": "Smelter"
+          },
+          {
+            "name": "Solar fragment",
+            "amount": 15,
+            "iconEmoji": "☀️",
+            "source": "Ocean Solar Orbs"
+          }
+        ],
+        "benefits": [
+          "Maximum Lumina beam intensity",
+          "Activates the Grand Coral Altar & unlocks full Merfolk Kingdom secrets"
+        ],
+        "description": "Master wand radiant with supreme ancient ocean power."
+      }
+    ]
+  },
+  {
+    "id": "ocean_clearing_vortex",
+    "name": "Vortexanator Ocean Cleaners",
+    "category": "Diving & Exploration",
+    "source": "Ling's Lab / Crafting",
+    "iconEmoji": "🌀",
+    "description": "Deployable vacuum devices that generate concentrated whirlpools to suck up ocean trash and oil clumps in seconds.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Vortexanator I",
+        "goldCost": 0,
+        "unlock": {
+          "source": "Diving",
+          "level": 3,
+          "description": "Diving Mastery Level 3"
+        },
+        "materials": [
+          {
+            "name": "Scrap",
+            "amount": 15,
+            "iconEmoji": "⚙️",
+            "source": "Recycling Machine"
+          },
+          {
+            "name": "Bronze kelp",
+            "amount": 5,
+            "iconEmoji": "🌿",
+            "source": "Diving 10m-20m"
+          },
+          {
+            "name": "Bronze bar",
+            "amount": 1,
+            "iconEmoji": "🟤",
+            "source": "Smelter"
+          }
+        ],
+        "benefits": [
+          "Clears a 3x3 radius of underwater trash instantly",
+          "Yields extra scrap and mystery coffers"
+        ],
+        "description": "Generates a localized whirlpool clearing nearby ocean debris."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Vortexanator II",
+        "goldCost": 0,
+        "unlock": {
+          "source": "Diving",
+          "level": 7,
+          "description": "Diving Mastery Level 7"
+        },
+        "materials": [
+          {
+            "name": "Scrap",
+            "amount": 25,
+            "iconEmoji": "⚙️",
+            "source": "Recycling Machine"
+          },
+          {
+            "name": "Silver kelp",
+            "amount": 5,
+            "iconEmoji": "🌿",
+            "source": "Diving 20m-30m"
+          },
+          {
+            "name": "Silver bar",
+            "amount": 1,
+            "iconEmoji": "⚪",
+            "source": "Smelter"
+          }
+        ],
+        "benefits": [
+          "Clears a 5x5 radius of underwater trash and oil slime",
+          "High yield of coffers, fossils, and rare artifacts"
+        ],
+        "description": "Powerful oceanic vacuum clearing large patches of ocean seabed."
+      }
+    ]
+  },
+  {
+    "id": "underwater_farming",
+    "name": "Underwater Farm Buildings & Infrastructure",
+    "category": "Underwater Farming",
+    "source": "Carpenter (Dinda & Joko) / Merfolk Kingdom",
+    "iconEmoji": "🪸",
+    "description": "Specialized farm buildings constructed on the underwater seabed farm near the Merfolk Kingdom.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Underwater Silo",
+        "goldCost": 3500,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "C",
+          "description": "Town Rank C & Seabed Farm Unlocked"
+        },
+        "materials": [
+          {
+            "name": "Stone",
+            "amount": 100,
+            "iconEmoji": "🪨",
+            "source": "Mining / Seabed"
+          },
+          {
+            "name": "Silver bar",
+            "amount": 5,
+            "iconEmoji": "⚪",
+            "source": "Smelter"
+          },
+          {
+            "name": "Silver kelp essence",
+            "amount": 5,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          }
+        ],
+        "benefits": [
+          "Stores up to 300 kelp feed on the seabed farm",
+          "Supplies feed directly to underwater barn troughs"
+        ],
+        "description": "Submerged silo storing kelp nourishment for marine livestock."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Underwater Barn",
+        "goldCost": 8000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "B",
+          "description": "Town Rank B & Merfolk Rank"
+        },
+        "materials": [
+          {
+            "name": "Hardwood",
+            "amount": 50,
+            "iconEmoji": "🪵",
+            "source": "Deep Forest Stumps"
+          },
+          {
+            "name": "Gold bar",
+            "amount": 5,
+            "iconEmoji": "🟡",
+            "source": "Smelter"
+          },
+          {
+            "name": "Gold kelp essence",
+            "amount": 5,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          }
+        ],
+        "benefits": [
+          "Houses up to 8 underwater sea creatures and marine mounts",
+          "Harvest rare luminescent corals, pearls, and sea silk"
+        ],
+        "description": "Marine habitat allowing you to raise majestic deep-sea fauna."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Aquaculture Tank",
+        "goldCost": 1500,
+        "unlock": {
+          "source": "Catching",
+          "level": 4,
+          "description": "Catching Mastery Level 4"
+        },
+        "materials": [
+          {
+            "name": "Glass",
+            "amount": 10,
+            "iconEmoji": "🍶",
+            "source": "Kiln"
+          },
+          {
+            "name": "Scrap",
+            "amount": 15,
+            "iconEmoji": "⚙️",
+            "source": "Recycling Machine"
+          },
+          {
+            "name": "Bronze bar",
+            "amount": 2,
+            "iconEmoji": "🟤",
+            "source": "Smelter"
+          }
+        ],
+        "benefits": [
+          "Multiply foraged marine critters, oysters, sea cucumbers, and crabs over time",
+          "Produces daily marine forage harvests without diving"
+        ],
+        "description": "Seabed tank designed for breeding caught marine life."
+      }
+    ]
+  },
+  {
+    "id": "lumina_sprinklers",
+    "name": "Lumina Underwater Sprinklers",
+    "category": "Lumina Tech",
+    "source": "Ling's Lab / Merfolk Tech",
+    "iconEmoji": "💧",
+    "description": "Submersible irrigation systems tailored for underwater marine crops planted on seabed farm soil.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Lumina Sprinkler I",
+        "goldCost": 2000,
+        "unlock": {
+          "source": "Diving",
+          "level": 4,
+          "description": "Diving Mastery Level 4"
+        },
+        "materials": [
+          {
+            "name": "Bronze kelp essence",
+            "amount": 2,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Bronze bar",
+            "amount": 3,
+            "iconEmoji": "🟤",
+            "source": "Smelter"
+          },
+          {
+            "name": "Scrap",
+            "amount": 5,
+            "iconEmoji": "⚙️",
+            "source": "Recycling Machine"
+          }
+        ],
+        "benefits": [
+          "Waters a 3x3 seabed area (8 tiles) underwater automatically",
+          "Compatible with Anemone auto-fertilizer attachment"
+        ],
+        "description": "Submerged sprinkler irrigating surrounding coral beds."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Lumina Sprinkler II",
+        "goldCost": 4500,
+        "unlock": {
+          "source": "Diving",
+          "level": 8,
+          "description": "Diving Mastery Level 8"
+        },
+        "materials": [
+          {
+            "name": "Silver kelp essence",
+            "amount": 2,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Silver bar",
+            "amount": 3,
+            "iconEmoji": "⚪",
+            "source": "Smelter"
+          },
+          {
+            "name": "Scrap",
+            "amount": 5,
+            "iconEmoji": "⚙️",
+            "source": "Recycling Machine"
+          }
+        ],
+        "benefits": [
+          "Waters a 5x5 seabed area (24 tiles) underwater automatically",
+          "Compatible with Anemone auto FS attachment"
+        ],
+        "description": "High pressure lumina sprinkler covering 24 underwater tiles."
+      }
+    ]
+  },
+  {
+    "id": "merfolk_tailoring_gear",
+    "name": "Merfolk Gear & Tail Transformations",
+    "category": "Merfolk Crafts",
+    "source": "Merfolk Kingdom (Naga / King Krakatoa)",
+    "iconEmoji": "🧜‍♀️",
+    "description": "Magical underwater tailoring allowing human divers to transform into Merfolk tails and swim at extreme velocities.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Merfolk Tail Transformation",
+        "goldCost": 5000,
+        "unlock": {
+          "source": "Quest",
+          "description": "Complete One of Us quest & heal 20 ocean shrines"
+        },
+        "materials": [
+          {
+            "name": "Silver kelp essence",
+            "amount": 5,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Pearl",
+            "amount": 5,
+            "iconEmoji": "🦪",
+            "source": "Ocean Forage / Clams"
+          },
+          {
+            "name": "Cotton cloth",
+            "amount": 5,
+            "iconEmoji": "🧵",
+            "source": "Loom"
+          }
+        ],
+        "benefits": [
+          "Transforms legs into a customizable Merfolk tail underwater",
+          "+50% swim speed and infinite breath underwater"
+        ],
+        "description": "Grants the power to take Merfolk form while submerged."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Royal Merfolk Regalia (Tail Skins)",
+        "goldCost": 8000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "A",
+          "description": "Town Rank A & Merfolk Kingdom Heart 8"
+        },
+        "materials": [
+          {
+            "name": "Osmium kelp essence",
+            "amount": 5,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Golden pearl",
+            "amount": 2,
+            "iconEmoji": "✨",
+            "source": "Rare Clams"
+          },
+          {
+            "name": "Silk cloth",
+            "amount": 5,
+            "iconEmoji": "🧵",
+            "source": "Loom"
+          }
+        ],
+        "benefits": [
+          "Unlocks Arcana, Whale, and Shark tail visual variations",
+          "+100% swim speed boost and instant oceanic dash"
+        ],
+        "description": "Royal undersea attire handcrafted with iridescent fabrics."
+      }
+    ]
+  }
+]

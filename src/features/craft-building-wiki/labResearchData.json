@@ -1,0 +1,757 @@
+[
+  {
+    "id": "crop_quality",
+    "name": "Crop Quality Enhancement",
+    "category": "Crop & Quality Tech",
+    "laboratory": "Ling's Laboratory",
+    "iconEmoji": "🌱",
+    "description": "Upgrades the base quality tier of all vegetable, grain, and flower seeds sold at Sam’s General Store.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Bronze Crop Quality",
+        "goldCost": 1500,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "E",
+          "description": "Town Rank E"
+        },
+        "materials": [
+          {
+            "name": "Bronze kelp essence",
+            "amount": 20,
+            "iconEmoji": "🧪",
+            "source": "Extractor: 5 Bronze Kelp + 1 Glass"
+          },
+          {
+            "name": "Bronze bar",
+            "amount": 20,
+            "iconEmoji": "🟤",
+            "source": "Smelt 5 Bronze Ore + 1 Coal"
+          }
+        ],
+        "benefits": [
+          "All seeds sold at Sam’s General Store yield Bronze+ star crops",
+          "Increases harvest sell prices and altar offering compatibility",
+          "+25% base produce value"
+        ],
+        "description": "Enables Bronze star base quality across all standard farm crops."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Silver Crop Quality",
+        "goldCost": 3000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "D",
+          "description": "Town Rank D"
+        },
+        "materials": [
+          {
+            "name": "Silver kelp essence",
+            "amount": 20,
+            "iconEmoji": "🧪",
+            "source": "Extractor: 5 Silver Kelp + 1 Glass"
+          },
+          {
+            "name": "Silver bar",
+            "amount": 20,
+            "iconEmoji": "⚪",
+            "source": "Smelt 5 Silver Ore + 1 Coal"
+          }
+        ],
+        "benefits": [
+          "All seeds yield Silver+ star crops",
+          "+50% base produce sell value",
+          "Higher juice, wine, and artisan conversion value"
+        ],
+        "description": "Upgrades all crop seeds to guarantee Silver or higher quality."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Gold Crop Quality",
+        "goldCost": 6000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "C",
+          "description": "Town Rank C"
+        },
+        "materials": [
+          {
+            "name": "Gold kelp essence",
+            "amount": 20,
+            "iconEmoji": "🧪",
+            "source": "Extractor: 5 Gold Kelp + 1 Glass"
+          },
+          {
+            "name": "Gold bar",
+            "amount": 20,
+            "iconEmoji": "🟡",
+            "source": "Smelt 5 Gold Ore + 1 Coal"
+          }
+        ],
+        "benefits": [
+          "All seeds yield Gold+ star crops",
+          "+80% base produce sell value",
+          "Unlocks top-tier cooking and festival competition scores"
+        ],
+        "description": "Boosts seed vitality to yield abundant Gold quality harvests."
+      },
+      {
+        "tierNumber": 4,
+        "name": "Osmium Crop Quality",
+        "goldCost": 12000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "B",
+          "description": "Town Rank B"
+        },
+        "materials": [
+          {
+            "name": "Osmium kelp essence",
+            "amount": 20,
+            "iconEmoji": "🧪",
+            "source": "Extractor: 5 Osmium Kelp + 1 Glass"
+          },
+          {
+            "name": "Osmium bar",
+            "amount": 20,
+            "iconEmoji": "🟣",
+            "source": "Smelt 5 Osmium Ore + 1 Coal"
+          }
+        ],
+        "benefits": [
+          "All seeds yield pristine Osmium star crops (Purple Star)",
+          "+150% maximum produce sell value",
+          "Highest possible artisan goods pricing"
+        ],
+        "description": "The pinnacle of agricultural science. Produces flawless Osmium quality crops."
+      }
+    ]
+  },
+  {
+    "id": "fruit_tree_quality",
+    "name": "Fruit Tree & Sapling Quality",
+    "category": "Crop & Quality Tech",
+    "laboratory": "Ling's Laboratory",
+    "iconEmoji": "🍎",
+    "description": "Enhances fruit trees and seasonal saplings to produce higher star quality orchard harvests.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Bronze Fruit Tree Quality",
+        "goldCost": 1500,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "E",
+          "description": "Town Rank E"
+        },
+        "materials": [
+          {
+            "name": "Bronze kelp essence",
+            "amount": 15,
+            "iconEmoji": "🧪",
+            "source": "Extractor: 5 Bronze Kelp + 1 Glass"
+          },
+          {
+            "name": "Bronze bar",
+            "amount": 15,
+            "iconEmoji": "🟤",
+            "source": "Smelt 5 Bronze Ore + 1 Coal"
+          }
+        ],
+        "benefits": [
+          "All orchard trees and saplings yield Bronze+ fruit",
+          "Boosts apple, orange, banana, dragonfruit, and almond quality"
+        ],
+        "description": "Orchard saplings produce Bronze star fruit."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Silver Fruit Tree Quality",
+        "goldCost": 3000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "D",
+          "description": "Town Rank D"
+        },
+        "materials": [
+          {
+            "name": "Silver kelp essence",
+            "amount": 15,
+            "iconEmoji": "🧪",
+            "source": "Extractor: 5 Silver Kelp + 1 Glass"
+          },
+          {
+            "name": "Silver bar",
+            "amount": 15,
+            "iconEmoji": "⚪",
+            "source": "Smelt 5 Silver Ore + 1 Coal"
+          }
+        ],
+        "benefits": [
+          "All orchard trees yield Silver+ fruit",
+          "Increases jam and wine winery profits"
+        ],
+        "description": "Orchard saplings produce Silver star fruit."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Gold Fruit Tree Quality",
+        "goldCost": 6000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "C",
+          "description": "Town Rank C"
+        },
+        "materials": [
+          {
+            "name": "Gold kelp essence",
+            "amount": 15,
+            "iconEmoji": "🧪",
+            "source": "Extractor: 5 Gold Kelp + 1 Glass"
+          },
+          {
+            "name": "Gold bar",
+            "amount": 15,
+            "iconEmoji": "🟡",
+            "source": "Smelt 5 Gold Ore + 1 Coal"
+          }
+        ],
+        "benefits": [
+          "All orchard trees yield Gold+ fruit",
+          "Premium artisan product values"
+        ],
+        "description": "Orchard saplings produce Gold star fruit."
+      },
+      {
+        "tierNumber": 4,
+        "name": "Osmium Fruit Tree Quality",
+        "goldCost": 12000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "B",
+          "description": "Town Rank B"
+        },
+        "materials": [
+          {
+            "name": "Osmium kelp essence",
+            "amount": 15,
+            "iconEmoji": "🧪",
+            "source": "Extractor: 5 Osmium Kelp + 1 Glass"
+          },
+          {
+            "name": "Osmium bar",
+            "amount": 15,
+            "iconEmoji": "🟣",
+            "source": "Smelt 5 Osmium Ore + 1 Coal"
+          }
+        ],
+        "benefits": [
+          "All orchard trees produce Osmium quality fruit",
+          "Supreme artisan wine and gourmet dishes"
+        ],
+        "description": "Orchard trees produce pristine Osmium quality fruits."
+      }
+    ]
+  },
+  {
+    "id": "hay_quality",
+    "name": "Hay & Pasture Quality",
+    "category": "Crop & Quality Tech",
+    "laboratory": "Ling's Laboratory",
+    "iconEmoji": "🌾",
+    "description": "Increases nutritional value of grass and silo hay, speeding up animal affection gain and product quality.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Bronze Hay Quality",
+        "goldCost": 1000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "E",
+          "description": "Town Rank E"
+        },
+        "materials": [
+          {
+            "name": "Bronze kelp essence",
+            "amount": 10,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Bronze bar",
+            "amount": 10,
+            "iconEmoji": "🟤",
+            "source": "Smelt 5 Bronze Ore + 1 Coal"
+          }
+        ],
+        "benefits": [
+          "Bronze quality hay harvested from wild grass",
+          "Higher animal friendship gain rate"
+        ],
+        "description": "Harvested grass stores Bronze quality hay in silos."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Silver Hay Quality",
+        "goldCost": 2500,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "D",
+          "description": "Town Rank D"
+        },
+        "materials": [
+          {
+            "name": "Silver kelp essence",
+            "amount": 10,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Silver bar",
+            "amount": 10,
+            "iconEmoji": "⚪",
+            "source": "Smelt 5 Silver Ore + 1 Coal"
+          }
+        ],
+        "benefits": [
+          "Silver quality hay harvested from grass",
+          "Higher chance of large milk and large eggs"
+        ],
+        "description": "Harvested grass stores Silver quality hay."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Gold Hay Quality",
+        "goldCost": 5000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "C",
+          "description": "Town Rank C"
+        },
+        "materials": [
+          {
+            "name": "Gold kelp essence",
+            "amount": 10,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Gold bar",
+            "amount": 10,
+            "iconEmoji": "🟡",
+            "source": "Smelt 5 Gold Ore + 1 Coal"
+          }
+        ],
+        "benefits": [
+          "Gold quality hay harvested from grass",
+          "Maximal ranching productivity"
+        ],
+        "description": "Harvested grass stores Gold quality hay."
+      },
+      {
+        "tierNumber": 4,
+        "name": "Osmium Hay Quality",
+        "goldCost": 10000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "B",
+          "description": "Town Rank B"
+        },
+        "materials": [
+          {
+            "name": "Osmium kelp essence",
+            "amount": 10,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Osmium bar",
+            "amount": 10,
+            "iconEmoji": "🟣",
+            "source": "Smelt 5 Osmium Ore + 1 Coal"
+          }
+        ],
+        "benefits": [
+          "Osmium quality hay harvested from grass",
+          "Guaranteed maximum happiness and large golden eggs/milk"
+        ],
+        "description": "Harvested grass stores Osmium quality nutritious hay."
+      }
+    ]
+  },
+  {
+    "id": "farm_automation_attachments",
+    "name": "Sprinkler Automation Attachments",
+    "category": "Farm Automation",
+    "laboratory": "Ling's Laboratory",
+    "iconEmoji": "⚙️",
+    "description": "Modular attachments developed by Ling that snap onto Sprinkler II and Sprinkler III units.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Auto-Fertilizer Attachment",
+        "goldCost": 2500,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "D",
+          "description": "Town Rank D"
+        },
+        "materials": [
+          {
+            "name": "Bronze kelp essence",
+            "amount": 2,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Scrap",
+            "amount": 5,
+            "iconEmoji": "⚙️",
+            "source": "Recycling Machine"
+          },
+          {
+            "name": "Battery",
+            "amount": 1,
+            "iconEmoji": "🔋",
+            "source": "Solar Panel"
+          }
+        ],
+        "benefits": [
+          "Attaches to Sprinkler II & III",
+          "Automatically applies loaded Fertilizer to tilled soil at 6:00 AM"
+        ],
+        "description": "Snaps onto sprinklers to automatically disperse fertilizer upon morning watering."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Auto-Seed Attachment",
+        "goldCost": 3500,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "C",
+          "description": "Town Rank C"
+        },
+        "materials": [
+          {
+            "name": "Silver kelp essence",
+            "amount": 2,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Scrap",
+            "amount": 5,
+            "iconEmoji": "⚙️",
+            "source": "Recycling Machine"
+          },
+          {
+            "name": "Battery",
+            "amount": 1,
+            "iconEmoji": "🔋",
+            "source": "Solar Panel"
+          }
+        ],
+        "benefits": [
+          "Attaches to Sprinkler II & III",
+          "Automatically plants loaded seeds into empty tilled soil every morning"
+        ],
+        "description": "Plants seeds across the sprinkler’s entire range automatically."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Auto-SFH Attachment (Seed, Fertilizer, Harvest)",
+        "goldCost": 7500,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "B",
+          "description": "Town Rank B"
+        },
+        "materials": [
+          {
+            "name": "Gold kelp essence",
+            "amount": 3,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Scrap",
+            "amount": 10,
+            "iconEmoji": "⚙️",
+            "source": "Recycling Machine"
+          },
+          {
+            "name": "Battery",
+            "amount": 2,
+            "iconEmoji": "🔋",
+            "source": "Solar Panel"
+          }
+        ],
+        "benefits": [
+          "All-in-one farm automation",
+          "Simultaneously fertilizes, plants seeds, and harvests ripe crops every morning"
+        ],
+        "description": "The ultimate crop automation device. Waters, fertilizes, plants, and harvests completely unattended."
+      }
+    ]
+  },
+  {
+    "id": "ranch_automation",
+    "name": "Ranch & Barn Automation",
+    "category": "Farm Automation",
+    "laboratory": "Ling's Laboratory",
+    "iconEmoji": "🤖",
+    "description": "Robotic farm hands that automate animal care, daily petting, product collection, and feeding.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Auto-Collector",
+        "goldCost": 4000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "D",
+          "description": "Town Rank D"
+        },
+        "materials": [
+          {
+            "name": "Bronze kelp essence",
+            "amount": 2,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Bronze bar",
+            "amount": 5,
+            "iconEmoji": "🟤",
+            "source": "Blacksmith Smelter"
+          },
+          {
+            "name": "Silver bar",
+            "amount": 5,
+            "iconEmoji": "⚪",
+            "source": "Blacksmith Smelter"
+          }
+        ],
+        "benefits": [
+          "Placed inside Coop or Barn",
+          "Automatically gathers eggs, milk, wool, feathers, and truffles daily into a single chest"
+        ],
+        "description": "Collects all animal products automatically every morning."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Auto-Petter",
+        "goldCost": 5000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "D",
+          "description": "Town Rank D"
+        },
+        "materials": [
+          {
+            "name": "Silver kelp essence",
+            "amount": 3,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 10,
+            "iconEmoji": "🪵",
+            "source": "Hardwood Stumps"
+          },
+          {
+            "name": "Battery",
+            "amount": 2,
+            "iconEmoji": "🔋",
+            "source": "Solar Panel"
+          }
+        ],
+        "benefits": [
+          "Placed inside Coop or Barn",
+          "Pets all animals automatically to maintain mood and affection gain"
+        ],
+        "description": "Provides daily affection to all housed animals so you never miss a pet."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Auto-Chest (Artisan Conveyor)",
+        "goldCost": 8000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "B",
+          "description": "Town Rank B"
+        },
+        "materials": [
+          {
+            "name": "Osmium kelp essence",
+            "amount": 5,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Hardwood",
+            "amount": 20,
+            "iconEmoji": "🪵",
+            "source": "Hardwood Stumps"
+          },
+          {
+            "name": "Battery",
+            "amount": 2,
+            "iconEmoji": "🔋",
+            "source": "Solar Panel"
+          }
+        ],
+        "benefits": [
+          "Placed adjacent to Kegs, Jars, Beehives, and Mayonnaise machines",
+          "Automatically feeds raw inputs and retrieves finished artisan goods"
+        ],
+        "description": "Connects artisan machines into an automated processing chain."
+      }
+    ]
+  },
+  {
+    "id": "synthesis_and_replication",
+    "name": "Material Synthesis & Duplication",
+    "category": "Material Synthesis",
+    "laboratory": "Ling's Laboratory",
+    "iconEmoji": "🧪",
+    "description": "Advanced laboratory appliances for converting kelp, harvesting solar energy, and duplicating gems.",
+    "tiers": [
+      {
+        "tierNumber": 1,
+        "name": "Extractor",
+        "goldCost": 500,
+        "unlock": {
+          "source": "Default",
+          "description": "Unlocked during Ling’s diving tutorial"
+        },
+        "materials": [
+          {
+            "name": "Scrap",
+            "amount": 20,
+            "iconEmoji": "⚙️",
+            "source": "Recycling Machine"
+          },
+          {
+            "name": "Bronze ore",
+            "amount": 20,
+            "iconEmoji": "🟤",
+            "source": "Earth Shaft Mines"
+          }
+        ],
+        "benefits": [
+          "Converts 5 Kelp + 1 Glass into 1 Kelp Essence",
+          "Essential machine for crafting all Laboratory upgrades"
+        ],
+        "description": "Synthesizes pure Kelp Essences from harvested ocean flora."
+      },
+      {
+        "tierNumber": 2,
+        "name": "Solar Panel",
+        "goldCost": 2000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "D",
+          "description": "Town Rank D"
+        },
+        "materials": [
+          {
+            "name": "Scrap",
+            "amount": 10,
+            "iconEmoji": "⚙️",
+            "source": "Recycling Machine"
+          },
+          {
+            "name": "Glass",
+            "amount": 5,
+            "iconEmoji": "🍶",
+            "source": "Kiln (Stone/Sand)"
+          },
+          {
+            "name": "Bronze bar",
+            "amount": 3,
+            "iconEmoji": "🟤",
+            "source": "Smelter"
+          }
+        ],
+        "benefits": [
+          "Placed outdoors on the farm",
+          "Harnesses sunny weather over 3 days to generate 1 Battery"
+        ],
+        "description": "Solar generator producing Batteries for advanced electronics and automation."
+      },
+      {
+        "tierNumber": 3,
+        "name": "Slime of Transmutation",
+        "goldCost": 4500,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "C",
+          "description": "Town Rank C"
+        },
+        "materials": [
+          {
+            "name": "Silver kelp essence",
+            "amount": 5,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Slime goop",
+            "amount": 10,
+            "iconEmoji": "🟢",
+            "source": "Cavern Slime Drops"
+          },
+          {
+            "name": "Silver bar",
+            "amount": 5,
+            "iconEmoji": "⚪",
+            "source": "Smelter"
+          }
+        ],
+        "benefits": [
+          "Place any crop or artisan item inside",
+          "Upgrades item quality by 1 star tier over 24 hours"
+        ],
+        "description": "Mutates crops and goods into higher quality star variants."
+      },
+      {
+        "tierNumber": 4,
+        "name": "Slime of Replication",
+        "goldCost": 10000,
+        "unlock": {
+          "source": "TownRank",
+          "rank": "A",
+          "description": "Town Rank A"
+        },
+        "materials": [
+          {
+            "name": "Osmium kelp essence",
+            "amount": 5,
+            "iconEmoji": "🧪",
+            "source": "Extractor"
+          },
+          {
+            "name": "Slime goop",
+            "amount": 20,
+            "iconEmoji": "🟢",
+            "source": "Cavern Slime Drops"
+          },
+          {
+            "name": "Osmium bar",
+            "amount": 5,
+            "iconEmoji": "🟣",
+            "source": "Smelter"
+          }
+        ],
+        "benefits": [
+          "Duplicates inserted Pink Diamonds, Gems, Fossils, and rare Geodes",
+          "Replication cycle takes 1 to 4 days depending on item value"
+        ],
+        "description": "The ultimate laboratory device. Clones precious minerals, fossils, and gems indefinitely."
+      }
+    ]
+  }
+]

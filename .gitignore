@@ -28,3 +28,4 @@ scratch_coral_guide
 .agents/
 live_debug.txt
 live_game_state.json
+live_map_state.json

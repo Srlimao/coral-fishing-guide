@@ -125,4 +125,72 @@ test.describe('Craft & Building Wiki Feature Suite', () => {
     await copyBtn.click();
     await expect(page.getByText(/Copied to Clipboard!/i)).toBeVisible();
   });
+
+  test('should switch to Tools & Upgrades tab and test tier progression and modal', async ({ page }) => {
+    await navigateToWiki(page);
+
+    // Switch to Tools tab
+    await page.locator('[data-wiki-tab="tools"]').click();
+
+    // Verify Hoe tool card exists
+    const hoeCard = page.locator('[data-tool-id="hoe"]');
+    await expect(hoeCard).toBeVisible();
+
+    // Verify Backpack Expansion card exists
+    const backpackCard = page.locator('[data-tool-id="backpack"]');
+    await expect(backpackCard).toBeVisible();
+
+    // Click on Hoe card to open progression guide modal
+    await hoeCard.click();
+
+    // Modal should be visible
+    const modal = page.locator('div.fixed.inset-0.z-50');
+    await expect(modal.getByRole('heading', { level: 2, name: /Hoe/i })).toBeVisible();
+    await expect(modal.getByText(/Upgrade Tier Progression/i)).toBeVisible();
+
+    // Switch to Gold tier in modal
+    await modal.getByRole('button', { name: /Gold/i }).click();
+    await expect(modal.getByText('6,000g').first()).toBeVisible();
+
+    // Add to planner
+    await modal.getByRole('button', { name: /Add.*to Plan/i }).click();
+    await expect(modal.getByText(/In Shopping List/i)).toBeVisible();
+  });
+
+  test('should switch to Lab & Research tab and test quality tech cards', async ({ page }) => {
+    await navigateToWiki(page);
+
+    // Switch to Lab tab
+    await page.locator('[data-wiki-tab="lab"]').click();
+
+    // Verify Crop Quality card exists
+    const cropQualityCard = page.locator('[data-lab-id="crop_quality"]');
+    await expect(cropQualityCard).toBeVisible();
+
+    // Verify Farm Automation card exists
+    const automationCard = page.locator('[data-lab-id="farm_automation_attachments"]');
+    await expect(automationCard).toBeVisible();
+  });
+
+  test('should switch to Ocean & Diving tab and test underwater tech and planner addition', async ({ page }) => {
+    await navigateToWiki(page);
+
+    // Switch to Ocean tab
+    await page.locator('[data-wiki-tab="ocean"]').click();
+
+    // Verify Lumina Wands card exists
+    const wandCard = page.locator('[data-ocean-id="lumina_wands"]');
+    await expect(wandCard).toBeVisible();
+
+    // Verify Underwater Farm buildings card exists
+    const oceanFarmCard = page.locator('[data-ocean-id="underwater_farming"]');
+    await expect(oceanFarmCard).toBeVisible();
+
+    // Add Lumina Wand to planner
+    const planBtn = wandCard.getByRole('button', { name: /Plan/i }).first();
+    await expect(planBtn).toBeVisible();
+    await planBtn.click();
+    await expect(wandCard.getByRole('button', { name: /Planned/i })).toBeVisible();
+  });
 });
+
